@@ -92,6 +92,7 @@ Choose what you need. These can be used independently or together:
 **When to use:** Researching target company before applying or interviewing
 **What you need:** Company name, job description (optional but helpful)
 **Load:** @`supporting-prompts/company-research.md`
+**Template:** @`templates/research-brief-template.md`
 
 Agentic parallel research covering:
 - Company fundamentals, leadership, financial health
@@ -103,7 +104,7 @@ Agentic parallel research covering:
 
 Uses parallel WebSearch, WebFetch, and Task tool for comprehensive intelligence.
 
-**Output:** `{role-slug}-research-brief.md`
+**Output:** `{role-slug}-research-brief.md` (MUST follow research-brief-template.md structure)
 
 ---
 
@@ -112,6 +113,9 @@ Uses parallel WebSearch, WebFetch, and Task tool for comprehensive intelligence.
 **When to use:** Tailoring CV for specific role to pass ATS screening
 **What you need:** Your current CV + target job description
 **Load:** @`supporting-prompts/ATS-Helper.md`
+**Templates:**
+- @`templates/cv-template.md` for CV output
+- @`templates/linkedin-updates-template.md` for LinkedIn updates
 
 NLP and recruitment AI specialist approach:
 - Keyword and concept extraction from job description
@@ -120,7 +124,9 @@ NLP and recruitment AI specialist approach:
 - LinkedIn API consistency checks
 - Formatting and parsing safety verification
 
-**Output:** `{role-slug}-cv-optimized.md` + `{role-slug}-linkedin-updates.md`
+**Output:**
+- `{role-slug}-cv-optimized.md` (use cv-template.md structure)
+- `{role-slug}-linkedin-updates.md` (use linkedin-updates-template.md structure)
 
 ---
 
@@ -131,6 +137,7 @@ NLP and recruitment AI specialist approach:
 
 **Option A - Comprehensive Profile Audit:**
 **Load:** @`supporting-prompts/linkedin-profile-review.md`
+**Template:** @`templates/linkedin-updates-template.md`
 - Complete profile sections review (photo to recommendations)
 - Headline and about section optimization
 - Skills reordering (RSC API top 3)
@@ -145,6 +152,7 @@ NLP and recruitment AI specialist approach:
 
 **Option C - Content Strategy Coaching (Proactive):**
 **Load:** @`supporting-prompts/content-strategy-coaching.md`
+**Template:** @`templates/content-calendar-template.md`
 - Develop sustainable 3x/week posting strategy
 - Identify authentic content pillars from real expertise
 - Build engagement network (20-30 strategic connections)
@@ -153,7 +161,10 @@ NLP and recruitment AI specialist approach:
 - Voice coaching (write authentically, not templates)
 - Professional, non-cheesy guidance grounded in experience
 
-**Output:** `{role-slug}-linkedin-profile-review.md` or `{role-slug}-content-strategy.md` + `{role-slug}-content-calendar.md`
+**Output:**
+- Option A: `{role-slug}-linkedin-profile-review.md` (use linkedin-updates-template.md)
+- Option B: `{role-slug}-content-review.md` (custom analysis format)
+- Option C: `{role-slug}-content-strategy.md` + `{role-slug}-content-calendar.md` (use content-calendar-template.md)
 
 ---
 
@@ -162,6 +173,7 @@ NLP and recruitment AI specialist approach:
 **When to use:** Preparing for upcoming interview
 **What you need:** CV + job description + company research + interview stage
 **Load:** @`supporting-prompts/interview-prep.md`
+**Template:** @`templates/interview-prep-template.md`
 
 Role-specific preparation engine:
 - 15-20 likely questions (behavioral, technical, situational, company-specific)
@@ -173,7 +185,7 @@ Role-specific preparation engine:
 
 All answers cite your real experience with evidence.
 
-**Output:** `{role-slug}-interview-prep.md`
+**Output:** `{role-slug}-interview-prep.md` (MUST use interview-prep-template.md structure)
 
 ---
 
@@ -182,6 +194,7 @@ All answers cite your real experience with evidence.
 **When to use:** Identifying who to connect with on LinkedIn for target role/company
 **What you need:** Company name + target role + your background/LinkedIn
 **Load:** @`supporting-prompts/networking-strategy.md`
+**Template:** @`templates/networking-intelligence-template.md`
 
 Agentic parallel research to identify high-value connections:
 - Hiring managers and direct team members
@@ -195,7 +208,7 @@ Agentic parallel research to identify high-value connections:
 
 Uses parallel WebSearch to find 8-12 strategic people, prioritized in 3 tiers.
 
-**Output:** `{role-slug}-networking-intelligence.md` (uses networking-intelligence-template.md with clear tabular contact plan)
+**Output:** `{role-slug}-networking-intelligence.md` (MUST use networking-intelligence-template.md with clear tabular contact plan and tier structure)
 
 ---
 
@@ -203,7 +216,7 @@ Uses parallel WebSearch to find 8-12 strategic people, prioritized in 3 tiers.
 
 **When to use:** Planning comprehensive application approach
 **What you need:** All above outputs + timeline constraints
-**Load:** @`templates/application-strategy-template.md`
+**Template:** @`templates/application-strategy-template.md`
 
 Comprehensive planning:
 - Timeline and milestone planning
@@ -211,7 +224,7 @@ Comprehensive planning:
 - Risk mitigation for identified gaps
 - Follow-up protocols and decision framework
 
-**Output:** `{role-slug}-application-strategy.md`
+**Output:** `{role-slug}-application-strategy.md` (MUST follow application-strategy-template.md structure exactly)
 
 ## Output Standards
 
@@ -223,6 +236,35 @@ All outputs must follow these standards:
 - **Cited sources** - All research findings include URLs and dates accessed
 - **Quantified metrics** - Specific numbers, percentages, timeframes
 - **Actionable steps** - Concrete next actions, not vague advice
+
+### Template Usage (Critical)
+
+**IMPORTANT:** Each capability specifies a template file with `**Template:** @\`templates/template-name.md\``. You MUST:
+
+1. **Load the template first** using the @ symbol before generating output
+2. **Follow the template structure exactly** - sections, headings, format
+3. **Preserve template footers** - attribution and feedback sections at the bottom
+4. **Match output filenames** - use specified `{role-slug}-output-name.md` format
+
+**Why this matters:**
+- Templates ensure consistent, professional output quality
+- Users rely on predictable structure across all capabilities
+- Footers provide attribution to Paul Bratcher and feedback channels
+- Proper formatting ensures outputs are usable and actionable
+
+**All templates are located in:**
+```
+.claude/skills/Career-Helper/templates/
+├── research-brief-template.md
+├── cv-template.md
+├── linkedin-updates-template.md
+├── content-calendar-template.md
+├── interview-prep-template.md
+├── networking-intelligence-template.md
+└── application-strategy-template.md
+```
+
+Never skip template loading. It's not optional.
 
 ## File Organization
 
