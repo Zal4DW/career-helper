@@ -268,17 +268,7 @@ Never skip template loading. It's not optional.
 
 ## File Organization
 
-**Templates (read-only, in skill folder):**
-```
-.claude/skills/Career-Helper/templates/
-├── research-brief-template.md
-├── cv-template.md
-├── linkedin-updates-template.md
-├── content-calendar-template.md
-├── interview-prep-template.md
-├── networking-intelligence-template.md
-└── application-strategy-template.md
-```
+**Templates:** See list in Template Usage section above
 
 **Generated outputs (write to project root):**
 ```
@@ -311,11 +301,10 @@ Use @ symbol to load these specialized prompts only when needed:
 
 **Progressive disclosure:** Don't load all at once. Load only what's needed for the current task to keep context efficient.
 
-## Quality Standards
+## Quality Standards & Working with Uncertainty
 
-For whatever capabilities you use, maintain these standards:
-
-- **Never invent data** - Mark missing info as `[MISSING]`, don't fabricate experience
+**Core Standards:**
+- **Never invent data** - Mark missing info as `[MISSING]`, don't fabricate experience, dates, or qualifications
 - **Cite sources** - All research includes URLs and access dates
 - **Use real experience** - Answers reference user's actual CV, not generic examples
 - **Be specific** - Quantified metrics, concrete actions, no vague buzzwords
@@ -323,12 +312,7 @@ For whatever capabilities you use, maintain these standards:
 - **ATS-safe** - Simple formatting, conventional headings, consistent dates
 - **Actionable** - Clear next steps, not just analysis
 
-Adapt these standards to what you're actually delivering - don't apply CV standards to interview prep.
-
-## When Things Are Missing or Uncertain
-
-**Incomplete information:**
-- Never invent experience, dates, or qualifications
+**When information is incomplete:**
 - Mark gaps as `[MISSING: what's needed]` and continue
 - Work with what you have, offer to refine later
 - Ask user if specific missing info is critical to their goal
