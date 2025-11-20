@@ -5,8 +5,6 @@ description: End-to-end career support for job seekers at all levels. Optimizes 
 
 # Career Helper
 
-Comprehensive career support system for professionals navigating job search and career transitions. Provides research-driven, data-backed support across the entire application lifecycle.
-
 ## Getting Help
 
 **If user asks "how do I use this?" or "what can you do?"** → Load @`supporting-prompts/usage-guide.md`
@@ -23,36 +21,6 @@ This skill provides six integrated services:
 4. **Interview Preparation** - Role-specific questions, evidence-backed answers with citations
 5. **Strategic Networking Intelligence** - High-value LinkedIn connections, personalized outreach strategies
 6. **Application Strategy** - Timeline planning, follow-up protocols, stakeholder mapping
-
-## How This Skill Works
-
-When activated, I'll first understand what you need help with, then provide relevant support. You don't need to use all capabilities - I'll adapt to your specific situation.
-
-### Initial Understanding
-
-Start by understanding your current situation and needs:
-
-1. **What brings you here?** (applying for role / preparing interview / optimizing profile / general career transition)
-2. **What do you have?** (CV, LinkedIn profile, job description, company name)
-3. **What's your timeline?** (applying today / interview next week / exploring options)
-4. **What's your priority?** (getting past ATS / interview prep / profile visibility / comprehensive support)
-5. **Career stage context?** (age range or years of experience - helps tailor advice for your specific challenges)
-
-**If user mentions age, experience level, or stage-related concerns:** Load @`supporting-prompts/career-stage-context.md` to understand generation-specific challenges (early career, mid-career, experienced/executive, late career) and adapt all advice accordingly.
-
-Based on your answers, I'll recommend which capabilities to use and in what order.
-
-### Adaptive Approach
-
-I'll only gather and use the information needed for what you're actually trying to accomplish:
-
-- **If optimizing CV for specific role:** Need CV + job description
-- **If preparing for interview:** Need CV + job description + company name + interview stage
-- **If researching company:** Need company name + role (optional)
-- **If optimizing LinkedIn:** Need LinkedIn URL + career goals
-- **If comprehensive job application:** Need everything
-
-Don't worry about having everything perfect - I'll work with what you provide and ask for clarification as needed.
 
 ## Available Capabilities
 
@@ -183,24 +151,6 @@ Comprehensive planning:
 - Follow-up protocols and decision framework
 
 **Output:** `{role-slug}-application-strategy.md`
-
-## Working Together
-
-This is a conversation, not a checklist. After each capability:
-
-**Check in with user:**
-- Is this what you needed?
-- Want to dig deeper on any specific area?
-- Ready to move to another capability, or refine this one?
-- Discovered something that changes your priorities?
-
-**Be adaptive:**
-- User might realize they need different support mid-stream
-- They might want to skip capabilities or go out of order
-- They might have new information that changes approach
-- Timeline or priorities might shift
-
-**Stay flexible - don't force the waterfall.**
 
 ## Output Standards
 
