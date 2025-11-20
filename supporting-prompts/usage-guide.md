@@ -2,6 +2,8 @@
 
 This guide helps users understand how to use the Career Helper skill effectively.
 
+**New to this skill?** Check the **Quick Start section** in the main SKILL.md file for common requests and instant examples.
+
 ## Quick Start Examples
 
 **"I want to review my LinkedIn profile for a [specific role]"**
@@ -65,12 +67,21 @@ Depending on what you need, gather:
 
 ## How It Works
 
-1. **Tell me what you need** - I'll ask clarifying questions
-2. **I'll load only what's needed** - Using @ symbol for on-demand context
-3. **Get actionable outputs** - Optimized files, research briefs, prep guides
-4. **Iterate together** - Refine based on feedback, dig deeper as needed
+1. **Tell me what you need** - I'll ask clarifying questions or refer you to Quick Start section in SKILL.md
+2. **I'll load only what's needed** - Using @ symbol to load supporting prompts and templates on-demand
+3. **Templates ensure consistency** - All outputs follow professional, structured templates with attribution
+4. **Get actionable outputs** - Files saved to `career-outputs/` in your project directory
+5. **Iterate together** - Refine based on feedback, dig deeper as needed
 
 **You're in control** - Skip capabilities, go out of order, pivot mid-stream. This is a conversation, not a checklist.
+
+### About the @ Symbol (Progressive Disclosure)
+
+When you see `@` in the skill (e.g., `@supporting-prompts/company-research.md` or `@templates/cv-template.md`), this means the skill loads specialized context **only when needed**. This keeps the conversation efficient and focused.
+
+- **Supporting prompts** provide specialized expertise (ATS optimization, company research, networking strategy)
+- **Templates** ensure consistent, professional output structure with proper attribution
+- You don't need to manually load these - the skill handles it based on your request
 
 ## What This Skill Can Do
 
