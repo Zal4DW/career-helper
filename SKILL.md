@@ -5,6 +5,20 @@ description: End-to-end career support for job seekers at all levels. Optimizes 
 
 # Career Helper
 
+## Quick Start
+
+**First time using this skill?** → Load @`supporting-prompts/usage-guide.md`
+
+**Common requests:**
+- "Help me optimize my CV for [job description]" → CV/ATS optimization
+- "Who should I connect with at [Company]?" → Strategic networking
+- "I have an interview at [Company] next week" → Interview prep + research
+- "Build me a LinkedIn content strategy" → Content coaching + calendar
+- "Research [Company] before I apply" → Company intelligence
+- "Review my LinkedIn profile for [role]" → Profile audit
+
+**Need help or want to explore all capabilities?** Say: "What can you do?" or "How do I use this?"
+
 ## Getting Help
 
 **If user asks "how do I use this?" or "what can you do?"** → Load @`supporting-prompts/usage-guide.md`
@@ -21,6 +35,22 @@ This skill provides six integrated services:
 4. **Interview Preparation** - Role-specific questions, evidence-backed answers with citations
 5. **Strategic Networking Intelligence** - High-value LinkedIn connections, personalized outreach strategies
 6. **Application Strategy** - Timeline planning, follow-up protocols, stakeholder mapping
+
+## About This Skill
+
+**Created by:** Paul Bratcher
+**Organization:** Prosper Consulting
+**Repository:** https://github.com/Zal4DW/career-helper
+**LinkedIn:** https://www.linkedin.com/in/paul-bratcher/
+
+**Feedback Welcome:**
+- Found this helpful? Share your success story!
+- Feature requests or bugs? Open an issue on GitHub
+- Questions? Use GitHub Discussions or connect on LinkedIn
+
+This skill is actively maintained and improved based on user feedback.
+
+---
 
 ## Available Capabilities
 
