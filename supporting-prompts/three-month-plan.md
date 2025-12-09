@@ -511,6 +511,41 @@ Don't give generic, banal advice. Every recommendation should be specifically re
 
 If the user is a software engineer, don't give them advice about "selling Agile." If they're in finance, project management tips won't resonate. Ask about their sector and tailor accordingly.
 
+### For Gen Z / Early Career / Graduates
+
+**UK Career Podcasts:**
+- [Future You](https://www.prospects.ac.uk/podcasts) - Prospects.ac.uk careers advice for students and graduates
+- [Career Zone Podcast](https://open.spotify.com/show/4bjqPghg9qBddvaZ20HjH4) - University of Exeter, CV advice, interview prep
+- [40 Minute Mentor](https://40minutementor.com/) - Top UK Business/Careers podcast, successful leaders sharing stories
+- [Ctrl Alt Delete](https://www.emmagannon.co.uk/ctrl-alt-delete) - Emma Gannon on work, wellbeing, creativity
+- [Squiggly Careers](https://www.amazingif.com/listen/) - Helen Tupper & Sarah Ellis on non-linear career paths
+
+**Gen Z-Specific:**
+- "Your Gen Z Co-Worker" podcast
+- "Heart to Hustle" - Real advice for early careers
+- "A Real Piece of Work" (NPR) - Jobs podcast for young people
+- [WorkLife with Adam Grant](https://www.ted.com/podcasts/worklife) - Organisational psychology
+
+**Early Career Platforms:**
+- [Prospects.ac.uk](https://www.prospects.ac.uk/) - Graduate careers, job profiles, schemes
+- [Milkround](https://www.milkround.com/) - Graduate jobs and internships
+- [TargetJobs](https://targetjobs.co.uk/) - Graduate careers guidance
+- [Bright Network](https://www.brightnetwork.co.uk/) - Graduate networking and jobs
+
+**Key Stats:**
+- 43% of Gen Z say they've received no formal career advice
+- 66% use Instagram for career networking (vs 35% LinkedIn)
+- 1 in 5 Gen Z landed interviews via TikTok
+- 74% expect to change careers at least 3 times
+
+**Advice:**
+- Don't limit yourself to LinkedIn - use Instagram, TikTok where your generation networks
+- Portfolio and project-based evidence matters
+- Growth narrative over stability - employers understand career exploration
+- Seek mentors across generations (only 20% of Gen Z have spoken to someone over 50 at work)
+
+---
+
 ### For Digital Delivery, Agile, and Project Management Roles
 
 **The Delivery Manager Daily** by Mario De'Cristofano
@@ -541,15 +576,254 @@ If the user is a software engineer, don't give them advice about "selling Agile.
 3. Set expectations early - establish how you work
 4. Don't avoid "hairy dragons" - tackle difficult problems early, don't let them fester
 
-### For Other Sectors
+### For Finance / CFO / Investment Professionals
 
-When building a plan for someone NOT in digital delivery/project management, find and recommend resources relevant to THEIR field:
-- Finance: CFA podcasts, Financial Times careers, sector-specific recruiters
-- Engineering: Relevant technical communities, engineering leadership resources
-- Creative: Portfolio guidance, creative industry networking, agency vs. in-house advice
-- Sales: Sales-specific methodologies, relationship-building approaches
-- Healthcare: NHS-specific guidance, clinical vs. management pathways
-- Public Sector: Civil Service recruitment processes, grade structures
+**Job Boards & Networking:**
+- [CFA UK](https://www.cfauk.org/society/careers) - Career opportunities, NED Pathway programme, networking events
+- [eFinancialCareers UK](https://www.efinancialcareers.co.uk/) - No.1 job site for finance and tech professionals
+- [CFA Institute Job Board](https://careers.cfainstitute.org/) - Global finance roles
+
+**Key Skills for 2025:**
+- Power BI/Looker, advanced Excel, process automation
+- ESG disclosures and reporting
+- UK/EU regulatory awareness, AML/financial crime
+- AI & data-driven finance, algorithmic trading
+
+**Specialist Recruiters:**
+- Meraki Talent - UK finance jobs outlook reports
+- Robert Half - Finance and accounting specialists
+
+---
+
+### For Technology / Software Engineering / CTO
+
+**Salary Guides & Market Intelligence:**
+- [Fruition Group 2025 Tech Salary Guide](https://www.fruitiongroup.com/) - Benchmarks for CTO, CIO, CISO roles
+- [LeadDev](https://leaddev.com/) - Engineering management content and salary data
+
+**CTO/Engineering Leadership Resources:**
+- [The CTO Club](https://thectoclub.com/) - Curated blogs and resources for tech leaders
+- "All Things Distributed" by Werner Vogels (Amazon CTO)
+- "Irrational Exuberance" by Will Larson - Engineering leadership
+- "Software Lead Weekly" - Newsletter on engineering management
+
+**Recruitment:**
+- [EMBS Technology & Engineering](https://embstalent.co.uk/) - CTO placements
+- [Lorien](https://www.lorienglobal.com/) - Tech transformation recruitment
+- Platform Recruitment - Software engineering specialists
+
+**Market Context:**
+- UK tech sector projected to grow 5.4% in 2025
+- 68% of CIOs/CTOs have mapped future workforce needs
+- 73% list upskilling as top priority
+
+---
+
+### For Healthcare / NHS / Clinical Management
+
+**Official Portals:**
+- [NHS Jobs](https://www.jobs.nhs.uk/) - 25,000+ vacancies monthly across 350+ careers
+- [Health Careers](https://www.healthcareers.nhs.uk/) - Career planning, role comparisons, "Find Your Career" quiz
+- [NHS Scotland Jobs](https://jobs.scot.nhs.uk/) - Scottish opportunities
+- [HealthJobsUK](https://www.healthjobsuk.com/) - Trust vacancies across England
+
+**Career Pathways:**
+- Clinical to management transitions
+- NHS Professionals (NHSP) for bank/temporary work
+- Apprenticeship routes (not all NHS careers need degrees)
+- Part-time study and distance learning while working
+
+---
+
+### For Creative Industries / Design / Marketing / Agencies
+
+**Job Boards:**
+- [Major Players](https://www.majorplayers.co.uk/) - Marketing and creative industries (clients include Spotify, Google)
+- [Creative Recruitment UK](https://www.creativerecruitment.co.uk/) - 30+ years in creative industries
+- [If You Could Jobs](https://www.ifyoucouldjobs.com/) - Creative jobs board
+- [The Dots](https://the-dots.com/) - Creative networking and jobs
+- [Discover Creative Careers](https://discovercreative.careers/) - Industry-wide resource
+
+**Early Career:**
+- [ERIC Platform](https://www.ericplatform.com/) - "Pre-job power boost" for young creatives
+
+**Market Context:**
+- Creative industries grow at 2x rate of wider economy
+- 2+ million employed in sector
+- Skills gap in creative + technical/digital combination
+
+**2025 Salary Ranges (London):**
+- Junior: £25-35k
+- Mid-weight: £35-50k
+- Senior: £50-80k+
+- Creative Directors: £80-120k+
+
+---
+
+### For Sales / Commercial Director / B2B Enterprise
+
+**Specialist Recruiters:**
+- [Pareto](https://www.pareto.co.uk/) - B2B sales specialists
+- Sales and commercial director roles via Jobsite, CV-Library, Indeed UK
+
+**Key Frameworks to Know:**
+- MEDDIC, Challenger Sale, or similar methodologies
+- Essential for senior commercial roles
+
+**In-Demand Experience:**
+- 10+ years B2B/Technology/SaaS
+- Global sales team exposure
+- Sales enablement tools expertise
+- Fintech or enterprise software background valued
+
+**Salary Context:**
+- Commercial Director: up to £140k + bonus
+- Enterprise Sales Director: £80-100k + uncapped commission
+
+---
+
+### For Civil Service / Public Sector
+
+**Official Portals:**
+- [Civil Service Careers](https://www.civil-service-careers.gov.uk/) - All grades, departments, locations
+- [Civil Service Jobs](https://www.jobs.nhs.uk/) - Live vacancies
+- [Career Matcher Tool](https://www.civil-service-careers.gov.uk/career-matcher/) - Find suitable roles
+
+**Grade Structure:**
+- SCS (Senior Civil Service): Deputy Director to Permanent Secretary
+- SCS is smallest group (7,525 officials, 2% of workforce)
+- 75% of civil servants now at EO grade and above
+
+**Fast Stream:**
+- Leadership development programme
+- 17 specialist schemes available
+- Fast-tracks progression to senior roles
+
+**Application Approach:**
+- Success Profiles framework: behaviours, strengths, experience, ability, technical skills
+- STAR method for behaviour-based interviews
+- Demonstrate Civil Service values: honesty, integrity, objectivity, impartiality
+
+**Benefits:**
+- Pension: 28.97% employer contribution
+- 5 days dedicated learning/development per year
+
+---
+
+### For Over-50s / Late Career / Experienced Professionals
+
+**Specialist Resources:**
+- [Rest Less](https://restless.co.uk/) - Jobs, career advice, community for over-50s
+- [National Careers Service - Later Life](https://nationalcareers.service.gov.uk/managing-your-career-later-in-life) - Government guidance
+- Age and Employment Network (via Shaw Trust) - 50+ Works guide
+
+**Statistics:**
+- One in three UK workers are over 50
+- 3 million people aged 50+ returned to work after retiring (Legal & General, 2024)
+- 37% returned due to cost of living; 62% wanted to stay mentally active
+
+**Age-Inclusive Recruiters:**
+- [GenX Talent](https://www.linkedin.com/company/genx-talent/) - Actively combats age discrimination
+- First Global Recruitments - Over-50s specialists
+
+**Legal Protection:**
+- Equality Act protects against age discrimination
+- Employers must abide by law
+
+**Recommended Sectors:**
+- Healthcare (NHS roles, care, support work)
+- Education (teaching, tutoring, training)
+- Consulting (leverage decades of expertise)
+- Tech (with focused upskilling - see learning platforms below)
+
+---
+
+### For Executive / C-Suite / Board Positions
+
+**Executive Career Transition:**
+- [CJPI](https://www.cjpi.com/) - UK executive outplacement and career transition, unlimited coaching until placement
+- [Randstad RiseSmart](https://www.randstadenterprise.com/) - Executive transition programme with peer-level coaches
+- [Endeavor Agency](https://www.endeavorexecutive.com/) - Executive career coaching and recruiter connections
+
+**Non-Executive Director (NED) Resources:**
+- [NEDonBoard](https://www.nedonboard.com/) - UK professional body for NEDs, job opportunities, events
+- [VirtualNonExecs](https://www.virtualnonexecs.com/) - NED job platform and career tools
+- [NEDworks](https://www.nedworks.net/) - Network for NEDs and Chairs (£35/year)
+- [NEDA](https://www.nedaglobal.com/) - Non-Executive Directors' Association
+- [RSM UK NED Network](https://www.rsmuk.com/) - Networking and upskilling for NEDs
+- [BDO NED Hub](https://www.bdo.co.uk/) - Resources and awards
+
+**Public Sector NED:**
+- [UKRN Next Gen NEDs Scheme](https://ukrn.org.uk/next-gen-neds/) - 4th year, placements with regulators (ICO, FCA, Ofcom, etc.)
+- 300+ member Community of Interest
+
+**NED Remuneration:**
+- FTSE 100: £60-80k
+- FTSE 250: £50-60k
+- SMEs: £20-30k
+- Not-for-profit: Often voluntary
+
+**Tips for First NED Role:**
+- Start small - charities, family businesses, smaller boards as stepping stones
+- Network through advisors, events, LinkedIn
+- CFA UK NED Pathway programme for investment professionals
+
+---
+
+### For HR Directors / People Leaders
+
+**Professional Bodies:**
+- [CIPD](https://www.cipd.co.uk/) - Chartered Institute of Personnel and Development
+- CIPD job board, qualifications, networking events
+- People Management magazine and resources
+
+**Specialist Recruiters:**
+- Macildowie - Strong in HR and senior appointments
+- Frazer Jones - HR recruitment specialists
+- Michael Page HR - Generalist and specialist HR roles
+
+---
+
+### For Software Engineers (All Levels)
+
+**Job Boards:**
+- [Stack Overflow Jobs](https://stackoverflow.com/jobs)
+- [Hired](https://hired.com/) - Tech job platform
+- [Otta](https://otta.com/) - Startup and scale-up tech jobs
+- LinkedIn Jobs with skills-based filtering
+
+**Communities:**
+- Local meetup groups (search Meetup.com for your stack)
+- Tech Twitter/X communities
+- Discord servers for specific technologies
+- GitHub discussions and open source contribution
+
+---
+
+## Online Learning Platforms (Upskilling for Career Changers)
+
+**Free/Low-Cost Technical Skills:**
+- [LinkedIn Learning](https://www.linkedin.com/learning/) - Broad professional skills, certificates show on profile
+- [DeepLearning.AI](https://www.deeplearning.ai/) - AI/ML courses by Andrew Ng, excellent for understanding AI landscape
+- [Microsoft Learn](https://learn.microsoft.com/) - Azure, Office 365, technical certifications
+- [Google Career Certificates](https://grow.google/certificates/) - Data analytics, IT support, project management, UX design
+- [Anthropic Academy](https://www.anthropic.com/) - AI safety and Claude-related learning (emerging)
+- [Coursera](https://www.coursera.org/) - University-quality courses, many free to audit
+- [edX](https://www.edx.org/) - MIT, Harvard courses
+
+**For Career Changers:**
+- Google certificates recognised by many employers
+- LinkedIn Learning certificates display on your profile
+- DeepLearning.AI courses valuable for understanding AI even in non-technical roles
+- Microsoft certifications valued across enterprise environments
+
+**Pro Tips:**
+- Complete courses relevant to target roles, not random learning
+- Add certificates to LinkedIn immediately
+- Reference specific learnings in applications and interviews
+- Combine technical upskilling with domain expertise
+
+---
 
 **Always ask:** "What podcasts, communities, or resources are respected in YOUR field?" and incorporate their answers
 
