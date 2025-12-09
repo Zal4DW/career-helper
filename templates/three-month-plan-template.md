@@ -645,7 +645,10 @@ Consider keeping a simple "wins list" - it's surprisingly helpful on difficult d
 - Research: Company website, news, Glassdoor, LinkedIn
 - Questions to ask: Business, team, role, culture
 
-### Recommended Reading
+### Recommended Reading & Listening
+
+**Podcasts:**
+- The Delivery Manager Daily by Mario De'Cristofano - [Spotify](https://open.spotify.com/show/6jhTwJOEZOjAytXBRz47NU) - Excellent for interview prep, career development, and practical job-seeking advice
 
 **Job Search Strategy:**
 - "What Color Is Your Parachute?" - Richard N. Bolles

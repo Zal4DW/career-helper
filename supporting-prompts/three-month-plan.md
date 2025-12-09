@@ -491,11 +491,42 @@ Adapt advice based on career stage and generation:
 - They work for employers, but good ones advocate for candidates
 - Senior roles often come through retained search firms
 
+## Recommended Podcasts & Learning Resources
+
+**The Delivery Manager Daily** by Mario De'Cristofano
+- [Spotify](https://open.spotify.com/show/6jhTwJOEZOjAytXBRz47NU)
+- Excellent for Delivery Managers, Scrum Masters, and digital professionals
+- Practical advice on interviews, networking, and career development
+
+**Key Insights from The Delivery Manager Daily:**
+
+**Interview Mindset:**
+- Don't just "sell Agile" - focus on solving empiric problems
+- Be "fungible" - demonstrate adaptability across roles
+- Use the "Zero-BS" approach for senior roles - show you can expose truth, not engage in corporate theatre
+
+**Behavioural Tips:**
+- Use "we, us, ours" instead of "I, me, mine" - shows team-centricity
+- Avoid "Why?" questions (defensive) - use "What," "How," or "Help me understand..."
+- Vulnerability builds trust - it's okay to admit when you don't know something
+
+**Career Development:**
+- Build your "Toolbox" - repository of templates, guides, assets to deploy immediately in new roles
+- Create outside-of-work value: build projects, content creation, blogging
+- Treat your career search like a project - set goals, timescales, milestones
+
+**First 90 Days in a New Role:**
+1. Understand context - look at political and people landscape, not just the project
+2. Make friends - identify noisemakers, champions, and allies
+3. Set expectations early - establish how you work
+4. Don't avoid "hairy dragons" - tackle difficult problems early
+
 **Sources:**
 - Reed in Partnership Wellbeing for Work
 - Mental Health UK Into Work Programme
 - NHS Talking Therapies Employment Support
 - GOV.UK Get Britain Working White Paper
+- The Delivery Manager Daily Podcast by Mario De'Cristofano
 
 ## Output Format
 
