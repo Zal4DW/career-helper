@@ -17,6 +17,7 @@ description: End-to-end career support for job seekers at all levels. Optimizes 
 - "Build me a LinkedIn content strategy" → Content coaching + calendar
 - "Research [Company] before I apply" → Company intelligence
 - "Review my LinkedIn profile for [role]" → Profile audit
+- "Help me create a 3-month job search plan" → Structured activity planning with wellbeing
 
 **Need help or want to explore all capabilities?** Say: "What can you do?" or "How do I use this?"
 
@@ -68,7 +69,8 @@ I work conversationally - you don't need to use all capabilities, just what help
 | 4 | Interview Preparation | Role-specific questions, evidence-backed answers with citations |
 | 5 | Interviewer's Perspective Reports | What interviewers really assess, red flags, thinking frameworks |
 | 6 | Strategic Networking Intelligence | High-value LinkedIn connections, personalized outreach strategies |
-| 7 | Application Strategy | Timeline planning, follow-up protocols, stakeholder mapping
+| 7 | Application Strategy | Timeline planning, follow-up protocols, stakeholder mapping |
+| 8 | 3-Month Job Search Plan | Structured activity planning with goals, weekly breakdown, daily tasks, wellbeing practices |
 
 ## About This Skill
 
@@ -255,6 +257,37 @@ Comprehensive planning:
 
 **Output:** `{role-slug}-application-strategy.md` (MUST follow application-strategy-template.md structure exactly)
 
+---
+
+### 7. 3-Month Job Search Plan
+
+**When to use:** User needs structured guidance for their job search, is feeling overwhelmed, or wants a comprehensive activity plan
+**What you need:** Career stage, current situation, target direction, constraints, existing materials
+**Load:** @`supporting-prompts/three-month-plan.md`
+**Template:** @`templates/three-month-plan-template.md`
+
+Comprehensive job search activity planning:
+- Define 3-4 audacious but achievable Month 3 goals
+- Back-solve into Month 2 and Month 1 milestones
+- 12-week breakdown with specific focus areas
+- Daily rhythm template adapted to career level
+- Weekly task checklists (recurring and one-time)
+- Wellbeing practices integrated throughout
+- Progress tracking metrics and reflection prompts
+- UK-specific resources and support
+- Generational adaptations (Gen Z to Boomers)
+
+**Approach:**
+- Collaborative, human-in-the-loop planning (ask questions, co-create)
+- Professional but warm tone (not hustle culture)
+- Acknowledges emotional reality of job searching
+- Research-backed best practices (2025 UK data)
+- Adapts to career level and personal circumstances
+
+**Output:** `three-month-plan.md` (MUST follow three-month-plan-template.md structure)
+
+---
+
 ## Output Standards
 
 All outputs must follow these standards:
@@ -291,7 +324,8 @@ All outputs must follow these standards:
 ├── interview-prep-template.md
 ├── interviewer-perspective-template.md
 ├── networking-intelligence-template.md
-└── application-strategy-template.md
+├── application-strategy-template.md
+└── three-month-plan-template.md
 ```
 
 Never skip template loading. It's not optional.
@@ -311,7 +345,8 @@ career-outputs/
 ├── {role-slug}-networking-intelligence.md
 ├── {role-slug}-interview-prep.md
 ├── {role-slug}-interviewer-perspective.md
-└── {role-slug}-application-strategy.md
+├── {role-slug}-application-strategy.md
+└── three-month-plan.md
 ```
 
 Skills cannot write to their own directory. All generated files go to `career-outputs/` in the project working directory.
@@ -332,6 +367,7 @@ Use @ symbol to load these specialized prompts only when needed:
 - **@supporting-prompts/deep-research-reflection.md** - Multi-cycle research with gap analysis, counter-evidence, and citation validation
 - **@supporting-prompts/usage-guide.md** - How to use this skill, quick start examples, capabilities list
 - **@supporting-prompts/reflect-validate.md** - Reflective validation workflow for quality assurance
+- **@supporting-prompts/three-month-plan.md** - Structured 3-month job search activity planning with wellbeing integration
 
 **Progressive disclosure:** Don't load all at once. Load only what's needed for the current task to keep context efficient.
 

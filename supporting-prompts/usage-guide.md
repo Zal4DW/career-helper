@@ -30,6 +30,12 @@ This guide helps users understand how to use the Career Helper skill effectively
 **"Create a full application plan for this Chief AI Officer role"**
 → I'll combine all capabilities: research, CV optimization, LinkedIn updates, interview prep, networking strategy
 
+**"Help me create a 3-month job search plan"**
+→ I'll work with you to define audacious goals, back-solve into weekly milestones, and create a sustainable daily rhythm with wellbeing practices
+
+**"I've been made redundant and feel overwhelmed - can you help me get organised?"**
+→ I'll guide you through collaborative planning to build structure, momentum, and confidence throughout your search
+
 ## What to Have Ready
 
 Depending on what you need, gather:
@@ -69,6 +75,15 @@ Depending on what you need, gather:
 - Target role title
 - Your LinkedIn profile URL
 - Brief background summary
+
+**For 3-Month Job Search Plan:**
+- Current situation (employed, recently redundant, unemployed X months, career change)
+- Career stage (early career, mid-career, senior, executive)
+- Target role or direction (even if unclear)
+- Financial runway/constraints
+- Existing materials status (CV, LinkedIn profile)
+- How you're feeling about the process (honestly)
+- Personal circumstances (family, location, etc.)
 
 **For Full Application:**
 - All of the above
@@ -168,6 +183,21 @@ When you see `@` in the skill (e.g., `@supporting-prompts/company-research.md` o
 - Application question preparation
 - Decision criteria and offer evaluation
 - Alternative scenario planning
+
+### 7. 3-Month Job Search Plan (NEW)
+Build a structured, sustainable job search with wellbeing at the core:
+- Define 3-4 audacious but achievable Month 3 goals
+- Back-solve into Month 2 and Month 1 milestones
+- 12-week breakdown with specific focus areas and tasks
+- Daily rhythm template adapted to your career level
+- Weekly task checklists (recurring and one-time)
+- Wellbeing practices integrated throughout (structure protects mental health)
+- Progress tracking metrics and reflection prompts
+- Research-backed best practices (2025 UK job search data)
+- Generational adaptations (Gen Z to Boomers)
+- UK-specific resources: government programmes, recruitment partners, mental health support
+- Collaborative, human-in-the-loop planning (not prescriptive templates)
+- Professional but warm tone (no hustle culture or toxic positivity)
 
 ---
 

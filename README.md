@@ -146,6 +146,23 @@ Creates comprehensive tracking system with:
 - Risk mitigation for identified gaps
 - Cover letters, follow-up protocols, decision frameworks
 
+### 📅 3-Month Job Search Plan (NEW)
+Build a structured, sustainable job search with wellbeing at the core:
+- **Audacious Goal Setting:** Define 3-4 meaningful Month 3 goals, then back-solve into smaller milestones
+- **12-Week Breakdown:** Specific focus areas and tasks for each week
+- **Daily Rhythm Template:** Realistic activity schedules adapted to your career level
+- **Wellbeing Integration:** Structure protects mental health; practices woven throughout
+- **Research-Backed:** 2025 UK job search data and networking statistics
+- **Generational Adaptations:** Tailored advice from Gen Z to Boomers
+- **UK Resources:** Government programmes, recruitment partners, mental health support
+- **Human-in-the-Loop:** Collaborative planning, not prescriptive templates
+
+Creates comprehensive activity plan with:
+- Monthly checkpoints and milestones
+- Weekly task checklists (recurring and one-time)
+- Progress tracking metrics
+- Reflection prompts for continuous improvement
+
 ---
 
 ## 🎓 Adaptive Intelligence
@@ -186,6 +203,7 @@ Or ask directly:
 "I have an interview next week at [Company], help me prepare"
 "What are interviewers really looking for in my answers?"
 "Build me a LinkedIn content strategy"
+"Help me create a 3-month job search plan"
 ```
 
 ### What You'll Need
@@ -219,6 +237,13 @@ Or ask directly:
 - Your LinkedIn URL
 - Brief background
 
+**For 3-Month Job Search Plan:**
+- Current situation (employed, recently redundant, etc.)
+- Career stage and target direction
+- Financial runway/constraints
+- Existing materials (CV, LinkedIn status)
+- How you're feeling about the process
+
 ### Understanding Outputs
 
 All outputs are saved to `career-outputs/` in your project directory:
@@ -233,7 +258,8 @@ career-outputs/
 ├── {role-slug}-networking-intelligence.md
 ├── {role-slug}-interview-prep.md
 ├── {role-slug}-interviewer-perspective.md
-└── {role-slug}-application-strategy.md
+├── {role-slug}-application-strategy.md
+└── three-month-plan.md
 ```
 
 **Note:** Skills cannot write to their own directory due to Claude Code sandboxing. Outputs always go to the project working directory.
@@ -300,6 +326,22 @@ The skill uses **progressive disclosure** - loading specialized prompts only whe
    → Interviewer's Perspective report showing:
    → What they assess, red flags, how to think about answers
    → Mental frameworks instead of memorized scripts
+```
+
+### Structured Job Search Plan
+```
+1. "I've just been made redundant and need help getting organised"
+   → Interactive session to understand your situation
+   → Define audacious but achievable Month 3 goals
+   → Back-solve into weekly milestones and daily tasks
+   → Wellbeing practices integrated throughout
+   → Output: three-month-plan.md with full activity breakdown
+
+2. "I'm feeling overwhelmed by my job search"
+   → Collaborative planning to create structure
+   → Realistic daily rhythm for your career level
+   → Progress tracking to see momentum
+   → Encouragement without toxic positivity
 ```
 
 ---
