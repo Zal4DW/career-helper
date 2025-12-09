@@ -647,8 +647,12 @@ Consider keeping a simple "wins list" - it's surprisingly helpful on difficult d
 
 ### Recommended Reading & Listening
 
-**Podcasts:**
-- The Delivery Manager Daily by Mario De'Cristofano - [Spotify](https://open.spotify.com/show/6jhTwJOEZOjAytXBRz47NU) - Excellent for interview prep, career development, and practical job-seeking advice
+**For Your Sector:**
+{Tailored recommendations based on their specific industry and role - ask them what's respected in their field}
+
+**Podcasts (sector-specific):**
+- {If Digital Delivery/Agile/PM:} The Delivery Manager Daily by Mario De'Cristofano - [Spotify](https://open.spotify.com/show/6jhTwJOEZOjAytXBRz47NU) - Practical, no-BS advice for delivery roles
+- {For other sectors:} Research and recommend podcasts relevant to their specific field
 
 **Job Search Strategy:**
 - "What Color Is Your Parachute?" - Richard N. Bolles
@@ -661,6 +665,9 @@ Consider keeping a simple "wins list" - it's surprisingly helpful on difficult d
 **Mindset & Resilience:**
 - "Designing Your Life" - Burnett & Evans
 - "The Obstacle Is the Way" - Ryan Holiday
+
+**Your Sector-Specific Resources:**
+{Ask: "What communities, publications, or podcasts are respected in your field?" and add them here}
 
 ### Support Resources
 
