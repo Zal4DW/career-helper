@@ -337,6 +337,113 @@ Review the user's CV and identify achievements that could become standalone Link
 - Technology implementations
 - Cost savings or revenue growth initiatives
 
+---
+
+#### Writing Compelling Project Descriptions
+
+LinkedIn project descriptions have a **2,000 character limit**. Use this space strategically to maximise search visibility and demonstrate impact.
+
+**The CAR Framework (Challenge → Action → Result):**
+
+Structure every project description using this proven formula:
+
+```
+[1-2 sentences: THE CHALLENGE]
+What problem existed? What was the business context? Why did this matter?
+
+[2-3 sentences: YOUR ACTION]
+What specifically did YOU do? What was your role? What approach did you take?
+
+[1-2 sentences: THE RESULT]
+What was the measurable outcome? What changed because of your work?
+
+Key achievements:
+• [Quantified result with number/percentage]
+• [Quantified result with number/percentage]
+• [Optional: Third achievement]
+
+Technologies/Methods: [Keyword 1], [Keyword 2], [Keyword 3]
+```
+
+**Word Count Guidance:**
+
+| Section | Target Length | Purpose |
+|---------|--------------|---------|
+| Challenge | 30-50 words | Context and stakes |
+| Action | 50-80 words | Your specific contribution |
+| Result | 30-50 words | Measurable outcomes |
+| Achievements | 2-3 bullets | Scannable proof points |
+| Keywords | 5-8 terms | Search optimisation |
+
+**Before & After Examples:**
+
+**❌ WEAK (vague, no outcomes):**
+```
+Worked on a digital transformation project. Helped the team implement
+new systems and processes. The project was successful and improved
+efficiency across the organisation.
+```
+
+**✅ STRONG (specific, quantified, keyword-rich):**
+```
+Challenge: Legacy systems were causing 40% of customer service delays,
+with manual processes costing the business £2M annually in inefficiencies.
+
+Led the end-to-end digital transformation of customer operations for a
+FTSE 250 retailer, managing a cross-functional team of 12 across IT,
+Operations, and Customer Service. Designed the technology roadmap,
+selected vendors, and drove adoption across 500+ staff.
+
+Result: Reduced average handling time by 35% and delivered £1.8M in
+annual savings within 18 months.
+
+Key achievements:
+• Implemented Salesforce Service Cloud across 3 contact centres
+• Achieved 94% staff adoption within 90 days
+• Reduced customer complaints by 28%
+
+Technologies: Salesforce, Process Automation, Change Management,
+Agile Delivery, Stakeholder Engagement
+```
+
+**Common Mistakes to Avoid:**
+
+| Mistake | Why It's a Problem | Fix |
+|---------|-------------------|-----|
+| "Helped with..." / "Assisted..." | Minimises your contribution | Use strong verbs: Led, Designed, Delivered, Built |
+| No numbers | Unverifiable; forgettable | Add at least 2-3 metrics (%, £, time saved) |
+| Team-only language ("We achieved...") | Unclear what YOU did | Balance "I" with team context |
+| Missing keywords | Won't appear in recruiter searches | Include tools, methods, industry terms |
+| Wall of text | Recruiters skim; they'll skip it | Use line breaks, bullets, clear structure |
+| Only listing tasks | Shows what you did, not impact | Always connect action to outcome |
+
+**Keyword Strategy for Projects:**
+
+Each project should include searchable terms recruiters use:
+
+| Keyword Type | Examples | Where to Place |
+|-------------|----------|----------------|
+| **Tools/Platforms** | Salesforce, AWS, Tableau, SAP | Technologies line |
+| **Methodologies** | Agile, Lean, Six Sigma, Design Thinking | Action section |
+| **Functions** | Product Management, Data Analytics, Change Management | Title or description |
+| **Industry terms** | FinTech, B2B SaaS, Supply Chain, Digital Transformation | Challenge section |
+| **Soft skills** | Cross-functional Leadership, Stakeholder Management | Action section |
+
+**Quick Quality Checklist:**
+
+Before publishing each project, verify:
+- [ ] Title is specific and contains keywords (not just "Project X")
+- [ ] Challenge establishes stakes (why did this matter?)
+- [ ] Action clearly shows YOUR contribution
+- [ ] At least 2 quantified results (numbers, percentages, £/$ values)
+- [ ] 5-8 relevant keywords included naturally
+- [ ] Formatted with line breaks for scannability
+- [ ] Under 2,000 characters
+- [ ] Associated with correct role/company
+- [ ] Date range is accurate
+
+---
+
 **Project Title Formula:**
 `[Action Verb] + [What] + [Where/Context] + [Optional: Result]`
 
