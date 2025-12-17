@@ -272,7 +272,183 @@ The LinkedIn Recruiter System Connect API exports only the two most recent roles
 **How to Reorder:**
 {Step-by-step instructions for drag-and-drop reordering}
 
-### 7. Education & Certifications
+### 7. Projects Section (Often Underutilised)
+
+**Why Projects Matter:**
+- Creates additional search surface - each project adds keywords
+- Demonstrates real work beyond job titles
+- Shows initiative and scope of impact
+- Can highlight achievements that don't fit neatly in Experience
+- Visible to recruiters using LinkedIn Recruiter
+- Often underused by candidates = competitive advantage
+
+**Current Projects:**
+{Review what's listed, if anything}
+
+**CV Mining for Projects:**
+
+Review the user's CV and identify achievements that could become standalone LinkedIn Projects:
+
+| CV Achievement | Suggested Project Title | Keywords to Add |
+|---------------|------------------------|-----------------|
+| {Achievement from CV} | {Project title} | {Keywords} |
+| {Achievement from CV} | {Project title} | {Keywords} |
+| {Achievement from CV} | {Project title} | {Keywords} |
+
+**Criteria for Good LinkedIn Projects:**
+- Specific, named initiatives (not vague responsibilities)
+- Quantifiable outcomes or scope
+- Relevant to target roles
+- Demonstrates skills in demand
+- Can include link to portfolio/case study if available
+
+**Recommended Projects to Add:**
+
+**Project 1:**
+- **Title:** {Specific, keyword-rich title}
+- **Associated with:** {Role/Company or "Independent"}
+- **Start/End dates:** {Timeframe}
+- **Project URL:** {If available - portfolio, case study, presentation}
+- **Description:**
+  ```
+  {2-4 sentences: What was the challenge? What did you do? What was the outcome?}
+
+  Key achievements:
+  • {Quantified result 1}
+  • {Quantified result 2}
+
+  Skills demonstrated: {Skill 1}, {Skill 2}, {Skill 3}
+  ```
+- **Team members to tag:** {If others on LinkedIn were involved}
+
+**Project 2:**
+{Same structure}
+
+**Project 3:**
+{Same structure}
+
+**Types of Work to Convert to Projects:**
+- Major initiatives or transformations you led
+- Products or features you launched
+- Process improvements with measurable impact
+- Client implementations or case studies
+- Research or analysis projects
+- Cross-functional programmes
+- Technology implementations
+- Cost savings or revenue growth initiatives
+
+**Project Title Formula:**
+`[Action Verb] + [What] + [Where/Context] + [Optional: Result]`
+
+Examples:
+- "Digital Transformation Programme at FTSE 100 Retailer"
+- "AI-Powered Customer Service Platform Launch (40% Cost Reduction)"
+- "Global Supply Chain Redesign - £20M Annual Savings"
+- "Product-Market Fit Research for Series A SaaS Startup"
+
+---
+
+### 8. Licenses & Certifications (Search Visibility Multiplier)
+
+**Why This Section Matters:**
+- Each certification is indexed by LinkedIn search
+- Recruiters often filter by specific certifications
+- Demonstrates continuous learning (Curiosity - WEF top skill)
+- Can differentiate you from other candidates
+- Industry certifications signal credibility
+
+**Current Certifications:**
+{Review what's listed}
+
+**CV Mining for Certifications:**
+
+Review CV for any credentials that should be on LinkedIn:
+
+| Credential from CV | On LinkedIn? | Action |
+|-------------------|--------------|--------|
+| {Certification} | Yes / No | {Add / Verify} |
+| {Professional membership} | Yes / No | {Add / Verify} |
+| {Training completed} | Yes / No | {Add / Verify} |
+
+**Categories to Check:**
+
+**Professional Certifications:**
+- Industry certifications (PMP, PRINCE2, Six Sigma, etc.)
+- Technical certifications (AWS, Azure, Google Cloud, Salesforce, etc.)
+- Professional body qualifications (CIPD, ACCA, CIM, etc.)
+- Security certifications (CISSP, CISM, etc.)
+
+**Vendor/Platform Certifications:**
+- Software platforms used in target roles
+- Cloud provider certifications
+- Analytics/data tools (Google Analytics, Tableau, etc.)
+- Marketing platforms (HubSpot, Marketo, etc.)
+
+**Training & Courses:**
+- Leadership development programmes
+- Executive education (business school short courses)
+- Notable online courses (Coursera, LinkedIn Learning completions)
+- Internal training programmes worth highlighting
+
+**For Each Certification:**
+- **Name:** {Full official title - this is what recruiters search}
+- **Issuing Organization:** {Issuer name - also searchable}
+- **Issue Date:** {When earned}
+- **Expiration Date:** {If applicable}
+- **Credential ID:** {If available}
+- **Credential URL:** {Link to verify if available}
+
+**Missing Certifications to Consider:**
+
+Based on target roles and industry trends:
+
+| Certification | Why Relevant | Time/Cost to Obtain |
+|--------------|--------------|---------------------|
+| {Cert 1} | {Relevance to target roles} | {Estimate} |
+| {Cert 2} | {Relevance to target roles} | {Estimate} |
+
+---
+
+### 9. Publications, Honours & Volunteer Experience
+
+**Publications:**
+Content you've created that demonstrates thought leadership:
+- Articles or blog posts
+- Industry reports or whitepapers
+- Conference presentations
+- Podcast appearances
+- Book contributions
+
+**Current:** {What's listed}
+**Recommended to Add:** {Based on CV or user background}
+
+**Honours & Awards:**
+Recognition that validates expertise:
+- Industry awards
+- Company awards
+- Academic honours
+- Speaking invitations (implied recognition)
+
+**Current:** {What's listed}
+**Recommended to Add:** {Based on CV}
+
+**Volunteer Experience:**
+Often overlooked but can:
+- Show leadership outside paid work
+- Demonstrate values and soft skills
+- Add keywords for sector expertise (e.g., "Non-profit governance")
+- Appeal to purpose-driven employers
+
+**Current:** {What's listed}
+**Consider Adding:**
+- Board positions (even small charities)
+- Mentoring (formal programmes)
+- Industry association roles
+- Community involvement relevant to career narrative
+
+---
+
+### 10. Education Section
 
 **Current Entries:**
 {Review what's listed}
@@ -282,7 +458,25 @@ The LinkedIn Recruiter System Connect API exports only the two most recent roles
 - {Any formatting improvements}
 - {Priority of display}
 
-### 8. Recommendations Section
+**Education Entry Optimisation:**
+
+For each education entry, consider adding:
+- **Activities and societies:** Relevant clubs, leadership roles
+- **Description:** Notable projects, dissertation topics, awards
+- **Grade:** If impressive and relevant (especially for earlier career)
+
+**Example Enhancement:**
+```
+Before: MBA, London Business School, 2018
+
+After: MBA, London Business School, 2018
+       - Concentration: Strategy & Finance
+       - Exchange: INSEAD Singapore
+       - Dissertation: "Digital Transformation in Traditional Retail"
+       - Activities: Consulting Club (VP), Tech & Media Conference Lead
+```
+
+### 11. Recommendations Section
 
 **Current Status:**
 {Number of recommendations, from whom, how recent}
@@ -309,7 +503,7 @@ Thank you,
 {User Name}
 ```
 
-### 9. Activity & Content Strategy
+### 12. Activity & Content Strategy
 
 **Current Activity:**
 {Review recent posts, engagement, frequency}
@@ -340,7 +534,7 @@ Thank you,
 - Engage with content from {specific types of people}
 - Share insights that demonstrate {specific expertise}
 
-### 10. Discoverability Optimization
+### 13. Discoverability Optimization
 
 **Recruiter Search Perspective:**
 
@@ -368,7 +562,7 @@ Thank you,
 - Network growth: {Assessment}
 - Content performance: {Assessment if visible}
 
-### 11. Professional Network Audit
+### 14. Professional Network Audit
 
 **Current Network:**
 {Size, composition if visible}
@@ -394,7 +588,7 @@ Best,
 {User Name}
 ```
 
-### 12. Settings & Privacy Optimization
+### 15. Settings & Privacy Optimization
 
 **Recommended Settings:**
 
