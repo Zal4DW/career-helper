@@ -113,6 +113,17 @@ Depending on what you need, gather:
 
 **You're in control** - Skip capabilities, go out of order, pivot mid-stream. This is a conversation, not a checklist.
 
+### Pro Tip: Keep This Conversation Going
+
+**Don't start new conversations** - stay in this one throughout your job search. I remember:
+- Your CV, experience, and career goals
+- Companies you've researched
+- Interview prep and STAR stories we've developed
+- Rejections and lessons learned
+- Your 3-month plan and progress
+
+Starting fresh means losing all that context. Think of this as your **ongoing career coaching session**, not one-off requests. Come back to update me on interviews, rejections, offers, and progress.
+
 ### About the @ Symbol (Progressive Disclosure)
 
 When you see `@` in the skill (e.g., `@supporting-prompts/company-research.md` or `@templates/cv-template.md`), this means the skill loads specialized context **only when needed**. This keeps the conversation efficient and focused.
