@@ -1,24 +1,26 @@
 {
   "name": "career-helper",
-  "version": "0.2.0",
-  "description": "End-to-end career support for job seekers - LinkedIn optimization, ATS CV rewriting, interview preparation, interviewer's perspective reports, company research, hiring manager identification, and networking strategy",
+  "version": "0.3.0",
+  "description": "End-to-end career support for job seekers - LinkedIn optimization, ATS CV rewriting, interview preparation, interviewer's perspective reports, post-interview coaching, company research, hiring manager identification, and networking strategy",
   "author": "Paul Bratcher",
   "organization": "Prosper Consulting AI, UK",
   "created": "2025-11-20",
-  "last_updated": "2025-12-01",
+  "last_updated": "2025-12-17",
   "license": "CC BY-NC 4.0",
   "capabilities": [
     "linkedin-profile-optimization",
     "ats-cv-rewriting",
     "interview-preparation",
     "interviewer-perspective-reports",
+    "post-interview-coaching",
     "company-research",
     "hiring-manager-identification",
     "networking-strategy",
     "application-strategy-planning",
     "content-coaching",
-    "deep-research-validation"
+    "deep-research-validation",
+    "three-month-job-search-plan"
   ],
   "status": "internal-only",
-  "notes": "Comprehensive job search assistant with human-in-the-loop guidance. v0.2.0 adds Interviewer's Perspective reports and deep research validation workflow."
+  "notes": "Comprehensive job search assistant with human-in-the-loop guidance. v0.3.0 adds Post-Interview Coaching capability with rejection diagnosis (skill/signal/fit gaps), WEF 2025 future skills alignment, wellbeing support, and LinkedIn AI optimization guidance."
 }

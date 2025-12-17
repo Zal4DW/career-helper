@@ -14,6 +14,7 @@ description: End-to-end career support for job seekers at all levels. Optimizes 
 - "Who should I connect with at [Company]?" → Strategic networking
 - "I have an interview at [Company] next week" → Interview prep + research
 - "What are interviewers really looking for?" → Interviewer's perspective report
+- "I just got rejected from [role] - help me understand what happened" → Post-interview coaching
 - "Build me a LinkedIn content strategy" → Content coaching + calendar
 - "Research [Company] before I apply" → Company intelligence
 - "Review my LinkedIn profile for [role]" → Profile audit
@@ -63,14 +64,15 @@ I work conversationally - you don't need to use all capabilities, just what help
 
 | # | Capability | Description |
 |:--|:-----------|:------------|
-| 1 | LinkedIn Profile Optimization | Headline, about section, skills ordering, API consistency |
+| 1 | LinkedIn Profile Optimization | Headline, about section, skills ordering, API consistency, AI Job Match optimization |
 | 2 | ATS-Optimized CV Rewriting | Keyword saturation, semantic alignment, parsing safety |
 | 3 | Company & Role Research | Market analysis, company intelligence, hiring manager identification |
 | 4 | Interview Preparation | Role-specific questions, evidence-backed answers with citations |
 | 5 | Interviewer's Perspective Reports | What interviewers really assess, red flags, thinking frameworks |
-| 6 | Strategic Networking Intelligence | High-value LinkedIn connections, personalized outreach strategies |
-| 7 | Application Strategy | Timeline planning, follow-up protocols, stakeholder mapping |
-| 8 | 3-Month Job Search Plan | Structured activity planning with goals, weekly breakdown, daily tasks, wellbeing practices |
+| 6 | Post-Interview Coaching | Rejection diagnosis, skill/signal/fit gap analysis, recovery planning, future skills alignment |
+| 7 | Strategic Networking Intelligence | High-value LinkedIn connections, personalized outreach strategies |
+| 8 | Application Strategy | Timeline planning, follow-up protocols, stakeholder mapping |
+| 9 | 3-Month Job Search Plan | Structured activity planning with goals, weekly breakdown, daily tasks, wellbeing practices |
 
 ## About This Skill
 
@@ -220,7 +222,47 @@ Covers question categories:
 
 ---
 
-### 5. Strategic Networking Intelligence
+### 5. Post-Interview Coaching & Recovery
+
+**When to use:** After receiving a rejection, or when an interview didn't progress as expected
+**What you need:** CV + job description + interview recollection + any feedback received
+**Load:** @`supporting-prompts/post-interview-coaching.md`
+**Template:** @`templates/post-interview-debrief-template.md`
+
+Diagnostic framework for understanding and recovering from rejection:
+
+**Stage-Specific Diagnosis:**
+- Identifies WHERE rejection occurred (Application → Recruiter Screen → HM Screen → Technical → Final)
+- Each stage filters for different things - diagnosis adapts accordingly
+- Recruiter screen rejections ≠ final round rejections (different actions needed)
+
+**Gap Analysis:**
+- **Skill Gap:** Missing core capability - fixable with training/experience
+- **Signal Gap:** Strong background but poor framing - fixable with practice
+- **Fit/Timing Gap:** Right person, wrong moment - often external factors
+
+**Future Skills Alignment (WEF 2025):**
+- Cross-references gaps against World Economic Forum Future of Jobs 2025 report
+- Prioritises development based on role need AND future demand (+87% AI/Big Data, +70% Cybersecurity)
+- Helps decide what's worth investing time in vs. deprioritising
+
+**Wellbeing & Resilience:**
+- Calibrates support to rejection severity (stage-appropriate)
+- Normalises rejection with data (6-10 rejections average before offer)
+- "What's Still True" evidence anchor from CV
+- Pattern tracking across multiple rejections
+
+**Action Planning:**
+- Stage-appropriate next steps (not generic advice)
+- Feedback request templates
+- Plan updates for existing career documents
+- Forward momentum with concrete timeline
+
+**Output:** `{role-slug}-post-interview-debrief.md` (MUST use post-interview-debrief-template.md structure)
+
+---
+
+### 7. Strategic Networking Intelligence
 
 **When to use:** Identifying who to connect with on LinkedIn for target role/company
 **What you need:** Company name + target role + your background/LinkedIn
@@ -243,7 +285,7 @@ Uses parallel WebSearch to find 8-12 strategic people, prioritized in 3 tiers.
 
 ---
 
-### 6. Application Strategy & Timeline
+### 8. Application Strategy & Timeline
 
 **When to use:** Planning comprehensive application approach
 **What you need:** All above outputs + timeline constraints
@@ -259,7 +301,7 @@ Comprehensive planning:
 
 ---
 
-### 7. 3-Month Job Search Plan
+### 9. 3-Month Job Search Plan
 
 **When to use:** User needs structured guidance for their job search, is feeling overwhelmed, or wants a comprehensive activity plan
 **What you need:** Career stage, current situation, target direction, constraints, existing materials
@@ -323,6 +365,7 @@ All outputs must follow these standards:
 ├── content-calendar-template.md
 ├── interview-prep-template.md
 ├── interviewer-perspective-template.md
+├── post-interview-debrief-template.md
 ├── networking-intelligence-template.md
 ├── application-strategy-template.md
 └── three-month-plan-template.md
@@ -345,6 +388,7 @@ career-outputs/
 ├── {role-slug}-networking-intelligence.md
 ├── {role-slug}-interview-prep.md
 ├── {role-slug}-interviewer-perspective.md
+├── {role-slug}-post-interview-debrief.md
 ├── {role-slug}-application-strategy.md
 └── three-month-plan.md
 ```
@@ -364,6 +408,7 @@ Use @ symbol to load these specialized prompts only when needed:
 - **@supporting-prompts/content-strategy-coaching.md** - Content strategy coaching for sustainable 3x/week posting with authentic topics
 - **@supporting-prompts/interview-prep.md** - Role-specific question generation with STAR frameworks from real experience
 - **@supporting-prompts/interviewer-perspective-guide.md** - Questions from interviewer's viewpoint with thinking frameworks (not scripts)
+- **@supporting-prompts/post-interview-coaching.md** - Rejection diagnosis, gap analysis, recovery planning, future skills alignment
 - **@supporting-prompts/deep-research-reflection.md** - Multi-cycle research with gap analysis, counter-evidence, and citation validation
 - **@supporting-prompts/usage-guide.md** - How to use this skill, quick start examples, capabilities list
 - **@supporting-prompts/reflect-validate.md** - Reflective validation workflow for quality assurance
