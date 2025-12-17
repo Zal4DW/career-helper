@@ -178,36 +178,71 @@ Help interpret common feedback phrases:
 
 ### Step 5: Future Skills Alignment (WEF 2025)
 
-Cross-reference identified gaps against future skills demand:
+Cross-reference identified gaps against future skills demand. **Important:** This is NOT about retraining everyone to be "AI people" - human skills are MORE in demand precisely because of automation.
 
-**Top 10 Fastest-Growing Skills (WEF Future of Jobs 2025):**
+**Top 10 Core Skills Employers Need (WEF Future of Jobs 2025):**
 
-| Rank | Skill | Growth Rate | Category |
-|------|-------|-------------|----------|
-| 1 | AI and big data | +87% | Technical |
-| 2 | Networks and cybersecurity | +70% | Technical |
-| 3 | Technological literacy | +68% | Technical |
-| 4 | Creative thinking | Rising | Cognitive |
-| 5 | Resilience, flexibility & agility | Rising | Socio-emotional |
-| 6 | Curiosity & lifelong learning | Rising | Socio-emotional |
-| 7 | Leadership & social influence | Rising | Socio-emotional |
-| 8 | Talent management | Rising | Management |
-| 9 | Analytical thinking | Rising | Cognitive |
-| 10 | Environmental stewardship | NEW | Emerging |
+| Rank | Skill | % Employers Rating Essential | Category |
+|------|-------|------------------------------|----------|
+| 1 | **Analytical thinking** | 70% | Cognitive |
+| 2 | **Resilience, flexibility & agility** | High | Socio-emotional |
+| 3 | **Leadership & social influence** | High | Socio-emotional |
+| 4 | **Creative thinking** | High | Cognitive |
+| 5 | **Motivation & self-awareness** | High | Socio-emotional |
+| 6 | Technological literacy | High | Technical |
+| 7 | **Empathy & active listening** | High | Socio-emotional |
+| 8 | **Curiosity & lifelong learning** | High | Socio-emotional |
+| 9 | Talent management | High | Management |
+| 10 | Service orientation | High | Socio-emotional |
+
+**Key Insight:** 6 of the top 10 skills are human/socio-emotional. As AI handles routine tasks, these become MORE valuable, not less.
+
+**Fastest-Growing Skills (Mixed Technical & Human):**
+
+| Category | Skills Growing | Why They Matter |
+|----------|---------------|-----------------|
+| **Cognitive** | Analytical thinking, Creative thinking, Systems thinking, Critical thinking | Can't be automated; essential for complex problem-solving |
+| **Socio-emotional** | Resilience, Leadership, Empathy, Curiosity, Emotional intelligence | Human connection and adaptability; AI can't replicate |
+| **Technical** | AI/data literacy, Cybersecurity, Technological literacy | Understanding tech, not necessarily building it |
+| **Management** | Talent management, Change leadership | Guiding humans through transformation |
+
+**How to Assess Your Gap Type:**
+
+| If the gap is... | It's likely a... | Development approach |
+|------------------|------------------|---------------------|
+| Technical knowledge (tools, methods, frameworks) | **Technical skill** | Training, certifications, projects |
+| How you communicate, influence, collaborate | **Human skill** | Practice, feedback, coaching, real situations |
+| How you think through problems | **Cognitive skill** | Deliberate practice, stretch assignments |
+| How you handle pressure, change, setbacks | **Resilience/adaptability** | Reframing, reflection, building evidence |
+
+**Demonstrating Human Skills (Often Harder Than Technical):**
+
+Human skills are assessed through behaviour, not credentials. Key ways to demonstrate:
+
+| Skill | How Interviewers Assess | How to Strengthen |
+|-------|------------------------|-------------------|
+| **Analytical thinking** | Problem-solving questions; how you structure answers | Practice case studies; show your reasoning process |
+| **Creative thinking** | "What would you do differently?"; novel solutions | Prepare examples of innovative approaches you've taken |
+| **Resilience** | "Tell me about a failure"; how you discuss setbacks | Reframe failures as learning; show bounce-back evidence |
+| **Leadership** | Influence without authority examples; team impact | Prepare STAR stories about rallying others, driving change |
+| **Empathy** | Stakeholder management; conflict resolution examples | Show you understand multiple perspectives in your answers |
+| **Curiosity** | Questions you ask; continuous learning evidence | Show genuine interest; mention learning initiatives |
 
 **Prioritisation Matrix:**
 
-| If Gap Is... | And Future Demand Is... | Priority | Action |
-|--------------|------------------------|----------|--------|
-| Required by role | Growing (+70%+) | CRITICAL | Immediate development - high ROI |
-| Required by role | Stable | HIGH | Develop for this role family |
-| Not required | Growing (+70%+) | STRATEGIC | Consider adjacent roles |
-| Not required | Declining | SKIP | Don't invest time |
+| If Gap Is... | Category | Priority | Action |
+|--------------|----------|----------|--------|
+| Required by role | Human/Socio-emotional | CRITICAL | Often a signal gap - reframe how you demonstrate it |
+| Required by role | Technical | CRITICAL | Training, certs, projects |
+| Required by role | Cognitive | HIGH | Practice methods, get feedback on thinking |
+| Not required but growing | Any | STRATEGIC | Build over time; opens doors |
 
 **Declining Skills (Deprioritise):**
 - Manual dexterity, endurance & precision (-24% to -39%)
 - Repetitive clerical tasks
-- Low digital interaction roles
+- Rote technical skills being automated
+
+**Important Reframe:** If feedback mentions "soft skills" or "leadership presence" or "executive presence" - these are often signal gaps, not skill gaps. You may HAVE the skill but not be demonstrating it effectively. That's fixable with practice and framing, not years of training.
 
 ### Step 6: Wellbeing & Resilience Support
 
