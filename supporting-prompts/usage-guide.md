@@ -191,7 +191,7 @@ When you see `@` in the skill (e.g., `@supporting-prompts/company-research.md` o
 - Covers: behavioral, situational, role-specific, cultural fit, "why" questions
 - Available standalone or integrated into full interview prep
 
-### 5. Post-Interview Coaching & Recovery (NEW)
+### 6. Post-Interview Coaching & Recovery (NEW)
 Diagnostic framework for understanding and recovering from interview rejection:
 - **Stage-specific diagnosis:** Each stage (recruiter screen, HM screen, technical, final) assesses different things
 - **Gap analysis:** Skill gap (capability issue) vs Signal gap (framing issue) vs Fit/Timing gap (external factors)

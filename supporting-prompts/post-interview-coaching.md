@@ -181,6 +181,7 @@ Help interpret common feedback phrases:
 Cross-reference identified gaps against future skills demand. **Important:** This is NOT about retraining everyone to be "AI people" - human skills are MORE in demand precisely because of automation.
 
 **Top 10 Core Skills Employers Need (WEF Future of Jobs 2025):**
+*Source: World Economic Forum, "Future of Jobs Report 2025" - https://www.weforum.org/publications/the-future-of-jobs-report-2025/*
 
 | Rank | Skill | % Employers Rating Essential | Category |
 |------|-------|------------------------------|----------|
@@ -256,12 +257,12 @@ Human skills are assessed through behaviour, not credentials. Key ways to demons
 | Technical | Medium | Specific feedback focus |
 | Final | High | Full processing time |
 
-**Normalisation Data:**
-- Average rejections before offer: 6-10
-- Candidates rejected who later get hired by same company: 15% within 12 months
+**Normalisation Data** *(approximate industry estimates; varies by role, level, and market conditions)*:
+- Average rejections before offer: ~6-10
+- Candidates rejected who later get hired by same company: ~15% within 12 months
 - Rejections due to fit/timing (not capability): ~60%
-- Job seekers reporting rejection fatigue: 32.4%
-- Confidence typically wavers after: 5th rejection
+- Job seekers reporting rejection fatigue: ~32%
+- Confidence typically wavers after: ~5th rejection
 
 **The Three Stories Framework:**
 
@@ -309,11 +310,11 @@ LinkedIn's AI systems now heavily influence who gets seen:
 | **Top Applicant Badge** | Algorithm ranks you vs other applicants | Profile completeness, skills alignment, activity level |
 | **Hiring Assistant** | AI agent screens candidates, asks questions via InMail | Clear positioning, evidence-based claims |
 
-**Key LinkedIn AI Stats:**
-- 67 million people search for jobs on LinkedIn weekly
-- 11,000+ applications submitted per minute
-- Profiles with professional photos get 14x more views
-- Complete profiles get 40x more opportunities
+**Key LinkedIn AI Stats** *(as of 2024-2025, based on LinkedIn reports)*:
+- ~67 million people search for jobs on LinkedIn weekly
+- ~11,000+ applications submitted per minute
+- Profiles with professional photos get ~14x more views
+- Complete profiles get ~40x more opportunities
 - Top Applicant badge indicates higher chance of hearing back
 
 **Actions:**

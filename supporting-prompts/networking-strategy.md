@@ -594,9 +594,9 @@ Beyond individual connections, LinkedIn Groups, Events, and Collaborative Articl
 
 ### Why Groups Matter for Job Seekers
 
-**Key Statistics:**
-- 87% of recruiters regularly use LinkedIn (and monitor groups)
-- 95% of recruiters start their candidate search on LinkedIn
+**Key Statistics** *(approximate industry data, based on LinkedIn and Jobvite reports 2022-2024)*:
+- ~87% of recruiters regularly use LinkedIn (and monitor groups)
+- ~95% of recruiters start their candidate search on LinkedIn
 - LinkedIn allows up to 50 groups; average user joins only 7
 - Groups often contain unadvertised job postings from hiring managers
 - Active group members get more profile views and InMails from recruiters

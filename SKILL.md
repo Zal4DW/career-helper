@@ -314,7 +314,7 @@ Covers question categories:
 
 ---
 
-### 5. Post-Interview Coaching & Recovery
+### 6. Post-Interview Coaching & Recovery
 
 **When to use:** After receiving a rejection, or when an interview didn't progress as expected
 **What you need:** CV + job description + interview recollection + any feedback received

@@ -247,7 +247,7 @@ Despite this rejection, the following remains true about your capabilities:
 ### Where You Are
 
 **Rejection Count:** {X} in this search
-**Typical Range:** 6-10 rejections before offer is normal
+**Typical Range:** 6-10 rejections before offer is common *(approximate; varies by industry, level, and market conditions)*
 
 {If low count:}
 > You're within normal range. Each rejection is a data point, not a verdict.
