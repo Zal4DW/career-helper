@@ -159,6 +159,8 @@ You will analyze and provide optimization recommendations for each section.
 
 **Recommended About Structure:**
 
+**Tone Guidance:** Write warm and human, not corporate. The reader should feel like they're meeting a real person, not reading a press release. Make it clear why someone should want to message you. Avoid jargon-heavy sentences and passive voice—be direct, be readable, be you.
+
 **Paragraph 1 - The Hook (2-3 sentences):**
 {Opening that immediately positions you and hooks the reader. Should answer: who are you, at what level, and what's your superpower?}
 
