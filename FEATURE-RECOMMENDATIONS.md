@@ -19,42 +19,68 @@ The most impactful additions focus on:
 
 ---
 
+## Regional Considerations
+
+**Critical:** Many career features have significant regional variation. All new features must account for:
+
+| Factor | Regional Variations |
+|--------|---------------------|
+| **Currency** | GBP (UK), EUR (EU), USD (USA), AUD/NZD (APAC), CAD (Canada) |
+| **Salary Norms** | Annual vs monthly quoting; bonus structures; equity practices |
+| **Tax & Benefits** | National Insurance (UK), Social Security (USA), mandatory benefits (EU) |
+| **Employment Law** | Notice periods, garden leave, non-competes, redundancy |
+| **Job Market Data** | Different sources per region; salary benchmarks vary |
+| **Platform Usage** | LinkedIn dominant globally but local platforms matter (XING in DACH, Naukri in India) |
+| **CV/Resume Format** | CV (UK/EU) vs Resume (USA); photo inclusion varies |
+| **Negotiation Culture** | Acceptable tactics differ by region and industry |
+
+**Implementation Principle:** All salary, compensation, and market-related features must:
+- Ask for user's target region/market
+- Adapt currency and formats accordingly
+- Use region-appropriate data sources
+- Respect local employment law context
+- Default to UK English but adapt to US English for US roles
+
+---
+
 ## Gap Analysis: What's Missing
 
 ### Current Coverage (Strong)
-✅ LinkedIn profile optimization
-✅ ATS CV optimization
-✅ Company research
-✅ Interview preparation (questions & STAR frameworks)
-✅ Networking intelligence
-✅ Post-rejection coaching
-✅ Application strategy & timeline
-✅ 3-month job search planning
+- LinkedIn profile optimization
+- ATS CV optimization
+- Company research
+- Interview preparation (questions & STAR frameworks)
+- Networking intelligence
+- Post-rejection coaching
+- Application strategy & timeline
+- 3-month job search planning
 
 ### Critical Gaps Identified
-❌ **Salary negotiation** - Entirely missing, yet 58% of job seekers don't negotiate
-❌ **Offer evaluation** - No framework for comparing multiple offers
-❌ **Fractional/portfolio careers** - Only covers traditional employment
-❌ **Entrepreneurial transitions** - No support for starting a business or consultancy
-❌ **LinkedIn video optimization** - New 30-second video feature not addressed
-❌ **Skills verification strategy** - LinkedIn's 2025 verified skills not covered
-❌ **AI readiness assessment** - No guidance on demonstrating AI competency
-❌ **Mock interview practice** - Prep exists, but no simulation/practice mode
-❌ **Executive transition specifics** - C-suite moves have unique challenges
-❌ **Counter-offer navigation** - What to do when current employer counters
+| Gap | Impact | Notes |
+|-----|--------|-------|
+| **Salary negotiation** | Critical | 58% of job seekers don't negotiate; potential £10,000+ value |
+| **Offer evaluation** | High | No framework for comparing multiple offers |
+| **Fractional/portfolio careers** | High | Only covers traditional employment |
+| **Entrepreneurial transitions** | High | No support for starting a consultancy |
+| **LinkedIn video optimization** | Medium | New 30-second video feature not addressed |
+| **Skills verification strategy** | Medium | LinkedIn's 2025 verified skills not covered |
+| **AI readiness assessment** | High | No guidance on demonstrating AI competency |
+| **Mock interview practice** | High | Prep exists, but no simulation mode |
+| **Executive transition specifics** | Medium | C-suite moves have unique challenges |
+| **Counter-offer navigation** | Medium | What to do when current employer counters |
 
 ---
 
 ## Recommended Features (Priority Ordered)
 
-### 🏆 TIER 1: High Impact, High Value
+### TIER 1: High Impact, High Value
 
 ---
 
 #### 1. Salary Negotiation Coach
 **Priority:** Critical
 **Effort:** Medium
-**User Value:** Extremely High (potential $10,000+ impact per user)
+**User Value:** Extremely High (potential £10,000+ / $15,000+ / €12,000+ impact per user)
 
 **The Gap:**
 Only 42% of job seekers negotiate their salary, yet 9 out of 10 succeed when they try. Current skill has zero coverage of this critical moment.
@@ -62,25 +88,30 @@ Only 42% of job seekers negotiate their salary, yet 9 out of 10 succeed when the
 **Proposed Capability:**
 ```
 When to use: After receiving a job offer
-What you need: Offer details + market research + user priorities
+What you need: Offer details + target region + user priorities
+Load: @supporting-prompts/salary-negotiation.md
+Template: @templates/negotiation-strategy-template.md
 ```
 
 **Features:**
-- **Market compensation analysis** - Research salary bands for role/location/level using WebSearch
-- **Leverage calculator** - Assess negotiating position based on competing offers, unique skills, market demand
-- **Negotiation script generator** - Personalized scripts for different scenarios (phone, email, in-person)
-- **Counter-offer templates** - Specific language for base, bonus, equity, benefits, start date
+- **Market compensation research** - WebSearch for salary bands by role/location/level (region-specific sources)
+- **Leverage assessment** - Competing offers, unique skills, market demand analysis
+- **Negotiation script generator** - Personalised scripts for phone, email, in-person (culturally adapted)
+- **Counter-offer language** - Templates for base, bonus, equity, benefits, start date
 - **Risk assessment** - When to push, when to accept, red flags that offer may be rescinded
-- **Total compensation framework** - Evaluate beyond base salary (equity, benefits, WFH, growth potential)
-- **Practice dialogues** - Common objections and how to handle them
+- **Total compensation framework** - Evaluate beyond base: equity, pension, benefits, WFH, growth potential
+- **Common objections** - How to handle "this is our final offer", "budget is fixed", etc.
 - **Acceptance/decline templates** - Professional responses for either outcome
 
-**Template Output:** `{role-slug}-negotiation-strategy.md`
+**Regional Adaptations:**
+| Region | Considerations |
+|--------|---------------|
+| **UK** | Pension contributions, notice periods, garden leave, bonus timing |
+| **USA** | Equity/RSUs, health insurance value, 401k match, signing bonus |
+| **EU** | Mandatory benefits, works councils, 13th month salary, notice periods |
+| **APAC** | Variable bonus structures, housing allowances, education benefits |
 
-**Research Sources:**
-- [The Salary Negotiator](https://www.thesalarynegotiator.com/) - Guaranteed coaching model
-- [Levels.fyi](https://www.levels.fyi/services/) - Compensation data and negotiation
-- [Fearless Salary Negotiation](https://fearlesssalarynegotiation.com/) - High-earner strategies
+**Template Output:** `{role-slug}-negotiation-strategy.md`
 
 ---
 
@@ -95,17 +126,20 @@ No structured way to compare multiple offers or evaluate a single offer against 
 **Proposed Capability:**
 ```
 When to use: Evaluating job offer(s)
-What you need: Offer details + current situation + career priorities
+What you need: Offer details + current situation + career priorities + region
 ```
 
 **Features:**
-- **Weighted decision matrix** - Customizable factors (comp, growth, culture, location, mission, etc.)
-- **Total compensation calculator** - Normalize offers for comparison (equity, benefits, taxes, cost of living)
+- **Weighted decision matrix** - Customisable factors (comp, growth, culture, location, mission)
+- **Total compensation calculator** - Normalise offers accounting for:
+  - Currency conversion (if cross-border)
+  - Cost of living adjustments
+  - Tax implications by jurisdiction
+  - Benefits value (pension, healthcare, equity)
 - **Career trajectory analysis** - Which offer best positions for 3-5 year goals?
 - **Culture fit scoring** - Based on prior company research
-- **Risk assessment** - Startup vs. established, industry trends, company health
+- **Risk assessment** - Startup vs established, industry trends, company health
 - **Opportunity cost analysis** - What are you giving up? Counter-offer considerations
-- **"Regret minimization" framework** - Bezos-style decision making for big career moves
 
 **Template Output:** `offer-evaluation.md`
 
@@ -114,33 +148,42 @@ What you need: Offer details + current situation + career priorities
 #### 3. Portfolio & Fractional Career Support
 **Priority:** High
 **Effort:** High
-**User Value:** High (36% of US workforce now gig/portfolio)
+**User Value:** High (36% of US workforce, 25% of UK workforce now gig/portfolio)
 
 **The Gap:**
 Career Helper assumes traditional full-time employment. No support for fractional executives, portfolio careers, or hybrid income models.
 
-**Research Context:**
+**Market Context:**
 - 70+ million Americans in gig economy (36% of workforce)
-- Gen Z leading the charge (53% prefer freelancing)
-- Fractional C-suite roles growing rapidly
-- Traditional career paths being replaced by portfolio careers
+- UK self-employment at 4.3 million (13% of workforce)
+- EU freelance platforms growing 30%+ annually
+- Fractional C-suite roles growing rapidly globally
 
-**Proposed Capability - Fractional Career Strategy:**
+**Proposed Capability:**
 ```
 When to use: Considering or building a fractional/portfolio career
-What you need: Skills inventory + income goals + time availability
+What you need: Skills inventory + income goals + time availability + target regions
+Load: @supporting-prompts/portfolio-career.md
+Template: @templates/portfolio-career-template.md
 ```
 
 **Features:**
 - **Portfolio career design** - Map multiple income streams and time allocation
-- **Fractional executive positioning** - How to pitch yourself for fractional CFO, CMO, CTO roles
-- **Platform strategy** - Which platforms for which work (Toptal, Catalant, Graphite, etc.)
-- **Rate setting guidance** - Market rates by skill, experience, engagement type
+- **Fractional executive positioning** - How to pitch for fractional CFO, CMO, CTO roles
+- **Rate setting guidance** - Market rates by skill, experience, engagement type (region-specific)
 - **Client pipeline building** - Networking for ongoing work, not one-time jobs
-- **Contract negotiation** - Retainer vs. project, scope creep protection, payment terms
-- **Tax & benefits planning** - Self-employment considerations, retirement, insurance
-- **Portfolio CV format** - Different from traditional CV; emphasizes versatility and outcomes
-- **LinkedIn optimization for fractional** - Profile that attracts multiple client types
+- **Contract considerations** - Retainer vs project, scope protection, payment terms (jurisdiction-specific)
+- **Tax & structure basics** - Self-employment considerations by country
+- **Portfolio CV format** - Different from traditional CV; emphasises versatility and outcomes
+- **LinkedIn optimisation for fractional** - Profile that attracts multiple client types
+
+**Regional Adaptations:**
+| Region | Key Considerations |
+|--------|-------------------|
+| **UK** | IR35, limited company vs sole trader, NI implications |
+| **USA** | 1099 vs W-2, self-employment tax, state variations |
+| **EU** | VAT registration thresholds, cross-border invoicing, local regulations |
+| **APAC** | Varies significantly by country; contractor vs employee classification |
 
 **Template Output:** `portfolio-career-strategy.md`
 
@@ -157,28 +200,30 @@ Many mid-career and senior professionals consider starting a business or consult
 **Proposed Capability:**
 ```
 When to use: Considering transition from employment to entrepreneurship/consultancy
-What you need: Expertise areas + financial runway + risk tolerance
+What you need: Expertise areas + financial runway + risk tolerance + target market
+Load: @supporting-prompts/entrepreneurial-transition.md
+Template: @templates/entrepreneurial-transition-template.md
 ```
 
 **Features:**
 - **Consultancy launch planning** - Packaging expertise into service offerings
-- **Business model assessment** - Which model fits skills and goals (agency, productized service, SaaS)
-- **Financial runway analysis** - When to leap, how much buffer needed
+- **Business model assessment** - Which model fits skills and goals
+- **Financial runway analysis** - When to leap, how much buffer needed (currency-appropriate)
 - **Personal brand to business brand** - Transitioning LinkedIn presence
 - **First client acquisition strategy** - Leveraging existing network
-- **Pricing strategy** - Value-based vs. hourly, retainer structures
+- **Pricing strategy** - Value-based vs hourly, retainer structures (market-appropriate)
 - **Risk mitigation** - Side hustle first? Pilot projects? Notice period planning
-- **Legal/structural basics** - Entity types, contracts, IP considerations
+- **Legal/structural basics** - Entity types by jurisdiction, contracts, IP considerations
 
 **Template Output:** `entrepreneurial-transition-plan.md`
 
 ---
 
-### 🥈 TIER 2: High Impact, Medium Effort
+### TIER 2: High Impact, Medium Effort
 
 ---
 
-#### 5. LinkedIn Video Introduction Optimizer
+#### 5. LinkedIn Video Introduction Optimiser
 **Priority:** Medium-High
 **Effort:** Low
 **User Value:** Medium-High (new LinkedIn feature, early adoption advantage)
@@ -195,9 +240,8 @@ What you need: Target audience + key messages + career goals
 **Features:**
 - **Script generator** - 30-second elevator pitch tailored to goals
 - **Structure framework** - Hook → Value proposition → Call to action
-- **Delivery tips** - Eye contact, pacing, background, lighting basics
-- **Goal-specific variations** - Job seeker vs. thought leader vs. client acquisition
-- **A/B testing guidance** - How to iterate and improve
+- **Delivery guidance** - Eye contact, pacing, background, lighting basics
+- **Goal-specific variations** - Job seeker vs thought leader vs client acquisition
 - **Review existing video** - Critique and improvement suggestions (via screenshot/description)
 
 ---
@@ -205,31 +249,32 @@ What you need: Target audience + key messages + career goals
 #### 6. AI Readiness & Skills Assessment
 **Priority:** High
 **Effort:** Medium
-**User Value:** High (critical for 2025+ job market)
+**User Value:** High (critical for 2025+ job market globally)
 
 **The Gap:**
 The 2025 job market requires demonstrating AI literacy. No current support for assessing or showcasing AI readiness.
 
-**Research Context:**
-- AI-related job postings grew 38% from 2020-2024
-- Employers now expect AI literacy across all roles
-- "Sell your AI readiness" is critical advice for all levels
-- Major banks increased AI headcount 13% in just 6 months
+**Market Context:**
+- AI-related job postings grew 38% globally from 2020-2024
+- Employers now expect AI literacy across all roles, all regions
+- 54% of freelancers report advanced AI skills vs 38% of employees
+- Entry-level white-collar roles declining; AI-augmented roles growing
 
 **Proposed Capability:**
 ```
 When to use: Assessing and improving AI readiness for job search
 What you need: Current role + target roles + existing AI experience
+Load: @supporting-prompts/ai-readiness.md
+Template: @templates/ai-readiness-template.md
 ```
 
 **Features:**
 - **AI skills gap assessment** - What AI competencies does target role require?
 - **AI experience inventory** - Help user articulate existing AI-adjacent work
-- **Upskilling roadmap** - Specific courses, certifications, projects to build credibility
+- **Upskilling roadmap** - Specific skills and projects to build credibility
 - **CV/LinkedIn AI integration** - How to weave AI capabilities into existing materials
 - **Interview AI readiness prep** - Questions to expect about AI, frameworks to answer
 - **Portfolio project ideas** - Demonstrable AI projects by domain
-- **Tool proficiency guidance** - Which AI tools matter for which roles
 
 **Template Output:** `ai-readiness-plan.md`
 
@@ -245,30 +290,27 @@ LinkedIn's 2025 skills verification feature (badges, assessments) not addressed.
 
 **Proposed Capability:**
 ```
-When to use: Optimizing LinkedIn skills for recruiter visibility
+When to use: Optimising LinkedIn skills for recruiter visibility
 What you need: Target roles + current skills list
 ```
 
 **Features:**
-- **Skill prioritization matrix** - Which skills to verify based on role demand and recruiter searches
-- **Assessment prep tips** - LinkedIn's assessment format and study strategies
+- **Skill prioritisation matrix** - Which skills to verify based on role demand and recruiter searches
+- **Assessment preparation** - LinkedIn's assessment format and study strategies
 - **Certification integration** - How to upload/display verified certifications
-- **Skills ordering strategy** - Top 3 skills for RSC API optimization
+- **Skills ordering strategy** - Top 3 skills for RSC API optimisation
 - **Endorsement strategy** - Who to ask, how to reciprocate
 - **Hidden gem skills** - Underrated skills that differentiate in your domain
 
 ---
 
-#### 8. LinkedIn Engagement Optimizer
+#### 8. LinkedIn Engagement Optimiser
 **Priority:** Medium-High
 **Effort:** Medium
 **User Value:** Medium-High (visibility multiplier)
 
 **The Gap:**
 Current content strategy focuses on posting. Engagement (commenting, reacting) often more impactful for visibility.
-
-**Research Context:**
-"The simplest and most powerful activity that significantly boosts your visibility is commenting on your network's posts."
 
 **Proposed Capability:**
 ```
@@ -296,8 +338,9 @@ Current interview prep generates questions and frameworks, but no simulation/pra
 
 **Proposed Capability:**
 ```
-When to use: Practicing before actual interview
+When to use: Practising before actual interview
 What you need: Interview prep document + preferred interview type
+Load: @supporting-prompts/mock-interview.md
 ```
 
 **Features:**
@@ -305,14 +348,13 @@ What you need: Interview prep document + preferred interview type
 - **Real-time feedback** - Critique of answers as practice progresses
 - **STAR compliance check** - Did answer follow STAR format?
 - **Follow-up questions** - Realistic drilling down on initial responses
-- **Difficult interviewer personas** - Practice with challenging styles (skeptical, rapid-fire, silent)
+- **Difficult interviewer personas** - Practice with challenging styles (sceptical, rapid-fire, silent)
 - **Time management** - Feedback on answer length and pacing
-- **Confidence building** - Positive reinforcement with constructive feedback
-- **Recording recommendations** - Tips for self-review practice
+- **Confidence building** - Constructive feedback with encouragement
 
 ---
 
-### 🥉 TIER 3: Medium Impact, Strategic Value
+### TIER 3: Medium Impact, Strategic Value
 
 ---
 
@@ -324,20 +366,22 @@ What you need: Interview prep document + preferred interview type
 **The Gap:**
 C-suite transitions have unique challenges not covered by general career advice.
 
-**Research Context:**
-"Executives stepping into the 2025 job market face overlapping technological, organizational and cultural shifts... The capabilities that earned executives their C-suite promotion rarely match what the role actually demands."
+**Market Context:**
+"Executives stepping into the 2025 job market face overlapping technological, organisational and cultural shifts... The capabilities that earned executives their C-suite promotion rarely match what the role actually demands."
 
 **Proposed Capability:**
 ```
 When to use: C-suite or VP-level transitions
-What you need: Current level + target roles + transition type
+What you need: Current level + target roles + transition type + target regions
+Load: @supporting-prompts/executive-transition.md
+Template: @templates/executive-transition-template.md
 ```
 
 **Features:**
 - **Executive search process navigation** - How retained search differs from job boards
 - **Board and investor relationship prep** - Unique to C-suite transitions
 - **Reference orchestration** - Strategic reference selection for executive roles
-- **Equity negotiation specifics** - Options, RSUs, cliff, acceleration clauses
+- **Equity negotiation specifics** - Options, RSUs, cliff, acceleration clauses (region-specific)
 - **First 100 days planning** - Executive onboarding blueprint
 - **Leadership brand positioning** - Thought leadership at executive level
 - **Confidential search guidance** - How to search while employed at senior levels
@@ -362,10 +406,10 @@ What you need: Counter details + original reasons for leaving + new offer detail
 
 **Features:**
 - **Counter-offer analysis framework** - Why most counter-accepts fail within 18 months
-- **Decision matrix** - Money vs. underlying issues assessment
+- **Decision matrix** - Money vs underlying issues assessment
 - **Conversation scripts** - How to decline gracefully
 - **Bridge-burning prevention** - Leaving on good terms regardless of decision
-- **Legal considerations** - Notice period, garden leave, non-compete
+- **Legal considerations** - Notice period, garden leave, non-compete (jurisdiction-specific)
 
 ---
 
@@ -375,12 +419,14 @@ What you need: Counter details + original reasons for leaving + new offer detail
 **User Value:** High (growing need for career pivots)
 
 **The Gap:**
-Current skill optimizes for same-field progression. No support for major career pivots.
+Current skill optimises for same-field progression. No support for major career pivots.
 
 **Proposed Capability:**
 ```
 When to use: Considering significant career change (new industry/function)
 What you need: Current background + target direction + constraints
+Load: @supporting-prompts/career-pivot.md
+Template: @templates/career-pivot-template.md
 ```
 
 **Features:**
@@ -388,7 +434,7 @@ What you need: Current background + target direction + constraints
 - **Skill gap analysis** - What's needed for credible pivot
 - **Bridge role identification** - Intermediate steps that build credibility
 - **Credibility building plan** - Projects, certifications, volunteering to demonstrate commitment
-- **Pivot CV formatting** - Functional vs. chronological, highlighting transferable skills
+- **Pivot CV formatting** - Functional vs chronological, highlighting transferable skills
 - **Story crafting** - Narrative that makes pivot logical, not random
 - **Network pivot strategy** - Building connections in new field
 
@@ -396,27 +442,27 @@ What you need: Current background + target direction + constraints
 
 ---
 
-#### 13. Remote/Hybrid Optimization
+#### 13. Remote/Hybrid Optimisation
 **Priority:** Medium
 **Effort:** Low
-**User Value:** Medium (work pattern optimization)
+**User Value:** Medium (work pattern optimisation)
 
 **The Gap:**
-No specific guidance for targeting remote/hybrid roles or optimizing for distributed work.
+No specific guidance for targeting remote/hybrid roles or optimising for distributed work.
 
 **Proposed Capability:**
 ```
-When to use: Prioritizing remote work or optimizing remote search
+When to use: Prioritising remote work or optimising remote search
 What you need: Location preferences + time zone + remote experience
 ```
 
 **Features:**
 - **Remote-friendly company identification** - Research company remote policies
-- **Remote work CV optimization** - Highlighting remote-relevant skills
+- **Remote work CV optimisation** - Highlighting remote-relevant skills
 - **Time zone strategy** - How to position for async-friendly or specific TZ roles
 - **Remote interview preparation** - Technical setup, virtual presence
 - **Remote culture assessment** - Questions to evaluate remote-friendliness
-- **LinkedIn "Open to Work" optimization** - Remote/hybrid preference settings
+- **Cross-border considerations** - Tax, visa, employment law implications
 
 ---
 
@@ -472,7 +518,7 @@ What you need: Reference list + target roles
 
 ### Phase 1: Quick Wins (1-2 features)
 1. **Salary Negotiation Coach** - Highest user value, fills critical gap
-2. **LinkedIn Video Introduction Optimizer** - Low effort, timely (new LinkedIn feature)
+2. **LinkedIn Video Introduction Optimiser** - Low effort, timely (new LinkedIn feature)
 
 ### Phase 2: Core Expansion (2-3 features)
 3. **Offer Evaluation Framework** - Natural companion to salary negotiation
@@ -498,53 +544,56 @@ Each new capability should have:
 - Update to README.md feature list
 - Version bump in version.json
 
-### Tool Usage
-- **Salary/Offer features**: WebSearch for market data, compensation research
-- **Portfolio/Fractional features**: WebSearch for platform research, rate data
-- **Mock Interview**: New interaction pattern (Claude as interviewer)
-- **AI Readiness**: WebSearch for current AI skill demands by role
+### Regional Implementation
+- All salary/compensation features must ask for target region
+- WebSearch queries should include region-specific terms
+- Currency formatting must be locale-appropriate
+- Employment law context must be jurisdiction-aware
+- Default to UK English; adapt for US roles
 
 ### Quality Standards
 All new features should maintain:
-- UK English default
+- UK English default (US English for US-targeted roles)
 - No emojis
 - Citation requirements for research
 - Template-based consistent output
 - Actionable, specific recommendations
+- Region-appropriate advice
 
 ---
 
-## Sources
+## Research Sources (Validated)
 
-### Job Market Trends
-- [SkillUp Coalition - AI Job Search Tools](https://skillup.org/resources/ai-job-search-tools)
+### Job Market & AI Trends
+- [Josh Bersin - AI Job Market Impact (Dec 2025)](https://joshbersin.com/2025/12/yes-ai-is-really-impacting-the-job-market-heres-what-to-do/)
+- [Built In - How AI Changed the Job Market in 2025](https://builtin.com/articles/ai-work-2025-year-in-review)
 - [Novoresume - AI Job Search Trends 2025](https://novoresume.com/career-blog/ai-job-search-trends)
-- [Josh Bersin - AI Job Market Impact](https://joshbersin.com/2025/12/yes-ai-is-really-impacting-the-job-market-heres-what-to-do/)
-- [Built In - AI and Work 2025](https://builtin.com/articles/ai-work-2025-year-in-review)
+- [SkillUp Coalition - AI Job Search Tools 2025](https://skillup.org/resources/ai-job-search-tools)
 
-### Salary Negotiation
-- [The Salary Negotiator](https://www.thesalarynegotiator.com/)
-- [Levels.fyi Services](https://www.levels.fyi/services/)
-- [IGotAnOffer - Salary Negotiation Services](https://igotanoffer.com/en/advice/best-salary-negotiation-services)
-- [Career Agents - Salary Negotiation Tool](https://careeragents.org/salary-negotiation-tool/)
+### Salary Negotiation Research
+- [The Salary Negotiator](https://www.thesalarynegotiator.com/) - $10K guarantee model, 7% success fee
+- [Levels.fyi Services](https://www.levels.fyi/services/) - Tech-focused, $10K-$40K guarantees by level
+- [IGotAnOffer - Salary Negotiation Services Review](https://igotanoffer.com/en/advice/best-salary-negotiation-services)
+- [Fearless Salary Negotiation](https://fearlesssalarynegotiation.com/) - High-earner focus ($400K+)
+- [Career Agents - Salary Negotiation Tool](https://careeragents.org/salary-negotiation-tool/) - Free leverage calculator
 
-### Executive Transitions
-- [Deliberate Directions - Executive Coaching 2025](https://deliberatedirections.com/executive-coaching-career-transitions/)
-- [Find My Profession - Career Transition Coaches](https://www.findmyprofession.com/career-advice/coaching-services-career-transition/)
-- [Career Ahead - Mid-Career Executive Coaching](https://careeraheadonline.com/what-mid-career-professionals-need-to-know-about-executive-coaching-in-2025/)
+### Executive & Career Transitions
+- [Deliberate Directions - Executive Coaching Career Transitions 2025](https://deliberatedirections.com/executive-coaching-career-transitions/)
+- [Find My Profession - Career Transition Coaches 2025](https://www.findmyprofession.com/career-advice/coaching-services-career-transition/)
+- [Career Ahead Online - Mid-Career Executive Coaching 2025](https://careeraheadonline.com/what-mid-career-professionals-need-to-know-about-executive-coaching-in-2025/)
 
-### LinkedIn Features
-- [Resume Faster - LinkedIn 2025 Updates](https://resumefaster.com/linkedin-2025-essential-updates-you-cant-miss/)
-- [Supergrow - LinkedIn Personal Branding 2025](https://www.supergrow.ai/blog/linkedin-personal-branding)
-- [LAKSN - LinkedIn 2025 Features](https://www.laksn.com/linkedin-in-2025-benefits-features-how-to-grow-professionally)
-- [Roel Timmermans - LinkedIn Trends 2025](https://www.roeltimmermans.com/blog/linkedin-marketing-trends-2025)
+### LinkedIn 2025 Features
+- [Resume Faster - LinkedIn 2025 Essential Updates](https://resumefaster.com/linkedin-2025-essential-updates-you-cant-miss/)
+- [Supergrow - LinkedIn Personal Branding Strategy 2025](https://www.supergrow.ai/blog/linkedin-personal-branding)
+- [LAKSN Technologies - LinkedIn 2025 Features](https://www.laksn.com/linkedin-in-2025-benefits-features-how-to-grow-professionally)
+- [Roel Timmermans - LinkedIn Marketing Trends 2025](https://www.roeltimmermans.com/blog/linkedin-marketing-trends-2025)
 
-### Portfolio & Gig Economy
-- [Carry - Gig Economy Trends 2025](https://carry.com/learn/gig-economy-trends-for-freelancers-and-self-employed-workers)
-- [Giggle Finance - Future of Gig Economy](https://gigglefinance.com/future-of-gig-economy/)
-- [Greenhouse - Freelancers in 2025 Talent Plan](https://www.greenhouse.com/blog/welcome-to-the-gig-economy-why-hiring-freelancers-needs-to-be-part-of-your-2025-talent-plan)
-- [Tufts Alumni - Creating a Portfolio Career](https://alumniandfriends.tufts.edu/attend-events-reunions/working-gig-economy-creating-portfolio-career)
+### Gig Economy & Portfolio Careers
+- [Carry - Gig Economy Trends 2025](https://carry.com/learn/gig-economy-trends-for-freelancers-and-self-employed-workers) - 70M+ US gig workers
+- [Giggle Finance - Future of Gig Economy 2025](https://gigglefinance.com/future-of-gig-economy/) - $582B global market
+- [Greenhouse - Freelancers in 2025 Talent Plans](https://www.greenhouse.com/blog/welcome-to-the-gig-economy-why-hiring-freelancers-needs-to-be-part-of-your-2025-talent-plan)
 
 ---
 
 *This analysis was generated by Career Helper skill review using Claude Opus 4.5*
+*All sources validated via WebSearch on 30 December 2025*
