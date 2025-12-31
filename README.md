@@ -535,9 +535,64 @@ All outputs follow these standards:
 
 ---
 
-## 📄 License
+## 📄 License & Disclaimer
 
-This skill is provided as-is for use with Claude Code. See repository for license details.
+### License
+
+This skill is licensed under **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**.
+
+You are free to:
+- **Share** - Copy and redistribute the material
+- **Adapt** - Remix, transform, and build upon the material
+
+Under the following terms:
+- **Attribution** - Give appropriate credit and link to the repository
+- **NonCommercial** - Do not use for commercial purposes
+
+See [LICENSE](LICENSE) for full details.
+
+### Important Disclaimer
+
+**THIS SKILL IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.**
+
+- This tool provides **guidance and suggestions only** - not professional career advice
+- **All decisions are ultimately yours** - you are responsible for your career choices
+- **No guarantees** of job search success, interview outcomes, or employment results
+- Salary data, market research, and company information may be incomplete or outdated
+- Regional guidance (tax, legal, employment law) is **general information only** - consult qualified professionals for specific advice
+- AI-generated content should be reviewed and verified before use
+
+**The creators accept no liability for career decisions made based on this tool's outputs.**
+
+### Your Responsibility
+
+Before acting on any recommendation:
+- Verify facts independently, especially salary data and company information
+- Consult qualified professionals for legal, tax, and financial advice
+- Use your own judgment - you know your situation best
+- Review all generated content before submitting to employers
+
+---
+
+## 🌟 Found This Useful? Pay It Forward!
+
+This skill is provided **free** with a pay-it-forward mindset. If Career Helper has helped you:
+
+### Share the Love
+- **Share this skill** with friends, colleagues, or anyone job searching
+- **Post about it** on LinkedIn (tag [@Paul Bratcher](https://www.linkedin.com/in/paul-bratcher/))
+- **Star the repo** on [GitHub](https://github.com/Zal4DW/career-helper)
+
+### Tell Your Story
+- **Share your success** in [GitHub Discussions](https://github.com/Zal4DW/career-helper/discussions)
+- **Connect on LinkedIn** and let us know how it helped
+
+### Help Others
+- Offer to review someone else's CV
+- Share job search tips you've learned
+- Be generous with your career advice
+
+**Your success is our reward.** When you land that role, pay it forward by helping the next person in their job search.
 
 ---
 

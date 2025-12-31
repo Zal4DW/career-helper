@@ -187,9 +187,30 @@ Just tell me which number, or describe your situation in your own words."
 **Organization:** Prosper Consulting
 **Repository:** https://github.com/Zal4DW/career-helper
 **LinkedIn:** https://www.linkedin.com/in/paul-bratcher/
+**License:** CC BY-NC 4.0 (free for non-commercial use)
+
+### Important Disclaimer
+
+**This skill provides guidance and suggestions only - not professional career advice.**
+
+- All decisions are ultimately yours - you are responsible for your career choices
+- No guarantees of job search success, interview outcomes, or employment results
+- Salary data and market research may be incomplete or outdated - verify independently
+- Regional guidance (tax, legal, IR35, etc.) is general information only - consult qualified professionals
+- Review all generated content before using with employers
+
+**The creators accept no liability for career decisions made based on this tool's outputs.**
+
+### Found This Useful? Pay It Forward!
+
+This skill is provided **free** with a pay-it-forward mindset:
+- **Share** this skill with friends, colleagues, or anyone job searching
+- **Star** the repo on GitHub
+- **Tell your story** in GitHub Discussions when you land that role
+- **Help others** - review someone's CV, share your tips
 
 **Feedback Welcome:**
-- Found this helpful? Share your success story!
+- Success stories? We'd love to hear them!
 - Feature requests or bugs? Open an issue on GitHub
 - Questions? Use GitHub Discussions or connect on LinkedIn
 

@@ -367,11 +367,37 @@ Realistic interview practice with feedback:
 
 ---
 
+## Important Disclaimer
+
+**This skill provides guidance and suggestions only - not professional career advice.**
+
+Before acting on any recommendation:
+- **Verify facts independently** - especially salary data and company information
+- **Consult qualified professionals** - for legal, tax, and financial advice
+- **Use your own judgment** - you know your situation best
+- **Review all generated content** - before submitting to employers
+
+Regional guidance (tax, legal, IR35, employment law) is general information only. The creators accept no liability for career decisions made based on this tool's outputs.
+
+**All decisions are ultimately yours - you are responsible for your career choices.**
+
+---
+
 ## About This Skill
 
 **Created by:** Paul Bratcher
 **Organization:** Prosper Consulting
 **GitHub:** https://github.com/Zal4DW/career-helper
+**License:** CC BY-NC 4.0 (free for non-commercial use)
+
+### Found This Useful? Pay It Forward!
+
+This skill is provided **free** with a pay-it-forward mindset. If it helped you:
+
+- **Share** this skill with friends, colleagues, or anyone job searching
+- **Star** the repo on [GitHub](https://github.com/Zal4DW/career-helper)
+- **Tell your story** when you land that role
+- **Help the next person** - review someone's CV, share your tips
 
 ### We'd Love to Hear From You
 
