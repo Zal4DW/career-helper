@@ -75,7 +75,23 @@ The skill will automatically load when you ask questions related to job search, 
 
 ## ✨ Features
 
-### 🎯 LinkedIn Optimization (3 Modes)
+### NEW in v0.5.0
+
+**Salary & Offers:**
+- **Salary Negotiation Coach** - Market research, counter-offer scripts, region-specific guidance (UK/US/EU/APAC)
+- **Offer Evaluation Framework** - Multi-offer comparison, total compensation analysis, weighted decision matrix
+
+**Non-Traditional Careers:**
+- **Portfolio & Fractional Career Support** - Fractional executive positioning, rate setting, regional tax/legal guidance
+- **AI Readiness Assessment** - Skills gap analysis, upskilling roadmap, interview prep for AI questions
+
+**LinkedIn & Interview:**
+- **LinkedIn Video Optimiser** - 30-second profile video scripts with goal-based messaging
+- **Mock Interview Simulation** - Realistic practice with feedback, multiple interviewer personas
+
+---
+
+### 🎯 LinkedIn Optimization (5 Modes)
 
 **Mode A: Full Profile Audit**
 - Comprehensive review from photo to recommendations
@@ -87,7 +103,7 @@ The skill will automatically load when you ask questions related to job search, 
 - Decision-maker pain point identification
 - Improvement recommendations
 
-**Mode C: LinkedIn Thought Leader Content Planner (NEW)**
+**Mode C: LinkedIn Thought Leader Content Planner**
 
 Build your professional presence with authentic, sustainable content strategy:
 
@@ -107,6 +123,16 @@ Creates comprehensive tracking system with:
 - Content engagement tracker
 - Success metrics dashboard
 - Topic bank for future ideas
+
+**Mode D: Headline-Only Optimization**
+- Goal-first approach (job search, thought leadership, client acquisition, networking, board/advisory)
+- Headlines as value statements, not job titles
+- 3 options with trade-off analysis
+
+**Mode E: Video Introduction Optimiser**
+- 30-second profile video script generator
+- Goal-specific templates with Hook → Value → Proof → CTA structure
+- Recording and delivery guidance
 
 ### 📄 ATS CV Optimization
 - Keyword extraction & gap analysis from job descriptions
@@ -163,6 +189,49 @@ Creates comprehensive activity plan with:
 - Progress tracking metrics
 - Reflection prompts for continuous improvement
 
+### 💰 Salary Negotiation Coach
+Region-aware negotiation support:
+- Market compensation research via WebSearch
+- Leverage assessment and counter-offer strategy
+- Scripts for phone, email, and in-person negotiations
+- Total compensation framework (base, bonus, equity, pension, benefits)
+- Regional adaptations for UK, US, EU, and APAC markets
+- Common objection handling
+
+### ⚖️ Offer Evaluation Framework
+Compare offers systematically:
+- Total compensation normalisation (currency, cost of living, tax, benefits)
+- Career trajectory analysis for each option
+- Weighted decision matrix based on your priorities
+- Risk assessment (company health, role clarity, stability)
+- Intuition check and regret minimisation framework
+
+### 🎭 Mock Interview Simulation
+Realistic interview practice:
+- Multiple interviewer personas (recruiter, hiring manager, technical, executive)
+- Real-time or post-session feedback
+- STAR compliance checking
+- Difficult interviewer modes (sceptical, rapid-fire, silent)
+- Comprehensive debrief with improvement recommendations
+
+### 🧩 Portfolio & Fractional Career Support
+For non-traditional career paths:
+- Portfolio career readiness assessment
+- Fractional executive positioning (CFO, CMO, CTO, CPO)
+- Rate setting guidance by role and region
+- Legal and tax structure options (UK: IR35, Ltd; US: LLC, S-Corp)
+- Client acquisition strategy
+- LinkedIn optimisation for fractional/portfolio positioning
+
+### 🤖 AI Readiness Assessment
+Prepare for the 2025+ job market:
+- Current AI proficiency assessment
+- Gap analysis for target role requirements
+- Tiered upskilling roadmap
+- CV and LinkedIn AI integration
+- Interview preparation for AI-related questions
+- Portfolio project recommendations
+
 ---
 
 ## 🎓 Adaptive Intelligence
@@ -204,6 +273,11 @@ Or ask directly:
 "What are interviewers really looking for in my answers?"
 "Build me a LinkedIn content strategy"
 "Help me create a 3-month job search plan"
+"I got an offer - help me negotiate"
+"I have multiple offers - help me decide"
+"Let's do a mock interview"
+"I want to go fractional/portfolio"
+"How do I demonstrate AI skills for jobs?"
 ```
 
 ### What You'll Need
@@ -244,6 +318,28 @@ Or ask directly:
 - Existing materials (CV, LinkedIn status)
 - How you're feeling about the process
 
+**For Salary Negotiation:**
+- Offer details (base, bonus, equity, benefits)
+- Target region (UK, US, EU, APAC)
+- Competing offers (if any)
+- Your priorities (what matters most)
+
+**For Offer Evaluation:**
+- Details of each offer
+- Your career priorities
+- Current role details (if comparing)
+
+**For Portfolio/Fractional Career:**
+- Skills inventory
+- Income goals
+- Target regions and markets
+- Current financial runway
+
+**For AI Readiness:**
+- Current role and target roles
+- Current AI tool usage
+- Any AI training or certifications
+
 ### Understanding Outputs
 
 All outputs are saved to `career-outputs/` in your project directory:
@@ -258,7 +354,12 @@ career-outputs/
 ├── {role-slug}-networking-intelligence.md
 ├── {role-slug}-interview-prep.md
 ├── {role-slug}-interviewer-perspective.md
+├── {role-slug}-post-interview-debrief.md
 ├── {role-slug}-application-strategy.md
+├── {role-slug}-negotiation-strategy.md
+├── offer-evaluation.md
+├── portfolio-career-strategy.md
+├── ai-readiness-plan.md
 └── three-month-plan.md
 ```
 
@@ -456,5 +557,5 @@ Your feedback helps make this skill better for everyone in the job search journe
 
 ---
 
-**Version:** Check [Releases](https://github.com/Zal4DW/career-helper/releases) for latest version
-**Last Updated:** 2025-12-01
+**Version:** 0.5.0 - Check [Releases](https://github.com/Zal4DW/career-helper/releases) for latest version
+**Last Updated:** 2025-12-30

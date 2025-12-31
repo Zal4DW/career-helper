@@ -72,6 +72,19 @@ description: End-to-end career support for job seekers at all levels. Optimizes 
 - "I just got rejected from [role] - help me understand what happened" → Post-interview coaching
 - "I've had 5 rejections - what's going wrong?" → Pattern analysis + recovery plan
 
+**Got an Offer:**
+- "I got an offer! Help me negotiate" → Salary negotiation coaching
+- "I have multiple offers - help me decide" → Offer evaluation framework
+- "Is this offer any good?" → Total compensation analysis
+
+**Non-Traditional Paths:**
+- "I want to go fractional/portfolio" → Portfolio career strategy
+- "Help me become a fractional CFO/CMO/CTO" → Fractional executive positioning
+- "How do I demonstrate AI skills?" → AI readiness assessment
+
+**Practice:**
+- "Let's do a mock interview" → Interview simulation with feedback
+
 **Need help or unsure?** Just say "help" or "where do I start?"
 
 ---
@@ -161,6 +174,12 @@ Just tell me which number, or describe your situation in your own words."
 | 7 | Strategic Networking Intelligence | High-value LinkedIn connections, personalized outreach strategies |
 | 8 | Application Strategy | Timeline planning, follow-up protocols, stakeholder mapping |
 | 9 | 3-Month Job Search Plan | Structured activity planning with goals, weekly breakdown, daily tasks, wellbeing practices |
+| 10 | Salary Negotiation Coach | Market research, counter-offer scripts, regional compensation guidance (UK/US/EU/APAC) |
+| 11 | Offer Evaluation Framework | Multi-offer comparison, total compensation analysis, weighted decision matrix |
+| 12 | LinkedIn Video Optimiser | 30-second profile video scripts, goal-based messaging, delivery guidance |
+| 13 | Portfolio & Fractional Careers | Fractional executive positioning, rate setting, portfolio design, regional tax/legal guidance |
+| 14 | AI Readiness Assessment | AI skills gap analysis, upskilling roadmap, interview prep for AI questions |
+| 15 | Mock Interview Simulation | Realistic interview practice with feedback, multiple interviewer personas |
 
 ## About This Skill
 
@@ -439,6 +458,132 @@ Comprehensive job search activity planning:
 
 ---
 
+### 10. Salary Negotiation Coach
+
+**When to use:** After receiving a job offer and before accepting
+**What you need:** Offer details, target region (UK/US/EU/APAC), competing offers (if any), priorities
+**Load:** @`supporting-prompts/salary-negotiation.md`
+**Template:** @`templates/negotiation-strategy-template.md`
+
+Region-aware salary negotiation coaching:
+- Market compensation research via WebSearch (region-specific sources)
+- Leverage assessment and positioning strategy
+- Counter-offer scripts (phone, email, in-person)
+- Total compensation framework (base, bonus, equity, pension, benefits)
+- Common objection handling
+- Risk assessment (when to push, when to accept)
+- Acceptance and decline templates
+
+**Regional Adaptations:**
+- UK: Pension contributions, notice periods, garden leave, bonus timing
+- US: Equity/RSUs, health insurance value, 401k match, signing bonus
+- EU: Mandatory benefits, works councils, 13th month salary
+- APAC: Variable bonus structures, housing allowances
+
+**Output:** `{role-slug}-negotiation-strategy.md` (MUST follow negotiation-strategy-template.md structure)
+
+---
+
+### 11. Offer Evaluation Framework
+
+**When to use:** Comparing multiple job offers or evaluating a single offer
+**What you need:** Offer details, current situation, career priorities, region
+**Load:** @`supporting-prompts/offer-evaluation.md`
+**Template:** @`templates/offer-evaluation-template.md`
+
+Comprehensive offer analysis:
+- Total compensation normalisation (currency, CoL, tax, benefits)
+- Career trajectory analysis for each option
+- Culture and fit assessment
+- Risk evaluation (company health, role clarity)
+- Weighted decision matrix based on your priorities
+- Intuition check and regret minimisation framework
+- Scenario planning (best/likely/worst cases)
+
+**Output:** `offer-evaluation.md` (MUST follow offer-evaluation-template.md structure)
+
+---
+
+### 12. LinkedIn Video Introduction Optimiser
+
+**When to use:** Creating or improving 30-second LinkedIn profile video
+**What you need:** Career goals, target audience, key messages
+**Load:** @`supporting-prompts/linkedin-video.md`
+
+Goal-based video script creation:
+- 30-second script framework (Hook → Value → Proof → CTA)
+- Goal-specific templates (job search, thought leadership, client acquisition, networking)
+- Delivery and recording guidance
+- Technical setup checklist
+- 3 script options with trade-offs
+
+**Output:** Video script recommendations in conversation (copy-paste ready)
+
+---
+
+### 13. Portfolio & Fractional Career Support
+
+**When to use:** Transitioning to or building fractional executive, portfolio, or consultant career
+**What you need:** Skills inventory, income goals, target regions, current situation
+**Load:** @`supporting-prompts/portfolio-career.md`
+**Template:** @`templates/portfolio-career-template.md`
+
+Comprehensive portfolio career strategy:
+- Readiness assessment (financial, skills, personal)
+- Portfolio design with income stream mapping
+- Fractional executive positioning (CFO, CMO, CTO, CPO)
+- Rate setting guidance by role and region
+- Legal and tax structure options (UK: IR35, Ltd; US: LLC, S-Corp; EU: VAT)
+- Client acquisition strategy and platforms
+- LinkedIn optimisation for fractional/portfolio positioning
+- Portfolio CV format
+
+**Regional Adaptations:**
+- UK: IR35 considerations, Ltd company vs sole trader, NI implications
+- US: 1099 vs W-2, self-employment tax, state variations
+- EU: VAT registration, cross-border invoicing, local regulations
+
+**Output:** `portfolio-career-strategy.md` (MUST follow portfolio-career-template.md structure)
+
+---
+
+### 14. AI Readiness Assessment
+
+**When to use:** Assessing and improving AI competency for job search
+**What you need:** Current role, target roles, existing AI experience
+**Load:** @`supporting-prompts/ai-readiness.md`
+**Template:** @`templates/ai-readiness-template.md`
+
+AI skills development for 2025+ job market:
+- Current AI proficiency assessment (tools, applications, understanding)
+- Gap analysis for target role requirements (via WebSearch)
+- Tiered upskilling roadmap (immediate, foundation, differentiation)
+- CV and LinkedIn AI integration strategies
+- Interview preparation for AI-related questions
+- Portfolio project recommendations
+
+**Output:** `ai-readiness-plan.md` (MUST follow ai-readiness-template.md structure)
+
+---
+
+### 15. Mock Interview Simulation
+
+**When to use:** Practicing before actual interview
+**What you need:** Interview prep document, interview type and stage, interviewer persona preference
+**Load:** @`supporting-prompts/mock-interview.md`
+
+Realistic interview practice:
+- Interviewer personas (recruiter, hiring manager, technical, panel, executive)
+- Simulated interview with realistic questions and follow-ups
+- Real-time or end-of-session feedback
+- STAR compliance checking
+- Difficult interviewer modes (silent, sceptical, rapid-fire)
+- Comprehensive debrief with improvement recommendations
+
+**Output:** Feedback provided in conversation; can update interview prep document with learnings
+
+---
+
 ## Output Standards
 
 All outputs must follow these standards:
@@ -477,7 +622,11 @@ All outputs must follow these standards:
 ├── post-interview-debrief-template.md
 ├── networking-intelligence-template.md
 ├── application-strategy-template.md
-└── three-month-plan-template.md
+├── three-month-plan-template.md
+├── negotiation-strategy-template.md
+├── offer-evaluation-template.md
+├── portfolio-career-template.md
+└── ai-readiness-template.md
 ```
 
 Never skip template loading. It's not optional.
@@ -499,6 +648,10 @@ career-outputs/
 ├── {role-slug}-interviewer-perspective.md
 ├── {role-slug}-post-interview-debrief.md
 ├── {role-slug}-application-strategy.md
+├── {role-slug}-negotiation-strategy.md
+├── offer-evaluation.md
+├── portfolio-career-strategy.md
+├── ai-readiness-plan.md
 └── three-month-plan.md
 ```
 
@@ -523,6 +676,12 @@ Use @ symbol to load these specialized prompts only when needed:
 - **@supporting-prompts/usage-guide.md** - How to use this skill, quick start examples, capabilities list
 - **@supporting-prompts/reflect-validate.md** - Reflective validation workflow for quality assurance
 - **@supporting-prompts/three-month-plan.md** - Structured 3-month job search activity planning with wellbeing integration
+- **@supporting-prompts/salary-negotiation.md** - Region-aware salary negotiation with market research and scripts
+- **@supporting-prompts/offer-evaluation.md** - Multi-offer comparison with weighted decision framework
+- **@supporting-prompts/linkedin-video.md** - 30-second profile video scripts with goal-based templates
+- **@supporting-prompts/portfolio-career.md** - Fractional and portfolio career design with regional tax/legal guidance
+- **@supporting-prompts/ai-readiness.md** - AI skills assessment and upskilling roadmap for 2025+ job market
+- **@supporting-prompts/mock-interview.md** - Realistic interview simulation with multiple interviewer personas
 
 **Progressive disclosure:** Don't load all at once. Load only what's needed for the current task to keep context efficient.
 

@@ -1,7 +1,7 @@
 {
   "name": "career-helper",
-  "version": "0.4.0",
-  "description": "End-to-end career support for job seekers - LinkedIn optimization, ATS CV rewriting, interview preparation, interviewer's perspective reports, post-interview coaching, company research, hiring manager identification, and networking strategy",
+  "version": "0.5.0",
+  "description": "End-to-end career support for job seekers - LinkedIn optimization, ATS CV rewriting, interview preparation, interviewer's perspective reports, post-interview coaching, company research, hiring manager identification, networking strategy, salary negotiation, offer evaluation, portfolio/fractional career support, AI readiness assessment, and mock interview simulation",
   "author": "Paul Bratcher",
   "organization": "Prosper Consulting AI, UK",
   "created": "2025-11-20",
@@ -10,9 +10,11 @@
   "capabilities": [
     "linkedin-profile-optimization",
     "linkedin-headline-optimization",
+    "linkedin-video-optimization",
     "ats-cv-rewriting",
     "interview-preparation",
     "interviewer-perspective-reports",
+    "mock-interview-simulation",
     "post-interview-coaching",
     "company-research",
     "hiring-manager-identification",
@@ -20,8 +22,12 @@
     "application-strategy-planning",
     "content-coaching",
     "deep-research-validation",
-    "three-month-job-search-plan"
+    "three-month-job-search-plan",
+    "salary-negotiation",
+    "offer-evaluation",
+    "portfolio-fractional-careers",
+    "ai-readiness-assessment"
   ],
   "status": "internal-only",
-  "notes": "v0.4.0 adds LinkedIn Headline Optimization - goal-first approach with formulas for job search, thought leadership, client acquisition, networking, and board/advisory positioning. Headlines as value statements, not job titles."
+  "notes": "v0.5.0 adds 6 new capabilities: Salary Negotiation Coach (region-aware), Offer Evaluation Framework, LinkedIn Video Optimiser, Portfolio & Fractional Career Support (with regional tax/legal), AI Readiness Assessment, and Mock Interview Simulation. All salary/compensation features support UK, US, EU, and APAC regions with currency and regulatory adaptations."
 }
