@@ -1,0 +1,20 @@
+{
+  "name": "application-optimizer",
+  "version": "1.0.0",
+  "description": "ATS-optimised CV rewriting, company and role research with agentic parallel intelligence gathering, and application strategy planning.",
+  "author": "Paul Zealey",
+  "organisation": "Prosper AI Consulting, UK",
+  "created": "2025-05-01",
+  "last_updated": "2026-02-14",
+  "license": "CC BY-NC 4.0",
+  "capabilities": [
+    "company-research",
+    "cv-ats-optimisation",
+    "application-strategy",
+    "deep-research-validation"
+  ],
+  "status": "stable",
+  "notes": "v1.0.0: Split from monolithic career-helper skill into standalone marketplace plugin",
+  "skill_type": "support",
+  "odta_phases": []
+}

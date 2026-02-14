@@ -1,0 +1,20 @@
+{
+  "name": "career-navigator",
+  "version": "1.0.0",
+  "description": "Strategic networking intelligence, 3-month job search planning, salary negotiation coaching, and multi-offer evaluation frameworks.",
+  "author": "Paul Zealey",
+  "organisation": "Prosper AI Consulting, UK",
+  "created": "2025-05-01",
+  "last_updated": "2026-02-14",
+  "license": "CC BY-NC 4.0",
+  "capabilities": [
+    "strategic-networking",
+    "three-month-plan",
+    "salary-negotiation",
+    "offer-evaluation"
+  ],
+  "status": "stable",
+  "notes": "v1.0.0: Split from monolithic career-helper skill into standalone marketplace plugin",
+  "skill_type": "support",
+  "odta_phases": []
+}

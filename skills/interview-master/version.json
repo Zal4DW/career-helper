@@ -1,0 +1,20 @@
+{
+  "name": "interview-master",
+  "version": "1.0.0",
+  "description": "Interview preparation with role-specific questions and STAR frameworks, interviewer perspective reports, realistic mock interview simulation, and post-interview coaching.",
+  "author": "Paul Zealey",
+  "organisation": "Prosper AI Consulting, UK",
+  "created": "2025-05-01",
+  "last_updated": "2026-02-14",
+  "license": "CC BY-NC 4.0",
+  "capabilities": [
+    "interview-preparation",
+    "interviewer-perspective",
+    "mock-interview",
+    "post-interview-coaching"
+  ],
+  "status": "stable",
+  "notes": "v1.0.0: Split from monolithic career-helper skill into standalone marketplace plugin",
+  "skill_type": "support",
+  "odta_phases": []
+}

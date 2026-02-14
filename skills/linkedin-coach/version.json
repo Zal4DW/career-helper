@@ -1,0 +1,21 @@
+{
+  "name": "linkedin-coach",
+  "version": "1.0.0",
+  "description": "LinkedIn profile optimisation, headline crafting, content strategy coaching, post review, and video introduction scripts.",
+  "author": "Paul Zealey",
+  "organisation": "Prosper AI Consulting, UK",
+  "created": "2025-05-01",
+  "last_updated": "2026-02-14",
+  "license": "CC BY-NC 4.0",
+  "capabilities": [
+    "full-profile-audit",
+    "content-review",
+    "content-strategy-coaching",
+    "headline-optimisation",
+    "video-introduction"
+  ],
+  "status": "stable",
+  "notes": "v1.0.0: Split from monolithic career-helper skill into standalone marketplace plugin",
+  "skill_type": "support",
+  "odta_phases": []
+}
