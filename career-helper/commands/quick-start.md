@@ -44,7 +44,8 @@ Based on their answers, recommend ONE skill and invoke it:
 | LinkedIn improvement | /linkedin-coach |
 | Fractional/portfolio | /career-transitions |
 | AI skills | /career-transitions |
-| Just exploring | /career-navigator (3-month plan) |
+| Just exploring | /getting-started (full overview) |
+| "How does this work?" | /getting-started |
 
 ## Handoff
 

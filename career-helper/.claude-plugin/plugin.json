@@ -1,7 +1,7 @@
 {
   "name": "career-helper",
-  "version": "1.0.0",
-  "description": "End-to-end career support for job seekers at all levels. Five focused skills covering LinkedIn optimisation, ATS CV rewriting, interview preparation, job search strategy, and career transitions.",
+  "version": "1.1.0",
+  "description": "End-to-end career support for job seekers at all levels. Six focused skills covering getting started guidance, LinkedIn optimisation, ATS CV rewriting, interview preparation, job search strategy, and career transitions.",
   "author": {
     "name": "Prosper AI Consulting"
   }

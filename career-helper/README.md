@@ -1,6 +1,6 @@
 # Career Helper - Claude Code Plugin
 
-End-to-end career support for job seekers at all levels. Five focused skills covering LinkedIn optimisation, ATS CV rewriting, interview preparation, job search strategy, and career transitions.
+End-to-end career support for job seekers at all levels. Six focused skills covering getting started guidance, LinkedIn optimisation, ATS CV rewriting, interview preparation, job search strategy, and career transitions.
 
 **Created by:** Prosper AI Consulting | [GitHub Issues](https://github.com/Zal4DW/career-helper/issues)
 
@@ -29,6 +29,7 @@ git clone https://github.com/Zal4DW/career-helper.git ~/.claude/plugins/career-h
 
 | Skill | Capabilities | Command |
 |:------|:-------------|:--------|
+| **Getting Started** | Full overview with examples, preparation checklists, workflow planning, tips, power user strategies | `/getting-started` |
 | **LinkedIn Coach** | Profile audit, headlines, content strategy, post review, video scripts | `/linkedin-coach` |
 | **Application Optimizer** | Company research, ATS CV rewriting, application strategy | `/application-optimizer` |
 | **Interview Master** | Interview prep, mock interviews, interviewer perspective, post-interview coaching | `/interview-master` |
@@ -46,6 +47,12 @@ git clone https://github.com/Zal4DW/career-helper.git ~/.claude/plugins/career-h
 ## Quick Start
 
 Not sure where to begin? Try:
+
+```
+/getting-started
+```
+
+Or for guided question-based routing:
 
 ```
 /career-helper:quick-start
@@ -113,4 +120,4 @@ See [LICENSE](LICENSE) for full terms.
 
 ---
 
-*Career Helper Plugin v1.0.0 | Prosper AI Consulting, UK*
+*Career Helper Plugin v1.1.0 | Prosper AI Consulting, UK*
