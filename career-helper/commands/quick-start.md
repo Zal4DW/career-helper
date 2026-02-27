@@ -17,6 +17,7 @@ Ask these questions one at a time (use AskUserQuestion tool):
 - Negotiating or evaluating an offer
 - Want to improve my LinkedIn
 - Want to check my digital footprint before applying
+- Want a quick social media check (graduates / early career)
 - Considering a career change (freelance, fractional, portfolio)
 - Returning to work after a career break (maternity, redundancy, illness, sabbatical)
 - Graduate, apprentice, or early career - looking for my first role
@@ -32,6 +33,7 @@ Ask these questions one at a time (use AskUserQuestion tool):
 | Negotiating/evaluating | "Have you received a written offer, or are you expecting one?" |
 | Improve LinkedIn | "What's your main goal - job search, thought leadership, or client acquisition?" |
 | Check digital footprint | "Are you targeting a specific company, or do you want a general audit of your online presence?" |
+| Quick social media check | "Which platforms do you use most - Instagram, Twitter/X, TikTok, Facebook?" |
 | Career change | "Are you thinking about going fractional/portfolio, or building AI skills?" |
 | Returning to work | "How long have you been away, and what was the reason (if you're comfortable sharing)?" |
 | Graduate/early career | "Do you have a target role in mind, or are you still exploring options?" |
@@ -52,6 +54,8 @@ Based on their answers, recommend ONE skill and invoke it:
 | LinkedIn improvement | /linkedin-coach |
 | Digital footprint audit (general) | /employer-footprint |
 | Digital footprint audit (targeting company) | /employer-footprint (employer impression) |
+| Quick social media check | /social-media-review |
+| Graduate wanting to clean up socials | /social-media-review |
 | Fractional/portfolio | /career-transitions |
 | AI skills | /career-transitions |
 | Career returner with target role | /application-optimiser (career returner persona) |

@@ -18,6 +18,7 @@ You are a career support navigator. Help the user find the right skill for their
 | **/career-navigator** | Networking, 3-month plans, salary negotiation, offer evaluation | Planning your job search strategy |
 | **/career-transitions** | Portfolio careers, fractional executive roles, AI readiness | Changing career direction |
 | **/employer-footprint** | Digital footprint audit through employer's eyes, social media scan, interview questions from online presence | Checking what employers will find about you online |
+| **/social-media-review** | Quick social media check through recruiter's eyes, privacy cleanup guide | Graduates, early career, or anyone wanting a quick social media health check |
 | **/ned-ai-helper** | AI governance for boards, challenge frameworks, risk assessment, regulatory guidance | NEDs, Governors, and Trustees overseeing AI |
 
 ## Routing Logic
@@ -38,6 +39,10 @@ If the user described their situation, route them:
 | "Check my digital footprint" | /employer-footprint |
 | "Audit my social media before I apply" | /employer-footprint |
 | "What does my online presence look like to a recruiter?" | /employer-footprint |
+| "Review my social media" | /social-media-review |
+| "Is my Instagram/Twitter okay for employers?" | /social-media-review |
+| "I'm a graduate - what should I clean up?" | /social-media-review |
+| "How do I look on social media?" | /social-media-review |
 | "I'm a NED and need AI governance help" | /ned-ai-helper |
 | "Help me challenge an AI proposal at board" | /ned-ai-helper |
 | "I need AI risk assessment for the board" | /ned-ai-helper |

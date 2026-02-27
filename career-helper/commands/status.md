@@ -37,6 +37,8 @@ Look for career-helper output files in the current working directory and common 
 - *-employer-impression.md
 - *-social-media-audit.md
 - *-footprint-interview-questions.md
+- *-social-media-review.md
+- *-social-cleanup-guide.md
 ```
 
 ## Present Status
@@ -72,4 +74,5 @@ Suggested next steps:
 | Offer received | /career-navigator (negotiation) |
 | Multiple offers | /career-navigator (offer evaluation) |
 | Footprint dashboard done | /linkedin-coach (fix issues) or /interview-master (prep for footprint questions) |
+| Social media review done | /linkedin-coach (fix LinkedIn) or /employer-footprint (full audit) |
 | Nothing yet | /career-helper:quick-start |

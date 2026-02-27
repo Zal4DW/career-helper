@@ -1,6 +1,6 @@
 # Career Helper - Claude Code Plugin
 
-End-to-end career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Eight focused skills covering getting started guidance, employer footprint analysis, LinkedIn optimisation, ATS CV rewriting, interview preparation, job search strategy, career transitions, and board-level AI oversight.
+End-to-end career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Nine focused skills covering getting started guidance, employer footprint analysis, social media review, LinkedIn optimisation, ATS CV rewriting, interview preparation, job search strategy, career transitions, and board-level AI oversight.
 
 Available to all Claude users, including free subscriptions.
 
@@ -65,6 +65,7 @@ Or just describe what you need:
 |:------|:-------------|:--------|
 | **Getting Started** | Full overview, preparation checklists, workflow planning, skill tips, power user strategies | `/getting-started` |
 | **Employer Footprint** | Digital footprint audit through employer's eyes, social media scan, credit-report style dashboard, interview questions from online presence | `/employer-footprint` |
+| **Social Media Review** | Quick social media check through recruiter's eyes, privacy cleanup guide. Especially useful for graduates and early career. | `/social-media-review` |
 | **Application Optimiser** | Company and role research, ATS-optimised CV rewriting, application strategy | `/application-optimiser` |
 | **LinkedIn Coach** | Profile audit, headline optimisation, content strategy, post review, video scripts | `/linkedin-coach` |
 | **Interview Master** | Interview prep, mock interviews, interviewer perspective reports, post-interview coaching | `/interview-master` |
@@ -141,6 +142,8 @@ Skills generate markdown files you can convert to other formats:
 | `{name}-{company}-employer-impression.md` | Employer Footprint |
 | `{name}-social-media-audit.md` | Employer Footprint |
 | `{name}-footprint-interview-questions.md` | Employer Footprint |
+| `{name}-social-media-review.md` | Social Media Review |
+| `{name}-social-cleanup-guide.md` | Social Media Review |
 
 ---
 
@@ -174,4 +177,4 @@ cd ~/career-helper-workspace
 
 ---
 
-*Career Helper Plugin v1.4.0 | Prosper AI Consulting, UK*
+*Career Helper Plugin v1.5.0 | Prosper AI Consulting, UK*

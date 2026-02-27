@@ -314,8 +314,32 @@ After completing a footprint analysis, career-helper can help you act on the fin
 
 ---
 
+## Relationship to /social-media-review
+
+`/social-media-review` is the **lightweight version** of the social media audit within this skill:
+
+| Feature | /social-media-review | /employer-footprint |
+|:--------|:--------------------|:-------------------|
+| Social media check | Quick scan | Deep audit |
+| Google presence search | Basic | Comprehensive |
+| CV cross-reference | No | Yes |
+| Company culture mapping | No | Yes |
+| Scored dashboard (1-10) | No | Yes |
+| Interview questions | No | Yes |
+| Parallel research agents | No | Yes (8 agents) |
+| Best for | Quick check, graduates | Full pre-application audit |
+
+**When to recommend /social-media-review instead:**
+- User is a graduate or early career and just wants a quick check
+- User asks to "review my social media" or "check my Instagram"
+- User wants privacy settings advice and cleanup guidance
+- User doesn't have a target company and isn't doing a formal job search yet
+
+---
+
 ## Related Skills
 
+- **/social-media-review** - Quick social media health check (lighter alternative)
 - **/application-optimiser** - Research the company and optimise your CV
 - **/linkedin-coach** - Fix LinkedIn issues identified in the audit
 - **/interview-master** - Prepare for questions based on your footprint

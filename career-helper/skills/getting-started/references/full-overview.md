@@ -30,7 +30,7 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 
 **Important:** Never minimise the emotional challenge. A graduate terrified of their first interview deserves the same quality of support as a VP negotiating a package. Redundancy at 55 is a different experience from redundancy at 30. Let the user's situation shape how you present the tools.
 
-## The Eight Skills - With Examples
+## The Nine Skills - With Examples
 
 ### Application Optimiser - Research, CV, and Strategy
 
@@ -246,6 +246,43 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 - When you want to know what employers will find about you online
 - After a long time away from the job market (career returners)
 - When you want to audit specific social media channels for professionalism
+
+---
+
+### Social Media Review - Quick Check Through Recruiter Eyes
+
+**What it does:** A lightweight social media review focused on what recruiters actually check. Designed to be quick, approachable, and especially useful for graduates and early career users.
+
+**Real example - graduate cleaning up before applying:**
+
+> **You say:** "I'm a graduate about to start applying for jobs. Can you check my social media? I'm @janesmith on Instagram and Twitter."
+>
+> **What happens:**
+> 1. Searches for your name and handles as a recruiter would
+> 2. Reviews public content on each platform for positive and negative signals
+> 3. Applies the "3-second test" - what impression does a recruiter get from a quick glance?
+> 4. Provides clear GREEN/AMBER/RED flags with specific examples
+> 5. Gives you a "quick wins" list - 5 things you can fix in 10 minutes
+>
+> **You get:** Conversational review with actionable advice, optionally saved to `janesmith-social-media-review.md`
+
+**Real example - checking a specific platform:**
+
+> **You say:** "Is my Twitter okay for employers? My handle is @yourhandle"
+>
+> **What happens:**
+> 1. Reviews your recent tweets, retweets, replies, and bio
+> 2. Assesses tone (professional, casual, confrontational)
+> 3. Flags anything an employer might notice
+> 4. Gives specific recommendations
+
+**When to use it:**
+- You're a graduate or early career and want a quick social media health check
+- You want to check a specific platform before applying
+- You want privacy settings guidance and cleanup advice
+- You want something faster and lighter than a full employer footprint analysis
+
+**How it differs from /employer-footprint:** Social Media Review is a quick health check. Employer Footprint is the full medical - with 8 scored dimensions, CV cross-referencing, company culture mapping, and interview question generation.
 
 ---
 

@@ -208,3 +208,35 @@ Footprint Dashboard → LinkedIn Coach (fix profile issues)
 Employer Impression → Application Optimiser (company-specific positioning)
                     → Interview Master (company-specific interview prep)
 ```
+
+---
+
+## Social Media Review Tips
+
+### Input Quality
+
+- **Share your handles:** The more platforms you share, the more thorough the review. Include Instagram, Twitter/X, TikTok, Facebook - even if you think they're fine.
+- **Mention privacy status:** If you know which accounts are already private, say so - it saves time and helps focus the review on what's actually public.
+- **Target role context:** Mention what kind of role you're going for. A creative agency has different social media expectations than a law firm.
+
+### Common Mistakes
+
+- **Panicking about normal content.** Having a social life is fine. Party photos with friends are not red flags. The review will clearly distinguish between genuine concerns and things that are perfectly okay.
+- **Forgetting about old accounts.** That Tumblr from 2015 or the Twitter you haven't used since school may still be public and searchable.
+- **Only checking one platform.** Recruiters Google your name, not just your LinkedIn. What comes up across all channels matters.
+
+### Iteration Strategy
+
+1. Run a quick social scan first to get the overall picture
+2. Fix the RED flags immediately (delete or make private)
+3. Address AMBER flags over the next few days
+4. For LinkedIn specifically, use /linkedin-coach for a full professional audit
+5. If you want the full scored dashboard, upgrade to /employer-footprint
+
+### What Feeds Into What
+
+```
+Social Media Review → LinkedIn Coach (fix professional profile)
+                    → Employer Footprint (full scored audit)
+Privacy Cleanup → Peace of mind → Start applying with confidence
+```
