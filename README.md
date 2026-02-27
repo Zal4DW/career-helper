@@ -55,6 +55,7 @@ Or just describe what you need:
 "I got an offer - should I negotiate?"
 "I want to go fractional"
 "Check my digital footprint before I apply"
+"Review my social media - I'm a graduate about to start applying"
 ```
 
 ---
@@ -147,6 +148,23 @@ Skills generate markdown files you can convert to other formats:
 
 ---
 
+## Workspace Tip
+
+For the best experience, always use the same local folder for your career-helper sessions. This lets you build on previous analyses and track progress across sessions:
+
+```bash
+mkdir -p ~/career-helper-workspace
+cd ~/career-helper-workspace
+```
+
+---
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the full version history.
+
+---
+
 ## Contributing
 
 Found a bug, have a suggestion, or want to improve something? We welcome contributions and feedback.
@@ -163,17 +181,6 @@ Found a bug, have a suggestion, or want to improve something? We welcome contrib
 Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
 
 See [LICENSE](LICENSE) for full terms.
-
----
-
-### Workspace Tip
-
-For the best experience, always use the same local folder for your career-helper sessions. This lets you build on previous analyses and track progress across sessions:
-
-```bash
-mkdir -p ~/career-helper-workspace
-cd ~/career-helper-workspace
-```
 
 ---
 
