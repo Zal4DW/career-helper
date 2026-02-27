@@ -1,6 +1,6 @@
 {
   "name": "career-helper",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "End-to-end career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors",
   "owner": {
     "name": "Prosper AI Consulting"
@@ -9,7 +9,7 @@
     {
       "name": "career-helper",
       "source": "./career-helper",
-      "description": "End-to-end career support for job seekers at all levels. Optimises LinkedIn profiles, rewrites CVs for ATS systems, provides interview preparation, company research, salary negotiation, and more."
+      "description": "End-to-end career support for job seekers at all levels. Employer footprint analysis, LinkedIn optimisation, ATS CV rewriting, interview preparation, company research, salary negotiation, and more."
     }
   ]
 }

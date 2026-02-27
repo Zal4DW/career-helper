@@ -39,7 +39,7 @@ Get the most out of Career Helper. Whether you are a graduate writing your first
 Walk the user through everything career-helper can do, with concrete real-world examples showing exactly when and how to use each skill. This is the "show me everything" capability.
 
 **Core approach:**
-- Present all 5 skills and 18 capabilities with plain-language explanations
+- Present all 8 skills and their capabilities with plain-language explanations
 - For each skill, include a real-world scenario showing exactly what to say and what you get back
 - Show the complete plugin ecosystem: skills, commands, output files, and how they connect
 - End with "What's your situation? I'll tell you exactly where to start"
@@ -91,7 +91,7 @@ Create a personalised skill sequence based on the user's specific situation. Not
 Practical guidance for getting the best results from each skill. Not a repeat of help - specific tips on inputs, prompting, and iteration.
 
 **Core approach:**
-- Ask which skill they want tips for (or cover all five)
+- Ask which skill they want tips for (or cover all eight)
 - Provide input quality tips (what makes a good CV upload, how to share a LinkedIn profile, what details to include in a job description)
 - Common mistakes and how to avoid them
 - How to iterate and refine outputs
@@ -166,6 +166,7 @@ Job searching is emotionally challenging at every level. Never minimise this. A 
 ## Related Skills
 
 Ready to get started? Use the skill that fits:
+- **/employer-footprint** - See what employers will find about you online
 - **/application-optimiser** - Research companies and optimise your CV
 - **/linkedin-coach** - Optimise your LinkedIn profile and content
 - **/interview-master** - Prepare for interviews
@@ -176,4 +177,4 @@ Or run **/career-helper:quick-start** if you want guided routing.
 
 ---
 
-*Getting Started Guide v1.2.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Getting Started Guide v1.4.0 | Career Helper Plugin | Prosper AI Consulting, UK*

@@ -17,6 +17,7 @@ Ask using AskUserQuestion tool:
 - Actively applying for roles
 - Have an interview coming up
 - Just starting a job search
+- Want to check my digital footprint
 - Considering a career change
 - Want to improve my professional presence
 
@@ -34,6 +35,11 @@ Ask using AskUserQuestion tool:
 **Best for:** User has identified a company and role they want to apply for.
 
 ```
+Step 0: /employer-footprint (Full Footprint Analysis) [OPTIONAL]
+        Input: Name + social handles + CV + target company
+        Output: {name}-footprint-dashboard.md
+        Why first: Know what employers will find before you apply
+            ↓
 Step 1: /application-optimiser (Company Research)
         Input: Company name + job description
         Output: {role}-research-brief.md
@@ -90,6 +96,11 @@ Step 3: /interview-master (Mock Interview)
 **Best for:** User is beginning a job search without a specific target.
 
 ```
+Step 0: /employer-footprint (Full Footprint Analysis) [RECOMMENDED]
+        Input: Name + social handles + CV
+        Output: {name}-footprint-dashboard.md
+        Why first: Understand your digital presence before employers see it
+            ↓
 Step 1: /career-navigator (3-Month Plan)
         Input: Career stage, situation, goals
         Output: three-month-plan.md

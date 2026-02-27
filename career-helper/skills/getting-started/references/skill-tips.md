@@ -17,6 +17,7 @@ Practical guidance for getting the best results from each career-helper skill. F
 | Interview Master | Specify the interview stage and format - prep differs dramatically |
 | Career Navigator | Be honest about constraints (budget, location, timeline) for realistic plans |
 | Career Transitions | Know your minimum income requirement before starting |
+| Employer Footprint | Share ALL your social handles - the more platforms you provide, the more comprehensive the audit |
 
 ---
 
@@ -172,4 +173,38 @@ Company Research → Interview Preparation → Mock Interview
 ```
 Portfolio/Fractional Strategy → LinkedIn Repositioning → 3-Month Plan
 AI Readiness Assessment → CV Updates → Interview Prep (for AI questions)
+```
+
+---
+
+## Employer Footprint Tips
+
+### Input Quality
+
+- **Social media handles:** Share ALL your social handles - LinkedIn, GitHub, Twitter/X, personal website, Medium, YouTube, Stack Overflow, and anything else professional. The more you provide, the more comprehensive the audit. If you use the same handle everywhere, say so.
+- **Target company:** If you have a specific company in mind, always provide it. The skill maps your digital presence against their stated values for a much more targeted report.
+- **CV:** Provide your full CV. The skill cross-references it against your online presence for consistency checks.
+- **Concerns:** If there's something specific you're worried about employers finding, mention it. The analysis will pay extra attention to that area.
+
+### Common Mistakes
+
+- **Only providing LinkedIn.** Recruiters check Google, Twitter/X, GitHub, and more. A LinkedIn-only audit misses the bigger picture.
+- **Forgetting about old accounts.** That Twitter account you haven't used since university may still be public. If you remember it exists, share the handle.
+- **Running the audit but not acting on findings.** The dashboard recommends specific career-helper skills to address issues. Use them.
+
+### Iteration Strategy
+
+1. Run a full footprint analysis before starting your job search
+2. Address the highest-priority issues (RED scores first, then AMBER)
+3. Use /linkedin-coach to fix LinkedIn issues and /application-optimiser to align your CV
+4. Re-run the audit after making changes to verify improvement
+
+### What Feeds Into What
+
+```
+Footprint Dashboard → LinkedIn Coach (fix profile issues)
+                    → Application Optimiser (align CV with online presence)
+                    → Interview Master (prep for footprint-based questions)
+Employer Impression → Application Optimiser (company-specific positioning)
+                    → Interview Master (company-specific interview prep)
 ```

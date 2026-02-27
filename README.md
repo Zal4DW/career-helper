@@ -1,6 +1,6 @@
 # Career Helper - Claude Code Plugin
 
-End-to-end career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Seven focused skills covering getting started guidance, LinkedIn optimisation, ATS CV rewriting, interview preparation, job search strategy, career transitions, and board-level AI oversight.
+End-to-end career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Eight focused skills covering getting started guidance, employer footprint analysis, LinkedIn optimisation, ATS CV rewriting, interview preparation, job search strategy, career transitions, and board-level AI oversight.
 
 Available to all Claude users, including free subscriptions.
 
@@ -54,6 +54,7 @@ Or just describe what you need:
 "Help me prepare for an interview next Tuesday"
 "I got an offer - should I negotiate?"
 "I want to go fractional"
+"Check my digital footprint before I apply"
 ```
 
 ---
@@ -63,6 +64,7 @@ Or just describe what you need:
 | Skill | What It Does | Command |
 |:------|:-------------|:--------|
 | **Getting Started** | Full overview, preparation checklists, workflow planning, skill tips, power user strategies | `/getting-started` |
+| **Employer Footprint** | Digital footprint audit through employer's eyes, social media scan, credit-report style dashboard, interview questions from online presence | `/employer-footprint` |
 | **Application Optimiser** | Company and role research, ATS-optimised CV rewriting, application strategy | `/application-optimiser` |
 | **LinkedIn Coach** | Profile audit, headline optimisation, content strategy, post review, video scripts | `/linkedin-coach` |
 | **Interview Master** | Interview prep, mock interviews, interviewer perspective reports, post-interview coaching | `/interview-master` |
@@ -83,6 +85,7 @@ Or just describe what you need:
 ## Typical Workflow
 
 ```
+0. Audit your digital footprint  /employer-footprint
 1. Research the company          /application-optimiser
 2. Optimise your CV              /application-optimiser
 3. Sync your LinkedIn            /linkedin-coach
@@ -104,6 +107,7 @@ Or just describe what you need:
 - **Career stage adaptation** from graduates to late career
 - **Emotional intelligence** acknowledges the realities of job searching
 - **Template-driven** consistent, professional outputs
+- **Digital footprint audit** credit-report style employer impression dashboard
 
 ---
 
@@ -133,6 +137,10 @@ Skills generate markdown files you can convert to other formats:
 | `{topic}-governance-options.md` | NED AI Helper |
 | `{topic}-change-readiness-report.md` | NED AI Helper |
 | `{topic}-hitl-assessment.md` | NED AI Helper |
+| `{name}-footprint-dashboard.md` | Employer Footprint |
+| `{name}-{company}-employer-impression.md` | Employer Footprint |
+| `{name}-social-media-audit.md` | Employer Footprint |
+| `{name}-footprint-interview-questions.md` | Employer Footprint |
 
 ---
 
@@ -155,4 +163,15 @@ See [LICENSE](LICENSE) for full terms.
 
 ---
 
-*Career Helper Plugin v1.3.0 | Prosper AI Consulting, UK*
+### Workspace Tip
+
+For the best experience, always use the same local folder for your career-helper sessions. This lets you build on previous analyses and track progress across sessions:
+
+```bash
+mkdir -p ~/career-helper-workspace
+cd ~/career-helper-workspace
+```
+
+---
+
+*Career Helper Plugin v1.4.0 | Prosper AI Consulting, UK*

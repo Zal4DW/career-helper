@@ -17,6 +17,7 @@ You are a career support navigator. Help the user find the right skill for their
 | **/interview-master** | Interview prep, mock interviews, post-interview coaching | Before and after interviews |
 | **/career-navigator** | Networking, 3-month plans, salary negotiation, offer evaluation | Planning your job search strategy |
 | **/career-transitions** | Portfolio careers, fractional executive roles, AI readiness | Changing career direction |
+| **/employer-footprint** | Digital footprint audit through employer's eyes, social media scan, interview questions from online presence | Checking what employers will find about you online |
 | **/ned-ai-helper** | AI governance for boards, challenge frameworks, risk assessment, regulatory guidance | NEDs, Governors, and Trustees overseeing AI |
 
 ## Routing Logic
@@ -33,6 +34,10 @@ If the user described their situation, route them:
 | "I got an offer" | /career-navigator (salary negotiation or offer evaluation) |
 | "I want to go freelance/fractional" | /career-transitions |
 | "How do I show AI skills?" | /career-transitions (AI readiness) |
+| "What will employers find about me online?" | /employer-footprint |
+| "Check my digital footprint" | /employer-footprint |
+| "Audit my social media before I apply" | /employer-footprint |
+| "What does my online presence look like to a recruiter?" | /employer-footprint |
 | "I'm a NED and need AI governance help" | /ned-ai-helper |
 | "Help me challenge an AI proposal at board" | /ned-ai-helper |
 | "I need AI risk assessment for the board" | /ned-ai-helper |

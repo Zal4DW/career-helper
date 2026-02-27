@@ -64,6 +64,19 @@ Help the user gather the right materials before they start using career-helper s
 | Target direction (if known) | Nice to Have | More specific planning if you have a direction |
 | Constraints (notice period, location, salary floor) | Nice to Have | Realistic planning needs real constraints |
 
+### Checking Your Digital Footprint
+
+| Item | Essential? | Why |
+|:-----|:-----------|:----|
+| Your full professional name | **Essential** | This is what employers will Google |
+| Social media handles (LinkedIn, GitHub, Twitter/X, etc.) | **Essential** | The more you provide, the more comprehensive the audit |
+| Your current CV | **Essential** | Cross-referenced against your online presence for consistency |
+| Target company name | Nice to Have | Enables employer-specific impression mapping against their values |
+| Target role title | Nice to Have | Focuses the analysis on what matters for that role |
+| Job description | Nice to Have | Helps identify which aspects of your presence to prioritise |
+
+**What happens without social handles:** The audit relies only on Google search results, which may miss platform-specific content. Always provide handles for a thorough audit.
+
 ### Career Transition (Fractional/Portfolio)
 
 | Item | Essential? | Why |

@@ -124,7 +124,26 @@ Not just for external job searches. Adapt the tools:
 
 ---
 
-## Strategy 7: Output Maintenance
+## Strategy 7: Footprint-First Approach
+
+**When to use:** You want to start your job search with full awareness of how you appear online.
+
+**Approach:**
+1. `/employer-footprint` (Full Footprint Analysis) to see your digital presence through employer eyes
+2. Address RED and AMBER scores immediately:
+   - LinkedIn issues → `/linkedin-coach` (Profile Audit)
+   - Content gaps → `/linkedin-coach` (Content Strategy)
+   - CV inconsistencies → `/application-optimiser` (CV Optimisation)
+3. If targeting a specific company, run `/employer-footprint` (Employer Impression Report) to map your presence against their values
+4. Use the generated interview questions from your footprint as input to `/interview-master`
+
+**Key insight:** Running a footprint audit first reveals issues you might never discover otherwise. A LinkedIn profile that says "Director" when your CV says "Senior Manager" is an immediate red flag for recruiters. Better to find this yourself.
+
+**Advanced move:** After fixing issues, re-run the footprint analysis to confirm improvements. The before/after comparison demonstrates tangible progress.
+
+---
+
+## Strategy 8: Output Maintenance
 
 **When to use:** You have generated multiple outputs over time and want to keep them current.
 
@@ -144,4 +163,4 @@ Not just for external job searches. Adapt the tools:
 
 ## Presenting These Strategies
 
-When sharing with the user, pick the 2-3 most relevant strategies for their situation rather than listing all seven. Ask what they are working on and recommend accordingly.
+When sharing with the user, pick the 2-3 most relevant strategies for their situation rather than listing all eight. Ask what they are working on and recommend accordingly.
