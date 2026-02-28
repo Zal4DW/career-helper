@@ -6,6 +6,27 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ---
 
+## [1.5.1] - 2026-02-28
+
+### Added
+- **Ageism in employment support** for Interview Master skill (post-interview coaching & all capabilities)
+  - New reference: `ageism-in-employment.md` — comprehensive UK law (Equality Act 2010), Employment Tribunal process, burden of proof, time limits, compensation, whistleblowing routes, EHRC role, recent case law (2024-2025), and honest assessment of practical reality vs. letter of the law
+  - New reference: `age-discrimination-strategies.md` — practical CV strategies to reduce age bias, interview tactics for "overqualified" concerns, digital presence optimisation, skills to update (with free/affordable UK training resources), age-friendly employers and job boards, networking strategies for older workers
+  - New reference: `emotional-support-resilience.md` — psychological impact of age-related rejection, long-service identity crisis (20-30 years at one company), NHS and charity support services with helpline numbers, cognitive reframing techniques (3 C's Framework), daily routine templates, confidence rebuilding, crisis contacts, and when to seek professional help
+- New ageism persona in Interview Master — triggered when user mentions age discrimination, being "too old", "overqualified" as age proxy, long-service redundancy, or age-related rejection patterns. Loads all three ageism references alongside standard capability references
+- Ageism routing in help command (5 new routing entries)
+- Ageism routing in quick-start command (new situation option + follow-up question + 3 routing entries)
+- Quick start examples for ageism in Interview Master skill
+
+### Changed
+- Plugin version bumped to 1.5.1
+- Interview Master skill description updated to include ageism and age discrimination triggers
+- Interview Master tags updated to include ageism, age-discrimination, overqualified
+- Interview Master career stage adaptation updated with ageism support references
+- Updated all commands (help, quick-start) with ageism routing
+
+---
+
 ## [1.5.0] - 2026-02-27
 
 ### Added

@@ -14,7 +14,7 @@ You are a career support navigator. Help the user find the right skill for their
 | **/getting-started** | Full overview with examples, preparation checklists, workflow planning, tips | New users, or getting the most out of career-helper |
 | **/linkedin-coach** | Profile audit, headlines, content strategy, post review, video scripts | Improving your LinkedIn presence |
 | **/application-optimiser** | Company research, ATS CV rewriting, application strategy | Applying for specific roles |
-| **/interview-master** | Interview prep, mock interviews, post-interview coaching | Before and after interviews |
+| **/interview-master** | Interview prep, mock interviews, post-interview coaching, ageism support | Before and after interviews, age discrimination concerns |
 | **/career-navigator** | Networking, 3-month plans, salary negotiation, offer evaluation | Planning your job search strategy |
 | **/career-transitions** | Portfolio careers, fractional executive roles, AI readiness | Changing career direction |
 | **/employer-footprint** | Digital footprint audit through employer's eyes, social media scan, interview questions from online presence | Checking what employers will find about you online |
@@ -50,6 +50,11 @@ If the user described their situation, route them:
 | "I've been made redundant" | /career-navigator (with career returner persona) |
 | "I'm a graduate looking for my first role" | /application-optimiser (with early career persona) |
 | "I'm an apprentice preparing for interviews" | /interview-master (with early career persona) |
+| "I think I was rejected because of my age" | /interview-master (with ageism persona) |
+| "I keep being told I'm overqualified" | /interview-master (with ageism persona) |
+| "What are my rights around age discrimination?" | /interview-master (with ageism persona) |
+| "I was made redundant after 25 years and I'm struggling" | /interview-master (with ageism persona + career returner persona) |
+| "Younger candidates keep getting hired over me" | /interview-master (with ageism persona) |
 | "How do I use this?" | /getting-started |
 | "What can this do?" | /getting-started |
 | "I don't know where to start" | /getting-started or /career-helper:quick-start |

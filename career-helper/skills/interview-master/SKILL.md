@@ -1,7 +1,7 @@
 ---
 name: interview-master
-description: This skill should be used when the user asks to "prepare for an interview", "do a mock interview", "what do interviewers look for", "I got rejected", or "help me after an interview". Provides interview preparation with STAR frameworks, interviewer perspective reports, realistic mock interview simulation, and post-interview coaching for rejection recovery.
-tags: interview, preparation, mock, practice, rejection, coaching, star
+description: This skill should be used when the user asks to "prepare for an interview", "do a mock interview", "what do interviewers look for", "I got rejected", "help me after an interview", "I think I was rejected because of my age", "ageism", "age discrimination", or "I'm being told I'm overqualified". Provides interview preparation with STAR frameworks, interviewer perspective reports, realistic mock interview simulation, post-interview coaching for rejection recovery, and comprehensive ageism support including UK law, practical strategies, and emotional resilience.
+tags: interview, preparation, mock, practice, rejection, coaching, star, ageism, age-discrimination, overqualified
 ---
 
 # Interview Master
@@ -24,6 +24,9 @@ Complete interview support - before, during practice, and after.
 "What are interviewers really looking for?"
 "Let's do a mock interview"
 "I just got rejected - help me understand what happened"
+"I think I was rejected because of my age"
+"I keep getting told I'm overqualified - what can I do?"
+"I was made redundant after 25 years and I'm struggling"
 ```
 
 ---
@@ -133,8 +136,8 @@ Realistic interview practice:
 This skill adapts advice based on your career stage:
 - **Early Career** - Building presence, demonstrating potential
 - **Mid-Career** - Pivots, IC-to-management transitions, explaining gaps
-- **Experienced** - Age discrimination mitigation, tech fluency signals
-- **Late Career** - Ageism handling, fractional/advisory positioning
+- **Experienced** - Age discrimination mitigation, tech fluency signals, ageism support (law, strategies, emotional resilience)
+- **Late Career** - Ageism handling, fractional/advisory positioning, ageism support (law, strategies, emotional resilience)
 
 ---
 
@@ -148,8 +151,21 @@ When the user's context matches a specific persona, load the relevant reference 
 | Early Career | @references/early-career-interview-prep.md | User is a graduate, apprentice, school leaver, or attending first professional interviews |
 | NED | @references/ned-interview-prep.md | User is preparing for a board interview or nomination committee meeting |
 | Fractional | @references/fractional-discovery-prep.md | User is preparing for a client discovery call or fractional engagement pitch |
+| Ageism / Age Discrimination | @references/ageism-in-employment.md + @references/age-discrimination-strategies.md + @references/emotional-support-resilience.md | User mentions age discrimination, ageism, being "too old", being "overqualified" as age proxy, long service redundancy (20+ years), feeling their age is held against them, younger candidates being preferred, or age-related rejection patterns |
 
 These references supplement (not replace) the standard capability references. Load both the persona reference and the standard one.
+
+### Ageism Persona: Additional Guidance
+
+When the ageism persona is triggered, load ALL THREE ageism references alongside the standard capability reference (e.g., post-interview-coaching.md for Capability 4). The three references serve distinct purposes:
+
+| Reference | Purpose | When Most Relevant |
+|:----------|:--------|:-------------------|
+| **ageism-in-employment.md** | UK law (Equality Act 2010), rights, tribunal process, practical reality of proving discrimination, whistleblowing routes, evidence gathering | When the user wants to understand their legal position or is considering whether to pursue a complaint |
+| **age-discrimination-strategies.md** | Practical CV strategies, interview tactics, digital presence, skills to update, age-friendly employers, networking | When helping the user strengthen their approach and reduce age bias exposure in future applications |
+| **emotional-support-resilience.md** | Psychological impact, identity crisis after long service, NHS and charity support, resilience strategies, crisis contacts, cognitive reframing | When the user is emotionally distressed, processing redundancy grief, or showing signs of withdrawal or confidence erosion |
+
+**Tone calibration for ageism:** This is an area where candidates are particularly vulnerable. The emotional impact of being told you are too old — explicitly or implicitly — is uniquely corrosive because age cannot be changed. Calibrate your response to acknowledge this reality before moving to practical advice. Do not rush past the emotional dimension. Equally, do not dwell so long that you reinforce hopelessness. The goal is: validate, inform, equip, and mobilise.
 
 ---
 
@@ -178,4 +194,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Interview Master v1.3.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Interview Master v1.4.0 | Career Helper Plugin | Prosper AI Consulting, UK*

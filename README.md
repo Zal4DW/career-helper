@@ -69,7 +69,7 @@ Or just describe what you need:
 | **Social Media Review** | Quick social media check through recruiter's eyes, privacy cleanup guide. Especially useful for graduates and early career. | `/social-media-review` |
 | **Application Optimiser** | Company and role research, ATS-optimised CV rewriting, application strategy | `/application-optimiser` |
 | **LinkedIn Coach** | Profile audit, headline optimisation, content strategy, post review, video scripts | `/linkedin-coach` |
-| **Interview Master** | Interview prep, mock interviews, interviewer perspective reports, post-interview coaching | `/interview-master` |
+| **Interview Master** | Interview prep, mock interviews, interviewer perspective reports, post-interview coaching, ageism support (UK law, practical strategies, emotional resilience) | `/interview-master` |
 | **Career Navigator** | Networking intelligence, 3-month job search plans, salary negotiation, offer evaluation | `/career-navigator` |
 | **Career Transitions** | Portfolio and fractional careers, AI readiness assessment | `/career-transitions` |
 | **NED AI Helper** | AI governance for Non-Executive Directors, Board Governors, and Charity Trustees. Challenge frameworks, risk assessment, governance structures, regulatory guidance | `/ned-ai-helper` |
@@ -108,6 +108,7 @@ Or just describe what you need:
 - **ATS-optimised** CV output with keyword coverage analysis
 - **Career stage adaptation** from graduates to late career
 - **Emotional intelligence** acknowledges the realities of job searching
+- **Ageism support** UK law, practical strategies, and emotional resilience for age-related rejection
 - **Template-driven** consistent, professional outputs
 - **Digital footprint audit** credit-report style employer impression dashboard
 
@@ -184,4 +185,4 @@ See [LICENSE](LICENSE) for full terms.
 
 ---
 
-*Career Helper Plugin v1.5.0 | Prosper AI Consulting, UK*
+*Career Helper Plugin v1.5.1 | Prosper AI Consulting, UK*

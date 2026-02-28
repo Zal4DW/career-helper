@@ -20,6 +20,7 @@ Ask these questions one at a time (use AskUserQuestion tool):
 - Want a quick social media check (graduates / early career)
 - Considering a career change (freelance, fractional, portfolio)
 - Returning to work after a career break (maternity, redundancy, illness, sabbatical)
+- Dealing with age discrimination or feeling my age is held against me
 - Graduate, apprentice, or early career - looking for my first role
 - I'm a NED/Governor/Trustee and need AI governance support
 - Just exploring
@@ -36,6 +37,7 @@ Ask these questions one at a time (use AskUserQuestion tool):
 | Quick social media check | "Which platforms do you use most - Instagram, Twitter/X, TikTok, Facebook?" |
 | Career change | "Are you thinking about going fractional/portfolio, or building AI skills?" |
 | Returning to work | "How long have you been away, and what was the reason (if you're comfortable sharing)?" |
+| Age discrimination | "Are you dealing with a specific rejection you think was age-related, or is this a pattern you're seeing across your job search?" |
 | Graduate/early career | "Do you have a target role in mind, or are you still exploring options?" |
 | NED/Governor/Trustee | "What do you need - challenge an AI proposal, set up governance, or understand AI risks?" |
 | Just exploring | "What's your career level - early, mid, experienced, or late career?" |
@@ -61,6 +63,9 @@ Based on their answers, recommend ONE skill and invoke it:
 | Career returner with target role | /application-optimiser (career returner persona) |
 | Career returner, needs plan | /career-navigator (career returner persona) |
 | Redundancy, needs immediate plan | /career-navigator (career returner persona) |
+| Age discrimination, specific rejection | /interview-master (ageism persona, post-interview coaching) |
+| Age discrimination, pattern across search | /interview-master (ageism persona) |
+| Long-service redundancy with age concerns | /interview-master (ageism persona + career returner persona) |
 | Graduate/apprentice with target | /application-optimiser (early career persona) |
 | Graduate/apprentice, exploring | /career-navigator (early career persona) |
 | NED AI governance | /ned-ai-helper |
