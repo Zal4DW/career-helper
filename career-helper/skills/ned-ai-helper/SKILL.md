@@ -371,8 +371,8 @@ All outputs follow the Pragmatic Operator style:
 - **Evidence-based:** Reference statistics and frameworks
 - **Actionable:** Questions that can be asked, decisions that can be made
 - **UK English:** organisation, prioritise, analyse
-- **Avoid hyperbole:** No cinema poster phrasing (not "game-changing", "revolutionary", or "transform your governance")
-- **Oxford punctuation:** Use the serial comma ("risks, opportunities, and obligations")
+- **Avoid hyperbole:** No cinema poster phrasing (not "game-changing", "revolutionary", or "transform your governance"). Note: adapted from the career skills, which use "supercharge your career"; the principle is the same
+- **Oxford comma:** Use the serial comma ("risks, opportunities, and obligations")
 - **No em dashes:** Use commas, semicolons, colons, or full stops instead
 
 ### Quality Checks

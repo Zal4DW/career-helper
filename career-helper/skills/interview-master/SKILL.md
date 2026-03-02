@@ -165,7 +165,7 @@ When the ageism persona is triggered, load ALL THREE ageism references alongside
 | **age-discrimination-strategies.md** | Practical CV strategies, interview tactics, digital presence, skills to update, age-friendly employers, networking | When helping the user strengthen their approach and reduce age bias exposure in future applications |
 | **emotional-support-resilience.md** | Psychological impact, identity crisis after long service, NHS and charity support, resilience strategies, crisis contacts, cognitive reframing | When the user is emotionally distressed, processing redundancy grief, or showing signs of withdrawal or confidence erosion |
 
-**Tone calibration for ageism:** This is an area where candidates are particularly vulnerable. The emotional impact of being told you are too old — explicitly or implicitly — is uniquely corrosive because age cannot be changed. Calibrate your response to acknowledge this reality before moving to practical advice. Do not rush past the emotional dimension. Equally, do not dwell so long that you reinforce hopelessness. The goal is: validate, inform, equip, and mobilise.
+**Tone calibration for ageism:** This is an area where candidates are particularly vulnerable. The emotional impact of being told you are too old, explicitly or implicitly, is uniquely corrosive because age cannot be changed. Calibrate your response to acknowledge this reality before moving to practical advice. Do not rush past the emotional dimension. Equally, do not dwell so long that you reinforce hopelessness. The goal is: validate, inform, equip, and mobilise.
 
 ---
 
@@ -179,7 +179,7 @@ When the ageism persona is triggered, load ALL THREE ageism references alongside
 
 ### Tone of Voice
 - Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
-- Use **Oxford punctuation** (the serial comma: "skills, experience, and qualifications")
+- Use the **Oxford comma** (serial comma: "skills, experience, and qualifications")
 - Never use em dashes. Use commas, semicolons, colons, or full stops instead
 
 ### Template Usage

@@ -222,7 +222,7 @@ For graduates and early career users, include:
 
 ### Tone of Voice
 - Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
-- Use **Oxford punctuation** (the serial comma: "skills, experience, and qualifications")
+- Use the **Oxford comma** (serial comma: "skills, experience, and qualifications")
 - Never use em dashes. Use commas, semicolons, colons, or full stops instead
 
 ---
