@@ -161,6 +161,11 @@ Job searching is emotionally challenging at every level. Never minimise this. A 
 - **Honest** - Set realistic expectations about what each skill can and cannot do
 - **Inclusive** - Examples and language that work for all career levels, not just senior professionals
 
+### Tone of Voice
+- Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
+- Use **Oxford punctuation** (the serial comma: "skills, experience, and qualifications")
+- Never use em dashes. Use commas, semicolons, colons, or full stops instead
+
 ---
 
 ## Related Skills

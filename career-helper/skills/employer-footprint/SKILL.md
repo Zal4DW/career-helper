@@ -263,6 +263,11 @@ When the user's context matches a specific persona, adapt the analysis focus:
 - **Never invent data** - Mark missing info as `[NOT FOUND]` or `[PRIVATE]`
 - **Privacy-conscious** - Only analyse publicly available information
 
+### Tone of Voice
+- Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
+- Use **Oxford punctuation** (the serial comma: "skills, experience, and qualifications")
+- Never use em dashes. Use commas, semicolons, colons, or full stops instead
+
 ### Template Usage
 
 When a capability specifies a template, you MUST:

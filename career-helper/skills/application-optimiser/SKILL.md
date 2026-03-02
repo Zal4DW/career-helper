@@ -132,6 +132,11 @@ These references supplement (not replace) the standard capability references. Lo
 - **ATS-safe** - Simple formatting, conventional headings, consistent dates
 - **Never invent data** - Mark missing info as `[MISSING]`
 
+### Tone of Voice
+- Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
+- Use **Oxford punctuation** (the serial comma: "skills, experience, and qualifications")
+- Never use em dashes. Use commas, semicolons, colons, or full stops instead
+
 ### Template Usage
 
 When a capability specifies a template, you MUST:

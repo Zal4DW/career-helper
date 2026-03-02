@@ -177,6 +177,11 @@ When the ageism persona is triggered, load ALL THREE ageism references alongside
 - **STAR format** - Behavioural answers use Situation, Task, Action, Result
 - **Role-specific** - Questions tailored to the actual role, not generic
 
+### Tone of Voice
+- Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
+- Use **Oxford punctuation** (the serial comma: "skills, experience, and qualifications")
+- Never use em dashes. Use commas, semicolons, colons, or full stops instead
+
 ### Template Usage
 
 When a capability specifies a template, you MUST:
