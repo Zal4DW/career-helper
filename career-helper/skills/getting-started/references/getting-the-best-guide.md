@@ -112,6 +112,7 @@ This is not a one-and-done process. The folder you set up keeps everything conne
 ### A Few More Things Worth Knowing
 
 - You can run `/career-navigator` to build a 3-month job search plan. It includes wellbeing practices, which matters because job searching as a graduate is emotionally harder than most people acknowledge.
+- If you are wondering whether the roles you are applying for have a future, run `/ai-impact-assessment`. It researches whether AI will materially change the role in the next 12 months and gives you a 6-month plan to stay ahead. Better to know now than find out after you start.
 - If you are unsure where to start at all, just type "how do I get started" and Career Helper will route you.
 - Do not skip the social media review. Recruiters do check, and it takes five minutes.
 
@@ -183,6 +184,7 @@ Critically, it feeds those learnings back into your CV and interview prep. Each 
 
 ### A Few More Things Worth Knowing
 
+- Run `/ai-impact-assessment` before committing to a target role. If you are pivoting after redundancy or considering a new direction, this tells you whether AI is likely to disrupt that role in the next 12 months. It also provides a 6-month plan to position yourself ahead of the change.
 - Run `/career-transitions` if you are considering going fractional or portfolio. It covers readiness assessment, rate setting, IR35 considerations, and client acquisition strategy.
 - Use `/career-navigator` to evaluate and negotiate offers. The salary negotiation coach is region-aware (UK, US, EU, APAC) and covers total compensation including pension, equity, notice periods, and garden leave.
 - Your research briefs, CV versions, and interview prep all save to your folder. When you are managing five active applications simultaneously, this is the difference between preparation and chaos.
@@ -221,11 +223,15 @@ The output includes voice coaching so you write authentically rather than soundi
 
 Run `/employer-footprint` to see how your digital presence looks to the outside world. Even if you are not applying anywhere, knowing your baseline is valuable. The thought leadership scoring dimension tells you exactly where you stand and what would move the needle.
 
-**Step 4: AI Readiness Assessment**
+**Step 4: AI Impact Assessment**
+
+Run `/ai-impact-assessment` to get an honest picture of how AI is likely to affect your current role over the next 12 months. Even if you are not planning to move, knowing which of your day-to-day tasks are at risk and which are resilient helps you prioritise what to invest your development time in. The skill produces a specific, evidence-based assessment and a 6-month plan.
+
+**Step 5: AI Readiness Assessment**
 
 Run `/career-transitions` and ask for an AI readiness assessment. This evaluates your current AI proficiency against your role and target direction, produces a tiered upskilling roadmap, and gives you CV and LinkedIn integration strategies. Whether or not you are changing roles, demonstrating AI fluency is becoming a differentiator across almost every profession.
 
-**Step 5: Strategic Networking**
+**Step 6: Strategic Networking**
 
 Run `/career-navigator` for networking intelligence, even without a specific target company. Ask it to help you identify the right people to connect with in your industry. Building relationships before you need them is the definition of strategic networking.
 
@@ -262,6 +268,7 @@ Career Helper skills are designed to feed into each other. Here is the chain:
 | Interview master (post-interview coaching) | Diagnoses rejection and feeds back into CV/prep refinement |
 | Career navigator (salary negotiation) | Coaches through offer negotiation with region-specific guidance |
 | Career navigator (offer evaluation) | Compares multiple offers with weighted decision framework |
+| AI impact assessment | Identifies which tasks in your role face AI disruption, informing upskilling and pivot decisions |
 
 The persistent folder is what holds this chain together. Without it, each skill starts from scratch.
 
@@ -297,6 +304,7 @@ To summarise, here is what you get across the full skill set:
 - **Post-rejection coaching** that diagnoses where things went wrong and feeds improvements back into your materials
 - **AI readiness assessments** with tiered upskilling roadmaps
 - **Fractional and portfolio career planning** including rate setting, IR35 guidance, and client acquisition strategy
+- **AI impact assessments** with task-level disruption analysis, evidence-cited verdicts, and 6-month mitigation plans
 - **Social media reviews** from a quick recruiter-eye scan to a full 8-agent deep research audit
 
 All of it saves to your folder, builds on previous outputs, and adapts to your career stage.
