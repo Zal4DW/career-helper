@@ -8,9 +8,27 @@ Available to all Claude users, including free subscriptions.
 
 ---
 
+## What's New in v1.5
+
+Career Helper is now available as a **personal marketplace plugin** in the Claude Desktop app. Install it directly from the app and start using it immediately — no CLI or manual setup required.
+
+**Recent highlights (v1.2 → v1.5.1):**
+
+- **v1.5.1** — Ageism in employment support: UK law references (Equality Act 2010), practical CV and interview strategies to reduce age bias, emotional resilience resources
+- **v1.5.0** — New `/social-media-review` skill: quick social media check through a recruiter's eyes with GREEN/AMBER/RED flagging, graduate-specific guidance, privacy cleanup guide
+- **v1.4.0** — New `/employer-footprint` skill: agentic deep-research swarm, credit-report style dashboard with 8 scored dimensions, CV-to-online-presence consistency checking
+- **v1.3.0** — New `/ned-ai-helper` skill for board-level AI governance; new `/getting-started` skill with workflow planning and power user strategies
+- **v1.2.0** — Updated install instructions for Claude co-worker format
+
+See [CHANGELOG.md](CHANGELOG.md) for the full version history including all pre-1.0 releases.
+
+---
+
 ## Installation
 
 ### From the Claude Desktop App (Recommended)
+
+Career Helper is available as a **personal marketplace plugin** in the Claude Desktop app.
 
 1. Click the **+** button next to the chat input
 2. Select **Add plugins...**
@@ -18,7 +36,7 @@ Available to all Claude users, including free subscriptions.
 4. Enter `Zal4DW/career-helper` and click **Sync**
 5. Click **Install** on the Career Helper plugin
 
-That's it - the skills and commands are ready to use immediately. Available on all Claude plans, including free subscriptions.
+That's it — the skills and commands are ready to use immediately. Available on all Claude plans, including free subscriptions.
 
 ### Using Claude Code CLI
 
@@ -162,7 +180,7 @@ cd ~/career-helper-workspace
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for the full version history.
+See [CHANGELOG.md](CHANGELOG.md) for the full version history. The changelog is the authoritative source for release notes — it tracks every version from pre-1.0 through to the current release (v1.5.1).
 
 ---
 
