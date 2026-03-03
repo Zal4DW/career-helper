@@ -1,6 +1,6 @@
 # Career Helper - Claude Code Plugin
 
-End-to-end career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Nine focused skills covering getting started guidance, employer footprint analysis, social media review, LinkedIn optimisation, ATS CV rewriting, interview preparation, job search strategy, career transitions, and board-level AI oversight.
+End-to-end career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Ten focused skills covering getting started guidance, employer footprint analysis, social media review, LinkedIn optimisation, ATS CV rewriting, interview preparation, job search strategy, career transitions, AI impact assessment, and board-level AI oversight.
 
 Available to all Claude users, including free subscriptions.
 
@@ -56,6 +56,7 @@ Or just describe what you need:
 "I want to go fractional"
 "Check my digital footprint before I apply"
 "Review my social media - I'm a graduate about to start applying"
+"Will AI affect my job as a project manager?"
 ```
 
 ---
@@ -72,6 +73,7 @@ Or just describe what you need:
 | **Interview Master** | Interview prep, mock interviews, interviewer perspective reports, post-interview coaching, ageism support (UK law, practical strategies, emotional resilience) | `/interview-master` |
 | **Career Navigator** | Networking intelligence, 3-month job search plans, salary negotiation, offer evaluation | `/career-navigator` |
 | **Career Transitions** | Portfolio and fractional careers, AI readiness assessment | `/career-transitions` |
+| **AI Impact Assessment** | Honest AI disruption analysis for any role. Task-level risk assessment, timeline, certainty rating, 6-month mitigation plan | `/ai-impact-assessment` |
 | **NED AI Helper** | AI governance for Non-Executive Directors, Board Governors, and Charity Trustees. Challenge frameworks, risk assessment, governance structures, regulatory guidance | `/ned-ai-helper` |
 
 ## Commands
@@ -88,13 +90,14 @@ Or just describe what you need:
 
 ```
 0. Audit your digital footprint  /employer-footprint
-1. Research the company          /application-optimiser
-2. Optimise your CV              /application-optimiser
-3. Sync your LinkedIn            /linkedin-coach
-4. Prepare for interviews        /interview-master
-5. Practice with mock interview  /interview-master
-6. Negotiate your offer          /career-navigator
-7. Evaluate competing offers     /career-navigator
+1. Assess AI impact on your role /ai-impact-assessment
+2. Research the company          /application-optimiser
+3. Optimise your CV              /application-optimiser
+4. Sync your LinkedIn            /linkedin-coach
+5. Prepare for interviews        /interview-master
+6. Practice with mock interview  /interview-master
+7. Negotiate your offer          /career-navigator
+8. Evaluate competing offers     /career-navigator
 ```
 
 ---
@@ -110,6 +113,7 @@ Or just describe what you need:
 - **Emotional intelligence** acknowledges the realities of job searching
 - **Ageism support** UK law, practical strategies, and emotional resilience for age-related rejection
 - **Template-driven** consistent, professional outputs
+- **AI impact assessment** honest disruption analysis with 6-month mitigation plan
 - **Digital footprint audit** credit-report style employer impression dashboard
 
 ---
@@ -146,6 +150,7 @@ Skills generate markdown files you can convert to other formats:
 | `{name}-footprint-interview-questions.md` | Employer Footprint |
 | `{name}-social-media-review.md` | Social Media Review |
 | `{name}-social-cleanup-guide.md` | Social Media Review |
+| `{role}-ai-impact-assessment.md` | AI Impact Assessment |
 
 ---
 
@@ -185,4 +190,4 @@ See [LICENSE](LICENSE) for full terms.
 
 ---
 
-*Career Helper Plugin v1.5.1 | Prosper AI Consulting, UK*
+*Career Helper Plugin v1.6.0 | Prosper AI Consulting, UK*

@@ -6,6 +6,37 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ---
 
+## [1.6.0] - 2026-03-03
+
+### Added
+- **New skill: `/ai-impact-assessment`** - Honest AI disruption analysis for any role
+  - Two-phase architecture: Phase 1 runs research silently in extended thinking, Phase 2 delivers frank assessment
+  - Task-level analysis (not vague role-level predictions) with timeline and certainty ratings
+  - 6-month mitigation plan adapted to HIGH/MEDIUM/LOW risk levels
+  - WebSearch-driven research targeting labour market reports, company AI strategy, and automation studies
+  - Empathetic tone guidance for delivering difficult career news without false reassurance
+  - Output template: verdict, risk/resilience tables, monthly action plan, skills to develop, cross-skill routing
+  - 3 reference files: `ai-impact-research.md`, `assessment-and-plan.md`, `ai-impact-template.md`
+- **Getting the Best Guide** added to getting-started skill (Capability 6)
+  - Comprehensive guide covering installation, folder setup, and three scenario-based walkthroughs
+  - Markdown reference (`getting-the-best-guide.md`) and PDF version (`getting-the-best-guide.pdf`)
+  - Scenario walkthroughs for graduates, experienced professionals between roles, and employed professionals
+  - Skills connection maps, common mistakes to avoid, LinkedIn copy/paste workflows
+- AI impact assessment routing in help command (4 new routing entries)
+- AI impact assessment routing in quick-start command (new situation option + follow-up question + 2 routing entries)
+- Getting the Best Guide routing in help command (3 routing entries)
+- Getting the Best Guide routing in quick-start command (1 routing entry)
+- AI Impact Assessment section in full-overview reference with two worked examples
+- AI Impact Assessment added to all three scenario walkthroughs in getting-the-best guide
+
+### Changed
+- Plugin version bumped to 1.6.0 (10 skills)
+- Getting-started skill description updated with guide trigger phrases
+- Getting-started full overview updated from "Nine Skills" to "Ten Skills"
+- Getting-started SKILL.md version updated to v1.6.0
+
+---
+
 ## [1.5.1] - 2026-02-28
 
 ### Added
