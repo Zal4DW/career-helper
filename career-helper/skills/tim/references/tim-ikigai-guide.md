@@ -103,6 +103,16 @@ Then look for overlaps:
 
 ---
 
+## Offer a Visual Ikigai Map (Optional)
+
+Once you have summarised the answers, offer to turn them into the classic four-circle ikigai diagram the user can keep:
+
+"Would you like me to turn this into the classic ikigai diagram, an interactive page you can keep and come back to?"
+
+If yes, follow @tim-ikigai-visual.md to populate the template and save `ikigai-map.html`. It is colour-blind-safe and includes a full text equivalent, so it works for everyone. Only offer it when the user gave real answers to at least three questions and stayed engaged; skip it if they were reluctant or if `direction_questions_declined: true` is set.
+
+---
+
 ## Tone
 
 - Curious, not clinical. This is a conversation, not a personality test

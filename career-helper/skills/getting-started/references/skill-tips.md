@@ -53,7 +53,7 @@ After receiving your optimised CV:
 
 ### What Feeds Into What
 
-```
+```text
 Company Research → CV Optimisation → Cover Letter → Application Strategy
        ↓                  ↓
 Interview Prep    LinkedIn Updates
@@ -165,7 +165,7 @@ Company Research → Interview Preparation → Mock Interview
 
 ### What Feeds Into What
 
-```
+```text
 3-Month Plan → Networking Intelligence → Application Phase → Application Tracker
                                               ↓                      ↑
                     Salary Negotiation ← Offer Received    (every application logged here)

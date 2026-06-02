@@ -6,6 +6,29 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ---
 
+## [1.13.0] - 2026-06-02
+
+### Added
+- **Optional interactive ikigai map.** After Tim's four direction-finding questions (`/career-helper:career-coach`), Tim can now offer to render the classic four-circle ikigai diagram as a self-contained, interactive HTML page the user can keep and revisit. New references `career-helper/skills/tim/references/tim-ikigai-visual.md` (when to offer, how to populate from the user's own answers, accessibility rules) and `career-helper/skills/tim/references/ikigai-map-template.html` (a single-file template with no external assets). Output: `ikigai-map.html` in the workspace root. The diagram uses a colour-blind-safe palette, labels every region in text, supports hover and keyboard focus, and includes a full text-equivalent table so it is usable without seeing the diagram. Content is populated only from the user's own answers; unknown overlaps keep their `{{PLACEHOLDER}}` rather than being invented.
+
+### Changed
+- Plugin and marketplace version bumped to 1.13.0
+- `tim-ikigai-guide.md` now offers the visual map as an optional step after summarising the answers
+- `/career-helper:status` and Tim's routing output patterns recognise `ikigai-map.html`
+- README features list and output file table updated for the ikigai map
+
+### Documentation
+- **Shareable guide refreshed and brought up to date** (`career-helper/skills/getting-started/references/getting-the-best-guide.md` and the regenerated `getting-the-best-guide.pdf`):
+  - Added the missing `/personal-brand` row to the skills table and corrected the skill count from "ten" to "eleven" (the guide had not been updated when personal-brand shipped in v1.11.0)
+  - Added a new "I don't know what I want to do next" scenario covering Tim's ikigai direction-finding and the optional ikigai map
+  - Retrofitted the guide to the house style by replacing all em dashes with commas, colons, semicolons, full stops, or parentheses
+- **Added a reproducible PDF generator** at `scripts/build-guide-pdf.py` (depends on `markdown` and `weasyprint`, which are not part of the plugin runtime) so the shareable guide PDF can be regenerated from its markdown source and does not drift out of date again
+
+### House style
+- All new content adheres to the house style codified in v1.10.1: no em dashes, UK English throughout, Oxford comma, hyphenated compound modifiers, no emojis or emoji-style markers, no hyperbole, second-person coaching voice.
+
+---
+
 ## [1.12.0] - 2026-06-02
 
 ### Added

@@ -27,7 +27,7 @@ Copy a prompt below, run `/schedule`, paste it in, and set the cadence shown. Ad
 
 Reads your tracker and tells you what to do this week.
 
-```
+```text
 Read applications/tracker.md in my workspace. Give me a short Monday standup:
 1. Every active application and its next action, with anything overdue flagged first.
 2. Any application that has had no movement for over two weeks.
@@ -41,7 +41,7 @@ Cadence: Weekly, Monday.
 
 Watches the market for your target roles so you are not searching from scratch each time.
 
-```
+```text
 Search for new job postings and relevant market news from the past seven days for
 [your target role, e.g. "Head of Marketing"] in [your location/region]. Use the
 career-navigator approach: cite sources with dates, and be honest about volume and
@@ -55,7 +55,7 @@ Cadence: Weekly.
 
 Keeps your personal-brand cadence on track without you having to remember it.
 
-```
+```text
 Read my content calendar (personal-brand-content-plan.md or content-calendar.md) if
 present in my workspace. Remind me what I planned to post this week and which content
 pillar it belongs to. Suggest one specific post idea drawn only from my existing pillars
@@ -68,7 +68,7 @@ Cadence: Weekly.
 
 Catches the follow-ups that quietly slip.
 
-```
+```text
 Read applications/tracker.md and any application-strategy.md files in my workspace.
 Tell me which applications are due a follow-up today or are overdue, based on their
 next dates. For each, remind me of the follow-up step from the application strategy.
@@ -81,7 +81,7 @@ Cadence: Weekdays.
 
 Set this up when an interview is booked, then trigger it the day before.
 
-```
+```text
 I have an interview for [role] at [company] on [date]. Read the interview-prep file in
 the matching applications folder. Give me a focused day-before checklist: the five
 stories to have ready, the questions I planned to ask, and the logistics to confirm.

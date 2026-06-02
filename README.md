@@ -126,6 +126,7 @@ Or just describe what you need:
 - **Application tracker** a single plain-text board of every live application, owned by you and read by `/career-helper:status`
 - **Reference and referee prep** choosing, asking, and briefing referees, with UK conventions and regulated-role notes
 - **Scheduled routines for Claude Cowork** ready-made `/schedule` prompts for a weekly standup, market monitor, and follow-up check
+- **Ikigai direction-finding** Tim's four-question exercise for when you do not know what you want, with an optional interactive, colour-blind-safe ikigai map you can keep
 - **Career stage adaptation** from graduates to late career
 - **Wellbeing-aware coaching** Tim reads emotional signals, acknowledges difficulty before routing, checks in after heavy work, and carries wellbeing context across sessions
 - **Ageism support** UK law, practical strategies, and emotional resilience for age-related rejection
@@ -180,6 +181,7 @@ Skills generate markdown files you can convert to other formats:
 | `personal-brand-content-plan.md` | Personal Brand |
 | `personal-brand-bio-library.md` | Personal Brand |
 | `personal-brand-refresh-plan.md` | Personal Brand |
+| `ikigai-map.html` | Tim (Career Coach) |
 | `career-helper-preferences.md` | Tim (Career Coach) |
 
 ---
@@ -220,4 +222,4 @@ See [LICENSE](LICENSE) for full terms.
 
 ---
 
-*Career Helper Plugin v1.12.0 | Prosper AI Consulting, UK*
+*Career Helper Plugin v1.13.0 | Prosper AI Consulting, UK*

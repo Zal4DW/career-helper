@@ -20,11 +20,11 @@ The source repository is at [github.com/Zal4DW/career-helper](https://github.com
 
 ## What You Get
 
-Career Helper is not a single tool. It is a set of ten skills plus a guided coach, each designed for a different part of the career journey. You do not need to use them all, and you do not need to use them in order. Pick the ones that fit your situation, or let Tim (your career coach) figure it out for you. Here is the quick summary; the rest of this guide shows you exactly how to put them together.
+Career Helper is not a single tool. It is a set of eleven skills plus a guided coach, each designed for a different part of the career journey. You do not need to use them all, and you do not need to use them in order. Pick the ones that fit your situation, or let Tim (your career coach) figure it out for you. Here is the quick summary; the rest of this guide shows you exactly how to put them together.
 
 | Skill | What It Does |
 |:----|:----|
-| `/career-helper:career-coach` | **Tim — your career coach.** Understands your situation, runs the right skills in the right order, checks in between each one. Start here if you are unsure |
+| `/career-helper:career-coach` | **Tim, your career coach.** Understands your situation, runs the right skills in the right order, checks in between each one. Start here if you are unsure |
 | `/social-media-review` | Quick social media check through a recruiter's eyes |
 | `/employer-footprint` | Full digital footprint audit with a scored dashboard |
 | `/application-optimiser` | Company research, ATS CV optimisation, cover letters and supporting statements, and application strategy |
@@ -34,6 +34,7 @@ Career Helper is not a single tool. It is a set of ten skills plus a guided coac
 | `/career-transitions` | Fractional/portfolio careers, AI readiness, and non-linear career exploration (entrepreneurship, startups, public sector, charity, intrapreneurship) |
 | `/ai-impact-assessment` | Honest assessment of AI disruption risk for your role, with a 6-month mitigation plan |
 | `/ned-ai-helper` | AI governance for Non-Executive Directors, Governors, and Trustees |
+| `/personal-brand` | Why You, Why Them, Why Now positioning, audience and channel map, content pillars, and a bio library |
 | `/getting-started` | Full overview, preparation checklists, workflow planning, and this guide |
 
 **Accessibility:** Career Helper adapts for dyslexia and colour-blindness across every skill. Tim will ask about your preferences at the start, or you can mention them at any point. If you are dyslexic, you will get shorter sentences, numbered options, explicit signposting, and confirmation checks. All scoring and status indicators use text labels, never colour alone.
@@ -46,10 +47,11 @@ Now, before you run any of them, there are two things worth knowing.
 
 You do not have to figure out which skills to run or what order to run them in. Tim does that for you.
 
-Run `/career-helper:career-coach` and Tim will ask a few questions about your situation, then start working. He picks the right skill, runs it, shows you what was done, and checks in before moving to the next thing. If something difficult comes up — redundancy, rejection, age concerns — he adjusts the pace and acknowledges it before pressing on.
+Run `/career-helper:career-coach` and Tim will ask a few questions about your situation, then start working. He picks the right skill, runs it, shows you what was done, and checks in before moving to the next thing. If something difficult comes up (redundancy, rejection, age concerns), he adjusts the pace and acknowledges it before pressing on.
 
 **When to use Tim:**
 - You are new to Career Helper and do not know where to start
+- You are not sure what direction you want; Tim can help you find one before diving into applications
 - You want someone to manage the process while you focus on the content
 - You are dealing with a lot at once and want a guided approach
 - You have been here before and want to pick up where you left off
@@ -59,7 +61,7 @@ Run `/career-helper:career-coach` and Tim will ask a few questions about your si
 - You want to run one specific skill without the coaching wrapper
 - You are a returning user who just needs one thing done
 
-Tim saves your preferences (with your permission) so returning sessions pick up where you left off — including any accessibility preferences and notes about how things were going. Everything in this guide works both ways: with Tim guiding you, or with you running skills directly.
+Tim saves your preferences (with your permission) so returning sessions pick up where you left off, including any accessibility preferences and notes about how things were going. Everything in this guide works both ways: with Tim guiding you, or with you running skills directly.
 
 ---
 
@@ -159,16 +161,16 @@ This is not a one-and-done process. The folder you set up keeps everything conne
 
 ## Is This You? "I've just finished my apprenticeship and I'm looking for my next role"
 
-You have something most graduates do not: real work experience. You have been in a workplace, you have delivered actual outputs, and you have professional references. That is a genuine advantage. But apprenticeship CVs have their own challenges — your experience might be deep but narrow, your job title might not reflect what you actually did, and you may not know how to position yourself against people with degrees.
+You have something most graduates do not: real work experience. You have been in a workplace, you have delivered actual outputs, and you have professional references. That is a genuine advantage. But apprenticeship CVs have their own challenges: your experience might be deep but narrow, your job title might not reflect what you actually did, and you may not know how to position yourself against people with degrees.
 
 Career Helper understands apprenticeships. You will not get advice designed for someone with a dissertation and a summer internship.
 
 ### What to Have Ready
 
 - **Your CV** as a Word document or PDF. Even if it is rough. Include your apprenticeship details, any projects you worked on, and your end-point assessment result if you have one.
-- **A job description** for a role you are interested in. Does not need to be perfect — any relevant listing helps the skills calibrate.
+- **A job description** for a role you are interested in. Does not need to be perfect; any relevant listing helps the skills calibrate.
 - **Your LinkedIn profile URL.** If you do not have one yet, the LinkedIn Coach will help you build one that leads with your practical experience.
-- **Your social media handles.** Same as for graduates — recruiters check.
+- **Your social media handles.** Same as for graduates; recruiters check.
 - **Details of your apprenticeship.** Level, standard, employer, what you actually did day to day. The skills use this to find transferable skills you might not realise you have.
 
 ### Your Recommended Workflow
@@ -280,7 +282,7 @@ Critically, it feeds those learnings back into your CV and interview prep. Each 
 - When you are juggling several applications, run `/career-navigator` and build an application tracker. It is a single plain-text board of every role, its stage, and its next action, stored locally and read by `/career-helper:status`. It is the private alternative to a job-search spreadsheet.
 - When references are requested, run `/interview-master` for reference and referee prep. It helps you choose credible referees, ask them well, and brief each one on what the role values, with practical options when you cannot use your current employer yet.
 - Your research briefs, CV versions, and interview prep all save to per-application folders. When you are managing five active applications simultaneously, each one has its own folder with everything in one place. That is the difference between preparation and chaos.
-- If you would rather have someone manage the sequencing for you, run `/career-helper:career-coach`. Tim handles the routing and checks in between each skill — useful when you are juggling a lot and do not want to think about what to run next.
+- If you would rather have someone manage the sequencing for you, run `/career-helper:career-coach`. Tim handles the routing and checks in between each skill, useful when you are juggling a lot and do not want to think about what to run next.
 
 ---
 
@@ -342,24 +344,24 @@ Because you have been maintaining your folder all along, the skills already know
 
 ## Is This You? "I'm returning to work after a break"
 
-Whether you took time out for parenting, caring, health, travel, or simply because you needed to stop for a while, the gap feels bigger from the inside than it does from the outside. Employers care less about gaps than you think — but they do care about how you frame them. Career Helper has specific personas across multiple skills designed for exactly your situation.
+Whether you took time out for parenting, caring, health, travel, or simply because you needed to stop for a while, the gap feels bigger from the inside than it does from the outside. Employers care less about gaps than you think, but they do care about how you frame them. Career Helper has specific personas across multiple skills designed for exactly your situation.
 
 ### What to Have Ready
 
 - **Your most recent CV.** Even if it is years old. The skill needs a starting point.
-- **A job description** for the kind of role you are targeting. Does not need to be exact — even a rough direction helps.
+- **A job description** for the kind of role you are targeting. Does not need to be exact; even a rough direction helps.
 - **A brief summary of your break.** You do not need to justify it. Just a line or two so the skills can help you frame it positively.
-- **Any skills you developed during your break.** Project management through home renovation, financial management, volunteering, freelance work, courses — all of it counts if positioned well.
+- **Any skills you developed during your break.** Project management through home renovation, financial management, volunteering, freelance work, courses: all of it counts if positioned well.
 
 ### Your Recommended Workflow
 
 **Step 1: Employer Footprint**
 
-Run `/employer-footprint` first. After a career break, your online presence may be outdated — an old LinkedIn profile with a previous job title, dormant professional accounts, or nothing at all. The footprint audit shows you what employers will find right now and what needs updating before you start applying.
+Run `/employer-footprint` first. After a career break, your online presence may be outdated: an old LinkedIn profile with a previous job title, dormant professional accounts, or nothing at all. The footprint audit shows you what employers will find right now and what needs updating before you start applying.
 
 **Step 2: CV Optimisation**
 
-Run `/application-optimiser` with your CV and a target job description. The career returner persona loads automatically when you mention a career break. It focuses on framing your gap as a chapter, not a void — what you did, what you gained, and how it connects to what you are doing next.
+Run `/application-optimiser` with your CV and a target job description. The career returner persona loads automatically when you mention a career break. It focuses on framing your gap as a chapter, not a void: what you did, what you gained, and how it connects to what you are doing next.
 
 The skill produces a 30-second gap explanation you can use in applications and interviews. This is one of the most useful outputs for returners: a confident, prepared response to the question you are dreading.
 
@@ -378,8 +380,8 @@ Run `/career-navigator` for a 3-month job search plan. Returning to work is a pr
 ### A Few More Things Worth Knowing
 
 - If the whole thing feels overwhelming, run `/career-helper:career-coach` and let Tim manage the process. He will ask about your situation, check how you are doing, and sequence the right skills at the right pace.
-- You do not need to explain your break to Career Helper in detail. "Career break — parenting" or "Health break — now recovered" is enough for the skills to adapt.
-- If you are also dealing with confidence issues after your break, Tim's wellbeing awareness means he will notice and adjust — slower pace, more check-ins, more encouragement grounded in your actual strengths.
+- You do not need to explain your break to Career Helper in detail. "Career break, parenting" or "Health break, now recovered" is enough for the skills to adapt.
+- If you are also dealing with confidence issues after your break, Tim's wellbeing awareness means he will notice and adjust: slower pace, more check-ins, more encouragement grounded in your actual strengths.
 
 ---
 
@@ -387,11 +389,11 @@ Run `/career-navigator` for a 3-month job search plan. Returning to work is a pr
 
 Maybe you are tired of the corporate ladder. Maybe you have always wanted to run your own business. Maybe you are curious about the public sector, the charity world, or building something from scratch. Maybe you just know that "more of the same" is not the answer, even if you are not sure what is.
 
-Career Helper does not assume everyone wants a bigger version of their current job. The Career Transitions skill has a full non-linear career explorer covering entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling — with honest assessments, not cheerleading.
+Career Helper does not assume everyone wants a bigger version of their current job. The Career Transitions skill has a full non-linear career explorer covering entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling, with honest assessments, not cheerleading.
 
 ### What to Have Ready
 
-- **Your CV** — even if you are moving away from your current field, your transferable skills are the foundation.
+- **Your CV.** Even if you are moving away from your current field, your transferable skills are the foundation.
 - **A rough idea of what "different" means to you.** Even "I think I want to work for myself" or "I'm curious about the charity sector" is enough to start.
 - **Your financial situation (roughly).** Some paths require a runway. The skill includes financial readiness assessments so you can make informed decisions, not leap-of-faith ones.
 
@@ -401,14 +403,14 @@ Career Helper does not assume everyone wants a bigger version of their current j
 
 Run `/career-transitions` and tell it you want to explore alternatives. The non-linear career explorer covers:
 
-- **Entrepreneurship** — business readiness assessment, legal structures, funding, financial modelling, failure rate data
-- **Startup founding** — VC vs bootstrapping, co-founder dynamics, accelerators, equity and dilution, realistic success rates
-- **Public sector** — private-to-public transition, Success Profiles framework, Civil Service values, salary comparison
-- **Charity and non-profit** — career paths, the "passion tax" reality, sector resources
-- **Intrapreneurship** — innovating within your current organisation
-- **Multi-role skilling** — skill stacking, unique intersections, hybrid career models
+- **Entrepreneurship**: business readiness assessment, legal structures, funding, financial modelling, failure rate data
+- **Startup founding**: VC vs bootstrapping, co-founder dynamics, accelerators, equity and dilution, realistic success rates
+- **Public sector**: private-to-public transition, Success Profiles framework, Civil Service values, salary comparison
+- **Charity and non-profit**: career paths, the "passion tax" reality, sector resources
+- **Intrapreneurship**: innovating within your current organisation
+- **Multi-role skilling**: skill stacking, unique intersections, hybrid career models
 
-The output includes a weighted decision matrix with reversibility assessment — so you know which options you can try and walk back from, and which ones are harder to reverse.
+The output includes a weighted decision matrix with reversibility assessment, so you know which options you can try and walk back from, and which ones are harder to reverse.
 
 **Step 2: AI Impact Assessment**
 
@@ -424,14 +426,14 @@ If your chosen direction involves self-employment, the skill includes financial 
 
 **Step 5: Narrative Development**
 
-Whatever direction you choose, you need a story. The skill produces career narrative versions: 30-second, 2-minute, LinkedIn, and interview formats. "I spent 15 years in supply chain and now I'm exploring consulting" is not a story. "I realised that the problem-solving I loved was being automated, so I'm repositioning the strategic thinking that AI cannot do" — that is a story.
+Whatever direction you choose, you need a story. The skill produces career narrative versions: 30-second, 2-minute, LinkedIn, and interview formats. "I spent 15 years in supply chain and now I'm exploring consulting" is not a story. "I realised that the problem-solving I loved was being automated, so I'm repositioning the strategic thinking that AI cannot do." That is a story.
 
 ### A Few More Things Worth Knowing
 
 - If you are not sure whether to stay or go, that is a valid starting point. The skill does not assume you have decided.
 - Run `/career-helper:career-coach` if you want Tim to help you think it through. He can run the AI impact assessment, career transitions explorer, and LinkedIn repositioning in sequence.
-- **The skill starts with a reality check.** Before exploring options, it walks you through the actual realities of working hours, sales, loneliness, family impact, and failure. This is not to put you off — it is to make sure your decision is clear-eyed. If you still want to do it after that conversation, you are better prepared than most.
-- **Thinking about joining a startup rather than founding one?** The skill covers that too, including the equity conversation — vesting schedules, liquidation preferences, dilution, exercise windows, and the honest maths of salary-vs-equity trade-offs. Most startup equity is worth nothing. That does not mean you should not join one, but you should join for the learning and network, not the lottery ticket.
+- **The skill starts with a reality check.** Before exploring options, it walks you through the actual realities of working hours, sales, loneliness, family impact, and failure. This is not to put you off; it is to make sure your decision is clear-eyed. If you still want to do it after that conversation, you are better prepared than most.
+- **Thinking about joining a startup rather than founding one?** The skill covers that too, including the equity conversation: vesting schedules, liquidation preferences, dilution, exercise windows, and the honest maths of salary-vs-equity trade-offs. Most startup equity is worth nothing. That does not mean you should not join one, but you should join for the learning and network, not the lottery ticket.
 
 ---
 
@@ -439,29 +441,46 @@ Whatever direction you choose, you need a story. The skill produces career narra
 
 This is exactly what Tim is for.
 
-Run `/career-helper:career-coach`. Tim will ask you three questions — your situation, what would help most, and whether you have any accessibility preferences. Then he starts working. You do not need to know which skill to run. You do not need a plan. Tim builds the plan from what you tell him.
+Run `/career-helper:career-coach`. Tim will ask you three questions: your situation, what would help most, and whether you have any accessibility preferences. Then he starts working. You do not need to know which skill to run. You do not need a plan. Tim builds the plan from what you tell him.
 
-If you have just been made redundant, are dealing with multiple rejections, or are simply paralysed by the number of things you think you should be doing — Tim adjusts the pace. He does not rush you through a checklist. He acknowledges what is hard, then helps you do one concrete thing. Then another. Progress builds confidence; stalling erodes it.
+If you have just been made redundant, are dealing with multiple rejections, or are simply paralysed by the number of things you think you should be doing, Tim adjusts the pace. He does not rush you through a checklist. He acknowledges what is hard, then helps you do one concrete thing. Then another. Progress builds confidence; stalling erodes it.
 
 If you would rather not use Tim, start with `/getting-started` for a full overview, or `/social-media-review` for a quick win that takes five minutes and gives you something tangible to show for your first session.
 
 ---
 
+## Is This You? "I don't know what I want to do next"
+
+This is different from being overwhelmed by the process. Here the problem is direction: you can say what you do not want, but not what you do. That is common, especially after redundancy, a long stretch in one role, or a career break.
+
+Run `/career-helper:career-coach` and tell Tim you are not sure what you want. Rather than pushing you into a CV or an application, which give you little when you have no target, Tim can walk you through four short direction-finding questions based on the ikigai idea:
+
+1. What do you enjoy doing?
+2. What are you good at?
+3. What problems do you care about?
+4. What can you realistically be paid for?
+
+Tim looks for the overlaps in your answers, then routes you to the right next step: `/application-optimiser` if a clear role emerges, `/career-transitions` if you are drawn to non-traditional paths, or `/career-navigator` for a plan if you have the skills but not the market clarity. If a clear topic and audience emerge and you want to be known for it, those same four answers feed straight into `/personal-brand`, so the brand work does not start from a blank page.
+
+It is offered, not imposed. If it is not clicking, Tim drops it and simply talks the decision through with you instead. If you find the exercise useful, Tim can also turn your answers into the classic ikigai diagram as an interactive page you can keep and revisit.
+
+---
+
 ## Is This You? "I keep getting rejected and I don't know why"
 
-Run `/interview-master` in post-interview coaching mode. Tell it what happened — the role, the stage you reached, any feedback you received, and your own impression of how it went.
+Run `/interview-master` in post-interview coaching mode. Tell it what happened: the role, the stage you reached, any feedback you received, and your own impression of how it went.
 
 The skill diagnoses whether the problem is:
 
-- **A skill gap** — you lack something they need (and it tells you what to develop)
-- **A signal gap** — you have the experience but are not framing it well (CV positioning, interview delivery, or both)
-- **A fit/timing gap** — you were the right person at the wrong moment (nothing to fix, but patterns worth watching)
+- **A skill gap**: you lack something they need (and it tells you what to develop)
+- **A signal gap**: you have the experience but are not framing it well (CV positioning, interview delivery, or both)
+- **A fit/timing gap**: you were the right person at the wrong moment (nothing to fix, but patterns worth watching)
 
 If you have been rejected multiple times, share all of them. The skill looks for patterns across rejections, not just individual failures. A pattern of "great interview but didn't progress" points to a different problem than "never hear back after applying".
 
-After diagnosis, the skill feeds improvements directly back into your CV and interview prep. Each rejection genuinely makes the next application stronger — but only if you capture what went wrong.
+After diagnosis, the skill feeds improvements directly back into your CV and interview prep. Each rejection genuinely makes the next application stronger, but only if you capture what went wrong.
 
-If the rejections are hitting you emotionally — and they do, for everyone — run `/career-helper:career-coach` instead. Tim will run the rejection analysis but will also check how you are doing and adjust the pace.
+If the rejections are hitting you emotionally (and they do, for everyone), run `/career-helper:career-coach` instead. Tim will run the rejection analysis but will also check how you are doing and adjust the pace.
 
 ---
 
@@ -471,14 +490,14 @@ Run `/ai-impact-assessment`. Give it your current job title, a brief description
 
 The output includes:
 
-- **What is at risk** — specific tasks in your role that AI can already do or will be able to do soon, with evidence and timelines
-- **What is resilient** — the parts of your role that remain human-centric and why
-- **A certainty level** — how confident the assessment is, based on evidence quality
-- **A 6-month mitigation plan** — month-by-month actions to protect your position, build new capabilities, and make your AI awareness visible to employers
+- **What is at risk**: specific tasks in your role that AI can already do or will be able to do soon, with evidence and timelines
+- **What is resilient**: the parts of your role that remain human-centric and why
+- **A certainty level**: how confident the assessment is, based on evidence quality
+- **A 6-month mitigation plan**: month-by-month actions to protect your position, build new capabilities, and make your AI awareness visible to employers
 
 This is not a generic "AI is coming for everyone" scare piece. It is specific to your role, based on current research, and honest about what it does and does not know.
 
-If the assessment shows significant risk, the skill routes you to `/career-transitions` for AI readiness upskilling or non-linear career exploration. If it shows your role is resilient, it tells you that too — and suggests how to position your human-centric skills as a differentiator.
+If the assessment shows significant risk, the skill routes you to `/career-transitions` for AI readiness upskilling or non-linear career exploration. If it shows your role is resilient, it tells you that too, and suggests how to position your human-centric skills as a differentiator.
 
 ---
 
@@ -492,34 +511,34 @@ Run `/interview-master` and mention your age concerns. The ageism persona loads 
 
 **Practical strategies:** CV techniques that reduce age signals without hiding experience (functional formats, achievement-led structure, skills currency), interview tactics for "overqualified" concerns, digital presence updates that signal relevance, and specific skills to develop that counter the "out of touch" perception.
 
-**Emotional resilience:** The psychological impact of age-related rejection is different from other rejection — it hits identity, not just career prospects. The skill includes support resources (NHS Talking Therapies, Samaritans 116 123), cognitive reframing approaches, and honest acknowledgment that this is genuinely hard.
+**Emotional resilience:** The psychological impact of age-related rejection is different from other rejection: it hits identity, not just career prospects. The skill includes support resources (NHS Talking Therapies, Samaritans 116 123), cognitive reframing approaches, and honest acknowledgment that this is genuinely hard.
 
-If you are also between roles and need the full job search support, run `/career-helper:career-coach`. Tim understands age-related concerns and will weave the ageism support into the broader coaching — not as a separate topic but as context that shapes everything from CV optimisation to interview prep.
+If you are also between roles and need the full job search support, run `/career-helper:career-coach`. Tim understands age-related concerns and will weave the ageism support into the broader coaching, not as a separate topic but as context that shapes everything from CV optimisation to interview prep.
 
 ---
 
-## Is This You? "I've been offered a role — should I take it?"
+## Is This You? "I've been offered a role. Should I take it?"
 
-Run `/career-navigator` and ask for offer evaluation. Upload or paste the offer details — salary, benefits, bonus, equity, pension, notice period, location, and anything else included.
+Run `/career-navigator` and ask for offer evaluation. Upload or paste the offer details: salary, benefits, bonus, equity, pension, notice period, location, and anything else included.
 
 The skill produces a weighted decision framework covering:
 
-- **Total compensation analysis** — not just salary but the full package, region-adjusted (UK, US, EU, APAC) including pension contributions, equity vesting, bonus structure, and benefits value
-- **Role fit assessment** — how well the role matches your stated goals and career direction
-- **Red flags** — anything in the offer or from your research that warrants caution
-- **Comparison framework** — if you have multiple offers, a side-by-side weighted comparison
+- **Total compensation analysis**: not just salary but the full package, region-adjusted (UK, US, EU, APAC) including pension contributions, equity vesting, bonus structure, and benefits value
+- **Role fit assessment**: how well the role matches your stated goals and career direction
+- **Red flags**: anything in the offer or from your research that warrants caution
+- **Comparison framework**: if you have multiple offers, a side-by-side weighted comparison
 
-If you want to negotiate, the salary negotiation coach walks you through the conversation — what to ask for, how to frame it, what levers to pull beyond base salary, and when to accept.
+If you want to negotiate, the salary negotiation coach walks you through the conversation: what to ask for, how to frame it, what levers to pull beyond base salary, and when to accept.
 
-If you are unsure whether to take it at all, that is a harder question. Run `/career-helper:career-coach` and Tim can help you think through the decision in the context of your broader situation — not just whether the money is right, but whether the role is right for where you want to go.
+If you are unsure whether to take it at all, that is a harder question. Run `/career-helper:career-coach` and Tim can help you think through the decision in the context of your broader situation, not just whether the money is right, but whether the role is right for where you want to go.
 
 ---
 
-## Is This You? "I want to slow down — fewer days, better balance, or a step toward retirement"
+## Is This You? "I want to slow down: fewer days, better balance, or a step toward retirement"
 
-Not every career move is a step up. Sometimes the right move is a step back — deliberately, on your terms. You might want to drop to four days a week. You might want to transition from a full-time role to consulting two days a week. You might be thinking about phased retirement but you are not ready to stop completely. Or you might just want to reclaim time for family, health, or the things you have been putting off for twenty years.
+Not every career move is a step up. Sometimes the right move is a step back, deliberately, on your terms. You might want to drop to four days a week. You might want to transition from a full-time role to consulting two days a week. You might be thinking about phased retirement but you are not ready to stop completely. Or you might just want to reclaim time for family, health, or the things you have been putting off for twenty years.
 
-Career Helper can help you plan this, even though "slowing down" is not a crisis. The challenge is positioning a step back so it does not look like a step down — and finding the right arrangement rather than just accepting less.
+Career Helper can help you plan this, even though "slowing down" is not a crisis. The challenge is positioning a step back so it does not look like a step down, and finding the right arrangement rather than just accepting less.
 
 ### Your Recommended Workflow
 
@@ -527,21 +546,21 @@ Career Helper can help you plan this, even though "slowing down" is not a crisis
 
 Run `/career-transitions` and explain what you are looking for. The non-linear career explorer covers:
 
-- **Portfolio and fractional careers** — working 2-3 days a week across multiple clients instead of one full-time role. This is not freelancing; it is structured, senior, and increasingly common at director level and above. The skill covers rate setting, IR35 considerations, and client acquisition.
-- **Multi-role skilling** — combining part-time employment with consulting, board roles, mentoring, or teaching. The skill helps you identify which combination of your skills has the most value at reduced hours.
-- **Phased retirement planning** — how to negotiate a transition from five days to three, or from executive to advisory, without losing your professional identity or your leverage.
+- **Portfolio and fractional careers**: working 2-3 days a week across multiple clients instead of one full-time role. This is not freelancing; it is structured, senior, and increasingly common at director level and above. The skill covers rate setting, IR35 considerations, and client acquisition.
+- **Multi-role skilling**: combining part-time employment with consulting, board roles, mentoring, or teaching. The skill helps you identify which combination of your skills has the most value at reduced hours.
+- **Phased retirement planning**: how to negotiate a transition from five days to three, or from executive to advisory, without losing your professional identity or your leverage.
 
 The output includes a financial readiness assessment. Slowing down means earning less, and the skill is honest about what that looks like.
 
 **Step 2: LinkedIn Repositioning**
 
-Run `/linkedin-coach` once you know your direction. Your LinkedIn profile needs to signal "strategic choice" not "winding down". The skill helps you rewrite your headline and about section to position reduced availability as a feature — "I now work with select clients on strategic operations challenges" reads very differently from "Looking for part-time opportunities".
+Run `/linkedin-coach` once you know your direction. Your LinkedIn profile needs to signal "strategic choice" not "winding down". The skill helps you rewrite your headline and about section to position reduced availability as a feature: "I now work with select clients on strategic operations challenges" reads very differently from "Looking for part-time opportunities".
 
-The content strategy capability is especially useful here. Thought leadership on your terms — two posts a week about what you have learned over your career — builds the inbound enquiries that make fractional and portfolio work sustainable.
+The content strategy capability is especially useful here. Thought leadership on your terms (two posts a week about what you have learned over your career) builds the inbound enquiries that make fractional and portfolio work sustainable.
 
 **Step 3: Networking Intelligence**
 
-Run `/career-navigator` for networking intelligence. The contacts you need when slowing down are different from job search contacts — you are looking for people who commission fractional work, chair boards that need non-executive directors, or run organisations that value experience on a part-time basis.
+Run `/career-navigator` for networking intelligence. The contacts you need when slowing down are different from job search contacts: you are looking for people who commission fractional work, chair boards that need non-executive directors, or run organisations that value experience on a part-time basis.
 
 **Step 4: If You Are Negotiating with Your Current Employer**
 
@@ -551,7 +570,7 @@ If you want to reduce your hours with your current employer rather than leave, r
 
 - A NED, governor, or trustee role can be an excellent complement to reduced working hours. If that interests you, run `/ned-ai-helper` for AI governance support or ask Tim about board-level positioning.
 - Run `/ai-impact-assessment` to check whether the parts of your role you want to keep are the parts that will remain human-centric. No point building a three-day-a-week consultancy around tasks that AI will handle in two years.
-- If you are approaching this because of health, caring responsibilities, or burnout — not just preference — run `/career-helper:career-coach`. Tim adjusts the pace and acknowledges that this is about more than career strategy.
+- If you are approaching this because of health, caring responsibilities, or burnout (not just preference), run `/career-helper:career-coach`. Tim adjusts the pace and acknowledges that this is about more than career strategy.
 
 ---
 
@@ -620,15 +639,15 @@ To summarise, here is what you get across the full skill set:
 - **Ageism support** with UK employment law, practical strategies, and emotional resilience resources
 - **Social media reviews** from a quick recruiter-eye scan to a full 8-agent deep research audit
 - **Guided coaching with Tim** who understands your situation, runs the right skills in the right order, reads emotional signals, and checks in between each step
-- **Accessibility** across every skill — dyslexia-friendly enhanced mode and colour-blind safe output, stored in your preferences
+- **Accessibility** across every skill: dyslexia-friendly enhanced mode and colour-blind safe output, stored in your preferences
 
-All of it saves to your folder, builds on previous outputs, and adapts to your career stage — whether you are an apprentice, a graduate, mid-career, a senior leader, or approaching retirement.
+All of it saves to your folder, builds on previous outputs, and adapts to your career stage, whether you are an apprentice, a graduate, mid-career, a senior leader, or approaching retirement.
 
 ---
 
 ## Share This Guide
 
-If you found this useful, share it with someone who could benefit. Whether they are an apprentice looking for their next step, a graduate starting out, a professional between roles, someone returning after a break, someone considering a completely different direction, or someone wanting to slow down on their own terms — Career Helper works for all of them.
+If you found this useful, share it with someone who could benefit. Whether they are an apprentice looking for their next step, a graduate starting out, a professional between roles, someone returning after a break, someone considering a completely different direction, or someone wanting to slow down on their own terms, Career Helper works for all of them.
 
 If you have suggestions, feature requests, or you have hit a problem, you can [raise an issue on GitHub](https://github.com/Zal4DW/career-helper/issues). If you would prefer a conversation, drop Paul a message on [LinkedIn](https://www.linkedin.com/in/paul-bratcher/). We genuinely read everything and it helps us make the plugin better.
 
