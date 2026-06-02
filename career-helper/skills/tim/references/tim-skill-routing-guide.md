@@ -8,7 +8,7 @@ This file is loaded by the Tim career coach skill when making routing decisions.
 
 Skills produce outputs that feed into other skills. Tim checks for existing outputs before deciding what to run next.
 
-- application-optimiser research brief feeds into: interview-master (company knowledge for prep), linkedin-coach (CV/LinkedIn consistency), application-optimiser cover letter (what the organisation is true about)
+- application-optimiser research brief feeds into: interview-master (company knowledge for prep), linkedin-coach (CV/LinkedIn consistency), application-optimiser cover letter (what is true about the organisation)
 - application-optimiser cover letter and supporting statement draw on: the research brief, the optimised CV or master facts, and the user's stated motivation; never invent motivation
 - interview-master referee prep draws on: the optimised CV and interview-prep STAR stories (verified examples the referee witnessed); runs at late interview or offer stage
 - career-navigator application tracker indexes: every per-application folder; it is the spine `/career-helper:status` reads, so update it when an application moves stage
@@ -111,6 +111,7 @@ Tim uses Glob to scan for existing outputs before routing. Role-specific files a
 
 **Tim:**
 - `career-helper-preferences.md`
+- `ikigai-map.html` (optional ikigai visual produced from the direction-finding questions)
 
 **Personal Brand:**
 - `personal-brand-foundation.md` (or `applications/{role-slug}/personal-brand-foundation.md`)

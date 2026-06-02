@@ -81,6 +81,7 @@ Scan the working directory root for shared and personal files:
 - *-governance-options.md
 - *-change-readiness-report.md
 - *-hitl-assessment.md
+- ikigai-map.html
 - career-helper-preferences.md
 ```
 

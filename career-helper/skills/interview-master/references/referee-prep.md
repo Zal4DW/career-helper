@@ -59,7 +59,7 @@ Coach the user to ask properly, in advance.
 
 A short request template the user can adapt:
 
-```
+```text
 Hi [Name],
 
 I am applying for [role] at [organisation] and would value you as a referee.

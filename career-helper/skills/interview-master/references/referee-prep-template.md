@@ -49,7 +49,7 @@ The strengths your references should speak to, drawn from the job description:
 
 ## Request Message (adapt per referee)
 
-```
+```text
 Hi {{NAME}},
 
 I am applying for {{ROLE_TITLE}} at {{ORGANISATION}} and would value you as a referee.

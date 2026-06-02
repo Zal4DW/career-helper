@@ -19,7 +19,7 @@ Research companies, optimise your CV for ATS systems, and plan your application 
 
 ## Quick Start
 
-```
+```text
 "Research [Company] before I apply"
 "Help me optimise my CV for this job description"
 "Plan my application to [Company] for [Role]"

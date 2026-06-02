@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--
+  Ikigai Map template for Career Helper.
+  The skill replaces every {{PLACEHOLDER}} with the user's own words, then saves
+  the result as ikigai-map.html. HTML-escape every value first (at minimum the
+  characters & < > " '), so user text cannot break the markup or inject script.
+  The text-equivalent table is the single source of content; the diagram reads
+  from it, so you only fill each value once. Self-contained: no external assets.
+  Accessibility: colour-blind-safe palette, every region labelled in text, full
+  text table below, hover AND keyboard focus both reveal detail. Do not remove.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ikigai Map for {{NAME}}</title>
+<style>
+  :root {
+    --love: #0072B2;        /* Okabe-Ito blue */
+    --goodat: #E69F00;      /* orange */
+    --needs: #009E73;       /* bluish green */
+    --paid: #D55E00;        /* vermillion */
+    --ink: #25282d;
+    --muted: #5a616b;
+    --line: #d7dce3;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    color: var(--ink);
+    margin: 0;
+    padding: 24px;
+    line-height: 1.5;
+    background: #fafbfc;
+  }
+  header { max-width: 920px; margin: 0 auto 8px; }
+  h1 { color: #1a4d8f; font-size: 22pt; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 4px; }
+  main { max-width: 920px; margin: 0 auto; }
+  .layout { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
+  .diagram { flex: 1 1 460px; min-width: 320px; }
+  .panel {
+    flex: 1 1 300px; min-width: 260px;
+    border: 1px solid var(--line); border-radius: 8px;
+    padding: 14px 16px; background: #fff;
+  }
+  .panel h2 { font-size: 13pt; color: #1a4d8f; margin: 0 0 6px; }
+  #panel-title { font-weight: 700; }
+  #panel-text { margin: 6px 0 0; }
+  svg { width: 100%; height: auto; display: block; }
+  .region { cursor: pointer; outline: none; }
+  .region:focus-visible .hit { stroke: #1a4d8f; stroke-width: 3px; }
+  .region:hover .label, .region:focus-visible .label { font-weight: 700; }
+  .label { font-size: 13px; fill: var(--ink); pointer-events: none; }
+  .label.small { font-size: 11px; fill: var(--muted); }
+  .centre-label { font-size: 15px; font-weight: 700; fill: #1a4d8f; }
+  table { border-collapse: collapse; width: 100%; margin: 22px 0 0; font-size: 10.5pt; }
+  caption { text-align: left; font-weight: 700; color: #1a4d8f; padding: 0 0 6px; }
+  th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #eef2f7; width: 30%; }
+  .note { color: var(--muted); font-size: 9.5pt; margin-top: 14px; }
+  @media print { body { background: #fff; } .panel { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Ikigai Map</h1>
+  <p class="sub">{{NAME}} &middot; {{DATE}}</p>
+  <p class="sub">Hover or tab through each region to see what you wrote. The full text is in the table below the diagram.</p>
+</header>
+
+<main>
+<div class="layout">
+  <div class="diagram">
+    <svg viewBox="0 0 600 560" role="img" aria-label="Ikigai diagram with four overlapping areas: what you love, what you are good at, what the world needs, and what you can be paid for.">
+      <!-- four overlapping circles; multiply blend keeps overlaps legible -->
+      <g style="mix-blend-mode:multiply">
+        <circle cx="300" cy="190" r="175" fill="var(--love)"   fill-opacity="0.40"/>
+        <circle cx="410" cy="300" r="175" fill="var(--goodat)" fill-opacity="0.40"/>
+        <circle cx="300" cy="410" r="175" fill="var(--paid)"   fill-opacity="0.40"/>
+        <circle cx="190" cy="300" r="175" fill="var(--needs)"  fill-opacity="0.40"/>
+      </g>
+
+      <!-- base regions -->
+      <g class="region" tabindex="0" role="button" data-target="t-love" aria-label="What you love">
+        <circle class="hit" cx="300" cy="120" r="34" fill="transparent"/>
+        <text class="label" x="300" y="108" text-anchor="middle">What you</text>
+        <text class="label" x="300" y="126" text-anchor="middle" style="font-weight:700">LOVE</text>
+      </g>
+      <g class="region" tabindex="0" role="button" data-target="t-goodat" aria-label="What you are good at">
+        <circle class="hit" cx="500" cy="300" r="34" fill="transparent"/>
+        <text class="label" x="500" y="288" text-anchor="middle">What you are</text>
+        <text class="label" x="500" y="306" text-anchor="middle" style="font-weight:700">GOOD AT</text>
+      </g>
+      <g class="region" tabindex="0" role="button" data-target="t-paid" aria-label="What you can be paid for">
+        <text class="label" x="300" y="476" text-anchor="middle">What you can be</text>
+        <text class="label" x="300" y="494" text-anchor="middle" style="font-weight:700">PAID FOR</text>
+        <circle class="hit" cx="300" cy="486" r="34" fill="transparent"/>
+      </g>
+      <g class="region" tabindex="0" role="button" data-target="t-needs" aria-label="What the world needs">
+        <circle class="hit" cx="100" cy="300" r="34" fill="transparent"/>
+        <text class="label" x="100" y="288" text-anchor="middle">What the</text>
+        <text class="label" x="100" y="306" text-anchor="middle" style="font-weight:700">WORLD NEEDS</text>
+      </g>
+
+      <!-- overlap regions -->
+      <g class="region" tabindex="0" role="button" data-target="t-passion" aria-label="Passion: where love and good at overlap">
+        <circle class="hit" cx="385" cy="220" r="26" fill="transparent"/>
+        <text class="label small" x="385" y="224" text-anchor="middle">PASSION</text>
+      </g>
+      <g class="region" tabindex="0" role="button" data-target="t-profession" aria-label="Profession: where good at and paid overlap">
+        <circle class="hit" cx="385" cy="380" r="26" fill="transparent"/>
+        <text class="label small" x="385" y="384" text-anchor="middle">PROFESSION</text>
+      </g>
+      <g class="region" tabindex="0" role="button" data-target="t-vocation" aria-label="Vocation: where world needs and paid overlap">
+        <circle class="hit" cx="215" cy="380" r="26" fill="transparent"/>
+        <text class="label small" x="215" y="384" text-anchor="middle">VOCATION</text>
+      </g>
+      <g class="region" tabindex="0" role="button" data-target="t-mission" aria-label="Mission: where world needs and love overlap">
+        <circle class="hit" cx="215" cy="220" r="26" fill="transparent"/>
+        <text class="label small" x="215" y="224" text-anchor="middle">MISSION</text>
+      </g>
+
+      <!-- centre -->
+      <g class="region" tabindex="0" role="button" data-target="t-ikigai" aria-label="Ikigai: where all four overlap">
+        <circle class="hit" cx="300" cy="300" r="40" fill="transparent"/>
+        <text class="centre-label" x="300" y="304" text-anchor="middle">IKIGAI</text>
+      </g>
+    </svg>
+  </div>
+
+  <aside class="panel" aria-live="polite">
+    <h2>Detail</h2>
+    <p id="panel-title">Pick a region</p>
+    <p id="panel-text">Hover over or tab to a circle, an overlap, or the centre to see what you wrote there.</p>
+  </aside>
+</div>
+
+<!-- Every {{PLACEHOLDER}} below must be HTML-escaped at generation (& < > " ') -->
+<table>
+  <caption>Your ikigai in full (text equivalent)</caption>
+  <tbody>
+    <tr><th>What you love</th><td id="t-love">{{LOVE}}</td></tr>
+    <tr><th>What you are good at</th><td id="t-goodat">{{GOOD_AT}}</td></tr>
+    <tr><th>What the world needs</th><td id="t-needs">{{WORLD_NEEDS}}</td></tr>
+    <tr><th>What you can be paid for</th><td id="t-paid">{{PAID_FOR}}</td></tr>
+    <tr><th>Passion (love + good at)</th><td id="t-passion">{{PASSION}}</td></tr>
+    <tr><th>Mission (love + world needs)</th><td id="t-mission">{{MISSION}}</td></tr>
+    <tr><th>Profession (good at + paid)</th><td id="t-profession">{{PROFESSION}}</td></tr>
+    <tr><th>Vocation (world needs + paid)</th><td id="t-vocation">{{VOCATION}}</td></tr>
+    <tr><th>Ikigai (all four)</th><td id="t-ikigai">{{IKIGAI}}</td></tr>
+  </tbody>
+</table>
+
+<p class="note">This diagram is labelled in text and does not rely on colour to convey meaning. Every region's content is listed in the table above, so the page is fully usable without seeing the diagram. Generated with Career Helper by Prosper AI Consulting.</p>
+</main>
+
+<script>
+  (function () {
+    var titles = {
+      't-love': 'What you love',
+      't-goodat': 'What you are good at',
+      't-needs': 'What the world needs',
+      't-paid': 'What you can be paid for',
+      't-passion': 'Passion (love + good at)',
+      't-mission': 'Mission (love + world needs)',
+      't-profession': 'Profession (good at + paid)',
+      't-vocation': 'Vocation (world needs + paid)',
+      't-ikigai': 'Ikigai (all four overlap)'
+    };
+    var pt = document.getElementById('panel-title');
+    var px = document.getElementById('panel-text');
+    function show(id) {
+      var cell = document.getElementById(id);
+      if (!cell) return;
+      pt.textContent = titles[id] || '';
+      px.textContent = cell.textContent.trim() || 'Not filled in yet. This space is yours to complete.';
+    }
+    var regions = document.querySelectorAll('.region');
+    for (var i = 0; i < regions.length; i++) {
+      (function (r) {
+        var id = r.getAttribute('data-target');
+        r.addEventListener('mouseenter', function () { show(id); });
+        r.addEventListener('focus', function () { show(id); });
+        r.addEventListener('click', function () { show(id); });
+        r.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(id); }
+        });
+      })(regions[i]);
+    }
+  })();
+</script>
+</body>
+</html>
