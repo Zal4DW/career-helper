@@ -81,9 +81,12 @@ Based on their answers, recommend ONE skill and invoke it:
 | Situation | Skill to Invoke |
 |:----------|:----------------|
 | Has target role | /application-optimiser |
+| Needs a cover letter or supporting statement | /application-optimiser (cover letter) |
 | No target, needs plan | /career-navigator |
+| Wants to track or see all their applications | /career-navigator (application tracker) |
 | Interview coming | /interview-master |
 | Post-rejection | /interview-master |
+| Asked for references, choosing or briefing referees | /interview-master (reference and referee prep) |
 | Has offer | /career-navigator |
 | LinkedIn improvement | /linkedin-coach |
 | Digital footprint audit (general) | /employer-footprint |
@@ -121,6 +124,7 @@ Based on their answers, recommend ONE skill and invoke it:
 | Just exploring | /getting-started (full overview) |
 | "How does this work?" | /getting-started |
 | Wants a guide to read or share | /getting-started (getting the best guide) |
+| Wants to automate or schedule the search (Claude Cowork) | /getting-started (scheduled routines) |
 
 ## Handoff
 

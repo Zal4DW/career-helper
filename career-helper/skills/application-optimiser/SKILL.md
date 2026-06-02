@@ -15,6 +15,7 @@ Research companies, optimise your CV for ATS systems, and plan your application 
 | 1 | Company Research | Before applying or interviewing at a target company |
 | 2 | CV/ATS Optimisation | Tailoring your CV for a specific role |
 | 3 | Application Strategy | Planning your full application approach |
+| 4 | Cover Letter | Writing a cover letter, supporting statement, or application message |
 
 ## Quick Start
 
@@ -22,6 +23,8 @@ Research companies, optimise your CV for ATS systems, and plan your application 
 "Research [Company] before I apply"
 "Help me optimise my CV for this job description"
 "Plan my application to [Company] for [Role]"
+"Write a cover letter for this role"
+"Help me with the supporting statement for this application"
 ```
 
 ---
@@ -90,9 +93,28 @@ Comprehensive planning:
 - Stakeholder mapping and connection strategy
 - Risk mitigation for identified gaps
 - Follow-up protocols and decision framework
-- Cover letter approach
+- Cover letter approach (for a full draft, use Capability 4)
 
 **Output:** `applications/{role-slug}/application-strategy.md`
+
+---
+
+## 4. Cover Letter & Supporting Statement
+
+**What you need:** Job description + your CV (or master facts) + research brief if one exists + your own reasons for wanting the role
+**Load:** @references/cover-letter.md
+**Template:** @references/cover-letter-template.md
+
+Drafts a cover letter, competency-based supporting statement, or short application message, with every claim traceable to verified content:
+- Confirms which format the application actually requires before drafting
+- Mirrors job-description language only where the underlying fact genuinely matches
+- Sources motivation from you, never inventing reasons you care about the organisation
+- Addresses overqualification, career change, or gaps honestly where the CV cannot
+- Runs the same anti-hallucination guardrails and reflective validation as CV work
+
+**Output:**
+- `applications/{role-slug}/cover-letter.md` (full letter)
+- `applications/{role-slug}/supporting-statement.md` (competency-based applications)
 
 ---
 
@@ -183,4 +205,4 @@ After optimising your application:
 
 ---
 
-*Application Optimiser v1.3.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Application Optimiser v1.4.0 | Career Helper Plugin | Prosper AI Consulting, UK*

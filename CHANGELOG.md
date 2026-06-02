@@ -6,6 +6,28 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ---
 
+## [1.12.0] - 2026-06-02
+
+### Added
+- **Cover Letter & Supporting Statement** capability in `/application-optimiser` (Capability 4). Drafts a full cover letter, a competency-based supporting statement (for public sector, charity, NHS, and academia), or a short application message, confirming the required format before drafting. Mirrors job-description language only where the underlying fact genuinely matches, sources motivation from the user rather than inventing it, and addresses overqualification, career change, and gaps where the CV cannot. Runs the existing anti-hallucination guardrails and reflective validation. New references `career-helper/skills/application-optimiser/references/cover-letter.md` and `cover-letter-template.md`. Outputs `applications/{role-slug}/cover-letter.md` or `supporting-statement.md`.
+- **Application Tracker** capability in `/career-navigator` (Capability 5). A single, plain-text board of every live application at `applications/tracker.md`, owned by the user and stored locally, as the private alternative to a paid tracking platform. Builds from a scan of existing application folders, then confirms each stage with the user; tracks role, organisation, stage, next action, and next date; uses fixed text-label stages (never colour coding); records only confirmed status; and surfaces one honest observation when the data warrants it (stalled pipeline, overdue actions, thin volume). New references `career-helper/skills/career-navigator/references/application-tracker.md` and `application-tracker-template.md`.
+- **Reference & Referee Prep** capability in `/interview-master` (Capability 5). Helps the user choose credible, relevant referees, ask permission well, brief each referee on what the role values and the verified examples they witnessed, and anticipate the questions referees face (including the more formal checks for regulated and safeguarding roles). Handles common constraints: a current employer who cannot be contacted yet, UK factual-only reference policies, a difficult last manager, and first jobs with no prior employer. Referee details come only from the user; briefs match verified shared history. New references `career-helper/skills/interview-master/references/referee-prep.md` and `referee-prep-template.md`. Outputs `applications/{role-slug}/referee-prep.md`.
+- **Scheduled Job-Search Routines (Claude Cowork)** capability in `/getting-started` (Capability 7). Ready-made `/schedule` prompts that turn the job search into a living process: a Monday job-search standup that reads the tracker, a weekly market and role monitor, a LinkedIn posting reminder aligned to the content calendar, a weekday follow-up check, and an on-demand pre-interview nudge. States the two honest limitations plainly: the computer must be awake with Claude Desktop open, and scheduling is a Cowork feature rather than part of the plugin (CLI and web users can run the same prompts manually). Each prompt retains a "do not invent" instruction. New reference `career-helper/skills/getting-started/references/scheduled-routines.md`.
+
+### Changed
+- Plugin and marketplace version bumped to 1.12.0
+- Plugin and marketplace descriptions updated to mention cover letters and supporting statements, the application tracker, reference and referee prep, and Cowork scheduled routines
+- `/career-helper:status` now checks for `applications/tracker.md` first and uses it as the spine of the progress summary, falling back to a folder scan when no tracker exists, flagging any tracker that looks out of date against the files on disk, and offering to build a tracker when application folders exist without one. Folder scan list extended with `cover-letter.md`, `supporting-statement.md`, and `referee-prep.md`
+- `/career-helper:help` and `/career-helper:quick-start` routing updated to recognise cover letter, supporting statement, application tracking, referee, and "automate my job search" phrasing
+- Getting Started reference guides (`full-overview.md`, `skill-tips.md`, `power-user-strategies.md`, `getting-the-best-guide.md`) updated to cover the four new capabilities
+- Tim routing (`career-helper/agents/tim.md`, `career-helper/skills/tim/SKILL.md`, and `career-helper/skills/tim/references/tim-skill-routing-guide.md`) updated so Tim can route to the new capabilities and scan for their outputs
+- README skills table, output file table, typical workflow, and features list updated; per-skill SKILL.md versions bumped (Application Optimiser 1.4.0, Career Navigator 1.4.0, Interview Master 1.5.0, Getting Started 1.12.0)
+
+### House style
+- All new content adheres to the house style codified in v1.10.1: no em dashes, UK English throughout, Oxford comma, hyphenated compound modifiers, no emojis or emoji-style markers, no hyperbole, second-person coaching voice. Existing files were not retrofitted.
+
+---
+
 ## [1.11.0] - 2026-04-26
 
 ### Added

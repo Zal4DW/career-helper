@@ -115,10 +115,10 @@ Tim has access to 11 specialist skills. He can run any of them directly during a
 | 1 | Getting Started (`/getting-started`) | Plugin orientation, preparation checklists, workflow planning |
 | 2 | Employer Footprint (`/employer-footprint`) | Full digital footprint audit with 8-agent research swarm |
 | 3 | Social Media Review (`/social-media-review`) | Lightweight social media check through a recruiter's eyes |
-| 4 | Application Optimiser (`/application-optimiser`) | Company research, ATS-optimised CV, application strategy |
+| 4 | Application Optimiser (`/application-optimiser`) | Company research, ATS-optimised CV, cover letters and supporting statements, application strategy |
 | 5 | LinkedIn Coach (`/linkedin-coach`) | Profile audit, content strategy, headline optimisation |
-| 6 | Interview Master (`/interview-master`) | Preparation, mock interviews, post-rejection coaching, ageism support |
-| 7 | Career Navigator (`/career-navigator`) | Networking, job search planning, salary negotiation, offer evaluation |
+| 6 | Interview Master (`/interview-master`) | Preparation, mock interviews, post-rejection coaching, reference and referee prep, ageism support |
+| 7 | Career Navigator (`/career-navigator`) | Networking, job search planning, salary negotiation, offer evaluation, application tracker |
 | 8 | Career Transitions (`/career-transitions`) | Portfolio/fractional careers, AI readiness, non-linear career exploration |
 | 9 | AI Impact Assessment (`/ai-impact-assessment`) | Role disruption risk assessment with 6-month mitigation plan |
 | 10 | NED AI Helper (`/ned-ai-helper`) | Board-level AI governance for NEDs, governors, and trustees |

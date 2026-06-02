@@ -1,6 +1,6 @@
 # Career Helper - Claude Code Plugin
 
-End-to-end career support with guided coaching for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Twelve skills including Tim (your personal career coach who guides you through the right skills in the right order), getting started guidance, AI impact assessment, employer footprint analysis, social media review, LinkedIn optimisation, ATS CV rewriting, interview preparation, job search strategy, career transitions (including non-linear career exploration: entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling), board-level AI oversight, and personal brand building (Why You, Why Them, Why Now positioning, audience and channel map, content pillars, bio library).
+End-to-end career support with guided coaching for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Twelve skills including Tim (your personal career coach who guides you through the right skills in the right order), getting started guidance, AI impact assessment, employer footprint analysis, social media review, LinkedIn optimisation, ATS CV rewriting, cover letters and supporting statements, interview preparation, reference and referee prep, job search strategy with an application tracker, career transitions (including non-linear career exploration: entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling), board-level AI oversight, and personal brand building (Why You, Why Them, Why Now positioning, audience and channel map, content pillars, bio library). Ready-made Claude Cowork scheduled routines keep the search moving between sessions.
 
 Available to all Claude users, including free subscriptions.
 
@@ -67,13 +67,13 @@ Or just describe what you need:
 
 | Skill | What It Does | Command |
 |:------|:-------------|:--------|
-| **Getting Started** | Full overview, preparation checklists, workflow planning, skill tips, power user strategies | `/getting-started` |
+| **Getting Started** | Full overview, preparation checklists, workflow planning, skill tips, power user strategies, scheduled Cowork routines | `/getting-started` |
 | **Employer Footprint** | Digital footprint audit through employer's eyes, social media scan, credit-report style dashboard, interview questions from online presence | `/employer-footprint` |
 | **Social Media Review** | Quick social media check through recruiter's eyes, privacy cleanup guide. Especially useful for graduates and early career. | `/social-media-review` |
-| **Application Optimiser** | Company and role research, ATS-optimised CV rewriting, application strategy | `/application-optimiser` |
+| **Application Optimiser** | Company and role research, ATS-optimised CV rewriting, cover letters and supporting statements, application strategy | `/application-optimiser` |
 | **LinkedIn Coach** | Profile audit, headline optimisation, content strategy, post review, video scripts | `/linkedin-coach` |
-| **Interview Master** | Interview prep, mock interviews, interviewer perspective reports, post-interview coaching, ageism support (UK law, practical strategies, emotional resilience) | `/interview-master` |
-| **Career Navigator** | Networking intelligence, 3-month job search plans, salary negotiation, offer evaluation | `/career-navigator` |
+| **Interview Master** | Interview prep, mock interviews, interviewer perspective reports, post-interview coaching, reference and referee prep, ageism support (UK law, practical strategies, emotional resilience) | `/interview-master` |
+| **Career Navigator** | Networking intelligence, 3-month job search plans, salary negotiation, offer evaluation, application tracker | `/career-navigator` |
 | **Career Transitions** | Portfolio and fractional careers, AI readiness assessment, non-linear career exploration (entrepreneurship, startups, public sector, charity, intrapreneurship, multi-role skilling) | `/career-transitions` |
 | **AI Impact Assessment** | Researches whether AI will materially disrupt your role in the next 12 months, with a 6-month mitigation plan | `/ai-impact-assessment` |
 | **NED AI Helper** | AI governance for Non-Executive Directors, Board Governors, and Charity Trustees. Challenge frameworks, risk assessment, governance structures, regulatory guidance | `/ned-ai-helper` |
@@ -98,15 +98,20 @@ Or just describe what you need:
 **Or run skills yourself:**
 
 ```
-0. Audit your digital footprint  /employer-footprint
-1. Research the company          /application-optimiser
-2. Optimise your CV              /application-optimiser
-3. Sync your LinkedIn            /linkedin-coach
-4. Prepare for interviews        /interview-master
-5. Practice with mock interview  /interview-master
-6. Negotiate your offer          /career-navigator
-7. Evaluate competing offers     /career-navigator
+0. Audit your digital footprint   /employer-footprint
+1. Research the company           /application-optimiser
+2. Optimise your CV               /application-optimiser
+3. Write your cover letter        /application-optimiser
+4. Sync your LinkedIn             /linkedin-coach
+5. Track every application        /career-navigator
+6. Prepare for interviews         /interview-master
+7. Practice with mock interview   /interview-master
+8. Prepare your references        /interview-master
+9. Negotiate your offer           /career-navigator
+10. Evaluate competing offers     /career-navigator
 ```
+
+**Tip:** Inside Claude Cowork, run `/getting-started` and ask about scheduled routines to set up a weekly job-search standup, market monitor, and follow-up check that keep the search moving.
 
 ---
 
@@ -117,6 +122,10 @@ Or just describe what you need:
 - **Region-aware** guidance for UK, US, EU, and APAC markets
 - **Research-driven** with cited sources and access dates
 - **ATS-optimised** CV output with keyword coverage analysis
+- **Cover letters and supporting statements** with the same anti-hallucination guardrails as CV work
+- **Application tracker** a single plain-text board of every live application, owned by you and read by `/career-helper:status`
+- **Reference and referee prep** choosing, asking, and briefing referees, with UK conventions and regulated-role notes
+- **Scheduled routines for Claude Cowork** ready-made `/schedule` prompts for a weekly standup, market monitor, and follow-up check
 - **Career stage adaptation** from graduates to late career
 - **Wellbeing-aware coaching** Tim reads emotional signals, acknowledges difficulty before routing, checks in after heavy work, and carries wellbeing context across sessions
 - **Ageism support** UK law, practical strategies, and emotional resilience for age-related rejection
@@ -136,6 +145,8 @@ Skills generate markdown files you can convert to other formats:
 |:-------|:-------------|
 | `{role}-research-brief.md` | Application Optimiser |
 | `{role}-cv-optimized.md` | Application Optimiser |
+| `{role}-cover-letter.md` | Application Optimiser |
+| `{role}-supporting-statement.md` | Application Optimiser |
 | `{role}-application-strategy.md` | Application Optimiser |
 | `{role}-linkedin-profile-review.md` | LinkedIn Coach |
 | `{role}-content-strategy.md` | LinkedIn Coach |
@@ -143,10 +154,12 @@ Skills generate markdown files you can convert to other formats:
 | `{role}-interview-prep.md` | Interview Master |
 | `{role}-interviewer-perspective.md` | Interview Master |
 | `{role}-post-interview-debrief.md` | Interview Master |
+| `{role}-referee-prep.md` | Interview Master |
 | `{role}-networking-intelligence.md` | Career Navigator |
 | `three-month-plan.md` | Career Navigator |
 | `{role}-negotiation-strategy.md` | Career Navigator |
 | `offer-evaluation.md` | Career Navigator |
+| `applications/tracker.md` | Career Navigator |
 | `portfolio-career-strategy.md` | Career Transitions |
 | `ai-readiness-plan.md` | Career Transitions |
 | `non-linear-career-exploration.md` | Career Transitions |
@@ -207,4 +220,4 @@ See [LICENSE](LICENSE) for full terms.
 
 ---
 
-*Career Helper Plugin v1.11.0 | Prosper AI Consulting, UK*
+*Career Helper Plugin v1.12.0 | Prosper AI Consulting, UK*

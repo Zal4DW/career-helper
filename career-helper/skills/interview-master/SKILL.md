@@ -16,6 +16,7 @@ Complete interview support - before, during practice, and after.
 | 2 | Interviewer's Perspective | Understanding what interviewers really assess |
 | 3 | Mock Interview | Practising with realistic simulation |
 | 4 | Post-Interview Coaching | After a rejection or unsuccessful interview |
+| 5 | Reference & Referee Prep | Choosing, asking, and briefing your referees |
 
 ## Quick Start
 
@@ -27,6 +28,7 @@ Complete interview support - before, during practice, and after.
 "I think I was rejected because of my age"
 "I keep getting told I'm overqualified - what can I do?"
 "I was made redundant after 25 years and I'm struggling"
+"They asked for references - who should I use and how do I brief them?"
 ```
 
 ---
@@ -144,6 +146,29 @@ Realistic interview practice:
 
 ---
 
+## 5. Reference & Referee Prep
+
+**What you need:** The role and what it values + who you are considering as referees + any constraints (current employer, difficult last manager, first job)
+**Load:** @references/referee-prep.md
+**Template:** @references/referee-prep-template.md
+
+Prepare your references before you are asked, usually at late interview or offer stage:
+- Choose referees who are credible and relevant to this specific role
+- Ask permission well, in a way that lets a lukewarm referee decline gracefully
+- Brief each referee on what this role values and the verified examples they witnessed
+- Handle common constraints: a current employer who cannot be contacted yet, a UK factual-only reference policy, a difficult last manager, or a first job with no prior employer
+- Anticipate the questions referees are typically asked, including the more formal checks for regulated and safeguarding roles
+
+All referee details come from you; nothing is invented. Briefs match verified shared history, never coaching exaggeration.
+
+**Output:** `applications/{role-slug}/referee-prep.md`
+
+**Suggested next steps:**
+- "Want me to draft the brief to send each referee?"
+- "Ready for the offer and negotiation stage?" (route to `/career-navigator`)
+
+---
+
 ## Application Folder
 
 All role-specific outputs are saved in `applications/{role-slug}/`. When running any capability for a role, check if the folder exists first using Glob. If it doesn't, create it when saving the first output. If a research brief or CV already exists in the folder from a previous skill run, use those to inform interview preparation.
@@ -219,4 +244,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Interview Master v1.4.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Interview Master v1.5.0 | Career Helper Plugin | Prosper AI Consulting, UK*

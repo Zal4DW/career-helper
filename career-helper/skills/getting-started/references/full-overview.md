@@ -32,9 +32,9 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 
 ## The Eleven Skills - With Examples
 
-### Application Optimiser - Research, CV, and Strategy
+### Application Optimiser - Research, CV, Cover Letters, and Strategy
 
-**What it does:** Deep company research, ATS-optimised CV rewriting, and application strategy planning.
+**What it does:** Deep company research, ATS-optimised CV rewriting, cover letters and supporting statements, and application strategy planning.
 
 **Real example - applying for a specific role:**
 
@@ -62,6 +62,7 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 - You have found a role you want to apply for
 - You want to understand a company before applying or interviewing
 - Your CV needs tailoring for a specific job description
+- You need a cover letter or a competency-based supporting statement that says what the CV cannot
 - You are a graduate and not sure how to make a thin CV stand out
 
 ---
@@ -114,7 +115,7 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 
 ### Interview Master - Preparation, Practice, and Recovery
 
-**What it does:** Interview preparation with STAR frameworks, interviewer perspective reports, realistic mock interviews, and post-rejection coaching.
+**What it does:** Interview preparation with STAR frameworks, interviewer perspective reports, realistic mock interviews, post-rejection coaching, and reference and referee preparation.
 
 **Real example - preparing for an interview:**
 
@@ -156,13 +157,14 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 - You want to understand what interviewers are really looking for
 - You want to practice with a mock interview
 - You have been rejected and want to improve
+- You have been asked for references and want to choose and brief your referees well
 - You have never done a formal interview before and want to feel prepared
 
 ---
 
 ### Career Navigator - Planning, Networking, and Offers
 
-**What it does:** Strategic networking intelligence, 3-month job search plans, salary negotiation coaching, and offer evaluation.
+**What it does:** Strategic networking intelligence, 3-month job search plans, salary negotiation coaching, offer evaluation, and an application tracker that keeps every live application and its next action in one place.
 
 **Real example - planning a job search:**
 
@@ -208,6 +210,7 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 - You want to know who to connect with at a target company
 - You have received an offer and want to negotiate
 - You are comparing multiple offers
+- You want one place to track every application, its stage, and its next action
 - You have been made redundant and need structure and direction
 
 ---
@@ -419,6 +422,10 @@ In addition to skills, career-helper has three commands:
 | `/career-helper:help` | Shows all skills and routes you to the right one | You know you need help but are not sure which skill |
 | `/career-helper:quick-start` | Asks guided questions to find your starting point | You are brand new and want to be guided |
 | `/career-helper:status` | Shows all outputs you have generated and suggests next steps | You have used skills before and want to see progress |
+
+## Automating Your Search (Claude Cowork)
+
+If you use Career Helper inside Claude Cowork on Claude Desktop, you can put parts of the search on a schedule. Cowork's `/schedule` runs a saved prompt on a cadence (daily, weekly, weekdays, or on demand) with full access to the skills and your workspace folder. The getting-started skill offers ready-made routines: a Monday job-search standup that reads your tracker, a weekly market monitor, a LinkedIn posting reminder, a follow-up check, and a pre-interview nudge. Ask "can I automate my job search?" or run `/getting-started` and choose scheduled routines. Two honest caveats: your computer must be awake with Claude Desktop open, and scheduling is a Cowork feature (CLI and web users can run the same prompts manually).
 
 ## Getting the Best Guide
 
