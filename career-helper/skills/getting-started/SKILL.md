@@ -18,6 +18,7 @@ Get the most out of Career Helper. Whether you are a graduate writing your first
 | 4 | Skill-by-Skill Tips | Maximise results from any specific skill |
 | 5 | Power User Strategies | Advanced techniques for experienced users |
 | 6 | Getting the Best Guide | Comprehensive downloadable guide with scenario-based walkthroughs |
+| 7 | Scheduled Routines (Cowork) | Set up recurring job-search tasks in Claude Cowork |
 
 ## Quick Start
 
@@ -30,6 +31,8 @@ Get the most out of Career Helper. Whether you are a graduate writing your first
 "Show me advanced ways to use career-helper"
 "Can I get the getting the best guide?"
 "Give me the guide to share with someone"
+"Can I automate my job search?"
+"Set up a weekly routine for my job search"
 ```
 
 ---
@@ -153,6 +156,23 @@ Advanced techniques for users who have used the basic skills and want more.
 
 ---
 
+## 7. Scheduled Routines (Cowork)
+
+**What you need:** Claude Cowork on Claude Desktop, on a paid plan
+**Load:** @references/scheduled-routines.md
+
+Help the user turn their job search into a living process using Claude Cowork's scheduled tasks. Cowork can run a saved prompt on a schedule with full access to the Career Helper skills and the user's workspace folder.
+
+**Core approach:**
+- Explain how `/schedule` works and the two honest limitations: the computer must be awake with Claude Desktop open, and scheduling is a Cowork feature, not part of the plugin (CLI and web users can run the same prompts manually)
+- Offer the ready-made routines: Monday job-search standup, weekly market monitor, LinkedIn posting reminder, follow-up check, and pre-interview nudge
+- Recommend starting with one routine (usually the Monday standup) rather than all five
+- Keep the "do not invent" instruction in any prompt the user edits
+
+**Output:** Conversational setup guidance and copy-paste `/schedule` prompts
+
+---
+
 ## Response Approach
 
 When the user invokes this skill without specifying a capability:
@@ -163,6 +183,7 @@ When the user invokes this skill without specifying a capability:
    - "I need a plan for which skills to use and in what order" → Capability 3
    - "I want tips for getting better results from a specific skill" → Capability 4
    - "Give me the getting the best guide" → Capability 6
+   - "I want to automate or schedule parts of my job search" → Capability 7
 
 2. If the user is brand new or unsure, default to Capability 1 (Full Overview).
 
@@ -219,4 +240,4 @@ Or run **/career-helper:quick-start** if you want guided routing.
 
 ---
 
-*Getting Started Guide v1.11.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Getting Started Guide v1.12.0 | Career Helper Plugin | Prosper AI Consulting, UK*

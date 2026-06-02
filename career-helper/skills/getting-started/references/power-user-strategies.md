@@ -199,7 +199,8 @@ For users returning after a career break who want positioning that frames the ga
 **When to use:** You have generated multiple outputs over time and want to keep them current.
 
 **Approach:**
-- Run `/career-helper:status` periodically to see all generated files
+- Keep an application tracker (`/career-navigator`, Application Tracker) as the index of everything in flight; `/career-helper:status` reads it first
+- Run `/career-helper:status` periodically to see all generated files and the tracker board together
 - When your CV changes, re-run CV optimisation for active applications
 - When goals shift, re-run the 3-month plan
 - Research briefs older than 3 months should be refreshed - company situations change
@@ -211,6 +212,25 @@ For users returning after a career break who want positioning that frames the ga
 - Share with mentors or coaches for feedback
 - Use as reference during real interviews
 - Archive completed application folders when a role is finished
+
+---
+
+## Strategy 9: Automate the Search with Scheduled Tasks (Claude Cowork)
+
+**When to use:** You run Career Helper inside Claude Cowork on Claude Desktop and want the search to keep moving between sessions rather than only when you sit down to work on it.
+
+**Approach:**
+1. Keep an application tracker (`/career-navigator`) so a scheduled task has something to read
+2. Use Cowork's `/schedule` to set up recurring routines (see `/getting-started`, Scheduled Routines):
+   - **Monday standup** (weekly): reads the tracker, flags overdue actions, names the three things to do this week
+   - **Market monitor** (weekly): watches for new roles and news in your target area
+   - **Follow-up check** (weekdays): catches the follow-ups that slip
+   - **Posting reminder** (weekly): keeps your LinkedIn content cadence on track
+3. Start with one routine, usually the Monday standup, and add others once it is part of your week
+
+**Key insight:** the value compounds with a persistent workspace folder and a current tracker. Each scheduled run reads the same files, so the routines get more useful as your search progresses.
+
+**Two honest caveats:** scheduled tasks only run while your computer is awake with Claude Desktop open, and scheduling is a Cowork feature rather than part of the plugin. If you use the CLI or web app, run the same prompts manually.
 
 ---
 

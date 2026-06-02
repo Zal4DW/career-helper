@@ -27,10 +27,10 @@ Career Helper is not a single tool. It is a set of ten skills plus a guided coac
 | `/career-helper:career-coach` | **Tim — your career coach.** Understands your situation, runs the right skills in the right order, checks in between each one. Start here if you are unsure |
 | `/social-media-review` | Quick social media check through a recruiter's eyes |
 | `/employer-footprint` | Full digital footprint audit with a scored dashboard |
-| `/application-optimiser` | Company research, ATS CV optimisation, and application strategy |
+| `/application-optimiser` | Company research, ATS CV optimisation, cover letters and supporting statements, and application strategy |
 | `/linkedin-coach` | Profile audit, headline crafting, content strategy, and video intro scripts |
-| `/interview-master` | Interview prep, mock interviews, post-rejection coaching, and ageism support |
-| `/career-navigator` | Networking intelligence, 3-month plans, salary negotiation, and offer evaluation |
+| `/interview-master` | Interview prep, mock interviews, post-rejection coaching, reference and referee prep, and ageism support |
+| `/career-navigator` | Networking intelligence, 3-month plans, salary negotiation, offer evaluation, and an application tracker |
 | `/career-transitions` | Fractional/portfolio careers, AI readiness, and non-linear career exploration (entrepreneurship, startups, public sector, charity, intrapreneurship) |
 | `/ai-impact-assessment` | Honest assessment of AI disruption risk for your role, with a 6-month mitigation plan |
 | `/ned-ai-helper` | AI governance for Non-Executive Directors, Governors, and Trustees |
@@ -239,6 +239,8 @@ If you have been made redundant or have a career gap, the skill has a career ret
 
 Run the company research capability too. The intelligence brief covers leadership, financial health, hiring context, and red flags. When you are applying to roles at director level and above, knowing who the hiring manager reports to and what the board's strategic priorities are gives you a tangible edge.
 
+When a role needs a cover letter or a supporting statement, run `/application-optimiser` for that too. It drafts from your verified CV and the research brief, sources your motivation from you rather than inventing it, and is the right place to address an overqualification concern or a career gap that the CV cannot explain on its own.
+
 **Step 3: LinkedIn Overhaul**
 
 Run `/linkedin-coach` for the full profile audit. At your level, the content strategy capability is particularly valuable. Three posts a week, mixing tactical advice, strategic observations, and stories from your career, positions you as active and relevant. This directly counters any perception that you are "winding down" or out of touch.
@@ -275,6 +277,8 @@ Critically, it feeds those learnings back into your CV and interview prep. Each 
 
 - Run `/career-transitions` if you are considering going fractional or portfolio. It covers readiness assessment, rate setting, IR35 considerations, and client acquisition strategy.
 - Use `/career-navigator` to evaluate and negotiate offers. The salary negotiation coach is region-aware (UK, US, EU, APAC) and covers total compensation including pension, equity, notice periods, and garden leave.
+- When you are juggling several applications, run `/career-navigator` and build an application tracker. It is a single plain-text board of every role, its stage, and its next action, stored locally and read by `/career-helper:status`. It is the private alternative to a job-search spreadsheet.
+- When references are requested, run `/interview-master` for reference and referee prep. It helps you choose credible referees, ask them well, and brief each one on what the role values, with practical options when you cannot use your current employer yet.
 - Your research briefs, CV versions, and interview prep all save to per-application folders. When you are managing five active applications simultaneously, each one has its own folder with everything in one place. That is the difference between preparation and chaos.
 - If you would rather have someone manage the sequencing for you, run `/career-helper:career-coach`. Tim handles the routing and checks in between each skill — useful when you are juggling a lot and do not want to think about what to run next.
 
@@ -560,6 +564,7 @@ Career Helper skills are designed to feed into each other. Here is the chain:
 | Social media review or employer footprint | Identifies what to fix before applications |
 | Company research (application optimiser) | Informs CV tailoring, interview prep, and networking |
 | CV optimisation (application optimiser) | Produces a CV that LinkedIn coach and interview master reference |
+| Cover letter (application optimiser) | Says what the CV cannot: motivation, fit, and context for a gap or pivot |
 | LinkedIn coach (profile audit) | Creates consistency between CV and LinkedIn |
 | LinkedIn coach (content strategy) | Builds ongoing visibility and thought leadership |
 | Career navigator (networking intelligence) | Identifies who to connect with at target companies |
@@ -567,8 +572,10 @@ Career Helper skills are designed to feed into each other. Here is the chain:
 | Interview master (preparation) | Uses research brief and CV to build role-specific prep |
 | Interview master (mock interview) | Practises with realistic simulation |
 | Interview master (post-interview coaching) | Diagnoses rejection and feeds back into CV/prep refinement |
+| Interview master (reference and referee prep) | Helps you choose, ask, and brief referees at offer stage |
 | Career navigator (salary negotiation) | Coaches through offer negotiation with region-specific guidance |
 | Career navigator (offer evaluation) | Compares multiple offers with weighted decision framework |
+| Career navigator (application tracker) | Indexes every live application, its stage, and its next action |
 
 The persistent folder is what holds this chain together. Without it, each skill starts from scratch.
 
@@ -593,6 +600,7 @@ The persistent folder is what holds this chain together. Without it, each skill 
 To summarise, here is what you get across the full skill set:
 
 - **ATS-optimised CVs** tailored to specific job descriptions with 70%+ keyword coverage
+- **Cover letters and supporting statements** drafted from verified content, with the same anti-hallucination guardrails as the CV work
 - **Company intelligence briefs** covering leadership, culture, financials, red flags, and hiring context
 - **Digital footprint dashboards** scored across eight dimensions with text-label ratings
 - **LinkedIn profile audits** with headline optimisation, content strategy, and 4-week posting calendars
@@ -602,6 +610,9 @@ To summarise, here is what you get across the full skill set:
 - **Salary negotiation coaching** covering total compensation analysis across UK, US, EU, and APAC markets
 - **Offer evaluation frameworks** with weighted decision matrices for comparing multiple opportunities
 - **Post-rejection coaching** that diagnoses where things went wrong and feeds improvements back into your materials
+- **Reference and referee prep** to choose, ask, and brief your referees, with UK conventions and regulated-role notes
+- **An application tracker** that keeps every live application, its stage, and its next action in one plain-text board you own
+- **Scheduled routines for Claude Cowork** that put a Monday standup, market monitor, and follow-up check on repeat between sessions
 - **AI readiness assessments** with tiered upskilling roadmaps
 - **AI impact assessments** that research whether your role faces material disruption, with 6-month mitigation plans
 - **Fractional and portfolio career planning** including rate setting, IR35 guidance, and client acquisition strategy

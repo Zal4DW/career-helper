@@ -44,10 +44,17 @@ After receiving your optimised CV:
 2. Ask: "Can you strengthen the [specific section] to better address [specific JD requirement]?"
 3. If you have additional experience not in your original CV, mention it - the skill will incorporate it
 
+### Cover Letters and Supporting Statements
+
+- **Tell the skill which format the application wants.** A full cover letter, a competency-based supporting statement (public sector, charity, NHS, academia), and a short email message are structured differently. Confirming this first saves a rewrite.
+- **Bring your own reason for wanting the role.** The skill will not invent your motivation. "Why does this organisation interest you?" is a question you need to answer; a specific, true reason is worth more than anything generated.
+- **Run company research first.** A cover letter that names something concrete about the organisation lands far better than generic flattery. The research brief gives the skill that material.
+- **Use it to address what the CV cannot:** an overqualification concern, a career change, or a gap. This is the right place for one honest sentence of context.
+
 ### What Feeds Into What
 
 ```
-Company Research → CV Optimisation → Application Strategy
+Company Research → CV Optimisation → Cover Letter → Application Strategy
        ↓                  ↓
 Interview Prep    LinkedIn Updates
 ```
@@ -108,6 +115,13 @@ CV Optimisation (sync LinkedIn with CV)
 4. Review feedback and update your preparation notes
 5. For a different stage at the same company, run Interview Preparation again with the new stage specified
 
+### Reference and Referee Prep
+
+- **Prepare before you are asked.** References are usually requested at offer stage, often with a tight turnaround. Choosing and briefing referees in advance avoids a scramble.
+- **Brief your referees.** The step most people skip. Give each referee the role, the two or three things it values, and a reminder of the specific examples they witnessed. A briefed referee gives a stronger reference than an impressive one caught cold.
+- **Be honest about constraints.** Cannot use your current employer yet? Have a difficult last manager? A UK factual-only reference policy? Say so; the skill has practical options for each.
+- **Match briefs to real history.** The skill will not coach a referee to claim something that did not happen. Pick referees who genuinely saw the work this role values.
+
 ### What Feeds Into What
 
 ```
@@ -116,6 +130,8 @@ Company Research → Interview Preparation → Mock Interview
               Interviewer's Perspective
                           ↓
               Post-Interview Coaching (after the real interview)
+                          ↓
+              Reference and Referee Prep (late interview or offer stage)
 ```
 
 ---
@@ -141,12 +157,18 @@ Company Research → Interview Preparation → Mock Interview
 - Networking: Run for each new target company.
 - Negotiation: Iterate as counter-offers come in - share new data and ask for updated strategy.
 
+### Application Tracker
+
+- **Let it build from your folders.** If you already have application folders, the tracker scans them and infers each stage, then asks you to confirm. You do not start from a blank table.
+- **Keep one tracker.** It lives at `applications/tracker.md`. Update the stage and next action whenever something moves; `/career-helper:status` reads it as the spine of your progress view.
+- **Use it to spot stalls.** If several roles sit at "researching" with none submitted, the tracker will say so. That honesty is the point; a tidy list with no next actions is not a tracker.
+
 ### What Feeds Into What
 
 ```
-3-Month Plan → Networking Intelligence → Application Phase
-                                              ↓
-                    Salary Negotiation ← Offer Received
+3-Month Plan → Networking Intelligence → Application Phase → Application Tracker
+                                              ↓                      ↑
+                    Salary Negotiation ← Offer Received    (every application logged here)
                            ↓
                     Offer Evaluation (if multiple offers)
 ```

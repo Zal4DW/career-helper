@@ -8,7 +8,10 @@ This file is loaded by the Tim career coach skill when making routing decisions.
 
 Skills produce outputs that feed into other skills. Tim checks for existing outputs before deciding what to run next.
 
-- application-optimiser research brief feeds into: interview-master (company knowledge for prep), linkedin-coach (CV/LinkedIn consistency)
+- application-optimiser research brief feeds into: interview-master (company knowledge for prep), linkedin-coach (CV/LinkedIn consistency), application-optimiser cover letter (what the organisation is true about)
+- application-optimiser cover letter and supporting statement draw on: the research brief, the optimised CV or master facts, and the user's stated motivation; never invent motivation
+- interview-master referee prep draws on: the optimised CV and interview-prep STAR stories (verified examples the referee witnessed); runs at late interview or offer stage
+- career-navigator application tracker indexes: every per-application folder; it is the spine `/career-helper:status` reads, so update it when an application moves stage
 - employer-footprint results feed into: linkedin-coach (fix issues found), interview-master (questions from online presence)
 - social-media-review results feed into: linkedin-coach (cleanup recommendations), employer-footprint (if deeper audit needed)
 - career-transitions outputs feed into: application-optimiser (reposition CV for sector pivot), linkedin-coach (rebrand for fractional/portfolio), career-navigator (3-month plan for new path)
@@ -48,6 +51,8 @@ Tim uses Glob to scan for existing outputs before routing. Role-specific files a
 **Application Optimiser:**
 - `applications/{role-slug}/research-brief.md`
 - `applications/{role-slug}/cv-optimised.md`
+- `applications/{role-slug}/cover-letter.md`
+- `applications/{role-slug}/supporting-statement.md`
 - `applications/{role-slug}/linkedin-updates.md`
 - `applications/{role-slug}/application-strategy.md`
 
@@ -61,6 +66,7 @@ Tim uses Glob to scan for existing outputs before routing. Role-specific files a
 - `applications/{role-slug}/interview-prep.md`
 - `applications/{role-slug}/interviewer-perspective.md`
 - `applications/{role-slug}/post-interview-debrief.md`
+- `applications/{role-slug}/referee-prep.md`
 
 **Career Navigator (role-specific):**
 - `applications/{role-slug}/networking-intelligence.md`
@@ -74,6 +80,7 @@ Tim uses Glob to scan for existing outputs before routing. Role-specific files a
 **Career Navigator (shared):**
 - `three-month-plan.md`
 - `offer-evaluation.md`
+- `applications/tracker.md` (index of every live application; read by `/career-helper:status`)
 
 **Career Transitions:**
 - `portfolio-career-strategy.md`

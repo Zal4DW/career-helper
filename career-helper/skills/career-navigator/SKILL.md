@@ -16,6 +16,7 @@ Plan your search, build your network, and navigate offers.
 | 2 | 3-Month Job Search Plan | Structuring your entire job search |
 | 3 | Salary Negotiation | After receiving an offer |
 | 4 | Offer Evaluation | Comparing multiple offers or evaluating a single one |
+| 5 | Application Tracker | Keeping every live application and its next action in one place |
 
 ## Quick Start
 
@@ -24,6 +25,8 @@ Plan your search, build your network, and navigate offers.
 "Help me create a 3-month job search plan"
 "I got an offer - help me negotiate"
 "I have multiple offers - help me decide"
+"Help me track my applications"
+"Where am I with all my applications?"
 ```
 
 ---
@@ -158,9 +161,27 @@ Comprehensive offer analysis:
 
 ---
 
+## 5. Application Tracker
+
+**What you need:** Nothing to start; existing application folders if any
+**Load:** @references/application-tracker.md
+**Template:** @references/application-tracker-template.md
+
+A single, plain-text board of every live application, owned by the user and stored locally:
+- Builds from a scan of existing `applications/*/` folders, then confirms each stage with you
+- Tracks role, organisation, stage, next action, and next date per application
+- Uses fixed text-label stages (Researching through to Closed), never colour coding
+- Records only what you confirm or what existing files show, never inventing status
+- Surfaces one honest observation when the data warrants it (stalled pipeline, overdue actions, thin volume)
+- Read by `/career-helper:status` as the spine of your progress summary
+
+**Output:** `applications/tracker.md`
+
+---
+
 ## Application Folder
 
-Role-specific outputs (networking intelligence, negotiation strategy) are saved in `applications/{role-slug}/`. Cross-application outputs (three-month-plan, offer-evaluation) are saved in the workspace root. When running a role-specific capability, check if the application folder exists first using Glob. If it doesn't, create it when saving the first output.
+Role-specific outputs (networking intelligence, negotiation strategy) are saved in `applications/{role-slug}/`. Cross-application outputs (three-month-plan, offer-evaluation, tracker) are saved at the `applications/` level or workspace root. When running a role-specific capability, check if the application folder exists first using Glob. If it doesn't, create it when saving the first output.
 
 ---
 
@@ -225,4 +246,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Career Navigator v1.3.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Career Navigator v1.4.0 | Career Helper Plugin | Prosper AI Consulting, UK*

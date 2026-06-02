@@ -12,6 +12,14 @@ Check for `career-helper-preferences.md` in the current working directory. If fo
 
 ---
 
+## Check for the Tracker First
+
+Before scanning folders, check for `applications/tracker.md`. If it exists, read it and use it as the spine of the status summary: the active and closed tables already hold each application's stage, next action, and next date. Present that board first, then supplement with any output files found in the scan below. If the tracker looks out of date compared with the files on disk (for example, a folder has an `interview-prep.md` but the tracker still shows "Applied"), note the discrepancy and offer to refresh the tracker via `/career-navigator` (Application Tracker).
+
+If no tracker exists but application folders do, offer to build one: "Would you like me to create an application tracker so you can see every role and its next action in one place?" Route to `/career-navigator` (Application Tracker) if yes.
+
+---
+
 ## Check for Existing Outputs
 
 Look for career-helper output files in two locations:
@@ -24,11 +32,14 @@ Scan `applications/*/` for per-application subfolders. Each subfolder represents
 applications/{role-slug}/
 - research-brief.md
 - cv-optimised.md
+- cover-letter.md
+- supporting-statement.md
 - linkedin-updates.md
 - application-strategy.md
 - interview-prep.md
 - interviewer-perspective.md
 - post-interview-debrief.md
+- referee-prep.md
 - networking-intelligence.md
 - negotiation-strategy.md
 - linkedin-profile-review.md
