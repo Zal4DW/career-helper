@@ -12,6 +12,7 @@ Skills produce outputs that feed into other skills. Tim checks for existing outp
 - application-optimiser cover letter and supporting statement draw on: the research brief, the optimised CV or master facts, and the user's stated motivation; never invent motivation
 - interview-master referee prep draws on: the optimised CV and interview-prep STAR stories (verified examples the referee witnessed); runs at late interview or offer stage
 - career-navigator application tracker indexes: every per-application folder; it is the spine `/career-helper:status` reads, so update it when an application moves stage
+- career-navigator application learnings loop draws on: completed interviews, rejections, and wins, captured as per-event notes; the synthesised `applications/learnings/patterns.md` feeds interview-master (recurring objections to drill) and application-optimiser (a gap the CV consistently undersells), and is read by `/career-helper:status` when it exists
 - employer-footprint results feed into: linkedin-coach (fix issues found), interview-master (questions from online presence)
 - social-media-review results feed into: linkedin-coach (cleanup recommendations), employer-footprint (if deeper audit needed)
 - career-transitions outputs feed into: application-optimiser (reposition CV for sector pivot), linkedin-coach (rebrand for fractional/portfolio), career-navigator (3-month plan for new path)
@@ -81,6 +82,8 @@ Tim uses Glob to scan for existing outputs before routing. Role-specific files a
 - `three-month-plan.md`
 - `offer-evaluation.md`
 - `applications/tracker.md` (index of every live application; read by `/career-helper:status`)
+- `applications/learnings/patterns.md` (synthesised patterns; read by `/career-helper:status`)
+- `applications/learnings/interview-notes/{org-slug}-{role-slug}.md`, `applications/learnings/rejections/{org-slug}-{role-slug}.md`, `applications/learnings/wins/{org-slug}-{role-slug}.md` (per-event notes)
 
 **Career Transitions:**
 - `portfolio-career-strategy.md`
@@ -152,7 +155,7 @@ Three different tools, three different purposes. Quick cleanup of risky or embar
 Both personas apply and they reinforce each other. Start with interview-master with the ageism persona for emotional grounding and practical strategies — returners often face both age and gap discrimination simultaneously and need confidence before tactics. Then application-optimiser with the career returner persona to address how the gap is framed on the CV and in applications.
 
 **8. Multiple rejections — unclear cause**
-Do not assume the problem is the CV, the interview, or anything else. Ask: "Where in the process are you being rejected — at application stage, after phone screen, after interview, or at offer?" The answer determines the route. Application stage points to application-optimiser. Phone screen or first interview points to interview-master. Offer stage points to career-navigator negotiation. Running the wrong skill wastes the user's time and erodes trust.
+Do not assume the problem is the CV, the interview, or anything else. Ask: "Where in the process are you being rejected: at application stage, after phone screen, after interview, or at offer?" The answer determines the route. Application stage points to application-optimiser. Phone screen or first interview points to interview-master. Offer stage points to career-navigator negotiation. Running the wrong skill wastes the user's time and erodes trust. When the cause is genuinely unclear, capture each rejection as a structured analysis via the career-navigator learnings loop and synthesise once a few have accumulated; a pattern across notes (for example, the same objection at final round three times) is far more reliable than diagnosing from a single rejection.
 
 **9. Starting a business — financial anxiety**
 Route to career-transitions, non-linear explorer, entrepreneurship path. This capability includes financial readiness assessment and an honest pros/cons analysis with failure rate data. Do not route to career-navigator (which assumes employed job search) or application-optimiser (which assumes a specific role). The anxiety is usually about financial exposure — address that directly rather than redirecting to soft encouragement.

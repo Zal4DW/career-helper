@@ -30,7 +30,7 @@ Career Helper is not a single tool. It is a set of eleven skills plus a guided c
 | `/application-optimiser` | Company research, ATS CV optimisation, cover letters and supporting statements, and application strategy |
 | `/linkedin-coach` | Profile audit, headline crafting, content strategy, and video intro scripts |
 | `/interview-master` | Interview prep, mock interviews, post-rejection coaching, reference and referee prep, and ageism support |
-| `/career-navigator` | Networking intelligence, 3-month plans, salary negotiation, offer evaluation, and an application tracker |
+| `/career-navigator` | Networking intelligence, 3-month plans, salary negotiation, offer evaluation, an application tracker, and a learnings loop that turns interviews, rejections, and wins into synthesised patterns |
 | `/career-transitions` | Fractional/portfolio careers, AI readiness, and non-linear career exploration (entrepreneurship, startups, public sector, charity, intrapreneurship) |
 | `/ai-impact-assessment` | Honest assessment of AI disruption risk for your role, with a 6-month mitigation plan |
 | `/ned-ai-helper` | AI governance for Non-Executive Directors, Governors, and Trustees |
@@ -480,6 +480,8 @@ If you have been rejected multiple times, share all of them. The skill looks for
 
 After diagnosis, the skill feeds improvements directly back into your CV and interview prep. Each rejection genuinely makes the next application stronger, but only if you capture what went wrong.
 
+Over a long search, run `/career-navigator` and use the application learnings loop to keep this honest. It turns each interview, rejection, and win into a short structured note, then periodically synthesises those notes into a single patterns file so you can see what is actually working across dozens of applications, rather than relearning the same lesson each time. The synthesised patterns feed back into `/interview-master` (recurring objections worth drilling) and `/application-optimiser` (a gap your CV keeps underselling), and `/career-helper:status` surfaces the most useful current pattern when you check where you are.
+
 If the rejections are hitting you emotionally (and they do, for everyone), run `/career-helper:career-coach` instead. Tim will run the rejection analysis but will also check how you are doing and adjust the pace.
 
 ---
@@ -595,6 +597,7 @@ Career Helper skills are designed to feed into each other. Here is the chain:
 | Career navigator (salary negotiation) | Coaches through offer negotiation with region-specific guidance |
 | Career navigator (offer evaluation) | Compares multiple offers with weighted decision framework |
 | Career navigator (application tracker) | Indexes every live application, its stage, and its next action |
+| Career navigator (learnings loop) | Turns interviews, rejections, and wins into synthesised patterns that sharpen CV and interview work |
 
 The persistent folder is what holds this chain together. Without it, each skill starts from scratch.
 
@@ -631,6 +634,7 @@ To summarise, here is what you get across the full skill set:
 - **Post-rejection coaching** that diagnoses where things went wrong and feeds improvements back into your materials
 - **Reference and referee prep** to choose, ask, and brief your referees, with UK conventions and regulated-role notes
 - **An application tracker** that keeps every live application, its stage, and its next action in one plain-text board you own
+- **An application learnings loop** that captures each interview, rejection, and win as a structured note and synthesises them into the patterns that are actually shaping your search
 - **Scheduled routines for Claude Cowork** that put a Monday standup, market monitor, and follow-up check on repeat between sessions
 - **AI readiness assessments** with tiered upskilling roadmaps
 - **AI impact assessments** that research whether your role faces material disruption, with 6-month mitigation plans

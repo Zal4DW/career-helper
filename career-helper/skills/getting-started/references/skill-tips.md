@@ -163,14 +163,22 @@ Company Research → Interview Preparation → Mock Interview
 - **Keep one tracker.** It lives at `applications/tracker.md`. Update the stage and next action whenever something moves; `/career-helper:status` reads it as the spine of your progress view.
 - **Use it to spot stalls.** If several roles sit at "researching" with none submitted, the tracker will say so. That honesty is the point; a tidy list with no next actions is not a tracker.
 
+### Application Learnings Loop
+
+- **Capture close to the event.** A debrief written the same day is honest; one written a week later drifts into fiction. Run it as soon as you finish an interview or hear a decision.
+- **Keep notes and synthesis separate.** Individual debriefs, rejections, and wins are raw input under `applications/learnings/`; `patterns.md` is the considered output. Synthesise periodically (a rough guide: every three to five new notes), not after every application.
+- **Never invent a reason.** Record what was said and your honest read on the likely real reason as two separate things. Mark guesses as guesses; a fabricated rejection reason is worse than "no feedback given".
+- **Let it drive the fixes.** A recurring objection feeds `/interview-master`; a gap your CV keeps underselling feeds `/application-optimiser`. `/career-helper:status` surfaces the most useful current pattern.
+
 ### What Feeds Into What
 
 ```text
 3-Month Plan → Networking Intelligence → Application Phase → Application Tracker
                                               ↓                      ↑
                     Salary Negotiation ← Offer Received    (every application logged here)
-                           ↓
-                    Offer Evaluation (if multiple offers)
+                           ↓                      ↓
+                    Offer Evaluation      Learnings Loop → Patterns → Interview Master / Application Optimiser
+                    (if multiple offers)  (debriefs, rejections, wins)
 ```
 
 ---

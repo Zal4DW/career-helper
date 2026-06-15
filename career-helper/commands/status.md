@@ -20,6 +20,12 @@ If no tracker exists but application folders do, offer to build one: "Would you 
 
 ---
 
+## Check for Learnings
+
+Check for `applications/learnings/patterns.md`. If it exists, read it and surface the single most useful current pattern (what is working, or a recurring gap) after the tracker board. If per-event notes exist under `applications/learnings/interview-notes/`, `rejections/`, or `wins/` but `patterns.md` is missing or looks stale relative to them, offer to synthesise via `/career-navigator` (Application Learnings Loop). Never invent a pattern that the notes do not support.
+
+---
+
 ## Check for Existing Outputs
 
 Look for career-helper output files in two locations:
@@ -125,6 +131,9 @@ Overall suggested next steps:
 | LinkedIn + CV done | /interview-master (prepare for interviews) |
 | Interview prep done | /interview-master (mock interview) |
 | Post-interview debrief | /application-optimiser (next application) |
+| Interview done, not yet debriefed | /career-navigator (Application Learnings Loop: debrief) |
+| Rejection received | /career-navigator (Application Learnings Loop: rejection analysis) |
+| Several learnings notes accumulated | /career-navigator (Application Learnings Loop: synthesise patterns) |
 | Offer received | /career-navigator (negotiation) |
 | Multiple offers | /career-navigator (offer evaluation) |
 | Footprint dashboard done | /linkedin-coach (fix issues) or /interview-master (prep for footprint questions) |

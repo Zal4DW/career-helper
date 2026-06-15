@@ -17,6 +17,7 @@ Plan your search, build your network, and navigate offers.
 | 3 | Salary Negotiation | After receiving an offer |
 | 4 | Offer Evaluation | Comparing multiple offers or evaluating a single one |
 | 5 | Application Tracker | Keeping every live application and its next action in one place |
+| 6 | Application Learnings Loop | Capturing interviews, rejections, and wins, then synthesising the patterns |
 
 ## Quick Start
 
@@ -27,6 +28,9 @@ Plan your search, build your network, and navigate offers.
 "I have multiple offers - help me decide"
 "Help me track my applications"
 "Where am I with all my applications?"
+"Help me debrief that interview"
+"I got rejected - help me work out why"
+"What patterns are showing up across my applications?"
 ```
 
 ---
@@ -179,6 +183,24 @@ A single, plain-text board of every live application, owned by the user and stor
 
 ---
 
+## 6. Application Learnings Loop
+
+**What you need:** A completed interview, a rejection, or a win to record; accumulated notes when synthesising
+**Load:** @references/learnings-loop.md
+**Templates:** @references/interview-debrief-template.md, @references/rejection-analysis-template.md, @references/win-log-template.md, @references/patterns-synthesis-template.md
+
+Turn each outcome into a short, structured note, then periodically synthesise the notes into one patterns file:
+- Interview debrief: what they asked, what landed, what to do differently
+- Rejection analysis: what was said versus the likely real reason, and the concrete adjustment
+- Win log: which CV version and framings worked, so success is repeatable
+- Patterns synthesis: recurring gaps, what is working, and fit observations, drawn only from the notes
+- Records only what you confirm or what existing files show, never inventing a reason for a rejection
+- Feeds `/interview-master` (recurring objections) and `/application-optimiser` (gaps the CV undersells)
+
+**Output:** `applications/learnings/patterns.md`, plus per-event notes under `applications/learnings/interview-notes/`, `rejections/`, and `wins/`
+
+---
+
 ## Application Folder
 
 Role-specific outputs (networking intelligence, negotiation strategy) are saved in `applications/{role-slug}/`. Cross-application outputs (three-month-plan, offer-evaluation, tracker) are saved at the `applications/` level or workspace root. When running a role-specific capability, check if the application folder exists first using Glob. If it doesn't, create it when saving the first output.
@@ -246,4 +268,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Career Navigator v1.4.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Career Navigator v1.5.0 | Career Helper Plugin | Prosper AI Consulting, UK*
