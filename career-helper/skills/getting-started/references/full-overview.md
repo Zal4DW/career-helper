@@ -164,7 +164,7 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 
 ### Career Navigator - Planning, Networking, and Offers
 
-**What it does:** Strategic networking intelligence, 3-month job search plans, salary negotiation coaching, offer evaluation, and an application tracker that keeps every live application and its next action in one place.
+**What it does:** Strategic networking intelligence, 3-month job search plans, salary negotiation coaching, offer evaluation, an application tracker that keeps every live application and its next action in one place, and an application learnings loop that turns each interview, rejection, and win into a structured note and synthesises them into a single patterns file.
 
 **Real example - planning a job search:**
 
@@ -205,12 +205,26 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 >
 > **You get:** `three-month-plan.md`
 
+**Real example - learning from a long search:**
+
+> **You say:** "I had another interview yesterday and a rejection from last week. I keep feeling like I am making the same mistakes."
+>
+> **What happens:**
+> 1. Walks you through a short, structured debrief of the interview and an analysis of the rejection, in your own words
+> 2. Keeps what was actually said separate from your honest read on the likely real reason; never invents a reason
+> 3. Saves each as a per-event note under `applications/learnings/`
+> 4. Once a few notes have built up, synthesises them into a single patterns file: what is working, recurring gaps, and fit observations
+> 5. Surfaces the single most useful pattern, then points it at `/interview-master` or `/application-optimiser` to fix
+>
+> **You get:** `applications/learnings/patterns.md`, plus per-event notes under `applications/learnings/interview-notes/`, `rejections/`, and `wins/`
+
 **When to use it:**
 - You need a structured job search plan
 - You want to know who to connect with at a target company
 - You have received an offer and want to negotiate
 - You are comparing multiple offers
 - You want one place to track every application, its stage, and its next action
+- You want to turn interviews, rejections, and wins into patterns you can act on
 - You have been made redundant and need structure and direction
 
 ---

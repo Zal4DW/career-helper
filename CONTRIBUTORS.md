@@ -15,6 +15,17 @@ Plugin design, skill architecture, and ongoing maintenance.
 
 ## Community Contributors
 
+### @sal-avelar-01
+
+- **Contribution:** PR #29 — Job-search learnings loop (interview debriefs, rejection analyses, win logs, and synthesised patterns)
+- **Date:** June 2026
+- **What was adapted:** The structure of the learnings loop (per-event debrief, rejection, and win notes feeding a single synthesised patterns file) was adapted into `career-navigator` as a new capability, with templates rebuilt to the house style (UK English, "CV" rather than "resume", `{{PLACEHOLDER}}` syntax, no em dashes, template footers) and wired into `/career-helper:status`. The submitted master CV and the parallel `job-search/` directory were not adopted: personal data does not belong in the repo, and reusable value lives inside the plugin architecture.
+- **Released in:** v1.14.0
+
+Thank you for the learnings-loop idea. Treating each rejection and win as structured input to a synthesised view is a useful addition to how the plugin supports a long search.
+
+---
+
 ### @enigmaicon-eng
 
 - **Contribution:** PR #22 — Career coaching instructions and CV content verification framework

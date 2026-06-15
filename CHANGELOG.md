@@ -6,6 +6,24 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ---
 
+## [1.14.0] - 2026-06-15
+
+### Added
+- **Application Learnings Loop** capability in `/career-navigator` (Capability 6). Turns each interview, rejection, and win into a short, structured note, then periodically synthesises those notes into one patterns file so the user can see what is actually working across a long search rather than relearning the same lesson each time. Three per-event templates (interview debrief, rejection analysis, win log) and one synthesis template feed a single `applications/learnings/patterns.md`. Notes are stored per role under `applications/learnings/interview-notes/`, `rejections/`, and `wins/`. The capability records only what the user confirms or what existing files show, keeps the user's honest read on a rejection separate from what was actually said, never invents a reason, and surfaces one useful pattern at a time. It feeds `/interview-master` (recurring objections) and `/application-optimiser` (gaps the CV undersells). New references `career-helper/skills/career-navigator/references/learnings-loop.md`, `interview-debrief-template.md`, `rejection-analysis-template.md`, `win-log-template.md`, and `patterns-synthesis-template.md`.
+
+### Changed
+- Plugin and marketplace version bumped to 1.14.0
+- `/career-navigator` capabilities table, quick-start examples, and version footer updated for the learnings loop (skill v1.5.0)
+- `/career-helper:status` now checks for `applications/learnings/patterns.md`, surfaces the most useful current pattern after the tracker board, offers to synthesise when per-event notes have accumulated, and suggests the learnings loop as a next step after interviews and rejections
+- Tim career coach agent now lists the learnings loop under Career Navigator and carries routing judgements for capturing and synthesising interviews, rejections, and wins
+- Tim skill routing guide updated: the cross-skill dependency map, output-file patterns, and the multiple-rejections scenario now cover the learnings loop
+- Getting-started help guides updated to document the learnings loop: the shareable `getting-the-best-guide.md` (and regenerated PDF), `full-overview.md`, and `skill-tips.md`
+
+### House style
+- All new content adheres to the house style: no em dashes, UK English throughout (including "CV" rather than "resume"), Oxford comma, hyphenated compound modifiers, no emojis, no hyperbole, second-person coaching voice. Templates use `{{PLACEHOLDER}}` syntax and carry no real personal data.
+
+---
+
 ## [1.13.0] - 2026-06-02
 
 ### Added
