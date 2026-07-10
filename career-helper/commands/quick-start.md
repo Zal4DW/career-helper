@@ -84,6 +84,10 @@ Based on their answers, recommend ONE skill and invoke it:
 | Needs a cover letter or supporting statement | /application-optimiser (cover letter) |
 | No target, needs plan | /career-navigator |
 | Wants to track or see all their applications | /career-navigator (application tracker) |
+| Wants a visual board of the pipeline | /career-navigator (kanban board view) |
+| Cannot find roles to apply for | /job-scout |
+| Unsure which postings to prioritise | /job-scout (batch ranking) |
+| Worried about missing skills | /skills-radar |
 | Interview coming | /interview-master |
 | Post-rejection | /interview-master |
 | Asked for references, choosing or briefing referees | /interview-master (reference and referee prep) |

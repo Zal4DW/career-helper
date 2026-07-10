@@ -18,6 +18,8 @@ Before scanning folders, check for `applications/tracker.md`. If it exists, read
 
 If no tracker exists but application folders do, offer to build one: "Would you like me to create an application tracker so you can see every role and its next action in one place?" Route to `/career-navigator` (Application Tracker) if yes.
 
+If the tracker shows three or more active applications and no `applications/board.html` exists, offer the interactive board view once: "Would you like an interactive board of your pipeline? You can drag applications between stages and export the changes back to your tracker." Route to `/career-navigator` (Kanban Board View) if yes. If `applications/board.html` exists but the tracker has changed since it was generated, offer to regenerate the board so the two stay in step.
+
 ---
 
 ## Check for Learnings

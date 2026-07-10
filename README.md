@@ -1,6 +1,6 @@
 # Career Helper - Claude Code Plugin
 
-End-to-end career support with guided coaching for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Twelve skills including Tim (your personal career coach who guides you through the right skills in the right order), getting started guidance, AI impact assessment, employer footprint analysis, social media review, LinkedIn optimisation, ATS CV rewriting, cover letters and supporting statements, interview preparation, reference and referee prep, job search strategy with an application tracker, career transitions (including non-linear career exploration: entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling), board-level AI oversight, and personal brand building (Why You, Why Them, Why Now positioning, audience and channel map, content pillars, bio library). Ready-made Claude Cowork scheduled routines keep the search moving between sessions.
+End-to-end career support with guided coaching for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Fourteen skills including Tim (your personal career coach who guides you through the right skills in the right order), getting started guidance, AI impact assessment, employer footprint analysis, social media review, LinkedIn optimisation, ATS CV rewriting, cover letters and supporting statements, verified CV PDF production, interview preparation, reference and referee prep, job search strategy with an application tracker and interactive kanban board, live role discovery with batch ranking (job scout), an evidenced skills inventory with gap analysis and learning plans (skills radar), career transitions (including non-linear career exploration: entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling), board-level AI oversight, and personal brand building (Why You, Why Them, Why Now positioning, audience and channel map, content pillars, bio library). Ready-made Claude Cowork scheduled routines keep the search moving between sessions.
 
 Available to all Claude users, including free subscriptions.
 
@@ -70,10 +70,12 @@ Or just describe what you need:
 | **Getting Started** | Full overview, preparation checklists, workflow planning, skill tips, power user strategies, scheduled Cowork routines | `/getting-started` |
 | **Employer Footprint** | Digital footprint audit through employer's eyes, social media scan, credit-report style dashboard, interview questions from online presence | `/employer-footprint` |
 | **Social Media Review** | Quick social media check through recruiter's eyes, privacy cleanup guide. Especially useful for graduates and early career. | `/social-media-review` |
-| **Application Optimiser** | Company and role research, ATS-optimised CV rewriting, cover letters and supporting statements, application strategy | `/application-optimiser` |
+| **Application Optimiser** | Company and role research, ATS-optimised CV rewriting, cover letters and supporting statements, application strategy, verified CV PDF production with layout and ATS text-layer checks | `/application-optimiser` |
 | **LinkedIn Coach** | Profile audit, headline optimisation, content strategy, post review, video scripts | `/linkedin-coach` |
 | **Interview Master** | Interview prep, mock interviews, interviewer perspective reports, post-interview coaching, reference and referee prep, ageism support (UK law, practical strategies, emotional resilience) | `/interview-master` |
-| **Career Navigator** | Networking intelligence, 3-month job search plans, salary negotiation, offer evaluation, application tracker | `/career-navigator` |
+| **Career Navigator** | Networking intelligence, 3-month job search plans, salary negotiation, offer evaluation, application tracker with an interactive kanban board view | `/career-navigator` |
+| **Job Scout** | Live role discovery across boards and careers pages with honest coverage caveats, batch ranking of postings with deal-breaker vetting and deadline flags, shortlist feeding the tracker | `/job-scout` |
+| **Skills Radar** | Evidenced skills inventory (including your public work, with consent), gap analysis against a target role, realistic learning plans | `/skills-radar` |
 | **Career Transitions** | Portfolio and fractional careers, AI readiness assessment, non-linear career exploration (entrepreneurship, startups, public sector, charity, intrapreneurship, multi-role skilling) | `/career-transitions` |
 | **AI Impact Assessment** | Researches whether AI will materially disrupt your role in the next 12 months, with a 6-month mitigation plan | `/ai-impact-assessment` |
 | **NED AI Helper** | AI governance for Non-Executive Directors, Board Governors, and Charity Trustees. Challenge frameworks, risk assessment, governance structures, regulatory guidance | `/ned-ai-helper` |
@@ -124,6 +126,13 @@ Or just describe what you need:
 - **ATS-optimised** CV output with keyword coverage analysis
 - **Cover letters and supporting statements** with the same anti-hallucination guardrails as CV work
 - **Application tracker** a single plain-text board of every live application, owned by you and read by `/career-helper:status`
+- **Interactive kanban board** an offline, accessible HTML view of the tracker: drag applications between stages and export the changes back
+
+  ![The kanban board view: six stage columns from Researching to Closed, one card per application with its next action, an OVERDUE text tag on a slipped date, keyboard-operable move buttons, and toolbar buttons to copy or download the tracker markdown](docs/images/kanban-board-view.png)
+  *The board view of the application tracker, shown with placeholder data. Generated to `applications/board.html`; your tracker file stays the source of truth.*
+- **Job scouting** live role discovery and five-dimension batch ranking, honest about the limits of automated job-board search (and able to use the Claude for Chrome extension for logged-in boards)
+- **Skills radar** an evidenced skills inventory that separates real skill gaps from evidence gaps, with learning plans built around your actual weekly hours
+- **Verified CV PDFs** a generate-verify loop that renders an ATS-safe PDF, checks the text layer parses, and inspects the layout page by page
 - **Reference and referee prep** choosing, asking, and briefing referees, with UK conventions and regulated-role notes
 - **Scheduled routines for Claude Cowork** ready-made `/schedule` prompts for a weekly standup, market monitor, and follow-up check
 - **Ikigai direction-finding** Tim's four-question exercise for when you do not know what you want, with an optional interactive, colour-blind-safe ikigai map you can keep
@@ -149,6 +158,7 @@ Skills generate markdown files you can convert to other formats:
 | `{role}-cover-letter.md` | Application Optimiser |
 | `{role}-supporting-statement.md` | Application Optimiser |
 | `{role}-application-strategy.md` | Application Optimiser |
+| `applications/{role-slug}/cv.pdf` and `applications/{role-slug}/cover-letter.pdf` | Application Optimiser |
 | `{role}-linkedin-profile-review.md` | LinkedIn Coach |
 | `{role}-content-strategy.md` | LinkedIn Coach |
 | `{role}-content-calendar.md` | LinkedIn Coach |
@@ -161,6 +171,7 @@ Skills generate markdown files you can convert to other formats:
 | `{role}-negotiation-strategy.md` | Career Navigator |
 | `offer-evaluation.md` | Career Navigator |
 | `applications/tracker.md` | Career Navigator |
+| `applications/board.html` | Career Navigator |
 | `portfolio-career-strategy.md` | Career Transitions |
 | `ai-readiness-plan.md` | Career Transitions |
 | `non-linear-career-exploration.md` | Career Transitions |
@@ -182,6 +193,10 @@ Skills generate markdown files you can convert to other formats:
 | `personal-brand-bio-library.md` | Personal Brand |
 | `personal-brand-refresh-plan.md` | Personal Brand |
 | `ikigai-map.html` | Tim (Career Coach) |
+| `applications/shortlist.md` | Job Scout |
+| `skills-inventory.md` | Skills Radar |
+| `skills-gap-analysis.md` | Skills Radar |
+| `learning-plan.md` | Skills Radar |
 | `career-helper-preferences.md` | Tim (Career Coach) |
 
 ---

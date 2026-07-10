@@ -6,6 +6,33 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ---
 
+## [1.15.0] - 2026-07-10
+
+### Added
+- **Job Scout skill** (`/job-scout`). Live role discovery across job boards, aggregators, ATS-hosted postings, and employer careers pages, followed by five-dimension batch ranking (skills fit, level fit, practical fit, organisation signals, and winnability) with deal-breaker vetting, deadline flagging, and text-label tiers (Apply first, Apply, Park, Discard). The skill is deliberately honest that automated job-board search is fragile: it states coverage limits after every run, recommends saved alerts as the backbone of discovery, and offers the Claude for Chrome extension for logged-in boards such as LinkedIn and Indeed rather than attempting to circumvent access blocks. Chosen roles feed `applications/tracker.md` at stage Researching. New references `role-discovery.md`, `batch-ranking.md`, and `shortlist-template.md`. Output: `applications/shortlist.md`.
+- **Skills Radar skill** (`/skills-radar`). Builds an evidenced skills inventory in three layers (stated, implicit, and transferable), including consent-based mining of the user's own public work (GitHub, portfolio, publications, talks, volunteering) to surface skills the CV undersells. Gap analysis against a specific posting or a researched role type separates evidence gaps (present but unprovable) from skill gaps (genuinely missing), prioritised with a text-label matrix and cross-read against the learnings loop patterns file. Learning plans cover three gaps at most, pair every course with an evidence-building artefact, and are built around the user's honestly stated weekly hours. New references `skill-enrichment.md` and `gap-analysis.md`, plus `skills-inventory-template.md` and `learning-plan-template.md`. Outputs: `skills-inventory.md`, `skills-gap-analysis.md`, and `learning-plan.md`.
+- **Kanban Board View** capability in `/career-navigator` (Capability 7). Generates a fully self-contained, interactive HTML board from `applications/tracker.md`: one card per application across the six tracker stages, drag-and-drop plus keyboard-operable moves, an edit dialog, a text `OVERDUE` tag, and light and dark theme support. Export buttons produce complete tracker markdown (copy or download) so board changes flow back into the tracker, which remains the source of truth. No external assets or network calls; board edits persist in the browser only. New reference `kanban-board.md` and template `kanban-board-template.html`. Output: `applications/board.html`.
+- **CV PDF Production** capability in `/application-optimiser` (Capability 5). A generate-verify loop that renders `cv-optimised.md` (or a cover letter) to a deliberately plain, single-column, ATS-safe PDF, then proves it survived: `scripts/generate_cv_pdf.py` (three themes: standard, compact, relaxed; HTML fallback when WeasyPrint is unavailable) and `scripts/verify_cv_pdf.py` (ATS text-layer extraction with missing-content detection, page-limit flagging, and per-page PNG rendering for visual inspection of orphaned headings, overflow, and spacing). Verification applies whatever produced the PDF, including native rendering in Claude Cowork. Scripts adapted from the ODTA pdf-toolkit reference implementation. New reference `cv-pdf-production.md`. Outputs: `applications/{role-slug}/cv.pdf` and `cover-letter.pdf`.
+
+### Changed
+- Plugin and marketplace version bumped to 1.15.0, with descriptions updated for the two new skills (fourteen in total) and the new capabilities
+- `/career-navigator` capabilities table, quick-start examples, frontmatter triggers, and version footer updated for the kanban board view (skill v1.6.0); the application tracker reference now documents the board as a regenerable view
+- `/application-optimiser` capabilities table, quick-start examples, frontmatter triggers, and version footer updated for CV PDF production (skill v1.5.0)
+- `/career-helper:status` now offers the board view once when three or more applications are active, and offers to regenerate a stale board
+- `/career-helper:help` and `/career-helper:quick-start` route to the new skills and capabilities
+- Tim career coach agent and skill now list 13 orchestratable skills, with routing judgements for an empty pipeline (job-scout), recurring "you lack X" feedback (skills-radar), and a pipeline the user is losing track of (kanban board)
+- Tim skill routing guide updated: cross-skill dependency map, output-file patterns, and three new routing scenarios (14 to 16)
+- Getting-started guides updated for thirteen skills: the shareable `getting-the-best-guide.md` (and regenerated PDF), `full-overview.md` (two new skill sections with examples), and `skill-tips.md` (tips for both new skills)
+- README skills table, features, description, and output-files table updated
+
+### House style
+- All new content adheres to the house style: no em dashes, UK English throughout, Oxford comma, hyphenated compound modifiers, no emojis, no hyperbole, second-person coaching voice. Templates use `{{PLACEHOLDER}}` syntax and carry no real personal data. The kanban board and shortlist use text labels, never colour alone.
+
+### Credits
+- Feature direction informed by a gap analysis against [MadsLorentzen/ai-job-search](https://github.com/MadsLorentzen/ai-job-search), whose scrape, rank, expand, upskill, and PDF-verification workflow highlighted the gaps this release closes, reinterpreted for Career Helper's coaching-led, evidence-first approach.
+
+---
+
 ## [1.14.0] - 2026-06-15
 
 ### Added

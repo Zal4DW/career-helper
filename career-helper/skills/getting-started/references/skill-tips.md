@@ -319,3 +319,66 @@ Personal Brand A → Career Navigator (3-month plan with brand-build activity in
 Career Transitions (fractional/portfolio decision) → Personal Brand (brand layer for the chosen path)
 Personal Brand E → Social Media Review (if cleanup is needed) or Employer Footprint (if a deeper audit is needed)
 ```
+
+---
+
+## Job Scout Tips
+
+### Input Quality
+
+- **Give real deal-breakers, not aspirations.** Minimum salary, location limits, sectors you will not work in, visa needs. Deal-breakers filter roles out before ranking; preferences only shape scores. Mixing them up either hides good roles or wastes time on bad ones.
+- **Share your CV before ranking.** The winnability score is only honest when it is scored against what your profile actually evidences.
+- **Name your target boards.** If your sector has a strong niche board (CharityJob, jobs.ac.uk, Civil Service Jobs), say so; niche boards are usually more reachable and more current than the big aggregators.
+
+### Common Mistakes
+
+- **Treating a scout run as market coverage.** Automated search sees only what is reachable today. Set saved alerts on two or three boards as the backbone; use scout runs to widen coverage and to triage.
+- **Skipping the Claude in Chrome offer.** LinkedIn and Indeed hold many of the best listings behind logins. The browser extension lets the search run in your own logged-in browser; without it, expect those boards to be underrepresented.
+- **Applying down the whole shortlist.** The tiers exist to protect your energy. Apply first means this week; Park means not now. A padded application count is not a strategy.
+
+### Iteration Strategy
+
+- Re-run discovery weekly or fortnightly; merge new finds into the existing shortlist rather than starting over.
+- Re-rank after your CV or skills inventory changes; winnability moves when your evidence does.
+- If three runs in a row come back thin, the problem is probably the target, not the search. Step back to `/career-navigator` or Tim's direction questions.
+
+### What Feeds Into What
+
+```text
+Job Scout discovery → Job Scout ranking → applications/shortlist.md
+Chosen roles → applications/tracker.md (stage Researching) → /application-optimiser (research and CV tailoring)
+Skills Radar inventory → Job Scout winnability scoring
+Learnings loop patterns → Job Scout ranking (recurring objections lower winnability honestly)
+```
+
+---
+
+## Skills Radar Tips
+
+### Input Quality
+
+- **Point it at your own public work.** GitHub, portfolio, publications, talks, competition profiles. The biggest wins are skills your work proves but your CV never mentions. Only sources you confirm as yours are examined.
+- **Do not forget the unpaid work.** Trustee roles, community organising, and volunteer projects evidence governance, budgeting, and delivery. Users forget these constantly; the skill will ask.
+- **State your real weekly hours for the learning plan.** A plan built on fantasy capacity fails by week three. Three honest hours beat ten imaginary ones.
+
+### Common Mistakes
+
+- **Asking for a learning plan before a gap analysis.** Courses feel productive, but many "gaps" turn out to be evidence gaps: you have the skill and cannot prove it. Those are fixed with a case study or a CV rewrite in hours, not a course in months.
+- **Scoring yourself instead of the evidence.** The inventory grades what the evidence shows, in both directions; most people under-claim somewhere and over-claim somewhere else.
+- **Chasing more than three gaps at once.** A plan addressing six gaps addresses none.
+
+### Iteration Strategy
+
+- Refresh the inventory when something ships: a project, a publication, a new role.
+- Re-run the gap analysis when the target changes, or when interview feedback repeats (the learnings loop patterns file is gap evidence).
+- At each learning plan checkpoint, close the loop: update the CV via `/application-optimiser` and re-rank open roles via `/job-scout`.
+
+### What Feeds Into What
+
+```text
+Skills Radar inventory → /application-optimiser (surface undersold skills in the CV)
+Skills Radar inventory → Job Scout (honest winnability scoring)
+Learnings loop patterns → Skills Radar gap analysis (repeated objections are evidence)
+Skills Radar gap analysis → learning plan → CV update and shortlist re-rank
+AI-specific gaps → /career-transitions (AI Readiness Assessment)
+```

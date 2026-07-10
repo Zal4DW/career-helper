@@ -20,17 +20,19 @@ The source repository is at [github.com/Zal4DW/career-helper](https://github.com
 
 ## What You Get
 
-Career Helper is not a single tool. It is a set of eleven skills plus a guided coach, each designed for a different part of the career journey. You do not need to use them all, and you do not need to use them in order. Pick the ones that fit your situation, or let Tim (your career coach) figure it out for you. Here is the quick summary; the rest of this guide shows you exactly how to put them together.
+Career Helper is not a single tool. It is a set of thirteen skills plus a guided coach, each designed for a different part of the career journey. You do not need to use them all, and you do not need to use them in order. Pick the ones that fit your situation, or let Tim (your career coach) figure it out for you. Here is the quick summary; the rest of this guide shows you exactly how to put them together.
 
 | Skill | What It Does |
 |:----|:----|
 | `/career-helper:career-coach` | **Tim, your career coach.** Understands your situation, runs the right skills in the right order, checks in between each one. Start here if you are unsure |
 | `/social-media-review` | Quick social media check through a recruiter's eyes |
 | `/employer-footprint` | Full digital footprint audit with a scored dashboard |
-| `/application-optimiser` | Company research, ATS CV optimisation, cover letters and supporting statements, and application strategy |
+| `/application-optimiser` | Company research, ATS CV optimisation, cover letters and supporting statements, application strategy, and verified CV PDF production |
 | `/linkedin-coach` | Profile audit, headline crafting, content strategy, and video intro scripts |
 | `/interview-master` | Interview prep, mock interviews, post-rejection coaching, reference and referee prep, and ageism support |
-| `/career-navigator` | Networking intelligence, 3-month plans, salary negotiation, offer evaluation, an application tracker, and a learnings loop that turns interviews, rejections, and wins into synthesised patterns |
+| `/career-navigator` | Networking intelligence, 3-month plans, salary negotiation, offer evaluation, an application tracker with an interactive kanban board view, and a learnings loop that turns interviews, rejections, and wins into synthesised patterns |
+| `/job-scout` | Live role discovery across job boards and careers pages (with honest coverage caveats), batch ranking of postings, and a shortlist that feeds the tracker |
+| `/skills-radar` | An evidenced skills inventory (including skills your CV undersells), gap analysis against a target role, and a realistic learning plan |
 | `/career-transitions` | Fractional/portfolio careers, AI readiness, and non-linear career exploration (entrepreneurship, startups, public sector, charity, intrapreneurship) |
 | `/ai-impact-assessment` | Honest assessment of AI disruption risk for your role, with a 6-month mitigation plan |
 | `/ned-ai-helper` | AI governance for Non-Executive Directors, Governors, and Trustees |
