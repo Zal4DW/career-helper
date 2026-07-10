@@ -1,6 +1,6 @@
 # Tim Skill Routing Guide
 
-This file is loaded by the Tim career coach skill when making routing decisions. It describes how the 11 skills relate to each other, what output files to expect, and how to handle common scenarios.
+This file is loaded by the Tim career coach skill when making routing decisions. It describes how the 13 skills relate to each other, what output files to expect, and how to handle common scenarios.
 
 ---
 
@@ -23,6 +23,10 @@ Skills produce outputs that feed into other skills. Tim checks for existing outp
 - ikigai answers (captured in conversation or in `career-helper-preferences.md`) feed into: personal-brand (the four answers map onto Why You, Why Them, Why Now via the `brand-from-ikigai.md` bridge)
 - personal-brand foundation feeds into: linkedin-coach (positioning informs headline and content strategy), career-navigator (brand-build activities included in 3-month plan), career-transitions (brand layer for fractional or portfolio positioning), employer-footprint (intended positioning becomes the benchmark for the audit)
 - career-transitions output feeds into: personal-brand (structural decision must be made before the brand layer; never run brand for a path the user has not yet committed to)
+- job-scout shortlist feeds into: career-navigator application tracker (chosen roles are added at stage Researching) and application-optimiser (deep research and CV tailoring per chosen role); job-scout ranking reads the skills-radar inventory (winnability scoring) and `applications/learnings/patterns.md` where they exist
+- skills-radar inventory feeds into: application-optimiser (undersold skills the CV should surface), job-scout (honest winnability scoring), and interview-master (evidenced examples for stories); the gap analysis reads `applications/learnings/patterns.md` (recurring interview objections are gap evidence) and hands AI-specific gaps to career-transitions (AI Readiness)
+- career-navigator kanban board renders: `applications/tracker.md` as `applications/board.html`; board exports are merged back into the tracker, which stays the source of truth
+- application-optimiser CV PDF production consumes: the finished `cv-optimised.md` or cover letter, producing a verified `cv.pdf`; content changes always go through the markdown first
 
 ---
 
@@ -56,6 +60,7 @@ Tim uses Glob to scan for existing outputs before routing. Role-specific files a
 - `applications/{role-slug}/supporting-statement.md`
 - `applications/{role-slug}/linkedin-updates.md`
 - `applications/{role-slug}/application-strategy.md`
+- `applications/{role-slug}/cv.pdf` and `applications/{role-slug}/cover-letter.pdf` (verified PDF output)
 
 **LinkedIn Coach:**
 - `applications/{role-slug}/linkedin-profile-review.md`
@@ -82,6 +87,7 @@ Tim uses Glob to scan for existing outputs before routing. Role-specific files a
 - `three-month-plan.md`
 - `offer-evaluation.md`
 - `applications/tracker.md` (index of every live application; read by `/career-helper:status`)
+- `applications/board.html` (interactive kanban view of the tracker; regenerated, never authoritative)
 - `applications/learnings/patterns.md` (synthesised patterns; read by `/career-helper:status`)
 - `applications/learnings/interview-notes/{org-slug}-{role-slug}.md`, `applications/learnings/rejections/{org-slug}-{role-slug}.md`, `applications/learnings/wins/{org-slug}-{role-slug}.md` (per-event notes)
 
@@ -122,6 +128,14 @@ Tim uses Glob to scan for existing outputs before routing. Role-specific files a
 - `personal-brand-content-plan.md`
 - `personal-brand-bio-library.md`
 - `personal-brand-refresh-plan.md`
+
+**Job Scout:**
+- `applications/shortlist.md` (the single current ranked shortlist)
+
+**Skills Radar:**
+- `skills-inventory.md`
+- `skills-gap-analysis.md` (or `applications/{role-slug}/skills-gap-analysis.md` when tied to one role)
+- `learning-plan.md`
 
 ### How Tim scans for progress
 
@@ -175,3 +189,12 @@ A clarifying question to ask: "Are you trying to figure out what you stand for, 
 
 **13. Fractional pivot needing both structure and brand**
 Two questions, in order. First: "Have you decided you are going fractional, or are you still weighing it up?" If still weighing, run career-transitions (non-linear explorer, fractional path) for the structural and financial decision. Only once the user has committed should personal-brand be run with the fractional persona guide loaded; brand work for a path the user has not committed to produces output that gets binned. If they have already committed, skip career-transitions and run personal-brand directly.
+
+**14. Empty pipeline: "there's nothing to apply to"**
+Route to job-scout for discovery, with expectations set honestly: automated job-board search is fragile, the reachable listings are a subset of the market, and saved alerts plus direct careers pages remain the backbone. Job-scout will offer the Claude in Chrome extension for logged-in boards (LinkedIn, Indeed) where the user has it. If repeated discovery runs come back thin, the problem is usually the target, not the search; step back to career-navigator (3-month plan) or the ikigai questions to re-examine positioning.
+
+**15. "Every posting wants something I don't have"**
+Route to skills-radar. The gap analysis separates skill gaps (genuinely missing) from evidence gaps (present but unprovable from the CV); evidence gaps route onwards to application-optimiser for a rewrite, skill gaps produce a learning plan. If the recurring "missing" skill is AI-related, career-transitions (AI Readiness Assessment) holds the specialised roadmap. Cross-read `applications/learnings/patterns.md` first if it exists; a synthesised interview objection is stronger evidence than the user's impression.
+
+**16. Several applications in flight, user losing the thread**
+The tracker is the answer, and the kanban board is its visual layer. If no tracker exists, build it first (career-navigator, Application Tracker). With three or more active applications, offer the board view (career-navigator, Kanban Board View): drag between stages, then export back to the tracker. Follow the stage-change triggers on sync: Interviewing suggests interview-master, Offer suggests negotiation or offer evaluation, Closed with a rejection offers the learnings loop.

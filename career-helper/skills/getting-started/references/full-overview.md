@@ -30,11 +30,11 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 
 **Important:** Never minimise the emotional challenge. A graduate terrified of their first interview deserves the same quality of support as a VP negotiating a package. Redundancy at 55 is a different experience from redundancy at 30. Let the user's situation shape how you present the tools.
 
-## The Eleven Skills - With Examples
+## The Thirteen Skills - With Examples
 
 ### Application Optimiser - Research, CV, Cover Letters, and Strategy
 
-**What it does:** Deep company research, ATS-optimised CV rewriting, cover letters and supporting statements, and application strategy planning.
+**What it does:** Deep company research, ATS-optimised CV rewriting, cover letters and supporting statements, application strategy planning, and verified CV PDF production (a generate-verify loop that checks the layout visually and confirms the text layer parses the way ATS software will read it).
 
 **Real example - applying for a specific role:**
 
@@ -164,7 +164,7 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 
 ### Career Navigator - Planning, Networking, and Offers
 
-**What it does:** Strategic networking intelligence, 3-month job search plans, salary negotiation coaching, offer evaluation, an application tracker that keeps every live application and its next action in one place, and an application learnings loop that turns each interview, rejection, and win into a structured note and synthesises them into a single patterns file.
+**What it does:** Strategic networking intelligence, 3-month job search plans, salary negotiation coaching, offer evaluation, an application tracker that keeps every live application and its next action in one place (with an optional interactive kanban board view you can drag applications around and export back to the tracker), and an application learnings loop that turns each interview, rejection, and win into a structured note and synthesises them into a single patterns file.
 
 **Real example - planning a job search:**
 
@@ -424,6 +424,78 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 - Your online presence has drifted from where you want to be (Capability E: Brand Refresh)
 
 **How it differs from /linkedin-coach:** Personal Brand is the strategy layer (Why You, Why Them, Why Now). LinkedIn Coach is the platform layer (headline mechanics, post review, video script). Run brand first; LinkedIn Coach turns the positioning into LinkedIn-shaped output.
+
+---
+
+### Job Scout - Find Roles and Triage Them Honestly
+
+**What it does:** Live role discovery across job boards, aggregators, and employer careers pages, followed by batch ranking of postings against your actual profile, with deal-breaker vetting and deadline flagging. It is upfront that automated job-board search is fragile: boards block automation, listings go stale, and the reachable results are a subset of the market. It recommends saved alerts as the backbone, and can use the Claude for Chrome extension to search logged-in boards such as LinkedIn or Indeed through your own browser.
+
+**Real example - filling an empty pipeline:**
+
+> **You say:** "Find me head of operations roles in Leeds or remote, 70k minimum, no logistics companies."
+>
+> **What happens:**
+> 1. Captures your deal-breakers (location, salary floor, sector exclusions) before searching
+> 2. Searches boards, aggregators, ATS-hosted postings, and careers pages in parallel, and tells you which sources were unreachable
+> 3. Deduplicates the same role across boards and checks each posting still resolves
+> 4. Scores survivors on five dimensions (skills fit, level fit, practical fit, organisation signals, and winnability) and tiers them: Apply first, Apply, Park, Discard
+> 5. Flags anything closing within seven days and finishes with an honest coverage statement
+>
+> **You get:** `applications/shortlist.md`, and chosen roles added to your tracker at stage Researching
+
+**Real example - triaging postings you found yourself:**
+
+> **You say:** "Here are six job adverts I bookmarked this week. Which should I apply for first?"
+>
+> **What happens:**
+> 1. Reads each posting and your CV, then vets against your deal-breakers
+> 2. Scores each role with a one-line rationale per dimension, traced to the posting text
+> 3. Tells you plainly which are weak matches and why, rather than flattering the whole list
+>
+> **You get:** A ranked shortlist with next steps, feeding `/application-optimiser` for the winners
+
+**When to use it:**
+- Your pipeline is empty and you do not know what is out there
+- You have a pile of bookmarked postings and limited hours to apply
+- You keep applying to everything and hearing nothing (triage discipline)
+- You want deadlines across your target roles in one place
+
+---
+
+### Skills Radar - Inventory, Gaps, and a Learning Plan
+
+**What it does:** Builds an evidenced skills inventory (including mining your own public work, with your consent: GitHub, portfolio, publications, talks), compares it against a target role, and produces a prioritised gap analysis plus a realistic learning plan. Its most useful trick is separating evidence gaps (you have the skill but nothing shows it) from skill gaps (you genuinely lack it); the fixes are completely different.
+
+**Real example - the undersold CV:**
+
+> **You say:** "Audit my skills. Here is my CV, and my GitHub is github.com/example."
+>
+> **What happens:**
+> 1. Confirms which public sources are yours and may be examined
+> 2. Finds skills your repositories, projects, and volunteer roles demonstrate that your CV never mentions
+> 3. Grades everything by evidence (Strong, Solid, Working), and flags claims nothing supports
+> 4. Leads with the undersold skills and where the CV should say them
+>
+> **You get:** `skills-inventory.md`, and a route into `/application-optimiser` to rewrite the CV
+
+**Real example - repeated "you lack X" rejections:**
+
+> **You say:** "Three final rounds in a row said I lack commercial ownership. Is that fair, and what do I do about it?"
+>
+> **What happens:**
+> 1. Cross-reads your learnings loop patterns file if you have one; a repeated objection is live market evidence
+> 2. Maps the requirement against your inventory: evidenced, partially evidenced, or genuinely missing
+> 3. If it is an evidence gap, prescribes proof (a case study, a CV rewrite), not a course
+> 4. If it is a real gap, sizes it honestly and builds a learning plan around your actual weekly hours, pairing every course with an artefact that proves the skill publicly
+>
+> **You get:** `skills-gap-analysis.md` and `learning-plan.md`, with checkpoints that loop back into your CV and shortlist
+
+**When to use it:**
+- Every posting seems to want something you do not have
+- You suspect your CV undersells what you can actually do
+- You are planning a pivot and want to know how far the gap really is
+- You want a learning plan that fits real life, not a wish list
 
 ---
 

@@ -79,6 +79,7 @@ Do not lecture. One useful observation beats a paragraph of coaching.
 - The tracker is an index, not a replacement for the per-role files. Each row points to the work in `applications/{role-slug}/`.
 - The `/career-helper:status` command reads the tracker if it exists and uses it as the spine of the progress summary, falling back to a folder scan if there is no tracker.
 - The Application Strategy capability in `/application-optimiser` produces a per-role plan; the tracker aggregates across all roles.
+- The Kanban Board View (see `@references/kanban-board.md`) renders the tracker as an interactive HTML board at `applications/board.html`. The tracker file remains the source of truth; board exports are merged back into it, never the other way round by default.
 
 ---
 

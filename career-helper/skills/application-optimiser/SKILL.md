@@ -1,6 +1,6 @@
 ---
 name: application-optimiser
-description: This skill should be used when the user asks to "optimise my CV", "fix my CV", "improve my CV", "tailor my CV for ATS", "research a company", "help me apply for a role", or "plan my application". Provides ATS-optimised CV rewriting, company and role research with parallel intelligence gathering, and application strategy planning.
+description: This skill should be used when the user asks to "optimise my CV", "fix my CV", "improve my CV", "tailor my CV for ATS", "research a company", "help me apply for a role", "plan my application", "make a PDF of my CV", or "get my CV ready to upload". Provides ATS-optimised CV rewriting, company and role research with parallel intelligence gathering, application strategy planning, and verified CV PDF production with layout and ATS text-layer checks.
 tags: cv, ats, resume, company, research, application, strategy
 ---
 
@@ -16,6 +16,7 @@ Research companies, optimise your CV for ATS systems, and plan your application 
 | 2 | CV/ATS Optimisation | Tailoring your CV for a specific role |
 | 3 | Application Strategy | Planning your full application approach |
 | 4 | Cover Letter | Writing a cover letter, supporting statement, or application message |
+| 5 | CV PDF Production | Turning the finished CV or letter into a verified, submission-ready PDF |
 
 ## Quick Start
 
@@ -25,6 +26,7 @@ Research companies, optimise your CV for ATS systems, and plan your application 
 "Plan my application to [Company] for [Role]"
 "Write a cover letter for this role"
 "Help me with the supporting statement for this application"
+"Make me a PDF of my CV I can upload"
 ```
 
 ---
@@ -118,6 +120,24 @@ Drafts a cover letter, competency-based supporting statement, or short applicati
 
 ---
 
+## 5. CV PDF Production
+
+**What you need:** A finished `cv-optimised.md` (or cover letter) with no unfilled placeholders
+**Load:** @references/cv-pdf-production.md
+**Scripts:** `scripts/generate_cv_pdf.py` and `scripts/verify_cv_pdf.py`
+
+A generate-verify loop, never generate-and-hope:
+- Renders the markdown to a deliberately plain, single-column, ATS-safe PDF (three themes: standard, compact, relaxed)
+- Extracts the PDF text layer the way parsing software reads it, and fails if content did not survive
+- Flags documents over the page limit rather than shrinking the font
+- Renders each page to an image for visual inspection: orphaned headings, overflow, cramped spacing
+- Fix problems in the markdown and regenerate; a PDF is never hand-edited
+- HTML fallback when WeasyPrint is unavailable; verification applies whatever produced the PDF
+
+**Output:** `applications/{role-slug}/cv.pdf` (and `cover-letter.pdf` when requested)
+
+---
+
 ## Application Folder
 
 All role-specific outputs are saved in `applications/{role-slug}/`. When running any capability for a role, check if the folder exists first using Glob. If it doesn't, create it when saving the first output. The `{role-slug}` is derived from the role title and company (e.g., "Marketing Manager at Greenfield & Co" becomes `marketing-manager-greenfield`).
@@ -205,4 +225,4 @@ After optimising your application:
 
 ---
 
-*Application Optimiser v1.4.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Application Optimiser v1.5.0 | Career Helper Plugin | Prosper AI Consulting, UK*

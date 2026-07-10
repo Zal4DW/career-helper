@@ -1,6 +1,6 @@
 ---
 name: career-navigator
-description: This skill should be used when the user asks to "plan my job search", "build a networking strategy", "negotiate my salary", "evaluate a job offer", "compare offers", or "create a 3-month plan". Provides strategic networking intelligence, job search planning with wellbeing integration, salary negotiation coaching (UK/US/EU/APAC), and multi-offer evaluation frameworks.
+description: This skill should be used when the user asks to "plan my job search", "build a networking strategy", "negotiate my salary", "evaluate a job offer", "compare offers", "create a 3-month plan", "track my applications", or "show me my applications as a board". Provides strategic networking intelligence, job search planning with wellbeing integration, salary negotiation coaching (UK/US/EU/APAC), multi-offer evaluation frameworks, an application tracker, and an interactive kanban board view of the pipeline.
 tags: networking, salary, negotiation, offers, planning, job-search, strategy
 ---
 
@@ -18,6 +18,7 @@ Plan your search, build your network, and navigate offers.
 | 4 | Offer Evaluation | Comparing multiple offers or evaluating a single one |
 | 5 | Application Tracker | Keeping every live application and its next action in one place |
 | 6 | Application Learnings Loop | Capturing interviews, rejections, and wins, then synthesising the patterns |
+| 7 | Kanban Board View | Seeing and updating the whole pipeline visually when several applications are in flight |
 
 ## Quick Start
 
@@ -31,6 +32,7 @@ Plan your search, build your network, and navigate offers.
 "Help me debrief that interview"
 "I got rejected - help me work out why"
 "What patterns are showing up across my applications?"
+"Show me my applications as a board"
 ```
 
 ---
@@ -201,6 +203,24 @@ Turn each outcome into a short, structured note, then periodically synthesise th
 
 ---
 
+## 7. Kanban Board View
+
+**What you need:** An existing `applications/tracker.md` (build one first via the Application Tracker if not)
+**Load:** @references/kanban-board.md
+**Template:** @references/kanban-board-template.html
+
+An interactive, self-contained HTML board generated from the tracker:
+- One card per application in six stage columns (Researching, Applying, Applied, Interviewing, Offer, Closed)
+- Drag and drop between stages, with keyboard-operable move buttons and an edit dialog
+- Text-label stages and an `OVERDUE` text tag; colour is never the only signal
+- No external assets or network calls; board edits persist in the browser only
+- Export buttons produce tracker markdown so changes flow back into `applications/tracker.md`
+- The tracker file remains the source of truth; the board is a regenerable view
+
+**Output:** `applications/board.html`
+
+---
+
 ## Application Folder
 
 Role-specific outputs (networking intelligence, negotiation strategy) are saved in `applications/{role-slug}/`. Cross-application outputs (three-month-plan, offer-evaluation, tracker) are saved at the `applications/` level or workspace root. When running a role-specific capability, check if the application folder exists first using Glob. If it doesn't, create it when saving the first output.
@@ -268,4 +288,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Career Navigator v1.5.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Career Navigator v1.6.0 | Career Helper Plugin | Prosper AI Consulting, UK*

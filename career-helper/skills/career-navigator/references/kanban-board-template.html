@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Application Board</title>
+<style>
+  :root {
+    --bg: #f4f6f9;
+    --surface: #ffffff;
+    --ink: #25282d;
+    --ink-soft: #5a616b;
+    --line: #d9dee6;
+    --accent: #1a4d8f;
+    --accent-soft: #e8eef7;
+    --warn-ink: #7a4a00;
+    --warn-bg: #fff3df;
+    --focus: #b25000;
+    font-size: 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16191d;
+      --surface: #21252b;
+      --ink: #e6e9ed;
+      --ink-soft: #a7aeb8;
+      --line: #3a4048;
+      --accent: #7aa7dd;
+      --accent-soft: #263243;
+      --warn-ink: #ffd9a0;
+      --warn-bg: #453416;
+      --focus: #ffb066;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.45;
+  }
+  header {
+    padding: 18px 22px 10px 22px;
+  }
+  header h1 { margin: 0 0 2px 0; font-size: 1.35rem; }
+  header p { margin: 0; color: var(--ink-soft); font-size: 0.9rem; }
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 22px 14px 22px;
+    align-items: center;
+  }
+  button {
+    font: inherit;
+    font-size: 0.85rem;
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+  }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  @media (prefers-color-scheme: dark) {
+    button.primary { color: #16191d; }
+  }
+  button:focus-visible, [tabindex]:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 2px;
+  }
+  .status-msg {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    min-height: 1.2em;
+    padding: 0 22px 6px 22px;
+  }
+  .board {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(230px, 1fr);
+    gap: 12px;
+    padding: 0 22px 26px 22px;
+    overflow-x: auto;
+    align-items: start;
+  }
+  .column {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 140px;
+  }
+  .column h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin: 2px 4px 10px 4px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--ink-soft);
+  }
+  .column.drag-over { border-color: var(--accent); background: var(--accent-soft); }
+  .cards { display: flex; flex-direction: column; gap: 8px; min-height: 40px; }
+  .card {
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    background: var(--bg);
+    padding: 10px 10px 8px 10px;
+    cursor: grab;
+  }
+  .card:active { cursor: grabbing; }
+  .card .role { font-weight: 700; font-size: 0.95rem; margin: 0; }
+  .card .org { color: var(--ink-soft); font-size: 0.85rem; margin: 1px 0 6px 0; }
+  .card .meta { font-size: 0.8rem; margin: 2px 0; }
+  .card .meta strong { font-weight: 600; }
+  .card .overdue {
+    display: inline-block;
+    background: var(--warn-bg);
+    color: var(--warn-ink);
+    border-radius: 4px;
+    padding: 0 6px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    margin-left: 6px;
+  }
+  .card .controls {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+  }
+  .card .controls button {
+    font-size: 0.75rem;
+    padding: 3px 9px;
+  }
+  dialog {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--ink);
+    max-width: 430px;
+    width: 92vw;
+    padding: 18px;
+  }
+  dialog::backdrop { background: rgba(0,0,0,0.45); }
+  dialog h3 { margin: 0 0 12px 0; font-size: 1.05rem; }
+  dialog label { display: block; font-size: 0.82rem; font-weight: 600; margin: 10px 0 3px 0; }
+  dialog input, dialog select, dialog textarea {
+    font: inherit;
+    font-size: 0.88rem;
+    width: 100%;
+    padding: 7px 9px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  dialog textarea { resize: vertical; min-height: 56px; }
+  dialog .row { display: flex; gap: 10px; justify-content: flex-end; margin-top: 16px; }
+  .hint { font-size: 0.78rem; color: var(--ink-soft); margin-top: 4px; }
+  .visually-hidden {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px; padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Application Board</h1>
+  <p>Owner: {{NAME}}. Generated from applications/tracker.md on {{DATE}}. The tracker file remains the source of truth: export your changes back when you finish.</p>
+</header>
+
+<div class="toolbar">
+  <button class="primary" id="copy-md">Copy tracker markdown</button>
+  <button id="download-md">Download tracker.md</button>
+  <button id="add-card">Add application</button>
+  <button id="reset-data">Reset to file data</button>
+</div>
+<p class="status-msg" id="status-msg" role="status" aria-live="polite"></p>
+
+<main class="board" id="board" aria-label="Application kanban board"></main>
+
+<dialog id="edit-dialog">
+  <h3 id="edit-title">Edit application</h3>
+  <form method="dialog" id="edit-form">
+    <label for="f-role">Role</label>
+    <input id="f-role" required>
+    <label for="f-org">Organisation</label>
+    <input id="f-org" required>
+    <label for="f-stage">Stage</label>
+    <select id="f-stage"></select>
+    <label for="f-action">Next action</label>
+    <input id="f-action" placeholder="What you do next">
+    <label for="f-date">Next date</label>
+    <input id="f-date" type="date">
+    <label for="f-notes">Notes</label>
+    <textarea id="f-notes"></textarea>
+    <div id="closed-fields" hidden>
+      <label for="f-outcome">Outcome</label>
+      <select id="f-outcome">
+        <option>Accepted</option>
+        <option>Rejected</option>
+        <option>Withdrawn</option>
+        <option>No response</option>
+      </select>
+      <label for="f-closed-date">Date closed</label>
+      <input id="f-closed-date" type="date">
+      <label for="f-learned">What you learned</label>
+      <input id="f-learned">
+    </div>
+    <div class="row">
+      <button type="button" id="delete-card">Remove</button>
+      <button type="button" id="cancel-edit">Cancel</button>
+      <button class="primary" id="save-edit" value="save">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<script id="board-data" type="application/json">
+{
+  "owner": "{{NAME}}",
+  "generated": "{{DATE}}",
+  "cards": [
+    {
+      "role": "{{ROLE_TITLE}}",
+      "organisation": "{{ORGANISATION}}",
+      "stage": "{{Researching|Applying|Applied|Interviewing|Offer|Closed}}",
+      "nextAction": "{{NEXT_ACTION}}",
+      "nextDate": "{{YYYY-MM-DD or empty string}}",
+      "notes": "{{NOTES}}",
+      "outcome": "",
+      "dateClosed": "",
+      "learned": ""
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  'use strict';
+
+  var STAGES = ['Researching', 'Applying', 'Applied', 'Interviewing', 'Offer', 'Closed'];
+  var STORAGE_KEY = 'career-helper-board:' + document.title + ':{{DATE}}';
+
+  var fileData = JSON.parse(document.getElementById('board-data').textContent);
+  var state = load();
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) { return JSON.parse(raw); }
+    } catch (e) { /* localStorage unavailable: fall back to file data */ }
+    return normalise(fileData);
+  }
+  function normalise(data) {
+    var cards = (data.cards || []).filter(function (c) {
+      return c.role && c.role.indexOf('{{') === -1;
+    });
+    cards.forEach(function (c, i) { c.id = 'card-' + i; });
+    return { owner: data.owner, generated: data.generated, cards: cards, nextId: cards.length };
+  }
+  function save() {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) { /* ignore */ }
+  }
+
+  var board = document.getElementById('board');
+  var statusMsg = document.getElementById('status-msg');
+  function announce(text) { statusMsg.textContent = text; }
+
+  function isOverdue(card) {
+    if (!card.nextDate || card.stage === 'Closed') { return false; }
+    var d = new Date(card.nextDate + 'T23:59:59');
+    return !isNaN(d) && d < new Date();
+  }
+
+  function render() {
+    board.innerHTML = '';
+    STAGES.forEach(function (stage) {
+      var col = document.createElement('section');
+      col.className = 'column';
+      col.dataset.stage = stage;
+      var cards = state.cards.filter(function (c) { return c.stage === stage; });
+      var h = document.createElement('h2');
+      h.textContent = stage;
+      var count = document.createElement('span');
+      count.textContent = String(cards.length);
+      count.setAttribute('aria-label', cards.length + ' applications');
+      h.appendChild(count);
+      col.appendChild(h);
+      var list = document.createElement('div');
+      list.className = 'cards';
+      cards.forEach(function (card) { list.appendChild(renderCard(card)); });
+      col.appendChild(list);
+      col.addEventListener('dragover', function (e) { e.preventDefault(); col.classList.add('drag-over'); });
+      col.addEventListener('dragleave', function () { col.classList.remove('drag-over'); });
+      col.addEventListener('drop', function (e) {
+        e.preventDefault();
+        col.classList.remove('drag-over');
+        moveCard(e.dataTransfer.getData('text/plain'), stage);
+      });
+      board.appendChild(col);
+    });
+    save();
+  }
+
+  function renderCard(card) {
+    var el = document.createElement('article');
+    el.className = 'card';
+    el.draggable = true;
+    el.tabIndex = 0;
+    el.dataset.id = card.id;
+    el.setAttribute('aria-label', card.role + ' at ' + card.organisation + ', stage ' + card.stage);
+
+    var role = document.createElement('p');
+    role.className = 'role';
+    role.textContent = card.role;
+    el.appendChild(role);
+
+    var org = document.createElement('p');
+    org.className = 'org';
+    org.textContent = card.organisation;
+    el.appendChild(org);
+
+    if (card.stage === 'Closed') {
+      if (card.outcome) { el.appendChild(meta('Outcome', card.outcome)); }
+      if (card.learned) { el.appendChild(meta('Learned', card.learned)); }
+    } else {
+      if (card.nextAction) {
+        var m = meta('Next', card.nextAction + (card.nextDate ? ' (' + card.nextDate + ')' : ''));
+        if (isOverdue(card)) {
+          var tag = document.createElement('span');
+          tag.className = 'overdue';
+          tag.textContent = 'OVERDUE';
+          m.appendChild(tag);
+        }
+        el.appendChild(m);
+      }
+      if (card.notes) { el.appendChild(meta('Notes', card.notes)); }
+    }
+
+    var controls = document.createElement('div');
+    controls.className = 'controls';
+    var idx = STAGES.indexOf(card.stage);
+    if (idx > 0) { controls.appendChild(moveButton(card, STAGES[idx - 1], 'Back')); }
+    if (idx < STAGES.length - 1) { controls.appendChild(moveButton(card, STAGES[idx + 1], 'Advance')); }
+    var edit = document.createElement('button');
+    edit.textContent = 'Edit';
+    edit.addEventListener('click', function () { openEditor(card.id); });
+    controls.appendChild(edit);
+    el.appendChild(controls);
+
+    el.addEventListener('dragstart', function (e) { e.dataTransfer.setData('text/plain', card.id); });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { openEditor(card.id); }
+      if (e.key === 'ArrowRight' && idx < STAGES.length - 1) { moveCard(card.id, STAGES[idx + 1]); }
+      if (e.key === 'ArrowLeft' && idx > 0) { moveCard(card.id, STAGES[idx - 1]); }
+    });
+    return el;
+  }
+  function meta(label, value) {
+    var p = document.createElement('p');
+    p.className = 'meta';
+    var s = document.createElement('strong');
+    s.textContent = label + ': ';
+    p.appendChild(s);
+    p.appendChild(document.createTextNode(value));
+    return p;
+  }
+  function moveButton(card, target, verb) {
+    var b = document.createElement('button');
+    b.textContent = verb + ': ' + target;
+    b.addEventListener('click', function () { moveCard(card.id, target); });
+    return b;
+  }
+
+  function moveCard(id, stage) {
+    var card = state.cards.find(function (c) { return c.id === id; });
+    if (!card || card.stage === stage) { return; }
+    card.stage = stage;
+    announce(card.role + ' at ' + card.organisation + ' moved to ' + stage + '.');
+    render();
+    if (stage === 'Closed' && !card.outcome) { openEditor(id); }
+  }
+
+  // Editor
+  var dialog = document.getElementById('edit-dialog');
+  var stageSelect = document.getElementById('f-stage');
+  STAGES.forEach(function (s) {
+    var o = document.createElement('option');
+    o.textContent = s;
+    stageSelect.appendChild(o);
+  });
+  var editingId = null;
+
+  function openEditor(id) {
+    var card = state.cards.find(function (c) { return c.id === id; });
+    if (!card) { return; }
+    editingId = id;
+    document.getElementById('edit-title').textContent = 'Edit: ' + card.role;
+    document.getElementById('f-role').value = card.role;
+    document.getElementById('f-org').value = card.organisation;
+    stageSelect.value = card.stage;
+    document.getElementById('f-action').value = card.nextAction || '';
+    document.getElementById('f-date').value = card.nextDate || '';
+    document.getElementById('f-notes').value = card.notes || '';
+    document.getElementById('f-outcome').value = card.outcome || 'Rejected';
+    document.getElementById('f-closed-date').value = card.dateClosed || '';
+    document.getElementById('f-learned').value = card.learned || '';
+    toggleClosedFields();
+    dialog.showModal();
+  }
+  function toggleClosedFields() {
+    document.getElementById('closed-fields').hidden = stageSelect.value !== 'Closed';
+  }
+  stageSelect.addEventListener('change', toggleClosedFields);
+
+  document.getElementById('save-edit').addEventListener('click', function (e) {
+    e.preventDefault();
+    var card = state.cards.find(function (c) { return c.id === editingId; });
+    if (!card) { dialog.close(); return; }
+    card.role = document.getElementById('f-role').value.trim();
+    card.organisation = document.getElementById('f-org').value.trim();
+    card.stage = stageSelect.value;
+    card.nextAction = document.getElementById('f-action').value.trim();
+    card.nextDate = document.getElementById('f-date').value;
+    card.notes = document.getElementById('f-notes').value.trim();
+    card.outcome = document.getElementById('f-outcome').value;
+    card.dateClosed = document.getElementById('f-closed-date').value;
+    card.learned = document.getElementById('f-learned').value.trim();
+    dialog.close();
+    announce('Saved changes to ' + card.role + '.');
+    render();
+  });
+  document.getElementById('cancel-edit').addEventListener('click', function () { dialog.close(); });
+  document.getElementById('delete-card').addEventListener('click', function () {
+    state.cards = state.cards.filter(function (c) { return c.id !== editingId; });
+    dialog.close();
+    announce('Application removed from the board.');
+    render();
+  });
+
+  document.getElementById('add-card').addEventListener('click', function () {
+    var card = {
+      id: 'card-new-' + (state.nextId++),
+      role: 'New role',
+      organisation: 'Organisation',
+      stage: 'Researching',
+      nextAction: '',
+      nextDate: '',
+      notes: '',
+      outcome: '',
+      dateClosed: '',
+      learned: ''
+    };
+    state.cards.push(card);
+    render();
+    openEditor(card.id);
+  });
+
+  document.getElementById('reset-data').addEventListener('click', function () {
+    if (confirm('Discard board changes and reload the data generated from tracker.md?')) {
+      state = normalise(fileData);
+      announce('Board reset to the data generated from tracker.md.');
+      render();
+    }
+  });
+
+  // Markdown export in the exact applications/tracker.md format.
+  function pad(v) { return v || '[UNKNOWN]'; }
+  function cell(v) { return String(v == null ? '' : v).replace(/\|/g, '/').trim(); }
+  function toMarkdown() {
+    var today = new Date().toISOString().slice(0, 10);
+    var active = state.cards.filter(function (c) { return c.stage !== 'Closed'; });
+    var closed = state.cards.filter(function (c) { return c.stage === 'Closed'; });
+    var overdue = active.filter(isOverdue).map(function (c) {
+      return c.role + ' at ' + c.organisation + ' (' + c.nextDate + ')';
+    });
+    var lines = [];
+    lines.push('# Application Tracker', '');
+    lines.push('**Owner:** ' + (state.owner || '[UNKNOWN]'));
+    lines.push('**Last updated:** ' + today, '');
+    lines.push('A single view of every live application. Stages: Researching, Applying, Applied, Interviewing, Offer, Closed. Update the next action and date whenever something moves.', '');
+    lines.push('---', '', '## Active Applications', '');
+    lines.push('| Role | Organisation | Stage | Next action | Next date | Notes |');
+    lines.push('|:-----|:-------------|:------|:------------|:----------|:------|');
+    active.forEach(function (c) {
+      lines.push('| ' + [cell(c.role), cell(c.organisation), cell(c.stage), cell(pad(c.nextAction)), cell(pad(c.nextDate)), cell(c.notes)].join(' | ') + ' |');
+    });
+    lines.push('', '---', '', '## Closed', '');
+    lines.push('| Role | Organisation | Outcome | Date closed | What you learned |');
+    lines.push('|:-----|:-------------|:--------|:------------|:-----------------|');
+    closed.forEach(function (c) {
+      lines.push('| ' + [cell(c.role), cell(c.organisation), cell(pad(c.outcome)), cell(pad(c.dateClosed)), cell(c.learned)].join(' | ') + ' |');
+    });
+    lines.push('', '---', '', '## At a Glance', '');
+    lines.push('- **Active applications:** ' + active.length);
+    lines.push('- **Awaiting response:** ' + active.filter(function (c) { return c.stage === 'Applied'; }).length);
+    lines.push('- **Interviews booked:** ' + active.filter(function (c) { return c.stage === 'Interviewing'; }).length);
+    lines.push('- **Offers in hand:** ' + active.filter(function (c) { return c.stage === 'Offer'; }).length);
+    lines.push('- **Overdue actions:** ' + (overdue.length ? overdue.join('; ') : 'None'));
+    lines.push('', '---', '');
+    lines.push('*Generated using Career Helper. Found this helpful? Share your success story or suggest improvements at https://github.com/Zal4DW/career-helper*');
+    return lines.join('\n') + '\n';
+  }
+
+  document.getElementById('copy-md').addEventListener('click', function () {
+    var md = toMarkdown();
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(md).then(function () {
+        announce('Tracker markdown copied. Paste it into applications/tracker.md, or paste it to Claude and ask it to update your tracker.');
+      }, function () { fallbackCopy(md); });
+    } else {
+      fallbackCopy(md);
+    }
+  });
+  function fallbackCopy(md) {
+    var ta = document.createElement('textarea');
+    ta.value = md;
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); announce('Tracker markdown copied.'); }
+    catch (e) { announce('Copy failed. Use Download tracker.md instead.'); }
+    document.body.removeChild(ta);
+  }
+  document.getElementById('download-md').addEventListener('click', function () {
+    var blob = new Blob([toMarkdown()], { type: 'text/markdown' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'tracker.md';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+    announce('tracker.md downloaded. Replace applications/tracker.md with it, or ask Claude to merge it.');
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>

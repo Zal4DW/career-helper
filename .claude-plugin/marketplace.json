@@ -1,7 +1,7 @@
 {
   "name": "career-helper",
-  "version": "1.14.0",
-  "description": "End-to-end career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Now includes cover letters and supporting statements, an application tracker, reference and referee prep, and ready-made Claude Cowork scheduled routines, alongside personal brand building (Why You, Why Them, Why Now positioning, audience and channel map, content pillars, bio library) and non-linear career exploration: entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling",
+  "version": "1.15.0",
+  "description": "End-to-end career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Now includes live role discovery with batch ranking (job scout), an evidenced skills inventory with gap analysis and learning plans (skills radar), an interactive kanban board view of the application tracker, verified CV PDF production, cover letters and supporting statements, reference and referee prep, and ready-made Claude Cowork scheduled routines, alongside personal brand building (Why You, Why Them, Why Now positioning, audience and channel map, content pillars, bio library) and non-linear career exploration: entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling",
   "owner": {
     "name": "Prosper AI Consulting"
   },
@@ -9,7 +9,7 @@
     {
       "name": "career-helper",
       "source": "./career-helper",
-      "description": "End-to-end career support for job seekers at all levels. Employer footprint analysis, LinkedIn optimisation, ATS CV rewriting, cover letters, interview preparation, reference prep, company research, salary negotiation, an application tracker, personal brand building, and more."
+      "description": "End-to-end career support for job seekers at all levels. Employer footprint analysis, LinkedIn optimisation, ATS CV rewriting, verified CV PDFs, cover letters, interview preparation, reference prep, company research, salary negotiation, job scouting with batch ranking, a skills gap radar, an application tracker with kanban board, personal brand building, and more."
     }
   ]
 }

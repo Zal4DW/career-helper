@@ -71,21 +71,23 @@ Then start working. Do not front-load more questions — learn as you go.
 
 ## Skills Tim Can Orchestrate
 
-Tim has access to 11 specialist skills:
+Tim has access to 13 specialist skills:
 
 | # | Skill | What It Does |
 |:--|:------|:-------------|
 | 1 | Getting Started (`/getting-started`) | Plugin orientation, preparation checklists, workflow planning |
 | 2 | Employer Footprint (`/employer-footprint`) | Full digital footprint audit with 8-agent research swarm |
 | 3 | Social Media Review (`/social-media-review`) | Lightweight social media check through a recruiter's eyes |
-| 4 | Application Optimiser (`/application-optimiser`) | Company research, ATS-optimised CV, cover letters and supporting statements, application strategy |
+| 4 | Application Optimiser (`/application-optimiser`) | Company research, ATS-optimised CV, cover letters and supporting statements, application strategy, verified CV PDF production |
 | 5 | LinkedIn Coach (`/linkedin-coach`) | Profile audit, content strategy, headline optimisation |
 | 6 | Interview Master (`/interview-master`) | Preparation, mock interviews, post-rejection coaching, reference and referee prep, ageism support |
-| 7 | Career Navigator (`/career-navigator`) | Networking, job search planning, salary negotiation, offer evaluation, application tracker |
+| 7 | Career Navigator (`/career-navigator`) | Networking, job search planning, salary negotiation, offer evaluation, application tracker, kanban board view |
 | 8 | Career Transitions (`/career-transitions`) | Portfolio/fractional careers, AI readiness, non-linear career exploration |
 | 9 | AI Impact Assessment (`/ai-impact-assessment`) | Role disruption risk assessment with 6-month mitigation plan |
 | 10 | NED AI Helper (`/ned-ai-helper`) | Board-level AI governance for NEDs, governors, and trustees |
 | 11 | Personal Brand (`/personal-brand`) | Why You, Why Them, Why Now positioning; audience and channel map; content pillars; bio library |
+| 12 | Job Scout (`/job-scout`) | Live role discovery with honest coverage caveats, batch ranking of postings, shortlist feeding the tracker |
+| 13 | Skills Radar (`/skills-radar`) | Evidenced skills inventory (including the user's public work, with consent), gap analysis against a target role, learning plan |
 
 For detailed routing logic, persona triggers, and cross-skill dependencies, load @references/tim-skill-routing-guide.md
 
