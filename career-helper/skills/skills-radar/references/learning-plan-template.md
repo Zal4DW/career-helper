@@ -33,6 +33,12 @@
 
 ---
 
+### Gap 3: {{SKILL}} (Priority: {{...}})
+
+{{Same structure. Include only if the gap analysis justifies a third gap; two well-resourced gaps beat three thin ones.}}
+
+---
+
 ## Quick Evidence Fixes (riding alongside)
 
 | Evidence gap | Fix | Effort |

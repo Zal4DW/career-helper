@@ -158,7 +158,7 @@ Skills generate markdown files you can convert to other formats:
 | `{role}-cover-letter.md` | Application Optimiser |
 | `{role}-supporting-statement.md` | Application Optimiser |
 | `{role}-application-strategy.md` | Application Optimiser |
-| `{role}/cv.pdf` and `{role}/cover-letter.pdf` | Application Optimiser |
+| `applications/{role-slug}/cv.pdf` and `applications/{role-slug}/cover-letter.pdf` | Application Optimiser |
 | `{role}-linkedin-profile-review.md` | LinkedIn Coach |
 | `{role}-content-strategy.md` | LinkedIn Coach |
 | `{role}-content-calendar.md` | LinkedIn Coach |

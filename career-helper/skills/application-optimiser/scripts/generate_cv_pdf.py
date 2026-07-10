@@ -22,6 +22,7 @@ After generating, ALWAYS verify with verify_cv_pdf.py before the CV is
 sent anywhere. See references/cv-pdf-production.md for the full loop.
 """
 import argparse
+import re
 import sys
 from pathlib import Path
 
@@ -121,17 +122,24 @@ HTML_SHELL = """<!DOCTYPE html>
 
 
 def build_html(src: Path, theme: str) -> str:
+    """Convert the markdown source to a styled HTML document string.
+
+    Fails closed if unresolved {{PLACEHOLDER}} markers remain, so a
+    template can never be rendered into a submission document.
+    """
     try:
         import markdown
     except ImportError:
         sys.exit("Missing dependency: pip install markdown")
 
     text = src.read_text(encoding="utf-8")
-    if "{{" in text:
-        print(
-            "WARNING: the source still contains {{PLACEHOLDER}} markers. "
-            "Fill them in before sending this document anywhere.",
-            file=sys.stderr,
+    placeholders = sorted(set(re.findall(r"\{\{[^{}]*\}\}", text)))
+    if placeholders:
+        shown = ", ".join(placeholders[:10]) + (" ..." if len(placeholders) > 10 else "")
+        sys.exit(
+            f"Refusing to generate: {len(placeholders)} unresolved placeholder(s) "
+            f"in {src}: {shown}\n"
+            "Fill them in first; a submission document must never carry template markers."
         )
     body = markdown.markdown(
         text,
@@ -148,6 +156,7 @@ def build_html(src: Path, theme: str) -> str:
 
 
 def main() -> None:
+    """Parse arguments, render the document, and report the next step."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("source", type=Path, help="Markdown CV or cover letter")
     parser.add_argument("output", type=Path, help="Output .pdf (or .html with --html-only)")

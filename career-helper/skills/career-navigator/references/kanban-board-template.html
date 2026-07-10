@@ -249,9 +249,16 @@
   'use strict';
 
   var STAGES = ['Researching', 'Applying', 'Applied', 'Interviewing', 'Offer', 'Closed'];
-  var STORAGE_KEY = 'career-helper-board:' + document.title + ':{{DATE}}';
 
-  var fileData = JSON.parse(document.getElementById('board-data').textContent);
+  var rawData = document.getElementById('board-data').textContent;
+  var fileData = JSON.parse(rawData);
+  // Key browser state to a fingerprint of the embedded data, so a
+  // regenerated board never loads stale state saved against old data.
+  var fingerprint = 0;
+  for (var fi = 0; fi < rawData.length; fi++) {
+    fingerprint = ((fingerprint << 5) - fingerprint + rawData.charCodeAt(fi)) | 0;
+  }
+  var STORAGE_KEY = 'career-helper-board:' + fingerprint;
   var state = load();
 
   function load() {
@@ -262,8 +269,16 @@
     return normalise(fileData);
   }
   function normalise(data) {
+    // Clone each card so board edits never mutate the fileData snapshot
+    // that "Reset to file data" restores.
     var cards = (data.cards || []).filter(function (c) {
       return c.role && c.role.indexOf('{{') === -1;
+    }).map(function (c) {
+      var copy = {};
+      for (var k in c) {
+        if (Object.prototype.hasOwnProperty.call(c, k)) { copy[k] = c[k]; }
+      }
+      return copy;
     });
     cards.forEach(function (c, i) { c.id = 'card-' + i; });
     return { owner: data.owner, generated: data.generated, cards: cards, nextId: cards.length };
@@ -360,6 +375,9 @@
 
     el.addEventListener('dragstart', function (e) { e.dataTransfer.setData('text/plain', card.id); });
     el.addEventListener('keydown', function (e) {
+      // Only act on keys pressed on the card itself; Enter on a child
+      // button already triggers that button and must not double-fire.
+      if (e.target !== el) { return; }
       if (e.key === 'Enter') { openEditor(card.id); }
       if (e.key === 'ArrowRight' && idx < STAGES.length - 1) { moveCard(card.id, STAGES[idx + 1]); }
       if (e.key === 'ArrowLeft' && idx > 0) { moveCard(card.id, STAGES[idx - 1]); }
@@ -423,12 +441,18 @@
   }
   stageSelect.addEventListener('change', toggleClosedFields);
 
-  document.getElementById('save-edit').addEventListener('click', function (e) {
+  // Saving goes through the form's submit event so that pressing Enter in
+  // a field and clicking Save behave identically, and so the browser's
+  // required-field validation runs before anything is persisted.
+  document.getElementById('edit-form').addEventListener('submit', function (e) {
     e.preventDefault();
     var card = state.cards.find(function (c) { return c.id === editingId; });
     if (!card) { dialog.close(); return; }
-    card.role = document.getElementById('f-role').value.trim();
-    card.organisation = document.getElementById('f-org').value.trim();
+    var role = document.getElementById('f-role').value.trim();
+    var org = document.getElementById('f-org').value.trim();
+    if (!role || !org) { return; }
+    card.role = role;
+    card.organisation = org;
     card.stage = stageSelect.value;
     card.nextAction = document.getElementById('f-action').value.trim();
     card.nextDate = document.getElementById('f-date').value;
@@ -436,6 +460,7 @@
     card.outcome = document.getElementById('f-outcome').value;
     card.dateClosed = document.getElementById('f-closed-date').value;
     card.learned = document.getElementById('f-learned').value.trim();
+    delete card.draft;
     dialog.close();
     announce('Saved changes to ' + card.role + '.');
     render();
@@ -446,6 +471,17 @@
     dialog.close();
     announce('Application removed from the board.');
     render();
+  });
+  // A new card is a draft until first saved; closing the dialog any other
+  // way (Cancel, Escape) discards it rather than exporting a placeholder.
+  dialog.addEventListener('close', function () {
+    var card = state.cards.find(function (c) { return c.id === editingId; });
+    if (card && card.draft) {
+      state.cards = state.cards.filter(function (c) { return c.id !== editingId; });
+      announce('New application discarded.');
+      render();
+    }
+    editingId = null;
   });
 
   document.getElementById('add-card').addEventListener('click', function () {
@@ -459,7 +495,8 @@
       notes: '',
       outcome: '',
       dateClosed: '',
-      learned: ''
+      learned: '',
+      draft: true
     };
     state.cards.push(card);
     render();
@@ -476,9 +513,22 @@
 
   // Markdown export in the exact applications/tracker.md format.
   function pad(v) { return v || '[UNKNOWN]'; }
-  function cell(v) { return String(v == null ? '' : v).replace(/\|/g, '/').trim(); }
+  function cell(v) {
+    // Escape pipes and flatten newlines so values survive a markdown
+    // table without being silently altered beyond whitespace.
+    return String(v == null ? '' : v)
+      .replace(/\r?\n+/g, '; ')
+      .replace(/\|/g, '\\|')
+      .trim();
+  }
+  function localDate() {
+    var d = new Date();
+    var m = String(d.getMonth() + 1);
+    var day = String(d.getDate());
+    return d.getFullYear() + '-' + (m.length < 2 ? '0' + m : m) + '-' + (day.length < 2 ? '0' + day : day);
+  }
   function toMarkdown() {
-    var today = new Date().toISOString().slice(0, 10);
+    var today = localDate();
     var active = state.cards.filter(function (c) { return c.stage !== 'Closed'; });
     var closed = state.cards.filter(function (c) { return c.stage === 'Closed'; });
     var overdue = active.filter(isOverdue).map(function (c) {

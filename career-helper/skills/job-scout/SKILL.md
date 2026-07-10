@@ -90,7 +90,7 @@ Five-dimension scoring against your actual profile, never against an inflated re
 - Organisation signals (stability, culture evidence)
 - Winnability (competition, network paths, visible requirements you cannot evidence)
 - Deal-breaker vetting before scoring; a role that fails a hard constraint is Discard regardless of score
-- Deadline flagging, with roles closing within seven days marked "Apply first" candidates
+- Deadline flagging: roles closing within seven days carry a `CLOSING SOON` flag while keeping their calculated tier (deadlines change urgency, not quality)
 - Tiers are text labels: Apply first, Apply, Park, Discard
 
 **Output:** `applications/shortlist.md`

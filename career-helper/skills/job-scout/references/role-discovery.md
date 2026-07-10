@@ -58,7 +58,7 @@ If the user declines, continue without it and reflect the narrower coverage hone
 
 ## Step 4: Deduplicate and Verify
 
-1. **Deduplicate** on organisation plus role title plus location. The same role commonly appears on two or three boards; keep the version closest to the source (employer page or ATS link beats an aggregator copy).
+1. **Deduplicate** on a stable posting identifier first: the canonical application URL or the ATS requisition ID where visible. Fall back to organisation plus role title plus location only when no stronger identifier exists, and be careful with the fallback: an organisation can run two identical-looking requisitions at once. The same role commonly appears on two or three boards; keep the version closest to the source (employer page or ATS link beats an aggregator copy).
 2. **Verify liveness** where possible: fetch the application link; a 404 or "no longer accepting applications" page removes the role.
 3. **Record for every survivor**: source URL, date seen, posting date if shown, and closing date or `[NOT STATED]`.
 4. **Discard on deal-breakers** immediately, but tell the user what was discarded and why, in one line each; a wrongly-inferred deal-breaker should be correctable.

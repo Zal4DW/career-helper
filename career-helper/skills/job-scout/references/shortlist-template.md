@@ -15,10 +15,12 @@
 
 ## Ranked Roles
 
-| Rank | Role | Organisation | Tier | Avg | Skills | Level | Practical | Org | Winnability | Flags | Closing date | Source (date seen) |
-|:-----|:-----|:-------------|:-----|:----|:-------|:------|:----------|:----|:------------|:------|:-------------|:-------------------|
-| 1 | {{ROLE_TITLE}} | {{ORGANISATION}} | {{Apply first/Apply/Park}} | {{X.X}} | {{1-5}} | {{1-5}} | {{1-5}} | {{1-5}} | {{1-5}} | {{CLOSING SOON / STRETCH / none}} | {{YYYY-MM-DD or [NOT STATED]}} | {{URL}} ({{YYYY-MM-DD}}) |
-| 2 | {{ROLE_TITLE}} | {{ORGANISATION}} | {{Tier}} | {{X.X}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Rank | Role | Organisation | Tier | Avg | Skills | Level | Practical | Org | Winnability | Flags | Closing date | Next step | Source (date seen) |
+|:-----|:-----|:-------------|:-----|:----|:-------|:------|:----------|:----|:------------|:------|:-------------|:----------|:-------------------|
+| 1 | {{ROLE_TITLE}} | {{ORGANISATION}} | {{Apply first/Apply/Park}} | {{X.X}} | {{1-5}} | {{1-5}} | {{1-5}} | {{1-5}} | {{1-5}} | {{Semicolon-separated, e.g. CLOSING SOON: YYYY-MM-DD; STRETCH, or none}} | {{YYYY-MM-DD or [NOT STATED]}} | {{Concrete action, e.g. "Research via /application-optimiser this week"}} | {{URL}} ({{YYYY-MM-DD}}) |
+| 2 | {{ROLE_TITLE}} | {{ORGANISATION}} | {{Tier}} | {{X.X}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{e.g. "Park until {{DATE}}; revisit if pipeline thins"}} | {{...}} |
+
+Every ranked role carries a next step, whatever its tier: Apply first and Apply rows get a concrete action and timeframe; Park rows get a revisit condition; the Org score notes "no public signals found" where that neutral rule applied.
 
 ---
 

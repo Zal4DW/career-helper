@@ -363,7 +363,7 @@ Learnings loop patterns → Job Scout ranking (recurring objections lower winnab
 
 ### Common Mistakes
 
-- **Asking for a learning plan before a gap analysis.** Courses feel productive, but half of most "gaps" are evidence gaps: you have the skill and cannot prove it. Those are fixed with a case study or a CV rewrite in hours, not a course in months.
+- **Asking for a learning plan before a gap analysis.** Courses feel productive, but many "gaps" turn out to be evidence gaps: you have the skill and cannot prove it. Those are fixed with a case study or a CV rewrite in hours, not a course in months.
 - **Scoring yourself instead of the evidence.** The inventory grades what the evidence shows, in both directions; most people under-claim somewhere and over-claim somewhere else.
 - **Chasing more than three gaps at once.** A plan addressing six gaps addresses none.
 

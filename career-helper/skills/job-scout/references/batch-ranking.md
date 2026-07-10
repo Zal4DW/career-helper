@@ -36,7 +36,7 @@ Weighting: default to equal weights. If the user's priorities are known (from a 
 
 - Score against the profile as evidenced. If the user claims a skill the CV does not show, note it as unevidenced and suggest `/skills-radar` to surface or close the gap.
 - `[NOT STATED]` salary or location scores Practical fit at 3 by default, with the uncertainty named.
-- Organisation signals may need a quick WebSearch for larger employers; skip silently for tiny organisations with no public record rather than inventing signals.
+- Organisation signals may need a quick WebSearch for larger employers. When no public record exists (common for tiny organisations), score the dimension a neutral 3 and add an uncertainty note ("no public signals found") to the rationale; never invent signals, and never leave the dimension unscored, because a missing score would distort the average and shift tiers based only on source availability.
 
 ---
 

@@ -38,7 +38,8 @@ If the user has zero or one active application, the tracker table is enough; do 
    - `generated`: today's date, `YYYY-MM-DD`.
    - `cards`: one object per tracker row. Active rows map `role`, `organisation`, `stage`, `nextAction`, `nextDate`, and `notes`. Closed rows set `stage` to `Closed` and map `outcome`, `dateClosed`, and `learned`.
    - Use empty strings for unknown fields, never invented values. Remove the placeholder example card.
-4. **Replace the header placeholders.** `{{NAME}}` and `{{DATE}}` appear in the header paragraph and in the local storage key; fill both.
+   - Escape every literal `<` inside JSON string values as `\u003c` (JSON.parse restores the character). Tracker content is user text; an unescaped closing script tag pasted into a role or note would otherwise terminate the data block and break, or worse script-inject, the page.
+4. **Replace the header placeholders.** `{{NAME}}` and `{{DATE}}` appear in the header paragraph; fill both. (Browser state is keyed to a fingerprint of the data block, so a regenerated board automatically discards state saved against older data.)
 5. **Write the file** to `applications/board.html` and tell the user to open it in their browser.
 
 ---

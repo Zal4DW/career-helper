@@ -6,11 +6,11 @@
 
 ## Consent First
 
-Before examining any public source:
+Before examining any external source:
 
 1. Ask the user which sources are theirs and which they want included. Suggested prompts: GitHub or GitLab profile, portfolio site, personal blog, publications or conference talks, Kaggle or similar competition profiles, Google Scholar, course certificates, App Store or marketplace listings, open-source contributions.
 2. Only examine what the user confirms. Do not search for accounts that might be theirs; if the user wants to know what an employer could find uninvited, that is `/employer-footprint`.
-3. Everything examined must be public. Never ask for credentials to access private work; ask the user to describe private work instead, and record it as user-described evidence.
+3. Externally accessed sources must be public. Never ask for credentials to access private accounts. Documents the user supplies directly (their CV, a LinkedIn profile export, a private project write-up) are fine to examine; record them as user-provided evidence, distinct from externally verifiable sources.
 
 ---
 
