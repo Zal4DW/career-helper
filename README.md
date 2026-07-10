@@ -127,6 +127,9 @@ Or just describe what you need:
 - **Cover letters and supporting statements** with the same anti-hallucination guardrails as CV work
 - **Application tracker** a single plain-text board of every live application, owned by you and read by `/career-helper:status`
 - **Interactive kanban board** an offline, accessible HTML view of the tracker: drag applications between stages and export the changes back
+
+  ![The kanban board view: six stage columns from Researching to Closed, one card per application with its next action, an OVERDUE text tag on a slipped date, keyboard-operable move buttons, and toolbar buttons to copy or download the tracker markdown](docs/images/kanban-board-view.png)
+  *The board view of the application tracker, shown with placeholder data. Generated to `applications/board.html`; your tracker file stays the source of truth.*
 - **Job scouting** live role discovery and five-dimension batch ranking, honest about the limits of automated job-board search (and able to use the Claude for Chrome extension for logged-in boards)
 - **Skills radar** an evidenced skills inventory that separates real skill gaps from evidence gaps, with learning plans built around your actual weekly hours
 - **Verified CV PDFs** a generate-verify loop that renders an ATS-safe PDF, checks the text layer parses, and inspects the layout page by page
