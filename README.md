@@ -1,3 +1,5 @@
+
+
 # Career Helper - Claude Code Plugin
 
 End-to-end career support with guided coaching for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Fourteen skills including Tim (your personal career coach who guides you through the right skills in the right order), getting started guidance, AI impact assessment, employer footprint analysis, social media review, LinkedIn optimisation, ATS CV rewriting, cover letters and supporting statements, verified CV PDF production, interview preparation, reference and referee prep, job search strategy with an application tracker and interactive kanban board, live role discovery with batch ranking (job scout), an evidenced skills inventory with gap analysis and learning plans (skills radar), career transitions (including non-linear career exploration: entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling), board-level AI oversight, and personal brand building (Why You, Why Them, Why Now positioning, audience and channel map, content pillars, bio library). Ready-made Claude Cowork scheduled routines keep the search moving between sessions.
@@ -237,4 +239,4 @@ See [LICENSE](LICENSE) for full terms.
 
 ---
 
-*Career Helper Plugin v1.13.0 | Prosper AI Consulting, UK*
+*Career Helper Plugin v1.15.0 | Prosper AI Consulting, UK*
