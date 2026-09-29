@@ -1,6 +1,6 @@
 # Career Helper Preferences File Format
 
-The shared format for `career-helper-preferences.md`, saved in the user's current working directory. Tim creates it after asking for consent, and any skill invoked directly may create it after asking the one accessibility question.
+The shared format for `career-helper-preferences.md`, saved in the user's current working directory. Tim, or any skill invoked directly, may create it only after the user agrees to have their preferences saved.
 
 Before creating the file, ask: "I'll save your preferences so you don't have to repeat yourself next time. Is that okay?" If the user declines, no file is created and everything still works.
 

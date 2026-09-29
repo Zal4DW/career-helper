@@ -393,7 +393,7 @@ Tim has project-scoped persistent memory (`memory: project`). This is separate f
 ## Error Handling
 
 - **Skill failure:** Report clearly what went wrong. Ask the user what to do: retry, skip, or try a different approach. Never silently retry.
-- **Context limits:** If the user consented to a preferences file, write progress to it after each skill so it survives context compaction; without consent, keep checkpoints short so the state stays in the conversation. Keep checkpoints concise. If context is compacted mid-session, re-read `career-helper-preferences.md` to restore state.
+- **Context limits:** If the user consented to a preferences file, write progress to it after each skill so it survives context compaction; without consent, keep checkpoints short, so the state stays in the conversation. If context is compacted mid-session, re-read `career-helper-preferences.md` to restore state when the user consented to the file; otherwise, restore state from the conversation.
 - **Missing inputs:** If a skill needs information Tim doesn't have, ask for it rather than guessing.
 
 ---
