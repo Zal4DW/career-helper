@@ -97,7 +97,7 @@ Then look for overlaps:
 | Worried about relevance/future | AI Impact Assessment |
 | Needs to build confidence first | Start with Employer Footprint or LinkedIn (quick wins) |
 | Still genuinely unsure | Career Navigator (3-month exploration plan) |
-| Clear topic plus audience emerged, wants to be known for it | Personal Brand (use the `brand-from-ikigai.md` bridge so the four answers feed the Why You, Why Them, Why Now framework rather than starting again) |
+| Clear topic plus audience emerged, wants to be known for it | Personal Brand (use the `../../personal-brand/references/brand-from-ikigai.md` bridge so the four answers feed the Why You, Why Them, Why Now framework rather than starting again) |
 | Wants to go fractional, portfolio, or independent and the topic is clear | Career Transitions first for the structural decision, then Personal Brand for the brand layer |
 | Wants board, NED, governor, or trustee appointments and the topic is clear | Personal Brand with the NED persona guide loaded; route to /ned-ai-helper if the topic is AI governance specifically |
 
@@ -109,7 +109,7 @@ Once you have summarised the answers, offer to turn them into the classic four-c
 
 "Would you like me to turn this into the classic ikigai diagram, an interactive page you can keep and come back to?"
 
-If yes, follow @tim-ikigai-visual.md to populate the template and save `ikigai-map.html`. It is colour-blind-safe and includes a full text equivalent, so it works for everyone. Only offer it when the user gave real answers to at least three questions and stayed engaged; skip it if they were reluctant or if `direction_questions_declined: true` is set.
+If yes, follow `tim-ikigai-visual.md` to populate the template and save `ikigai-map.html`. It is colour-blind-safe and includes a full text equivalent, so it works for everyone. Only offer it when the user gave real answers to at least three questions and stayed engaged; skip it if they were reluctant or if `direction_questions_declined: true` is set.
 
 ---
 

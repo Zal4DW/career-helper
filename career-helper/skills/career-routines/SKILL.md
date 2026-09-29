@@ -36,7 +36,7 @@ Put the recurring parts of your job search on a schedule, so the tracker, follow
 - **dyslexia_friendly: true**: Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: choosing the cadence."). Refer to saved files by description, not filename. Repeat key details (routine names, days, times); do not assume the user remembers from earlier messages.
 - **colour_blind: true**: Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -55,15 +55,15 @@ Career Helper works in both Desktop Cowork and cloud Cowork, but they keep data 
 
 So the honest default for a routine that reads the tracker or market map is Desktop Cowork with the workspace folder, running on the user's machine at a time it is awake. Say this plainly before setting anything up, and let the user choose.
 
-**Load:** @references/cowork-scheduling.md for the setup steps, the cloud-or-local rules, permissions, and troubleshooting.
+**Load:** `references/cowork-scheduling.md` for the setup steps, the cloud-or-local rules, permissions, and troubleshooting.
 
 ---
 
 ## 1. Set Up a Routine
 
 **What you need:** Your workspace folder, a Cowork session, and a rough idea of cadence
-**Load:** @references/cowork-scheduling.md
-**Template:** @references/routines-register-template.md
+**Load:** `references/cowork-scheduling.md`
+**Template:** `references/routines-register-template.md`
 
 Walk the user through one routine at a time:
 
@@ -81,7 +81,7 @@ Walk the user through one routine at a time:
 ## 2. Routine Library
 
 **What you need:** Nothing; the library is ready-made
-**Load:** @references/routine-library.md
+**Load:** `references/routine-library.md`
 
 Seven prompts, each safe to run unattended:
 
@@ -100,7 +100,7 @@ Present the library only when asked, or when the weekly update does not fit; do 
 ## 3. Review Your Routines
 
 **What you need:** `routines.md`, and `updates/` or `market-watch/` if the routines write there
-**Load:** @references/cowork-scheduling.md (Troubleshooting section)
+**Load:** `references/cowork-scheduling.md` (Troubleshooting section)
 
 Read `routines.md` and the output folders, then report:
 
@@ -118,7 +118,7 @@ Offer the fix for each, and update `routines.md` when something changes. Never g
 ## 4. Outside Cowork
 
 **What you need:** To know where the user runs Career Helper
-**Load:** @references/cowork-scheduling.md (Outside Cowork section)
+**Load:** `references/cowork-scheduling.md` (Outside Cowork section)
 
 Some people run the plugin in Claude Code rather than Cowork. The prompts are identical; only the scheduler changes:
 
@@ -158,7 +158,7 @@ Routines are plumbing, and plumbing should be boring:
 
 ### Template Usage
 
-When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
+When a capability names a template, read it from the path given before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 

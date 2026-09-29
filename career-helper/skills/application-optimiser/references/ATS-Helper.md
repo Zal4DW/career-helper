@@ -13,9 +13,9 @@ Your objective is to rewrite the user's documents so they consistently reach hum
 
 ## Content Verification: Non-Negotiable
 
-**Before starting any step**, load `@verified-content-guardrails.md`. Every substantive word in the final CV must trace to a verified source:
+**Before starting any step**, load `verified-content-guardrails.md`. Every substantive word in the final CV must trace to a verified source:
 
-1. **Master facts file** (if present in cwd): `master-facts.md`. If present, treat as authoritative. Template available at `@master-facts-template.md`.
+1. **Master facts file** (if present in cwd): `master-facts.md`. If present, treat as authoritative. Template available at `master-facts-template.md`.
 2. **The user's current CV.** Default-verified, unless something looks inconsistent.
 3. **Explicit conversation turns.** Facts the user has confirmed in chat.
 4. **Job description.** Source for target keywords only, never for candidate history.
@@ -27,7 +27,7 @@ If a bullet would need a detail you cannot cite, **flag and ask**. Never guess.
 <User_Data>
 
   <master_facts_file>
-  [Check cwd for `master-facts.md`. If present, load it; this is the authoritative source. Pre-verified metrics, bullet library, and timeline live here. See @master-facts-template.md for format.]
+  [Check cwd for `master-facts.md`. If present, load it; this is the authoritative source. Pre-verified metrics, bullet library, and timeline live here. See `master-facts-template.md` for format.]
   </master_facts_file>
 
   <job_description>
@@ -54,7 +54,7 @@ If a bullet would need a detail you cannot cite, **flag and ask**. Never guess.
 ## Operating Rules
 
 - Use UK spelling throughout.
-- **Never invent experience, employers, dates, education, or certifications.** If data is missing, write [MISSING] and proceed. See `@verified-content-guardrails.md` for the full rule set, trigger phrases, and decision tree.
+- **Never invent experience, employers, dates, education, or certifications.** If data is missing, write [MISSING] and proceed. See `verified-content-guardrails.md` for the full rule set, trigger phrases, and decision tree.
 - **Prefer the master facts file when present.** When both the master facts file and the current CV contain an entry for the same role, trust the master facts file.
 - Optimise for ATS parsing. Use plain text headings, consistent date formats (MMM YYYY), and simple bullet points.
 - Maximise signal for three ranking modes:
@@ -298,7 +298,7 @@ The set of required section tags depends on which stage the conditional flow rea
 Two distinct thresholds apply to keyword coverage. They are not interchangeable:
 
 - **Aspirational target (this skill):** 90 percent of [Keyword_List] represented in Skills or Experience. This is what a strong CV rewrite aims for when verified evidence supports it.
-- **Minimum acceptance gate (`@reflect-validate.md`):** 70 percent. Below this, validation marks the CV as NEEDS_IMPROVEMENT and refines before presenting to the user.
+- **Minimum acceptance gate (`reflect-validate.md`):** 70 percent. Below this, validation marks the CV as NEEDS_IMPROVEMENT and refines before presenting to the user.
 
 Coverage between 70 and 90 percent passes validation but should still be improved if the source contains verified evidence to support more keywords. Coverage below 70 percent is never delivered.
 
@@ -311,7 +311,7 @@ Coverage between 70 and 90 percent passes validation but should still be improve
 
 ## Final Verification Before Delivery
 
-Before presenting the CV, run the Hallucination Red Flags scan from `@verified-content-guardrails.md`. If any red flag appears in your own output, either remove it or verify it with the user before delivering.
+Before presenting the CV, run the Hallucination Red Flags scan from `verified-content-guardrails.md`. If any red flag appears in your own output, either remove it or verify it with the user before delivering.
 
 <Final_Instruction>
 Execute this plan. Begin with `<Step_1_Output>`. Do not add conversational fluff. Your tone is that of a technical expert delivering a report.

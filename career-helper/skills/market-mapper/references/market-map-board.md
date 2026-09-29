@@ -2,7 +2,7 @@
 
 **Purpose:** Give the user an interactive, visual view of the watchlist when a markdown table stops being enough. The board renders every organisation on the map as a card in one of four priority columns (Act now, Warm, Watch, Quiet) and lets the user drag cards between priorities, edit the summary fields, and export the result back as the map's Watchlist section. It is the same mechanism as the application kanban board in `/career-navigator`, applied to the market map.
 
-**Applies to:** The board artefact at `market-map-board.html`, generated from `market-map.md` using `@references/market-map-board-template.html`.
+**Applies to:** The board artefact at `market-map-board.html`, generated from `market-map.md` using `market-map-board-template.html`.
 
 ---
 
@@ -32,7 +32,7 @@ If the map has fewer than five organisations, do not offer the board proactively
 ## Generating the Board
 
 1. **Read the map.** Load `market-map.md`. If none exists, build one first (Capability 1); the board has nothing to show without it.
-2. **Load the template.** Read `@references/market-map-board-template.html`.
+2. **Load the template.** Read `market-map-board-template.html`.
 3. **Populate the data block.** Replace the JSON inside `<script id="board-data" type="application/json">`:
    - `owner`: the user's name from the map header, or `[UNKNOWN]`.
    - `posture`: the posture from the map header (Employed and discreet, or Openly searching).

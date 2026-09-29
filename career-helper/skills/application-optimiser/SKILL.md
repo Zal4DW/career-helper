@@ -38,7 +38,7 @@ Research companies, optimise your CV for ATS systems, and plan your application 
 - **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: CV optimisation."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -47,8 +47,8 @@ These rules apply to **all communication with the user** and to the **formatting
 ## 1. Company & Role Research
 
 **What you need:** Company name, job description (optional but helpful)
-**Load:** @references/company-research.md
-**Template:** @references/research-brief-template.md
+**Load:** `references/company-research.md`
+**Template:** `references/research-brief-template.md`
 
 Agentic parallel research covering:
 - Company fundamentals, leadership, financial health
@@ -67,10 +67,10 @@ Uses parallel WebSearch, WebFetch, and Task sub-agents for the research. Run tho
 ## 2. CV Optimisation for ATS
 
 **What you need:** Your current CV + target job description
-**Load:** @references/ATS-Helper.md
+**Load:** `references/ATS-Helper.md`
 **Templates:**
-- @references/cv-template.md for CV output
-- @references/application-strategy-template.md for LinkedIn sync notes
+- `references/cv-template.md` for CV output
+- `references/application-strategy-template.md` for LinkedIn sync notes
 
 NLP and recruitment AI specialist approach:
 - Keyword and concept extraction from job description
@@ -89,7 +89,7 @@ NLP and recruitment AI specialist approach:
 ## 3. Application Strategy & Timeline
 
 **What you need:** Research brief + optimised CV + timeline constraints
-**Template:** @references/application-strategy-template.md
+**Template:** `references/application-strategy-template.md`
 
 Comprehensive planning:
 - Timeline and milestone planning
@@ -105,8 +105,8 @@ Comprehensive planning:
 ## 4. Cover Letter & Supporting Statement
 
 **What you need:** Job description + your CV (or master facts) + research brief if one exists + your own reasons for wanting the role
-**Load:** @references/cover-letter.md
-**Template:** @references/cover-letter-template.md
+**Load:** `references/cover-letter.md`
+**Template:** `references/cover-letter-template.md`
 
 Drafts a cover letter, competency-based supporting statement, or short application message, with every claim traceable to verified content:
 - Confirms which format the application actually requires before drafting
@@ -124,7 +124,7 @@ Drafts a cover letter, competency-based supporting statement, or short applicati
 ## 5. CV PDF Production
 
 **What you need:** A finished `cv-optimised.md` (or cover letter) with no unfilled placeholders
-**Load:** @references/cv-pdf-production.md
+**Load:** `references/cv-pdf-production.md`
 **Scripts:** `scripts/generate_cv_pdf.py` and `scripts/verify_cv_pdf.py`
 
 A generate-verify loop, never generate-and-hope:
@@ -148,7 +148,7 @@ All role-specific outputs are saved in `applications/{role-slug}/`. When running
 ## Deep Research Validation
 
 All research uses a rigorous multi-cycle validation workflow:
-**Load:** @references/deep-research-reflection.md
+**Load:** `references/deep-research-reflection.md`
 
 - **Gap Analysis** - After initial search, identify what's missing
 - **Counter-Evidence Search** - Actively search for contradicting information
@@ -159,7 +159,7 @@ All research uses a rigorous multi-cycle validation workflow:
 ## Reflective Validation
 
 After generating content, validate before presenting:
-**Load:** @references/reflect-validate.md
+**Load:** `references/reflect-validate.md`
 
 **For CV/ATS:** Keyword coverage 70%+? Achievements quantified? ATS-safe formatting?
 **For Research:** All claims cited? Sources recent (<12mo)? All sections present?
@@ -176,10 +176,10 @@ When the user's context matches a specific persona, load the relevant reference 
 
 | Persona | Load Reference | Trigger |
 |:--------|:--------------|:--------|
-| Career Returner | @references/career-returner-cv-guide.md | User mentions career break, returning to work, redundancy, maternity/paternity, illness, caregiving |
-| Early Career | @references/early-career-cv-template.md | User is a graduate, apprentice, school leaver, or has limited professional experience |
-| NED | @references/ned-cv-template.md | User seeks board roles, NED positions, governor or trustee appointments |
-| Fractional | @references/fractional-cv-template.md | User is going fractional, portfolio, or independent consulting |
+| Career Returner | `references/career-returner-cv-guide.md` | User mentions career break, returning to work, redundancy, maternity/paternity, illness, caregiving |
+| Early Career | `references/early-career-cv-template.md` | User is a graduate, apprentice, school leaver, or has limited professional experience |
+| NED | `references/ned-cv-template.md` | User seeks board roles, NED positions, governor or trustee appointments |
+| Fractional | `references/fractional-cv-template.md` | User is going fractional, portfolio, or independent consulting |
 
 These references supplement (not replace) the standard capability references. Load both the persona reference and the standard one.
 
@@ -206,7 +206,7 @@ Use web search to check specifics that may have changed since your training, suc
 
 ### Template Usage
 
-When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
+When a capability names a template, read it from the path given before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ### Working with Blocked Content
 

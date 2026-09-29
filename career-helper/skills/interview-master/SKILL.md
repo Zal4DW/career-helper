@@ -40,7 +40,7 @@ Complete interview support - before, during practice, and after.
 - **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: mock interview."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -49,8 +49,8 @@ These rules apply to **all communication with the user** and to the **formatting
 ## 1. Interview Preparation
 
 **What you need:** CV + job description + company name + interview stage
-**Load:** @references/interview-prep.md
-**Template:** @references/interview-prep-template.md
+**Load:** `references/interview-prep.md`
+**Template:** `references/interview-prep-template.md`
 
 Role-specific preparation, built from a competency map outwards:
 - A competency map of 8-12 competencies from the job description: why each matters, the evidence in the spec, how likely it is to be tested, and the interview style it will take
@@ -80,8 +80,8 @@ All answers cite your real experience with evidence. There is no overall readine
 ## 2. Interviewer's Perspective Report
 
 **What you need:** Job description + CV (optional but helpful)
-**Load:** @references/interviewer-perspective-guide.md
-**Template:** @references/interviewer-perspective-template.md
+**Load:** `references/interviewer-perspective-guide.md`
+**Template:** `references/interviewer-perspective-template.md`
 
 See questions from the interviewer's viewpoint:
 - What they're REALLY assessing behind each question
@@ -104,7 +104,7 @@ Question categories covered:
 ## 3. Mock Interview Simulation
 
 **What you need:** Interview prep document, interview type, persona preference
-**Load:** @references/mock-interview.md
+**Load:** `references/mock-interview.md`
 
 Realistic interview practice:
 - Interviewer personas: recruiter, hiring manager, technical, panel, executive
@@ -121,8 +121,8 @@ Realistic interview practice:
 ## 4. Post-Interview Coaching & Recovery
 
 **What you need:** CV + job description + interview recollection + any feedback received
-**Load:** @references/post-interview-coaching.md
-**Template:** @references/post-interview-debrief-template.md
+**Load:** `references/post-interview-coaching.md`
+**Template:** `references/post-interview-debrief-template.md`
 
 **Stage-Specific Diagnosis:**
 - WHERE rejection occurred (Application, Recruiter Screen, HM Screen, Technical, Final)
@@ -155,8 +155,8 @@ Realistic interview practice:
 ## 5. Reference & Referee Prep
 
 **What you need:** The role and what it values + who you are considering as referees + any constraints (current employer, difficult last manager, first job)
-**Load:** @references/referee-prep.md
-**Template:** @references/referee-prep-template.md
+**Load:** `references/referee-prep.md`
+**Template:** `references/referee-prep-template.md`
 
 Prepare your references before you are asked, usually at late interview or offer stage:
 - Choose referees who are credible and relevant to this specific role
@@ -197,11 +197,11 @@ When the user's context matches a specific persona, load the relevant reference 
 
 | Persona | Load Reference | Trigger |
 |:--------|:--------------|:--------|
-| Career Returner | @references/career-returner-interview-prep.md | User mentions career break, returning to work, redundancy, maternity/paternity |
-| Early Career | @references/early-career-interview-prep.md | User is a graduate, apprentice, school leaver, or attending first professional interviews |
-| NED | @references/ned-interview-prep.md | User is preparing for a board interview or nomination committee meeting |
-| Fractional | @references/fractional-discovery-prep.md | User is preparing for a client discovery call or fractional engagement pitch |
-| Ageism / Age Discrimination | @references/ageism-in-employment.md + @references/age-discrimination-strategies.md + @references/emotional-support-resilience.md | User mentions age discrimination, ageism, being "too old", being "overqualified" as age proxy, long service redundancy (20+ years), feeling their age is held against them, younger candidates being preferred, or age-related rejection patterns |
+| Career Returner | `references/career-returner-interview-prep.md` | User mentions career break, returning to work, redundancy, maternity/paternity |
+| Early Career | `references/early-career-interview-prep.md` | User is a graduate, apprentice, school leaver, or attending first professional interviews |
+| NED | `references/ned-interview-prep.md` | User is preparing for a board interview or nomination committee meeting |
+| Fractional | `references/fractional-discovery-prep.md` | User is preparing for a client discovery call or fractional engagement pitch |
+| Ageism / Age Discrimination | `references/ageism-in-employment.md` + `references/age-discrimination-strategies.md` + `references/emotional-support-resilience.md` | User mentions age discrimination, ageism, being "too old", being "overqualified" as age proxy, long service redundancy (20+ years), feeling their age is held against them, younger candidates being preferred, or age-related rejection patterns |
 
 These references supplement (not replace) the standard capability references. Load both the persona reference and the standard one.
 
@@ -235,7 +235,7 @@ When the ageism persona is triggered, load ALL THREE ageism references alongside
 
 ### Template Usage
 
-When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
+When a capability names a template, read it from the path given before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 

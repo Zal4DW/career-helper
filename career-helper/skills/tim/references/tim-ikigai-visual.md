@@ -42,7 +42,7 @@ Synthesising overlaps from the user's own answers is allowed; this is interpreta
 
 ## How to Build It
 
-1. Load the template: @references/ikigai-map-template.html
+1. Load the template: `ikigai-map-template.html`
 2. Replace every `{{PLACEHOLDER}}` with the user's content, HTML-escaped (or leave it if genuinely unknown). Escape at minimum `&`, `<`, `>`, `"`, and `'` so user text cannot break the markup or inject script.
 3. Save the result as `ikigai-map.html` in the workspace root.
 4. Tell the user the file is saved and can be opened in any browser. In Claude Cowork it can be opened directly.

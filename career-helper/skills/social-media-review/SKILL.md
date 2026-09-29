@@ -35,7 +35,7 @@ A quick, friendly check of your social media through a recruiter's eyes. Find ou
 - **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: privacy cleanup."). Refer to saved files by description, not filename. Repeat key details (platform names, usernames); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -80,7 +80,7 @@ Collect the following via AskUserQuestion:
 ## 1. Quick Social Scan
 
 **What you need:** Social media handles (at least 2-3 platforms)
-**Load:** @references/social-scan-methodology.md
+**Load:** `references/social-scan-methodology.md`
 
 A fast recruiter-eye review across all provided platforms:
 
@@ -128,7 +128,7 @@ Results presented in conversation with clear, actionable recommendations. Option
 ## 2. Platform Deep-Dive
 
 **What you need:** Username/URL for one specific platform
-**Load:** @references/social-scan-methodology.md
+**Load:** `references/social-scan-methodology.md`
 
 A detailed review of one platform. Useful when you know a specific account needs attention.
 
@@ -182,7 +182,7 @@ Detailed findings for the specific platform, presented in conversation.
 ## 3. Privacy & Cleanup Guide
 
 **What you need:** List of platforms used (handles not required for this capability)
-**Load:** @references/privacy-cleanup-guide.md
+**Load:** `references/privacy-cleanup-guide.md`
 
 A practical guide to locking down and cleaning up your social media:
 

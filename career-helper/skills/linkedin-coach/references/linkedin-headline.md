@@ -293,10 +293,10 @@ Head of Growth Marketing | B2B SaaS | Scaled ARR from $2M to $20M | HubSpot Cert
 ## Integration with Profile Review
 
 This prompt focuses on headline-only optimization. For comprehensive profile review:
-- Load @`references/linkedin-profile-review.md`
+- Load `linkedin-profile-review.md`
 
 For content strategy:
-- Load @`references/content-strategy-coaching.md`
+- Load `content-strategy-coaching.md`
 
 ---
 

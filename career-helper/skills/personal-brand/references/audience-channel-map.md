@@ -106,7 +106,7 @@ Channels follow audience. Below is the working menu; not every user uses every c
 
 - **Use when**: audience is professional, decision-making, and B2B-adjacent. Default for most users.
 - **Best for**: long-form posts, thought-leadership essays in the 800 to 1,500-word range, document carousels, video introductions, comments on industry voices.
-- **Cadence**: sustainable rhythm is 3 posts per week plus 30 minutes daily of intentional commenting. See `@../linkedin-coach/references/content-strategy-coaching.md` for the LinkedIn-specific tactics.
+- **Cadence**: sustainable rhythm is 3 posts per week plus 30 minutes daily of intentional commenting. See `../../linkedin-coach/references/content-strategy-coaching.md` for the LinkedIn-specific tactics.
 
 ### X/Twitter
 
@@ -225,7 +225,7 @@ Document the constraints in the output. They are as important as the channel cho
 
 Save to `personal-brand-audience-channels.md` (workspace root) or `applications/{role-slug}/personal-brand-audience-channels.md` (role-specific brand work).
 
-Use the structure in `@personal-brand-output-template.md`. Preserve the footer.
+Use the structure in `personal-brand-output-template.md`. Preserve the footer.
 
 ---
 

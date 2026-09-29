@@ -751,7 +751,7 @@ Use WebSearch to provide current, evidence-based information for the user's spec
 
 **Always output as:** `non-linear-career-exploration.md`
 
-Load template: @references/non-linear-careers-template.md
+Load template: `non-linear-careers-template.md`
 
 ---
 
@@ -759,7 +759,7 @@ Load template: @references/non-linear-careers-template.md
 
 After non-linear career exploration is complete:
 
-1. **If entrepreneurship chosen:** "Want to build a portfolio career strategy with financial projections?" → @references/portfolio-career.md
+1. **If entrepreneurship chosen:** "Want to build a portfolio career strategy with financial projections?" → `portfolio-career.md`
 2. **If public sector chosen:** "Want to optimise your CV for Civil Service applications?" → /application-optimiser
 3. **If staying but pivoting internally:** "Want to reposition your LinkedIn for your new direction?" → /linkedin-coach
 4. **If considering multiple paths:** "Want a 3-month exploration plan?" → /career-navigator (3-month plan)

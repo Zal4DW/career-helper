@@ -42,7 +42,7 @@ Support for non-traditional career paths: fractional executive roles, portfolio 
 - **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: AI readiness."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -51,8 +51,8 @@ These rules apply to **all communication with the user** and to the **formatting
 ## 1. Portfolio & Fractional Career Support
 
 **What you need:** Skills inventory, income goals, target regions, current situation
-**Load:** @references/portfolio-career.md
-**Template:** @references/portfolio-career-template.md
+**Load:** `references/portfolio-career.md`
+**Template:** `references/portfolio-career-template.md`
 
 Comprehensive portfolio career strategy:
 - Readiness assessment (financial, skills, personal)
@@ -75,8 +75,8 @@ Comprehensive portfolio career strategy:
 ## 2. AI Readiness Assessment
 
 **What you need:** Current role, target roles, existing AI experience
-**Load:** @references/ai-readiness.md
-**Template:** @references/ai-readiness-template.md
+**Load:** `references/ai-readiness.md`
+**Template:** `references/ai-readiness-template.md`
 
 AI skills development for the modern job market:
 - Current AI proficiency assessment (tools, applications, understanding)
@@ -93,8 +93,8 @@ AI skills development for the modern job market:
 ## 3. Non-Linear Career Explorer
 
 **What you need:** Current role/situation, career goals, financial situation, risk tolerance, region
-**Load:** @references/non-linear-careers.md
-**Template:** @references/non-linear-careers-template.md
+**Load:** `references/non-linear-careers.md`
+**Template:** `references/non-linear-careers-template.md`
 
 Comprehensive exploration of non-traditional career alternatives:
 
@@ -144,7 +144,7 @@ Use web search to check specifics that may have changed since your training, suc
 
 ### Template Usage
 
-When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
+When a capability names a template, read it from the path given before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 

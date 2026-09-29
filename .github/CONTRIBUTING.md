@@ -62,7 +62,11 @@ If you are unsure where something belongs, open an issue and ask.
 - **Skills** live under `career-helper/skills/{skill-name}/` with a `SKILL.md` and a `references/` folder.
 - **Agents** live under `career-helper/agents/`.
 - **Commands** live under `career-helper/commands/`.
-- **References** are loaded with `@references/filename.md` from within the owning skill.
+- **References** are named by path, in backticks, so Claude knows which file to read and when (for example, "Load `references/filename.md`"). Do not use `@` syntax; `@` imports are documented for `CLAUDE.md` only, not for skills, agents, or commands.
+  - From a `SKILL.md`, give the path relative to the skill folder: `references/filename.md`.
+  - From a file inside `references/`, give the path relative to that file: `other-file.md`.
+  - To reach another skill's file from a `SKILL.md`, use `${CLAUDE_PLUGIN_ROOT}/skills/{skill-name}/references/filename.md`; Claude Code expands this variable in `SKILL.md` content. From a file inside `references/`, use the path relative to that file (`../../{skill-name}/references/filename.md`), because reference files are read as they are and the variable is not expanded there.
+  - In agents and commands, give paths relative to the plugin folder (`skills/tim/references/filename.md`) and say so once near the top.
 - **New references should be purposeful.** Avoid creating a file that gets loaded once and never referenced again.
 
 ### Skill Content Conventions

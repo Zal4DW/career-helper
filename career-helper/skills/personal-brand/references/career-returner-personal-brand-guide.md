@@ -89,7 +89,7 @@ Cost of inaction for the audience: hiring the wrong returner is expensive; hirin
 
 Returner brand is most often built on:
 
-- **LinkedIn**: the dominant channel. The About section is doing more work than for any other persona; it is the place a hiring manager looks first for the gap and the framing. See `@../linkedin-coach/references/career-returner-linkedin-guide.md` for tactics.
+- **LinkedIn**: the dominant channel. The About section is doing more work than for any other persona; it is the place a hiring manager looks first for the gap and the framing. See `../../linkedin-coach/references/career-returner-linkedin-guide.md` for tactics.
 - **Returner programmes and communities**: returnship cohorts, returner-specific Slacks and meetups, sector-specific returner networks. Worth investing in early; the referral economy is unusually warm.
 - **A small amount of substantive content**: one or two well-judged posts, a short essay on the personal site, or a podcast guest appearance. Volume is not the goal; signal is.
 - **Direct outreach**: warm reconnections with pre-break network, with a clear "I am returning, here is what I am looking for" message.
@@ -135,7 +135,7 @@ Build in:
 - **A read-aloud check before saving any output.** If the user reads their own bio and does not recognise themselves, rewrite.
 - **Permission to be conservative.** Some returners are not ready for a high-profile brand on day one. A clean, current LinkedIn About plus a quiet plan for the next three months is enough to start. The brand can grow.
 - **A stopping rule.** If the brand work starts to feel like another job, pause. The aim is to make the user findable for the right work, not to add a second career on top of the return.
-- **Cross-reference**: if the break involves grief or loss, refer the user to wellbeing resources in `@../interview-master/references/emotional-support-resilience.md`. The brand work is not a substitute for support.
+- **Cross-reference**: if the break involves grief or loss, refer the user to wellbeing resources in `../../interview-master/references/emotional-support-resilience.md`. The brand work is not a substitute for support.
 
 ---
 
@@ -162,7 +162,7 @@ When to route to other skills:
 - For interview prep that addresses the break confidently: `/interview-master` with the career-returner persona
 - For a 3-month return plan: `/career-navigator` with the career-returner persona
 - For LinkedIn-specific tactics: `/linkedin-coach` with the career-returner reference
-- For wellbeing support: `@../interview-master/references/emotional-support-resilience.md`
+- For wellbeing support: `../../interview-master/references/emotional-support-resilience.md`
 
 ---
 

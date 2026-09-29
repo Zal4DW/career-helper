@@ -45,7 +45,7 @@ Get the most out of Career Helper. Whether you are a graduate writing your first
 - **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition. Refer to saved files by description, not filename.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -54,8 +54,8 @@ These rules apply to **all communication with the user** and to the **formatting
 ## 6. Getting the Best Guide
 
 **What you need:** Nothing - works for everyone
-**Load:** @references/getting-the-best-guide.md
-**PDF:** @references/getting-the-best-guide.pdf
+**Load:** `references/getting-the-best-guide.md`
+**PDF:** `references/getting-the-best-guide.pdf`
 
 A comprehensive guide covering installation, folder setup, and three scenario-based walkthroughs: graduates starting out, experienced professionals between roles, and employed professionals wanting better positioning. Includes skill connection maps, common mistakes to avoid, and practical advice on LinkedIn copy/paste workflows.
 
@@ -71,7 +71,7 @@ A comprehensive guide covering installation, folder setup, and three scenario-ba
 ## 1. Full Overview
 
 **What you need:** Nothing - this works for everyone
-**Load:** @references/full-overview.md
+**Load:** `references/full-overview.md`
 
 Walk the user through everything career-helper can do, with concrete real-world examples showing exactly when and how to use each skill. This is the "show me everything" capability.
 
@@ -88,7 +88,7 @@ Walk the user through everything career-helper can do, with concrete real-world 
 ## 2. Preparation Checklist
 
 **What you need:** Your current situation and goals
-**Load:** @references/preparation-checklist.md
+**Load:** `references/preparation-checklist.md`
 
 Help the user gather everything they need before diving into skills. Ask what they plan to work on, then provide a tailored checklist.
 
@@ -105,7 +105,7 @@ Help the user gather everything they need before diving into skills. Ask what th
 ## 3. Workflow Planner
 
 **What you need:** Career situation, goals, timeline, materials available
-**Load:** @references/workflow-planner.md
+**Load:** `references/workflow-planner.md`
 
 Create a personalised skill sequence based on the user's specific situation. Not a generic list - a tailored plan.
 
@@ -123,7 +123,7 @@ Create a personalised skill sequence based on the user's specific situation. Not
 ## 4. Skill-by-Skill Tips
 
 **What you need:** The skill(s) the user wants tips for
-**Load:** @references/skill-tips.md
+**Load:** `references/skill-tips.md`
 
 Practical guidance for getting the best results from each skill. Not a repeat of help - specific tips on inputs, prompting, and iteration.
 
@@ -141,7 +141,7 @@ Practical guidance for getting the best results from each skill. Not a repeat of
 ## 5. Power User Strategies
 
 **What you need:** Some familiarity with career-helper basics
-**Load:** @references/power-user-strategies.md
+**Load:** `references/power-user-strategies.md`
 
 Advanced techniques for users who have used the basic skills and want more.
 
@@ -160,7 +160,7 @@ Advanced techniques for users who have used the basic skills and want more.
 ## 7. Scheduled Routines
 
 **What you need:** A workspace folder and a Claude Cowork session
-**Load:** @../career-routines/references/cowork-scheduling.md and @../career-routines/references/routine-library.md
+**Load:** `${CLAUDE_PLUGIN_ROOT}/skills/career-routines/references/cowork-scheduling.md` and `${CLAUDE_PLUGIN_ROOT}/skills/career-routines/references/routine-library.md`
 
 Scheduling has its own skill, `/career-routines`. From here, give the short version and route:
 

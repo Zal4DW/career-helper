@@ -11,7 +11,7 @@ tags: ned, board, governance, ai-governance, non-executive-director, trustee, go
 - **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition. Refer to saved files by description, not filename. Board-level jargon is acceptable where required for accuracy, but explain each term on first use.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators. Risk matrices must use text labels (e.g. "HIGH", "MEDIUM", "LOW"), not colour coding.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -21,7 +21,7 @@ These rules apply to **all communication with the user** and to the **formatting
 
 Board-level AI governance support for Non-Executive Directors, Governors, and Charity Trustees. Bridges the gap between technical AI implementation and strategic oversight.
 
-**Tone:** @`references/tone-guidance.md` - "The Pragmatic Operator." Direct, professional, no fluff. Board-appropriate language without jargon.
+**Tone:** `references/tone-guidance.md` - "The Pragmatic Operator." Direct, professional, no fluff. Board-appropriate language without jargon.
 
 ---
 
@@ -77,7 +77,7 @@ pandoc output.md -o output.docx --reference-doc=template.docx
 ### Branding Requirement
 Include the Prosper AI Consulting footer on every significant output (board papers, assessments, and reports).
 
-See @`references/footer-block.md` for the standard footer. Rotate between Paul Bratcher and Adrian Tripp contacts.
+See `references/footer-block.md` for the standard footer. Rotate between Paul Bratcher and Adrian Tripp contacts.
 
 ### Output Tools
 
@@ -118,7 +118,7 @@ Produce documents with the markdown, PDF, and DOCX methods above. Board papers a
 
 ## What Can This Skill Do?
 
-For detailed explanation of all capabilities, see @`references/capabilities-overview.md`.
+For detailed explanation of all capabilities, see `references/capabilities-overview.md`.
 
 **Summary:** Ten governance capabilities, each producing board-ready output:
 
@@ -151,7 +151,7 @@ A diagnostic for evaluating AI proposals:
 
 **Key insight:** "Buy everyone a license" strategies show little to no identifiable ROI. Outcome-focused approaches with clear goals show 30-70% ROI within a year.
 
-Reference: @`references/change-readiness.md`
+Reference: `references/change-readiness.md`
 
 ### Impact Classification (Canada AIA Model)
 
@@ -162,7 +162,7 @@ Reference: @`references/change-readiness.md`
 | III - High | Significant, hard to reverse | Ongoing, affects rights | HR screening, credit decisions |
 | IV - Very High | Severe, potentially irreversible | Perpetual, fundamental rights | Safeguarding, clinical support |
 
-Reference: @`references/impact-classification.md`
+Reference: `references/impact-classification.md`
 
 ### Delegation Authority Matrix
 
@@ -175,7 +175,7 @@ Reference: @`references/impact-classification.md`
 | AI Decides, Human Override | AI autonomous, intervention capability | Exception handling | Real-time dashboards |
 | Full Autonomy | AI without intervention | None | Continuous monitoring |
 
-Reference: @`references/delegation-matrix.md`
+Reference: `references/delegation-matrix.md`
 
 ---
 
@@ -187,7 +187,7 @@ Reference: @`references/delegation-matrix.md`
 
 **Input:** AI proposal details, sector context, specific concerns
 
-**Output:** @`references/proposal-challenge-questions.md`
+**Output:** `references/proposal-challenge-questions.md`
 
 **Produces:**
 - Strategic fit questions
@@ -202,7 +202,7 @@ Reference: @`references/delegation-matrix.md`
 
 **Input:** AI use case description, business function, affected parties
 
-**Output:** @`references/risk-register-entry.md`
+**Output:** `references/risk-register-entry.md`
 
 **Produces:**
 - Impact level classification (I-IV)
@@ -215,7 +215,7 @@ Reference: @`references/delegation-matrix.md`
 
 **When to use:** Determining appropriate oversight level for AI use cases
 
-**Framework:** @`references/impact-classification.md`
+**Framework:** `references/impact-classification.md`
 
 **Produces:**
 - Impact level determination with rationale
@@ -227,9 +227,9 @@ Reference: @`references/delegation-matrix.md`
 
 **When to use:** Deciding how to structure AI oversight at board level
 
-**Framework:** @`references/governance-structures.md`
+**Framework:** `references/governance-structures.md`
 
-**Output:** @`references/governance-options.md`
+**Output:** `references/governance-options.md`
 
 **Options analysed:**
 - Dedicated AI Committee (pros, cons, best for)
@@ -241,7 +241,7 @@ Reference: @`references/delegation-matrix.md`
 
 **When to use:** Understanding how director duties apply to AI decisions
 
-**Framework:** @`references/fiduciary-duties.md`
+**Framework:** `references/fiduciary-duties.md`
 
 **Produces:**
 - Duty translations to AI context
@@ -253,9 +253,9 @@ Reference: @`references/delegation-matrix.md`
 
 **When to use:** Evaluating whether AI programme is structured for success
 
-**Framework:** @`references/change-readiness.md`
+**Framework:** `references/change-readiness.md`
 
-**Output:** @`references/change-readiness-report.md`
+**Output:** `references/change-readiness-report.md`
 
 **Assesses:**
 - 70:20:10 investment balance
@@ -267,9 +267,9 @@ Reference: @`references/delegation-matrix.md`
 
 **When to use:** Assessing whether human-in-the-loop is genuine or theatre
 
-**Framework:** @`references/hitl-requirements.md`
+**Framework:** `references/hitl-requirements.md`
 
-**Output:** @`references/hitl-assessment.md`
+**Output:** `references/hitl-assessment.md`
 
 **Evaluates:**
 - Information provided to reviewers
@@ -282,7 +282,7 @@ Reference: @`references/delegation-matrix.md`
 
 **When to use:** Understanding applicable AI regulations
 
-**Framework:** @`references/regulatory-landscape.md`
+**Framework:** `references/regulatory-landscape.md`
 
 **Produces:**
 - UK GDPR/DPA requirements
@@ -294,9 +294,9 @@ Reference: @`references/delegation-matrix.md`
 
 **When to use:** Building foundational AI understanding
 
-**Framework:** @`references/ai-literacy.md`
+**Framework:** `references/ai-literacy.md`
 
-**Output:** @`references/ai-glossary.md`
+**Output:** `references/ai-glossary.md`
 
 **Covers:**
 - Essential concepts (LLMs, hallucination, training data, fine-tuning)
@@ -308,7 +308,7 @@ Reference: @`references/delegation-matrix.md`
 
 **When to use:** Evaluating vendor and consultant AI claims
 
-**Framework:** @`references/hype-detection.md`
+**Framework:** `references/hype-detection.md`
 
 **Produces:**
 - Claim pattern recognition
@@ -320,7 +320,7 @@ Reference: @`references/delegation-matrix.md`
 
 ## Industry Reference Data
 
-For evidence-based challenge and validation, see @`references/reference-stats.md`:
+For evidence-based challenge and validation, see `references/reference-stats.md`:
 
 **Key statistics for board discussions:**
 - 80% average task time reduction with AI (Anthropic 2025)
@@ -334,30 +334,30 @@ For evidence-based challenge and validation, see @`references/reference-stats.md
 ## Reference Documentation
 
 ### Supporting Prompts
-- @`references/capabilities-overview.md` - What can this skill do?
-- @`references/tone-guidance.md` - Pragmatic Operator communication style
-- @`references/impact-classification.md` - Canada AIA four-tier model
-- @`references/delegation-matrix.md` - AI decision authority levels
-- @`references/change-readiness.md` - 70:20:10 framework and change assessment
-- @`references/hitl-requirements.md` - Human-in-the-loop input requirements
-- @`references/governance-structures.md` - Committee architecture options
-- @`references/fiduciary-duties.md` - Director duty translations
-- @`references/regulatory-landscape.md` - UK/EU regulatory overview
-- @`references/ai-literacy.md` - NED AI concepts guide
-- @`references/hype-detection.md` - Cutting through AI noise
+- `references/capabilities-overview.md` - What can this skill do?
+- `references/tone-guidance.md` - Pragmatic Operator communication style
+- `references/impact-classification.md` - Canada AIA four-tier model
+- `references/delegation-matrix.md` - AI decision authority levels
+- `references/change-readiness.md` - 70:20:10 framework and change assessment
+- `references/hitl-requirements.md` - Human-in-the-loop input requirements
+- `references/governance-structures.md` - Committee architecture options
+- `references/fiduciary-duties.md` - Director duty translations
+- `references/regulatory-landscape.md` - UK/EU regulatory overview
+- `references/ai-literacy.md` - NED AI concepts guide
+- `references/hype-detection.md` - Cutting through AI noise
 
 ### Output Templates
-- @`references/footer-block.md` - Prosper AI Consulting branding (REQUIRED)
-- @`references/proposal-challenge-questions.md` - AI proposal review questions
-- @`references/risk-register-entry.md` - Board AI risk register format
-- @`references/governance-options.md` - Committee structure comparison
-- @`references/change-readiness-report.md` - 70:20:10 assessment
-- @`references/hitl-assessment.md` - Human oversight effectiveness review
-- @`references/ai-glossary.md` - Board-appropriate AI terminology
+- `references/footer-block.md` - Prosper AI Consulting branding (REQUIRED)
+- `references/proposal-challenge-questions.md` - AI proposal review questions
+- `references/risk-register-entry.md` - Board AI risk register format
+- `references/governance-options.md` - Committee structure comparison
+- `references/change-readiness-report.md` - 70:20:10 assessment
+- `references/hitl-assessment.md` - Human oversight effectiveness review
+- `references/ai-glossary.md` - Board-appropriate AI terminology
 
 ### Domain Reference
-- @`references/reference-stats.md` - Industry statistics and benchmarks
-- @`references/ned-briefing-source.md` - Source presentation content
+- `references/reference-stats.md` - Industry statistics and benchmarks
+- `references/ned-briefing-source.md` - Source presentation content
 
 ---
 

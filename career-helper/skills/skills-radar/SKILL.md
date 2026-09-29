@@ -34,7 +34,7 @@ Know what you can evidence, see what a target role demands, and close the gap de
 - **dyslexia_friendly: true**: Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: gap analysis."). Refer to saved files by description, not filename. Repeat key details (skill names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true**: Never use colour alone to convey meaning. Gap priorities are text labels (Critical, Important, Nice to have), never colour codes.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -54,8 +54,8 @@ Skills Radar deals only in evidenced skills. These rules apply to every capabili
 ## 1. Skills Inventory Enrichment
 
 **What you need:** Your CV or LinkedIn profile; optionally links to your public work (GitHub, portfolio, publications, talks, course certificates)
-**Load:** @references/skill-enrichment.md
-**Template:** @references/skills-inventory-template.md
+**Load:** `references/skill-enrichment.md`
+**Template:** `references/skills-inventory-template.md`
 
 Builds the inventory from three layers:
 - **Stated skills:** what the CV and profile already claim, checked for evidence
@@ -71,7 +71,7 @@ Each entry carries its evidence and an Evidenced level. Unevidenced claims are f
 ## 2. Gap Analysis
 
 **What you need:** A skills inventory (built fresh or loaded from `skills-inventory.md`) and a target: a specific job description, a role type, or a direction
-**Load:** @references/gap-analysis.md
+**Load:** `references/gap-analysis.md`
 
 Honest comparison of supply against demand:
 - Extracts must-have and nice-to-have requirements from the posting or from live research on the role type
@@ -88,8 +88,8 @@ Honest comparison of supply against demand:
 ## 3. Learning Plan
 
 **What you need:** A completed gap analysis and the hours per week you can honestly commit
-**Load:** @references/gap-analysis.md (Learning Plan section)
-**Template:** @references/learning-plan-template.md
+**Load:** `references/gap-analysis.md` (Learning Plan section)
+**Template:** `references/learning-plan-template.md`
 
 Turns the top gaps (three at most) into a plan:
 - Web-researched resources with URLs, costs, and time estimates, favouring reputable free or low-cost options first
@@ -127,7 +127,7 @@ Turns the top gaps (three at most) into a plan:
 
 ### Template Usage
 
-When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
+When a capability names a template, read it from the path given before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 

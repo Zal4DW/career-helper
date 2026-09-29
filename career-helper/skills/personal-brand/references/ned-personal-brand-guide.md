@@ -104,7 +104,7 @@ The audience map (Capability B) should weight relational channels and trusted pu
 
 ## Bio Library Adjustments
 
-For board work, the bio library should include the **Board Bio** as a primary surface. See `@bio-library-templates.md`.
+For board work, the bio library should include the **Board Bio** as a primary surface. See `bio-library-templates.md`.
 
 Key shifts in the bio library:
 
@@ -142,7 +142,7 @@ When this persona is loaded:
 When to route to other skills:
 
 - For AI governance content specifically: `/ned-ai-helper`
-- For LinkedIn-specific board positioning: `/linkedin-coach` with the NED reference (`@../linkedin-coach/references/ned-linkedin-strategy.md`)
+- For LinkedIn-specific board positioning: `/linkedin-coach` with the NED reference (`../../linkedin-coach/references/ned-linkedin-strategy.md`)
 - For deeper digital footprint audit: `/employer-footprint`
 
 ---

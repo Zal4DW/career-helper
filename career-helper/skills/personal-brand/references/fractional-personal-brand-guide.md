@@ -91,7 +91,7 @@ Cost of inaction for the buyer: a specific, costly mistake the buyer is likely t
 
 Fractional brand is built on:
 
-- **LinkedIn**: the dominant channel for B2B fractional. Daily presence is realistic and rewarded. See `@../linkedin-coach/references/fractional-linkedin-guide.md` for tactics.
+- **LinkedIn**: the dominant channel for B2B fractional. Daily presence is realistic and rewarded. See `../../linkedin-coach/references/fractional-linkedin-guide.md` for tactics.
 - **Personal site or "work with me" page**: the buyer's destination after they read a post or get a referral. Treat this as the highest-leverage page on the internet for fractional work.
 - **Targeted inbound channels**: founder Slacks, sector-specific communities, accelerator networks, alumni networks. Often higher conversion than broad social.
 - **Podcast guesting**: well-targeted founder-audience podcasts. One good appearance is worth ten medium-quality LinkedIn weeks.

@@ -18,7 +18,7 @@ Output:
 4. A long-form, mid-form, and short-form cadence
 5. Voice rules pulled directly from the foundation document
 
-This skill builds the brand-level content layer. For LinkedIn-specific tactics (cadence within LinkedIn, post structures, video scripts), cross-reference `@../linkedin-coach/references/content-strategy-coaching.md`. The two are deliberately complementary; this one tells the user what to talk about and why, the other tells them how to format it on LinkedIn specifically.
+This skill builds the brand-level content layer. For LinkedIn-specific tactics (cadence within LinkedIn, post structures, video scripts), cross-reference `../../linkedin-coach/references/content-strategy-coaching.md`. The two are deliberately complementary; this one tells the user what to talk about and why, the other tells them how to format it on LinkedIn specifically.
 
 ---
 
@@ -191,7 +191,7 @@ Document the plan in the output so the user can run it without re-engaging the s
 
 Save to `personal-brand-content-plan.md` (workspace root) or `applications/{role-slug}/personal-brand-content-plan.md` (role-specific).
 
-Use the structure in `@personal-brand-output-template.md`. Preserve the footer.
+Use the structure in `personal-brand-output-template.md`. Preserve the footer.
 
 ---
 

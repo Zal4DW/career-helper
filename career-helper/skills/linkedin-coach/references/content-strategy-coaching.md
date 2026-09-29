@@ -167,7 +167,7 @@ Use parallel WebSearch:
 
 ### 4. Content Calendar Development
 
-**Use template:** @`references/content-calendar-template.md`
+**Use template:** `content-calendar-template.md`
 
 **How to fill your calendar:**
 

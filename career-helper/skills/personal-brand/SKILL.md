@@ -37,7 +37,7 @@ Strategic positioning for your online presence, built around three questions: Wh
 - **dyslexia_friendly: true**: use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: audience and channel map."). Refer to saved files by description, not filename. Repeat key details (sector, target role, audience) and do not assume the user remembers from earlier messages.
 - **colour_blind: true**: never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim), ask once: "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim), ask once: "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -46,8 +46,8 @@ These rules apply to **all communication with the user** and to the **formatting
 ## A. Brand Foundation
 
 **What you need:** rough sense of expertise, target audience, and why you're investing in this now. Ikigai answers from Tim are useful inputs if available.
-**Load:** @references/personal-brand-foundation.md
-**Optional input bridge:** @references/brand-from-ikigai.md (use when the user has answered the four ikigai questions)
+**Load:** `references/personal-brand-foundation.md`
+**Optional input bridge:** `references/brand-from-ikigai.md` (use when the user has answered the four ikigai questions)
 
 The core capability. Walk through Why You, Why Them, and Why Now in three blocks of questions. Synthesise into:
 
@@ -63,7 +63,7 @@ The core capability. Walk through Why You, Why Them, and Why Now in three blocks
 ## B. Audience and Channel Map
 
 **What you need:** a positioning statement (from Capability A or your own draft) and time you can realistically commit per week.
-**Load:** @references/audience-channel-map.md
+**Load:** `references/audience-channel-map.md`
 
 Translate Why Them into a concrete audience and channel plan:
 
@@ -79,8 +79,8 @@ Translate Why Them into a concrete audience and channel plan:
 ## C. Content Pillars and Cadence
 
 **What you need:** a positioning statement and an audience map (or enough context to draft both inline).
-**Load:** @references/content-pillars-from-brand.md
-**Cross-reference:** @../linkedin-coach/references/content-strategy-coaching.md if the user is LinkedIn-focused. This skill builds the brand layer above the LinkedIn-specific tactics.
+**Load:** `references/content-pillars-from-brand.md`
+**Cross-reference:** `${CLAUDE_PLUGIN_ROOT}/skills/linkedin-coach/references/content-strategy-coaching.md` if the user is LinkedIn-focused. This skill builds the brand layer above the LinkedIn-specific tactics.
 
 Translate positioning into three to five content pillars, then a sustainable cadence:
 
@@ -97,7 +97,7 @@ Translate positioning into three to five content pillars, then a sustainable cad
 ## D. Bio Library
 
 **What you need:** a positioning statement (from Capability A) plus any existing bios you want refreshed.
-**Load:** @references/bio-library-templates.md
+**Load:** `references/bio-library-templates.md`
 
 Produce a coherent set of bios so every surface tells the same story at the right length:
 
@@ -118,7 +118,7 @@ Produce a coherent set of bios so every surface tells the same story at the righ
 ## E. Brand Refresh
 
 **What you need:** access to your current online presence (LinkedIn, personal site, recent talks or posts) and a sense of where you want to be.
-**Load:** @references/personal-brand-foundation.md, then @references/audience-channel-map.md
+**Load:** `references/personal-brand-foundation.md`, then `references/audience-channel-map.md`
 
 A diagnostic before a rebuild:
 
@@ -145,9 +145,9 @@ When the user's context matches a specific persona, load the relevant guide alon
 
 | Persona | Load Reference | Trigger |
 |:--------|:---------------|:--------|
-| NED, Governor, or Trustee | @references/ned-personal-brand-guide.md | User seeks board roles, NED positions, governor or trustee appointments, or wants to be known for board-level perspectives |
-| Fractional or Portfolio | @references/fractional-personal-brand-guide.md | User runs fractional, portfolio, or independent consulting work and needs the brand to attract inbound enquiries |
-| Career Returner | @references/career-returner-personal-brand-guide.md | User is returning after a career break and wants positioning that frames the gap honestly without making it the story |
+| NED, Governor, or Trustee | `references/ned-personal-brand-guide.md` | User seeks board roles, NED positions, governor or trustee appointments, or wants to be known for board-level perspectives |
+| Fractional or Portfolio | `references/fractional-personal-brand-guide.md` | User runs fractional, portfolio, or independent consulting work and needs the brand to attract inbound enquiries |
+| Career Returner | `references/career-returner-personal-brand-guide.md` | User is returning after a career break and wants positioning that frames the gap honestly without making it the story |
 
 Persona guides supplement the standard references, they do not replace them. Load both.
 
@@ -178,7 +178,7 @@ Persona guides supplement the standard references, they do not replace them. Loa
 
 ### Template Usage
 
-When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
+When a capability names a template, read it from the path given before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 

@@ -115,7 +115,7 @@ For roles in regulated or safeguarding settings (finance, healthcare, education,
 
 **File:** `applications/{role-slug}/referee-prep.md`
 
-**Load template:** @references/referee-prep-template.md
+**Load template:** `referee-prep-template.md`
 
 **Suggested next steps:**
 - "Want me to draft the brief to send each referee?"

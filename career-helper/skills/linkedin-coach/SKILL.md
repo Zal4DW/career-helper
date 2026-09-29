@@ -37,7 +37,7 @@ Comprehensive LinkedIn optimisation across five modes. Choose the one that fits 
 - **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: content strategy."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -46,8 +46,8 @@ These rules apply to **all communication with the user** and to the **formatting
 ## A. Full Profile Audit
 
 **What you need:** LinkedIn profile content (screenshots, copy/paste, or PDF export - see reference for options) + career goals
-**Load:** @references/linkedin-profile-review.md
-**Template:** @references/linkedin-updates-template.md
+**Load:** `references/linkedin-profile-review.md`
+**Template:** `references/linkedin-updates-template.md`
 
 Complete profile sections review:
 - Photo, banner, headline, about section
@@ -62,7 +62,7 @@ Complete profile sections review:
 ## B. Content Review (Reactive)
 
 **What you need:** Posts to review + target audience
-**Load:** @references/linkedin-posts-helper.md
+**Load:** `references/linkedin-posts-helper.md`
 
 Analyse existing posts:
 - Audience alignment assessment
@@ -76,8 +76,8 @@ Analyse existing posts:
 ## C. Content Strategy Coaching (Proactive)
 
 **What you need:** Role, expertise areas, career goals, target audience
-**Load:** @references/content-strategy-coaching.md
-**Template:** @references/content-calendar-template.md
+**Load:** `references/content-strategy-coaching.md`
+**Template:** `references/content-calendar-template.md`
 
 Build a sustainable posting strategy:
 - Discover 3-5 authentic content pillars from real expertise
@@ -94,7 +94,7 @@ Build a sustainable posting strategy:
 ## D. Headline-Only Optimisation
 
 **What you need:** Career goals + target audience
-**Load:** @references/linkedin-headline.md
+**Load:** `references/linkedin-headline.md`
 
 Goal-first headline optimisation:
 - Job search, thought leadership, client acquisition, networking, or board/advisory
@@ -110,7 +110,7 @@ Goal-first headline optimisation:
 ## E. Video Introduction Optimiser
 
 **What you need:** Career goals, target audience, key messages
-**Load:** @references/linkedin-video.md
+**Load:** `references/linkedin-video.md`
 
 30-second profile video script:
 - Hook, Value, Proof, CTA structure
@@ -135,10 +135,10 @@ When the user's context matches a specific persona, load the relevant reference 
 
 | Persona | Load Reference | Trigger |
 |:--------|:--------------|:--------|
-| Career Returner | @references/career-returner-linkedin-guide.md | User mentions career break, returning to work, redundancy, maternity/paternity |
+| Career Returner | `references/career-returner-linkedin-guide.md` | User mentions career break, returning to work, redundancy, maternity/paternity |
 | Early Career | (use career-stage-context.md Early Career section) | User is a graduate, apprentice, or school leaver |
-| NED | @references/ned-linkedin-strategy.md | User seeks board roles, NED positions, governor or trustee appointments |
-| Fractional | @references/fractional-linkedin-guide.md | User is going fractional, portfolio, or independent consulting |
+| NED | `references/ned-linkedin-strategy.md` | User seeks board roles, NED positions, governor or trustee appointments |
+| Fractional | `references/fractional-linkedin-guide.md` | User is going fractional, portfolio, or independent consulting |
 
 These references supplement (not replace) the standard capability references. Load both the persona reference and the standard one.
 
@@ -159,7 +159,7 @@ These references supplement (not replace) the standard capability references. Lo
 
 ### Template Usage
 
-When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
+When a capability names a template, read it from the path given before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 

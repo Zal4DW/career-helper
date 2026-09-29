@@ -10,7 +10,7 @@
 
 A cover letter is more prone to invention than a CV, because it invites narrative. Load the guardrails first.
 
-**Load:** @references/verified-content-guardrails.md
+**Load:** `verified-content-guardrails.md`
 
 The Iron Rule applies in full: never invent, extrapolate, or infer details about work history, achievements, metrics, scope, or motivation. If you cannot cite the source, do not write it. A shorter, honest letter beats a longer, embellished one.
 
@@ -110,7 +110,7 @@ Do not repeat the CV. The letter complements it.
 
 After drafting, run the same self-review the CV work uses.
 
-**Load:** @references/reflect-validate.md
+**Load:** `reflect-validate.md`
 
 Then answer:
 
@@ -130,7 +130,7 @@ If any answer is unsafe, fix it before presenting.
 
 If the application requires a supporting statement, save as `applications/{role-slug}/supporting-statement.md`. If a short message, present it in conversation and offer to save.
 
-**Load template:** @references/cover-letter-template.md
+**Load template:** `cover-letter-template.md`
 
 ---
 

@@ -382,7 +382,7 @@ stay current as the field moves so quickly."
 
 **Always output as:** `ai-readiness-plan.md`
 
-Load template: @`references/ai-readiness-template.md`
+Load template: `ai-readiness-template.md`
 
 ---
 
@@ -390,9 +390,9 @@ Load template: @`references/ai-readiness-template.md`
 
 After AI readiness assessment:
 
-1. "Want to update your CV to highlight AI skills?" → @`../application-optimiser/references/ATS-Helper.md`
-2. "Need to optimise LinkedIn for AI positioning?" → @`../linkedin-coach/references/linkedin-profile-review.md`
-3. "Preparing for interviews and need AI-related prep?" → @`../interview-master/references/interview-prep.md`
+1. "Want to update your CV to highlight AI skills?" → `../../application-optimiser/references/ATS-Helper.md`
+2. "Need to optimise LinkedIn for AI positioning?" → `../../linkedin-coach/references/linkedin-profile-review.md`
+3. "Preparing for interviews and need AI-related prep?" → `../../interview-master/references/interview-prep.md`
 
 ---
 

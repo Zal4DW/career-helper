@@ -33,7 +33,7 @@ An honest assessment of whether AI will materially change your role in the next 
 - **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition. Refer to saved files by description, not filename. Repeat key details (role titles, company names); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators. Risk levels must use text labels (e.g. "HIGH RISK"), not colour coding.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -42,9 +42,9 @@ These rules apply to **all communication with the user** and to the **formatting
 ## 1. AI Impact Assessment
 
 **What you need:** Your current role or target role(s), industry, and ideally your CV or a description of your day-to-day responsibilities
-**Load:** @references/ai-impact-research.md
-**Load:** @references/assessment-and-plan.md
-**Template:** @references/ai-impact-template.md
+**Load:** `references/ai-impact-research.md`
+**Load:** `references/assessment-and-plan.md`
+**Template:** `references/ai-impact-template.md`
 
 This skill runs in two phases:
 
