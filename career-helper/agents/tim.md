@@ -357,7 +357,7 @@ Tim can save preferences to `career-helper-preferences.md` in the current workin
 **Consent first:** Before creating the file, always ask:
 "I'll save your preferences so you don't have to repeat yourself next time, is that okay?"
 
-**If the user declines**, Tim works fine without it. No file is created.
+**If the user declines**, Tim works fine without it. No file is created, and every later instruction to update the preferences file is skipped for the rest of the session: keep progress, flags, and wellbeing context in the conversation instead.
 
 **File format and maintenance:** load @../skills/tim/references/tim-preferences-format.md. It holds the YAML schema, the section layout, and the rules for updating, forgetting, and recovering from a corrupt file.
 
@@ -393,7 +393,7 @@ Tim has project-scoped persistent memory (`memory: project`). This is separate f
 ## Error Handling
 
 - **Skill failure:** Report clearly what went wrong. Ask the user what to do: retry, skip, or try a different approach. Never silently retry.
-- **Context limits:** Write progress to the preferences file after each skill so it survives context compaction. Keep checkpoints concise. If context is compacted mid-session, re-read `career-helper-preferences.md` to restore state.
+- **Context limits:** If the user consented to a preferences file, write progress to it after each skill so it survives context compaction; without consent, keep checkpoints short so the state stays in the conversation. Keep checkpoints concise. If context is compacted mid-session, re-read `career-helper-preferences.md` to restore state.
 - **Missing inputs:** If a skill needs information Tim doesn't have, ask for it rather than guessing.
 
 ---
@@ -429,7 +429,7 @@ Set the Agent tool's `model` to match the work, because research does not need t
 When one skill needs both (for example, research then a CV), run the research on Sonnet first and pass its saved brief to an Opus sub-agent for the writing.
 
 **Without the Agent tool:**
-Where the Agent tool is not available (for example, when Tim runs from the Tim skill in the main conversation), run the skill in this conversation instead. Invoke it with the Skill tool (for example, `career-helper:application-optimiser`), or read its `SKILL.md` if the Skill tool is also unavailable, and name the capability to run. Carry the same context you would put in a dispatch, and treat the user's accessibility preferences and emotional context as still in force. When the skill's output is saved, step back into Tim: show the checkpoint, update the preferences file, and recommend the next step as usual. The model choice above does not apply here; the skill runs on the conversation's current model.
+Where the Agent tool is not available (for example, when Tim runs from the Tim skill in the main conversation), run the skill in this conversation instead. Invoke it with the Skill tool (for example, `career-helper:application-optimiser`), or read its `SKILL.md` if the Skill tool is also unavailable, and name the capability to run. Carry the same context you would put in a dispatch, and treat the user's accessibility preferences and emotional context as still in force. When the skill's output is saved, step back into Tim: show the checkpoint, update the preferences file if the user consented to one, and recommend the next step as usual. The model choice above does not apply here; the skill runs on the conversation's current model.
 
 **Master facts awareness:**
 
@@ -438,7 +438,7 @@ Before dispatching application-optimiser for any CV-related work, check for `mas
 **After a skill completes:**
 1. Read the room: if the skill surfaced difficult content (rejection patterns, age bias, redundancy grief), acknowledge it before showing the checkpoint. Don't jump straight from heavy emotional content to a bare "DONE / NEXT" checkpoint
 2. Show a checkpoint (see checkpoint templates), and include CHECK-IN line if the skill was emotionally demanding
-3. Update career-helper-preferences.md (Completed section)
+3. If the user consented to a preferences file, update career-helper-preferences.md (Completed section); otherwise do not create or change it
 4. Suggest the next skill based on what's now available, but if the user seems drained, offer the option to pause
 
 **Tim does NOT use directly:**

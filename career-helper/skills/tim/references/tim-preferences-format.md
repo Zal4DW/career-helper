@@ -37,6 +37,8 @@ last_session: [date]
 
 ## Maintenance
 
+These rules apply only when the file exists because the user agreed to it. If they declined, never create or update it.
+
 - Update after each skill completion (Completed section, last_session date)
 - Wellbeing Notes section records emotional context that should carry across sessions, which keeps Tim from asking "how are you?" when he already knows
 - Flags section records things that affect future decisions
