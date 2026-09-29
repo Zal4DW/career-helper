@@ -451,7 +451,7 @@ Fractional {Role} | {Specialisation} | Helping {audience} achieve {outcome}
 
 **Always output as:** `portfolio-career-strategy.md`
 
-Load template: `portfolio-career-template.md`
+Load template: @`references/portfolio-career-template.md`
 
 ---
 
@@ -459,10 +459,10 @@ Load template: `portfolio-career-template.md`
 
 After portfolio strategy is complete:
 
-1. "Want to optimise your LinkedIn for fractional work?" → `../../linkedin-coach/references/linkedin-profile-review.md`
-2. "Need help with positioning and messaging?" → `../../linkedin-coach/references/linkedin-headline.md`
-3. "Ready to research target companies?" → `../../application-optimiser/references/company-research.md`
-4. "Want to build thought leadership to attract clients?" → `../../linkedin-coach/references/content-strategy-coaching.md`
+1. "Want to optimise your LinkedIn for fractional work?" → @`../linkedin-coach/references/linkedin-profile-review.md`
+2. "Need help with positioning and messaging?" → @`../linkedin-coach/references/linkedin-headline.md`
+3. "Ready to research target companies?" → @`../application-optimiser/references/company-research.md`
+4. "Want to build thought leadership to attract clients?" → @`../linkedin-coach/references/content-strategy-coaching.md`
 
 ---
 

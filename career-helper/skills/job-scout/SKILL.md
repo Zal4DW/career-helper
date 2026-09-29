@@ -34,7 +34,7 @@ Find live roles, triage them honestly, and turn the best into applications.
 - **dyslexia_friendly: true**: Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: ranking."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, deadlines); do not assume the user remembers from earlier messages.
 - **colour_blind: true**: Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators. Ranking tiers are text labels (Apply first, Apply, Park, Discard), never colour codes.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -56,14 +56,14 @@ Say so in one or two sentences, then offer the mitigations:
 
 Never present a discovery run as complete market coverage, and always state where each result came from and when it was seen.
 
-**Load:** `references/role-discovery.md` for the full search method and source-by-source guidance.
+**Load:** @references/role-discovery.md for the full search method and source-by-source guidance.
 
 ---
 
 ## 1. Role Discovery
 
 **What you need:** Target role or direction, location and remote preferences, any hard constraints; a CV or profile summary helps matching
-**Load:** `references/role-discovery.md`
+**Load:** @references/role-discovery.md
 
 Structured, multi-source discovery:
 - Deal-breakers and constraints captured first, so bad matches are filtered before they waste attention
@@ -80,8 +80,8 @@ Structured, multi-source discovery:
 ## 2. Batch Ranking
 
 **What you need:** A set of postings (from discovery or pasted by the user) and your profile or CV
-**Load:** `references/batch-ranking.md`
-**Template:** `references/shortlist-template.md`
+**Load:** @references/batch-ranking.md
+**Template:** @references/shortlist-template.md
 
 Five-dimension scoring against your actual profile, never against an inflated reading of it:
 - Skills and experience fit
@@ -142,7 +142,7 @@ Use web search to check specifics that may have changed since your training, suc
 
 ### Template Usage
 
-When a capability names a template, read it from the path given before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 

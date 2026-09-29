@@ -37,7 +37,7 @@ Spot the organisations worth watching before they advertise, know who runs them,
 - **dyslexia_friendly: true**: Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: decision makers."). Refer to saved files by description, not filename. Repeat key details (organisation names, dates, people); do not assume the user remembers from earlier messages.
 - **colour_blind: true**: Never use colour alone to convey meaning. Watch priorities are text labels (Act now, Warm, Watch, Quiet), never colour codes.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -63,15 +63,15 @@ Set expectations plainly before the first run:
 - **LinkedIn sits behind a login.** Public profile pages are sometimes reachable, but people search and company insights are not. Offer the Claude for Chrome extension once per session for LinkedIn coverage in the user's own browser; do not attempt to circumvent access limits.
 - **Recency has a window.** Default to signals from the last three months. State the window on every map and every update, and date every signal.
 
-**Load:** `references/company-mapping.md` for the full method and the signal taxonomy.
+**Load:** @references/company-mapping.md for the full method and the signal taxonomy.
 
 ---
 
 ## 1. Market Map
 
 **What you need:** Your current or most recent employer, the direction you are interested in (functions, seniority, sectors), geography, and any organisations you already have in mind or want excluded
-**Load:** `references/company-mapping.md`
-**Template:** `references/market-map-template.md`
+**Load:** @references/company-mapping.md
+**Template:** @references/market-map-template.md
 
 Builds the map in four passes:
 
@@ -89,8 +89,8 @@ Each organisation gets a text-label watch priority: Act now, Warm, Watch, or Qui
 ## 2. Watchlist and Weekly Update
 
 **What you need:** An existing `market-map.md`; nothing else
-**Load:** `references/market-watch.md`
-**Template:** `references/market-watch-update-template.md`
+**Load:** @references/market-watch.md
+**Template:** @references/market-watch-update-template.md
 
 Re-runs the signal pass for every organisation on the map, compares against the previous state, and reports only the difference:
 
@@ -127,8 +127,8 @@ Do not add organisations to the tracker unless the user has chosen them and a ro
 ## 4. Watchlist Board View
 
 **What you need:** An existing `market-map.md` (build one first via Capability 1 if not)
-**Load:** `references/market-map-board.md`
-**Template:** `references/market-map-board-template.html`
+**Load:** @references/market-map-board.md
+**Template:** @references/market-map-board-template.html
 
 An interactive, self-contained HTML board generated from the map, built on the same mechanism as the application kanban board in `/career-navigator`:
 - One card per organisation in four priority columns (Act now, Warm, Watch, Quiet), each column carrying its one-line meaning
@@ -176,7 +176,7 @@ Use web search to check specifics that may have changed since your training, suc
 
 ### Template Usage
 
-When a capability names a template, read it from the path given before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 

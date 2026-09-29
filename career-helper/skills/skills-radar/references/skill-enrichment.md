@@ -80,7 +80,7 @@ Grade against the evidence, not against the user's self-assessment in either dir
 
 ## Output
 
-Load `skills-inventory-template.md` and save to `skills-inventory.md`.
+Load `@references/skills-inventory-template.md` and save to `skills-inventory.md`.
 
 Present the findings in this order:
 

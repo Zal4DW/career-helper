@@ -367,9 +367,9 @@ After user selects a script:
 
 After video script is complete:
 
-1. "Ready to update your full profile to match?" → `linkedin-profile-review.md`
-2. "Want to build a content strategy around your brand?" → `content-strategy-coaching.md`
-3. "Need to optimise your headline too?" → `linkedin-headline.md`
+1. "Ready to update your full profile to match?" → @`references/linkedin-profile-review.md`
+2. "Want to build a content strategy around your brand?" → @`references/content-strategy-coaching.md`
+3. "Need to optimise your headline too?" → @`references/linkedin-headline.md`
 
 ---
 

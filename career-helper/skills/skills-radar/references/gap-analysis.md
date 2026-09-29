@@ -64,6 +64,6 @@ Only after the gap analysis, and only for the gaps that matter. Rules:
 4. **Every gap pairs learning with evidence-building.** A course closes a gap privately; a project, a written piece, a talk, or a volunteering role closes it publicly. Specify both halves per gap: the learning and the artefact that will prove it.
 5. **Checkpoints connect to the search.** At each checkpoint (fortnightly or monthly): what was completed, what artefact exists now, and the loop actions: update the CV via `/application-optimiser`, refresh the inventory entry, and re-rank open roles via `/job-scout` if Winnability has changed.
 
-Load `learning-plan-template.md` and save to `learning-plan.md`.
+Load `@references/learning-plan-template.md` and save to `learning-plan.md`.
 
 For AI-specific readiness (prompting, AI tooling, AI governance), route to `/career-transitions` (AI Readiness Assessment) instead of building a general plan; it holds the specialised roadmaps.

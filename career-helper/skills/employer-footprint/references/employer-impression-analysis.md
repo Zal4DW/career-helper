@@ -28,7 +28,7 @@ Essential:
 Execute simultaneously:
 
 **Track A - Candidate Footprint:**
-Load `digital-footprint-audit.md` and execute the full audit swarm.
+Load @references/digital-footprint-audit.md and execute the full audit swarm.
 
 **Track B - Company Intelligence:**
 Research the target company's employer brand and values:

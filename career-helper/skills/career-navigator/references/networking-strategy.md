@@ -198,7 +198,7 @@ site:linkedin.com "[Company Name]" "[Technical Domain]" "blog" OR "article"
 
 ## Output Format
 
-**Use the template:** `networking-intelligence-template.md`
+**Use the template:** @`references/networking-intelligence-template.md`
 
 This template provides:
 - Clear tabular contact plan with action tracker

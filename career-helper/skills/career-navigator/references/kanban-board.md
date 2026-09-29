@@ -2,7 +2,7 @@
 
 **Purpose:** Give the user an interactive, visual view of their application pipeline when a markdown table stops being enough. The board renders every application as a card in one of six stage columns (Researching, Applying, Applied, Interviewing, Offer, Closed) and lets the user drag cards between stages, edit next actions, and export the result back to tracker markdown.
 
-**Applies to:** The board artefact at `applications/board.html`, generated from `applications/tracker.md` using `kanban-board-template.html`.
+**Applies to:** The board artefact at `applications/board.html`, generated from `applications/tracker.md` using `@references/kanban-board-template.html`.
 
 ---
 
@@ -31,8 +31,8 @@ If the user has zero or one active application, the tracker table is enough; do 
 
 ## Generating the Board
 
-1. **Read the tracker.** Load `applications/tracker.md`. If none exists, build one first (see `application-tracker.md`); the board has nothing to show without it.
-2. **Load the template.** Read `kanban-board-template.html`.
+1. **Read the tracker.** Load `applications/tracker.md`. If none exists, build one first (see `@references/application-tracker.md`); the board has nothing to show without it.
+2. **Load the template.** Read `@references/kanban-board-template.html`.
 3. **Populate the data block.** Replace the JSON inside `<script id="board-data" type="application/json">`:
    - `owner`: the user's name from the tracker header, or `[UNKNOWN]`.
    - `generated`: today's date, `YYYY-MM-DD`.

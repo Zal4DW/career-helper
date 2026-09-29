@@ -25,8 +25,6 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 - 24 broken file references in reference files for Career Navigator, Career Transitions, Interview Master, and LinkedIn Coach pointed at `supporting-prompts/` and `templates/` folders that no longer exist. They now point at the real files under `references/`, including cross-skill links to Application Optimiser, Interview Master, and LinkedIn Coach.
 - Source placeholders in the Application Optimiser deep-research example now use `{{SOURCE_URL}}` and `{{DATE}}` instead of a bare `(url)` link.
 
-- **File references follow the documented convention.** About 270 `@references/...` and `@../...` references across skills, references, and the Tim agent are now plain backticked paths, because `@` imports are documented for `CLAUDE.md` only. `SKILL.md` files use paths relative to the skill folder and `${CLAUDE_PLUGIN_ROOT}/skills/...` for another skill's files (Claude Code expands that variable in `SKILL.md` content); reference files use paths relative to themselves, including `../../{skill}/references/...` for cross-skill links, since the variable is not expanded in files read later; the Tim agent uses plugin-relative paths and says so. The rule in `.claude/CLAUDE.md` and `.github/CONTRIBUTING.md` is updated to match.
-
 ### House style
 - NED AI Helper gains `tags` frontmatter, and its `about-ned-governance/`, `supporting-prompts/`, and `templates/` folders are merged into `references/`.
 - Em dashes removed from the Tim agent and every skill's `SKILL.md`, and the checkmark and arrow markers removed from the Tim agent.

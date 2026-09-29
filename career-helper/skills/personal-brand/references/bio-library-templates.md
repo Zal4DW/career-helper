@@ -83,7 +83,7 @@ Two-sentence hook, two-sentence permission slip, one-line audience and contact. 
 
 ### 4. LinkedIn Headline (220 characters max)
 
-Cross-reference: `../../linkedin-coach/references/linkedin-headline.md` for goal-specific formulas. The personal-brand version is positioning-led:
+Cross-reference: `@../linkedin-coach/references/linkedin-headline.md` for goal-specific formulas. The personal-brand version is positioning-led:
 
 ```text
 [Distinct angle in 4 to 6 words] for [audience] | [proof point in 4 to 6 words] | [optional why-now in 3 to 5 words]
@@ -216,7 +216,7 @@ Structure:
 [Sentence 5: optional: relevant memberships, qualifications, or chartered status.]
 ```
 
-Cross-reference: `ned-personal-brand-guide.md` if the user is positioning specifically for board work.
+Cross-reference: `@ned-personal-brand-guide.md` if the user is positioning specifically for board work.
 
 ---
 
@@ -246,7 +246,7 @@ Cross-reference: `ned-personal-brand-guide.md` if the user is positioning specif
 
 Save to `personal-brand-bio-library.md` (workspace root) or `applications/{role-slug}/personal-brand-bio-library.md` (role-specific).
 
-Use the structure in `personal-brand-output-template.md`. Preserve the footer.
+Use the structure in `@personal-brand-output-template.md`. Preserve the footer.
 
 ---
 

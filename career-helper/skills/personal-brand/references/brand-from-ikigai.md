@@ -8,7 +8,7 @@ UK English. No em dashes. No emojis. Oxford comma. Second person.
 
 ## When This File Loads
 
-Load alongside `personal-brand-foundation.md` when:
+Load alongside `@personal-brand-foundation.md` when:
 
 - Tim has just walked the user through the four ikigai questions and a clear topic, audience, or sector has emerged
 - The user volunteers ikigai-style answers ("I love working with founders, I am good at unpicking technical debt, I care about teams not burning out, and I am paid to advise on architecture")
@@ -20,7 +20,7 @@ If none of the above apply, ignore this file and run the foundation work fresh.
 
 ## The Mapping
 
-The four ikigai questions in `../../tim/references/tim-ikigai-guide.md` are:
+The four ikigai questions in `@../tim/references/tim-ikigai-guide.md` are:
 
 1. What do you enjoy?
 2. What are you good at?

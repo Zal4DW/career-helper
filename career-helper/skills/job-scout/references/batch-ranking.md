@@ -61,7 +61,7 @@ Adjustments:
 
 ## Step 4: Present the Shortlist
 
-Load `shortlist-template.md` and save to `applications/shortlist.md`. Present:
+Load `@references/shortlist-template.md` and save to `applications/shortlist.md`. Present:
 
 1. The ranked table, Apply first at the top.
 2. One short paragraph per Apply first role: why it leads, its biggest risk, and the suggested next step.

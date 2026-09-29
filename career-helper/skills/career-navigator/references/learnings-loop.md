@@ -35,7 +35,7 @@ Use the same `{org-slug}-{role-slug}` naming as the rest of the application fold
 
 When the user reports a completed interview:
 
-1. Load `interview-debrief-template.md`.
+1. Load @references/interview-debrief-template.md.
 2. Walk the user through it conversationally. Do not interrogate; ask for what they remember and capture it in their words.
 3. Save to `applications/learnings/interview-notes/{org-slug}-{role-slug}.md`.
 4. If this is a later round, do not overwrite the earlier round's note; create a new file or append a clearly dated section.
@@ -44,7 +44,7 @@ When the user reports a completed interview:
 
 When the user reports a rejection:
 
-1. Load `rejection-analysis-template.md`.
+1. Load @references/rejection-analysis-template.md.
 2. Separate what was actually said from the user's honest assessment of the likely real reason. Keep the two apart in the note.
 3. Cross-reference the job description if the application folder has it, to identify any genuine gap the CV undersold.
 4. Save to `applications/learnings/rejections/{org-slug}-{role-slug}.md`.
@@ -54,7 +54,7 @@ When the user reports a rejection:
 
 When the user reports a callback, a strong interview, or an offer:
 
-1. Load `win-log-template.md`.
+1. Load @references/win-log-template.md.
 2. Capture which CV version and which framings worked, so the success is repeatable.
 3. Save to `applications/learnings/wins/{org-slug}-{role-slug}.md`.
 
@@ -62,7 +62,7 @@ When the user reports a callback, a strong interview, or an offer:
 
 When enough notes have accumulated:
 
-1. Load `patterns-synthesis-template.md` (create `applications/learnings/patterns.md` from it if it does not exist).
+1. Load @references/patterns-synthesis-template.md (create `applications/learnings/patterns.md` from it if it does not exist).
 2. Read across the debriefs, rejections, and wins. Look for the same point appearing in three or more notes before calling it a pattern; a single data point is an anecdote.
 3. Update each section with what the evidence supports, and add a dated row to the Synthesis Log explaining what changed and what prompted it.
 4. Surface the single most useful pattern to the user, then stop.
@@ -82,10 +82,10 @@ When enough notes have accumulated:
 **Files:** `applications/learnings/patterns.md`, plus per-event notes under `applications/learnings/interview-notes/`, `rejections/`, and `wins/`.
 
 **Load templates:**
-- `interview-debrief-template.md`
-- `rejection-analysis-template.md`
-- `win-log-template.md`
-- `patterns-synthesis-template.md`
+- @references/interview-debrief-template.md
+- @references/rejection-analysis-template.md
+- @references/win-log-template.md
+- @references/patterns-synthesis-template.md
 
 ---
 

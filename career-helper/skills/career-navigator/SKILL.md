@@ -44,7 +44,7 @@ Plan your search, build your network, and navigate offers.
 - **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: salary negotiation."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -82,8 +82,8 @@ Humour is fine when it lands naturally. Empty praise is not.
 ## 1. Strategic Networking Intelligence
 
 **What you need:** Company name + target role + your background/LinkedIn
-**Load:** `references/networking-strategy.md`
-**Template:** `references/networking-intelligence-template.md`
+**Load:** @references/networking-strategy.md
+**Template:** @references/networking-intelligence-template.md
 
 Agentic parallel research to identify high-value connections:
 - Hiring managers and direct team members
@@ -103,8 +103,8 @@ Uses parallel WebSearch to find 8-12 strategic people, prioritised in 3 tiers.
 ## 2. 3-Month Job Search Plan
 
 **What you need:** Career stage, current situation, target direction, constraints, existing materials
-**Load:** `references/three-month-plan.md`
-**Template:** `references/three-month-plan-template.md`
+**Load:** @references/three-month-plan.md
+**Template:** @references/three-month-plan-template.md
 
 Comprehensive activity planning:
 - Define 3-4 audacious but achievable Month 3 goals
@@ -126,8 +126,8 @@ Comprehensive activity planning:
 ## 3. Salary Negotiation Coach
 
 **What you need:** Offer details, target region (UK/US/EU/APAC), competing offers (if any), priorities
-**Load:** `references/salary-negotiation.md`
-**Template:** `references/negotiation-strategy-template.md`
+**Load:** @references/salary-negotiation.md
+**Template:** @references/negotiation-strategy-template.md
 
 Region-aware negotiation coaching:
 - Market compensation research via WebSearch
@@ -151,8 +151,8 @@ Region-aware negotiation coaching:
 ## 4. Offer Evaluation Framework
 
 **What you need:** Offer details, current situation, career priorities, region
-**Load:** `references/offer-evaluation.md`
-**Template:** `references/offer-evaluation-template.md`
+**Load:** @references/offer-evaluation.md
+**Template:** @references/offer-evaluation-template.md
 
 Comprehensive offer analysis:
 - Total compensation normalisation (currency, CoL, tax, benefits)
@@ -170,8 +170,8 @@ Comprehensive offer analysis:
 ## 5. Application Tracker
 
 **What you need:** Nothing to start; existing application folders if any
-**Load:** `references/application-tracker.md`
-**Template:** `references/application-tracker-template.md`
+**Load:** @references/application-tracker.md
+**Template:** @references/application-tracker-template.md
 
 A single, plain-text board of every live application, owned by the user and stored locally:
 - Builds from a scan of existing `applications/*/` folders, then confirms each stage with you
@@ -188,8 +188,8 @@ A single, plain-text board of every live application, owned by the user and stor
 ## 6. Application Learnings Loop
 
 **What you need:** A completed interview, a rejection, or a win to record; accumulated notes when synthesising
-**Load:** `references/learnings-loop.md`
-**Templates:** `references/interview-debrief-template.md`, `references/rejection-analysis-template.md`, `references/win-log-template.md`, `references/patterns-synthesis-template.md`
+**Load:** @references/learnings-loop.md
+**Templates:** @references/interview-debrief-template.md, @references/rejection-analysis-template.md, @references/win-log-template.md, @references/patterns-synthesis-template.md
 
 Turn each outcome into a short, structured note, then periodically synthesise the notes into one patterns file:
 - Interview debrief: what they asked, what landed, what to do differently
@@ -206,8 +206,8 @@ Turn each outcome into a short, structured note, then periodically synthesise th
 ## 7. Kanban Board View
 
 **What you need:** An existing `applications/tracker.md` (build one first via the Application Tracker if not)
-**Load:** `references/kanban-board.md`
-**Template:** `references/kanban-board-template.html`
+**Load:** @references/kanban-board.md
+**Template:** @references/kanban-board-template.html
 
 An interactive, self-contained HTML board generated from the tracker:
 - One card per application in six stage columns (Researching, Applying, Applied, Interviewing, Offer, Closed)
@@ -229,7 +229,7 @@ Role-specific outputs (networking intelligence, negotiation strategy) are saved 
 
 ## Career Stage Adaptation
 
-**Load:** `references/career-stage-context.md`
+**Load:** @references/career-stage-context.md
 
 This skill adapts advice based on your career stage:
 - **Early Career (Gen Z/Alpha)** - Building presence, demonstrating potential, portfolio emphasis
@@ -247,9 +247,9 @@ When the user's context matches a specific persona, load the relevant reference 
 
 | Persona | Load Reference | Trigger |
 |:--------|:--------------|:--------|
-| Career Returner | `references/career-returner-strategy.md` | User mentions career break, returning to work, redundancy, maternity/paternity, caregiving |
-| Early Career | `references/early-career-search-strategy.md` | User is a graduate, apprentice, school leaver, or searching for their first professional role |
-| NED | `references/ned-search-strategy.md` | User seeks board roles, NED positions, governor or trustee appointments |
+| Career Returner | @references/career-returner-strategy.md | User mentions career break, returning to work, redundancy, maternity/paternity, caregiving |
+| Early Career | @references/early-career-search-strategy.md | User is a graduate, apprentice, school leaver, or searching for their first professional role |
+| NED | @references/ned-search-strategy.md | User seeks board roles, NED positions, governor or trustee appointments |
 
 These references supplement (not replace) the standard capability references. Load both the persona reference and the standard one.
 
@@ -276,7 +276,7 @@ Use web search to check specifics that may have changed since your training, suc
 
 ### Template Usage
 
-When a capability names a template, read it from the path given before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 

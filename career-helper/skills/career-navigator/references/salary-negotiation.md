@@ -467,7 +467,7 @@ Best regards,
 
 **Always output as:** `{role-slug}-negotiation-strategy.md`
 
-Load template: `negotiation-strategy-template.md`
+Load template: @`references/negotiation-strategy-template.md`
 
 ---
 
@@ -475,7 +475,7 @@ Load template: `negotiation-strategy-template.md`
 
 After negotiation strategy is complete, offer:
 
-1. "Want me to help you evaluate if this offer meets your goals?" → `offer-evaluation.md`
+1. "Want me to help you evaluate if this offer meets your goals?" → @`references/offer-evaluation.md`
 2. "Ready to accept? I can help you with a professional acceptance email"
 3. "Need to decline? I can help you do it gracefully while keeping the door open"
 

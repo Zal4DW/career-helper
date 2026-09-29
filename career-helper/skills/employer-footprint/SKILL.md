@@ -35,7 +35,7 @@ See yourself through an employer's eyes. A deep-research swarm audit of your dig
 - **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: employer impression report."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators. Dashboard scores must use text labels, not colour coding.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in `${CLAUDE_PLUGIN_ROOT}/skills/tim/references/tim-preferences-format.md` before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -87,8 +87,8 @@ Before starting any analysis, collect the following via AskUserQuestion:
 ## 1. Full Footprint Analysis
 
 **What you need:** Name + social handles + CV + target company/role (optional)
-**Load:** `references/digital-footprint-audit.md`
-**Template:** `references/footprint-dashboard-template.md`
+**Load:** @references/digital-footprint-audit.md
+**Template:** @references/footprint-dashboard-template.md
 
 Agentic parallel research covering:
 
@@ -165,7 +165,7 @@ Each dimension scored 1-10 with text-label rating (GREEN/AMBER/RED):
 ## 2. Social Media Audit
 
 **What you need:** Social media handles for specific platforms
-**Load:** `references/social-media-audit.md`
+**Load:** @references/social-media-audit.md
 
 Focused deep-dive into specific social channels:
 - Platform-by-platform analysis
@@ -181,9 +181,9 @@ Focused deep-dive into specific social channels:
 ## 3. Employer Impression Report
 
 **What you need:** Name + CV + target company name + role
-**Load:** `references/employer-impression-analysis.md`
-**Template:** `references/footprint-dashboard-template.md`
-**Also Load:** `references/digital-footprint-audit.md`
+**Load:** @references/employer-impression-analysis.md
+**Template:** @references/footprint-dashboard-template.md
+**Also Load:** @references/digital-footprint-audit.md
 
 The full footprint analysis interpreted specifically through the lens of the target employer:
 - Company values and culture research (parallel with footprint analysis)
@@ -199,7 +199,7 @@ The full footprint analysis interpreted specifically through the lens of the tar
 ## 4. Interview Questions from Footprint
 
 **What you need:** Completed footprint analysis or employer impression report
-**Load:** `references/interview-questions-from-footprint.md`
+**Load:** @references/interview-questions-from-footprint.md
 
 Generate likely interview questions based on what's publicly visible:
 - Questions about specific projects or roles mentioned online
@@ -215,7 +215,7 @@ Generate likely interview questions based on what's publicly visible:
 ## Deep Research Validation
 
 All research uses a rigorous multi-cycle validation workflow:
-**Load:** `references/deep-research-reflection.md`
+**Load:** @references/deep-research-reflection.md
 
 - **Gap Analysis** - After initial search, identify what's missing
 - **Counter-Evidence Search** - Actively search for contradicting information
@@ -265,7 +265,7 @@ When the user's context matches a specific persona, adapt the analysis focus:
 
 ### Template Usage
 
-When a capability names a template, read it from the path given before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ### Working with Blocked Content
 

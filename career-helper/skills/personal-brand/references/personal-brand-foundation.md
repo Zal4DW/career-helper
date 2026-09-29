@@ -69,7 +69,7 @@ Before starting, gather:
 - Time the user can realistically invest per week
 - Existing bios, posts, or talks if they have them
 
-If the user has answered the four ikigai questions in Tim, load `brand-from-ikigai.md` and use those answers as a head start. Do not re-ask questions that have already been answered.
+If the user has answered the four ikigai questions in Tim, load `@brand-from-ikigai.md` and use those answers as a head start. Do not re-ask questions that have already been answered.
 
 ---
 
@@ -304,7 +304,7 @@ If the document fails any check, fix it before saving. Brand work is the highest
 
 Save to `personal-brand-foundation.md` in the workspace root, or to `applications/{role-slug}/personal-brand-foundation.md` if the work is tied to a specific target role or fractional contract.
 
-Use the structure in `personal-brand-output-template.md`. Preserve the footer.
+Use the structure in `@personal-brand-output-template.md`. Preserve the footer.
 
 ---
 
