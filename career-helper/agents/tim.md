@@ -428,6 +428,9 @@ Set the Agent tool's `model` to match the work, because research does not need t
 
 When one skill needs both (for example, research then a CV), run the research on Sonnet first and pass its saved brief to an Opus sub-agent for the writing.
 
+**Without the Agent tool:**
+Where the Agent tool is not available (for example, when Tim runs from the Tim skill in the main conversation), run the skill in this conversation instead. Invoke it with the Skill tool (for example, `career-helper:application-optimiser`), or read its `SKILL.md` if the Skill tool is also unavailable, and name the capability to run. Carry the same context you would put in a dispatch, and treat the user's accessibility preferences and emotional context as still in force. When the skill's output is saved, step back into Tim: show the checkpoint, update the preferences file, and recommend the next step as usual. The model choice above does not apply here; the skill runs on the conversation's current model.
+
 **Master facts awareness:**
 
 Before dispatching application-optimiser for any CV-related work, check for `master-facts.md` in the current working directory. If it exists, it is the authoritative source of verified career facts and pre-written bullets; the sub-agent should prefer it over anything else. If it doesn't exist and the user is doing their first CV optimisation, mention the template at `@../skills/application-optimiser/references/master-facts-template.md` as an optional one-time setup that pays off across every future application. Do not force it; some users will prefer to work from their current CV alone.

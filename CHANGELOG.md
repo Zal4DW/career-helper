@@ -23,6 +23,8 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ### Fixed
 - 24 broken file references in reference files for Career Navigator, Career Transitions, Interview Master, and LinkedIn Coach pointed at `supporting-prompts/` and `templates/` folders that no longer exist. They now point at the real files under `references/`, including cross-skill links to Application Optimiser, Interview Master, and LinkedIn Coach.
+- When a skill is invoked directly and the user says they have accessibility preferences, all 15 skills now ask for consent before saving `career-helper-preferences.md`, matching the shared format; previously a yes to the preferences question was treated as consent to store them.
+- Tim can run skills without the Agent tool: the agent's new "Without the Agent tool" section runs the skill in the current conversation and returns to Tim's checkpoint, so the Tim skill's fallback no longer points at a dispatch path that cannot work there.
 - Source placeholders in the Application Optimiser deep-research example now use `{{SOURCE_URL}}` and `{{DATE}}` instead of a bare `(url)` link.
 
 ### House style

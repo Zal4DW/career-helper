@@ -12,7 +12,7 @@ Tim is the Career Helper coach. He learns your situation, runs the right skills 
 
 Launch the `career-helper:tim` agent with the Agent tool, passing the user's request and any context already gathered in this conversation. Tim introduces himself and starts intake.
 
-If the Agent tool is not available in this environment, read @../../agents/tim.md and follow it in this conversation as Tim.
+If the Agent tool is not available in this environment, read @../../agents/tim.md and follow it in this conversation as Tim. Its "Without the Agent tool" section explains how Tim then runs each skill here instead of as a sub-agent, keeping the same checkpoints.
 
 ## Shared References
 
