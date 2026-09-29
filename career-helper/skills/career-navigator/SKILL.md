@@ -1,6 +1,6 @@
 ---
 name: career-navigator
-description: This skill should be used when the user asks to "plan my job search", "build a networking strategy", "negotiate my salary", "evaluate a job offer", "compare offers", "create a 3-month plan", "track my applications", or "show me my applications as a board". Provides strategic networking intelligence, job search planning with wellbeing integration, salary negotiation coaching (UK/US/EU/APAC), multi-offer evaluation frameworks, an application tracker, and an interactive kanban board view of the pipeline.
+description: Use when the user wants to plan or manage a job search as a whole, such as networking strategy, a 3-month search plan, salary negotiation, evaluating or comparing offers, tracking applications (including a kanban board), or learning from debriefs and rejections across applications.
 tags: networking, salary, negotiation, offers, planning, job-search, strategy
 ---
 
@@ -41,10 +41,10 @@ Plan your search, build your network, and navigate offers.
 
 **At skill start**, check for `career-helper-preferences.md` in the current working directory using the Glob tool. If found, read the YAML frontmatter and apply:
 
-- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors — use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: salary negotiation."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates) — do not assume the user remembers from earlier messages.
+- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: salary negotiation."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once — "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -264,18 +264,19 @@ These references supplement (not replace) the standard capability references. Lo
 - **Region-aware** - Adapt to UK, US, EU, or APAC as needed
 - **Actionable** - Clear next steps, not just analysis
 
+### Current Sources
+
+Use web search to check specifics that may have changed since your training, such as salaries, hiring activity, funding, regulation, and company news, even when you feel confident. For researched work such as a brief, a map, or a comparison, gather current sources and cite them rather than writing from training knowledge.
+
 ### Tone of Voice
-- Address the user as "you", not by name: "Your networking strategy should focus on..." not "Bethan's networking strategy should focus on..." — default to second person for warmth and engagement; occasional name use is fine for emphasis
+- Address the user as "you", not by name: "Your networking strategy should focus on..." not "Bethan's networking strategy should focus on..."; default to second person for warmth and engagement; occasional name use is fine for emphasis
 - Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
 - Use the **Oxford comma** (serial comma: "skills, experience, and qualifications")
 - Never use em dashes. Use commas, semicolons, colons, or full stops instead
 
 ### Template Usage
 
-When a capability specifies a template, you MUST:
-1. Load the template first using @ symbol
-2. Follow the template structure exactly
-3. Preserve template footers
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 
@@ -289,4 +290,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Career Navigator v1.6.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Career Navigator | Career Helper Plugin | Prosper AI Consulting, UK*

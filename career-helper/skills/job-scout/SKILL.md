@@ -1,6 +1,6 @@
 ---
 name: job-scout
-description: This skill should be used when the user asks to "find me jobs", "search for roles", "what jobs are out there for me", "scan the job boards", "help me find openings", "rank these job adverts", "which of these roles should I apply for", "triage these postings", or "build me a shortlist". Provides live role discovery across job boards and careers pages (with honest caveats about how unreliable automated search can be), batch ranking of postings against the user's profile with deal-breaker vetting and deadline flagging, and a shortlist that feeds the application tracker.
+description: Use when the user wants to find live job openings or triage postings they already have, such as searching boards and careers pages, ranking a batch of adverts against their profile, or building a shortlist for the tracker. Gives honest caveats about what automated search can and cannot see.
 tags: jobs, search, discovery, job-boards, ranking, shortlist, triage, openings, vacancies
 ---
 
@@ -34,7 +34,7 @@ Find live roles, triage them honestly, and turn the best into applications.
 - **dyslexia_friendly: true**: Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: ranking."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, deadlines); do not assume the user remembers from earlier messages.
 - **colour_blind: true**: Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators. Ranking tiers are text labels (Apply first, Apply, Park, Discard), never colour codes.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -129,6 +129,10 @@ Job Scout is a triage tool, and triage means saying no. When ranking:
 - **No invented details**: salary, deadline, and requirements come from the posting or are marked `[NOT STATED]`
 - **Actionable**: every shortlist entry has a recommended tier and a next step
 
+### Current Sources
+
+Use web search to check specifics that may have changed since your training, such as salaries, hiring activity, funding, regulation, and company news, even when you feel confident. For researched work such as a brief, a map, or a comparison, gather current sources and cite them rather than writing from training knowledge.
+
 ### Tone of Voice
 
 - Address the user as "you": "Your strongest matches are..." not "The user's strongest matches are..."
@@ -138,10 +142,7 @@ Job Scout is a triage tool, and triage means saying no. When ranking:
 
 ### Template Usage
 
-When a capability specifies a template, you MUST:
-1. Load the template first using the @ symbol
-2. Follow the template structure exactly
-3. Preserve template footers
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 
@@ -155,4 +156,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Job Scout v1.0.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Job Scout | Career Helper Plugin | Prosper AI Consulting, UK*

@@ -1,6 +1,6 @@
 ---
 name: interview-master
-description: This skill should be used when the user asks to "prepare for an interview", "do a mock interview", "what do interviewers look for", "I got rejected", "help me after an interview", "I think I was rejected because of my age", "ageism", "age discrimination", or "I'm being told I'm overqualified". Provides interview preparation with STAR frameworks, interviewer perspective reports, realistic mock interview simulation, post-interview coaching for rejection recovery, and comprehensive ageism support including UK law, practical strategies, and emotional resilience.
+description: Use when the user is preparing for, practising, or recovering from interviews, including mock interviews, what interviewers look for, post-interview or post-rejection coaching, references, and concerns about ageism or being called overqualified. Covers STAR frameworks, UK age-discrimination law, practical strategies, and emotional resilience.
 tags: interview, preparation, mock, practice, rejection, coaching, star, ageism, age-discrimination, overqualified
 ---
 
@@ -37,10 +37,10 @@ Complete interview support - before, during practice, and after.
 
 **At skill start**, check for `career-helper-preferences.md` in the current working directory using the Glob tool. If found, read the YAML frontmatter and apply:
 
-- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors — use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: mock interview."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates) — do not assume the user remembers from earlier messages.
+- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: mock interview."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once — "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -228,17 +228,14 @@ When the ageism persona is triggered, load ALL THREE ageism references alongside
 - **Role-specific** - Questions tailored to the actual role, not generic
 
 ### Tone of Voice
-- Address the user as "you", not by name: "You should prepare for..." not "Bethan should prepare for..." — default to second person for warmth and engagement; occasional name use is fine for emphasis
+- Address the user as "you", not by name: "You should prepare for..." not "Bethan should prepare for..."; default to second person for warmth and engagement; occasional name use is fine for emphasis
 - Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
 - Use the **Oxford comma** (serial comma: "skills, experience, and qualifications")
 - Never use em dashes. Use commas, semicolons, colons, or full stops instead
 
 ### Template Usage
 
-When a capability specifies a template, you MUST:
-1. Load the template first using @ symbol
-2. Follow the template structure exactly
-3. Preserve template footers
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 
@@ -251,4 +248,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Interview Master v1.6.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Interview Master | Career Helper Plugin | Prosper AI Consulting, UK*

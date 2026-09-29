@@ -1,6 +1,6 @@
 ---
 name: career-transitions
-description: This skill should be used when the user asks to "go fractional", "build a portfolio career", "become a fractional executive", "assess my AI readiness", "how do I show AI skills", "start my own business", "should I start a startup", "I want to be a founder", "thinking about entrepreneurship", "career change to public sector", "charity sector careers", "non-linear career", "I don't want to climb the ladder", "thinking about starting a company", "should I go into the public sector", "I want to do something different with my career", or "what are my options besides employment". Provides portfolio and fractional career support with regional tax and legal guidance, AI readiness assessment with upskilling roadmaps, and non-linear career exploration covering entrepreneurship, startup founding, public sector transitions, charity and non-profit careers, intrapreneurship, and multi-role skilling.
+description: Use when the user is considering a structural change to how they work rather than their next similar job, such as fractional or portfolio careers, starting a business or startup, moving into the public or charity sector, other non-linear paths, or assessing and evidencing their AI readiness. Includes regional tax and legal guidance for fractional work and upskilling roadmaps.
 tags: portfolio, fractional, career-change, ai-readiness, transition, executive, entrepreneurship, startup, founder, business, public-sector, charity, non-profit, non-linear, intrapreneurship, career-pivot
 ---
 
@@ -39,10 +39,10 @@ Support for non-traditional career paths: fractional executive roles, portfolio 
 
 **At skill start**, check for `career-helper-preferences.md` in the current working directory using the Glob tool. If found, read the YAML frontmatter and apply:
 
-- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors — use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: AI readiness."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates) — do not assume the user remembers from earlier messages.
+- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: AI readiness."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once — "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -131,8 +131,12 @@ Comprehensive exploration of non-traditional career alternatives:
 - **Disclaimer** - Regional guidance is general information only; consult qualified professionals
 - **Honest about trade-offs** - Every path has genuine downsides; present them clearly
 
+### Current Sources
+
+Use web search to check specifics that may have changed since your training, such as salaries, hiring activity, funding, regulation, and company news, even when you feel confident. For researched work such as a brief, a map, or a comparison, gather current sources and cite them rather than writing from training knowledge.
+
 ### Tone of Voice
-- Address the user as "you", not by name: "You have transferable skills in..." not "Bethan has transferable skills in..." — default to second person for warmth and engagement; occasional name use is fine for emphasis
+- Address the user as "you", not by name: "You have transferable skills in..." not "Bethan has transferable skills in..."; default to second person for warmth and engagement; occasional name use is fine for emphasis
 - Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
 - Use the **Oxford comma** (serial comma: "skills, experience, and qualifications")
 - Never use em dashes. Use commas, semicolons, colons, or full stops instead
@@ -140,10 +144,7 @@ Comprehensive exploration of non-traditional career alternatives:
 
 ### Template Usage
 
-When a capability specifies a template, you MUST:
-1. Load the template first using @ symbol
-2. Follow the template structure exactly
-3. Preserve template footers
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 
@@ -156,4 +157,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Career Transitions v1.7.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Career Transitions | Career Helper Plugin | Prosper AI Consulting, UK*

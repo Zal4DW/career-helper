@@ -1,6 +1,6 @@
 ---
 name: employer-footprint
-description: This skill should be used when the user asks to "check my digital footprint", "what will employers see about me online", "audit my online presence", "what does my digital profile look like to a recruiter", "check my social media for red flags", or "employer impression report". Conducts a comprehensive digital footprint analysis through the lens of a potential employer, producing a credit-report style dashboard of positive and negative signals across social media channels, public content, and online presence.
+description: Use when the user wants a full, scored audit of what an employer would find about them online, matched to a specific target company or role. Runs parallel research across social media, public content, and search presence, then produces a credit-report style dashboard of positive and negative signals with recommendations. For a quick, informal social media check, use social-media-review instead.
 tags: footprint, digital, social-media, audit, employer, impression, online-presence, reputation
 ---
 
@@ -32,10 +32,10 @@ See yourself through an employer's eyes. A deep-research swarm audit of your dig
 
 **At skill start**, check for `career-helper-preferences.md` in the current working directory using the Glob tool. If found, read the YAML frontmatter and apply:
 
-- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors — use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: employer impression report."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates) — do not assume the user remembers from earlier messages.
+- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: employer impression report."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators. Dashboard scores must use text labels, not colour coding.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once — "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -225,30 +225,11 @@ All research uses a rigorous multi-cycle validation workflow:
 
 ---
 
-## Parallel Execution Strategy
+## Research Approach
 
-**CRITICAL: Use parallel Task tool calls for maximum speed and depth.**
+The audit covers several independent sources (search-engine presence, LinkedIn, X/Twitter, GitHub, and the target company's culture and values), so run that research in parallel with Task sub-agents and parallel WebSearch calls rather than one source at a time. Use Sonnet for these research sub-agents; it searches and extracts well at a lower cost, and the scoring and recommendations stay with the main model.
 
-```markdown
-Wave 1 (Parallel):
-- Task Agent: Google presence search (name variations)
-- Task Agent: Company culture and values research
-- WebSearch: LinkedIn profile analysis
-- WebSearch: Twitter/X content audit
-- WebSearch: GitHub profile analysis
-
-Wave 2 (After Wave 1 results):
-- Task Agent: Deep-dive on flagged content
-- Task Agent: Cross-reference CV against online presence
-- WebSearch: Fill identified gaps
-- WebSearch: Counter-evidence and red flag hunt
-
-Wave 3 (Synthesis):
-- Score all dimensions
-- Generate dashboard
-- Map to employer values
-- Generate recommendations
-```
+Once the first pass is back, look for what is missing: flagged content that needs a closer look, claims on the CV that the online presence does not support, and counter-evidence or red flags the first searches did not surface. Search for those next. Then score every dimension, generate the dashboard, map the findings to the employer's values, and write the recommendations.
 
 ---
 
@@ -271,23 +252,20 @@ When the user's context matches a specific persona, adapt the analysis focus:
 - **UK English** throughout (unless US role explicitly requires US English)
 - **No emojis** - Professional tone
 - **Cited sources** - All findings include URLs and access dates
-- **Text-label ratings** — GREEN/AMBER/RED as text, never colour alone
+- **Text-label ratings:** GREEN/AMBER/RED as text, never colour alone
 - **Evidence-based** - Every flag backed by specific findings
 - **Never invent data** - Mark missing info as `[NOT FOUND]` or `[PRIVATE]`
 - **Privacy-conscious** - Only analyse publicly available information
 
 ### Tone of Voice
-- Address the user as "you", not by name: "Your digital presence shows..." not "Bethan's digital presence shows..." — default to second person for warmth and engagement; occasional name use is fine for emphasis
+- Address the user as "you", not by name: "Your digital presence shows..." not "Bethan's digital presence shows..."; default to second person for warmth and engagement; occasional name use is fine for emphasis
 - Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
 - Use the **Oxford comma** (serial comma: "skills, experience, and qualifications")
 - Never use em dashes. Use commas, semicolons, colons, or full stops instead
 
 ### Template Usage
 
-When a capability specifies a template, you MUST:
-1. Load the template first using @ symbol
-2. Follow the template structure exactly
-3. Preserve template footers
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ### Working with Blocked Content
 
@@ -295,7 +273,7 @@ When WebFetch fails (LinkedIn, Glassdoor, paywalled content):
 - Ask user to screenshot the page (Read tool processes images)
 - Or copy/paste text directly
 - Or save as PDF and provide path
-- Only request screenshots for critical content (top 3-5 items)
+- Screenshots are read accurately, including dense pages, so a full-page capture is fine; ask only for the pages that matter to the task, to save the user effort
 
 ---
 
@@ -366,4 +344,4 @@ After completing a footprint analysis, career-helper can help you act on the fin
 
 ---
 
-*Employer Footprint Analysis v1.0.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Employer Footprint Analysis | Career Helper Plugin | Prosper AI Consulting, UK*

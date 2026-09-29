@@ -6,6 +6,27 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ---
 
+## [1.17.0] - 2026-09-29
+
+### Changed
+- **Prompts reviewed against current Opus 5.5 and Sonnet 5.5 guidance.** Current models follow instructions closely and plan well without scripts, so dated patterns were removed across the skills and the Tim agent.
+- **Tim chooses a model per sub-agent.** Research, discovery, and extraction (Employer Footprint research, Social Media Review, Job Scout, Market Mapper, Skills Radar evidence gathering, Application Optimiser company research, and Career Navigator searches) are dispatched on Sonnet; CV and letter writing, interview and rejection coaching, ageism support, AI impact, transitions, personal brand, NED governance, and offer evaluation stay on Opus.
+- **Tim has one definition.** `agents/tim.md` is the single source of Tim's behaviour; `skills/tim/SKILL.md` now launches the agent (or follows the agent file where the Agent tool is unavailable), ending the drift between two copies (including the stale "not all 11" skill count).
+- **Shared preferences format.** The `career-helper-preferences.md` schema moves to `skills/tim/references/tim-preferences-format.md`, and every skill's Accessibility section points there.
+- **Employer Footprint research** describes the goal and the gap-filling pass instead of a scripted three-wave plan marked CRITICAL, and runs research sub-agents on Sonnet.
+- **NED AI Helper** loses the start-of-skill date capture (the model already knows the date) and the CRITICAL, MANDATORY, and NEVER markers; its tool restriction is narrowed to external document tools, with the confidentiality reason stated, so web research is no longer read as forbidden.
+- **Current Sources guidance** added to AI Impact Assessment, Market Mapper, Job Scout, Career Transitions, Career Navigator, and Application Optimiser, so research checks live sources rather than training knowledge.
+- **Skill descriptions** rewritten as short intent categories instead of long lists of quoted trigger phrases, with the boundaries between overlapping skills (Employer Footprint and Social Media Review, Personal Brand and LinkedIn Coach) stated explicitly.
+- **Template Usage** blocks rewritten as a plain instruction with its reason, replacing "you MUST".
+- **Blocked-content screenshots** no longer capped at the top three to five items.
+- Per-skill version numbers removed from skill footers; the plugin version is the only version.
+
+### House style
+- NED AI Helper gains `tags` frontmatter, and its `about-ned-governance/`, `supporting-prompts/`, and `templates/` folders are merged into `references/`.
+- Em dashes removed from the Tim agent and every skill's `SKILL.md`, and the checkmark and arrow markers removed from the Tim agent.
+
+---
+
 ## [1.16.0] - 2026-09-14
 
 ### Added

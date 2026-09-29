@@ -1,6 +1,6 @@
 ---
 name: personal-brand
-description: This skill should be used when the user asks to "build my personal brand", "work on my online presence", "find my niche", "position myself", "figure out what I'm known for", "rebrand", "refresh my bio", "find my voice", or talks about thought leadership, distinct positioning, or being recognised in their field. Uses the Why You, Why Them, and Why Now framework to produce a positioning statement, an audience and channel map, content pillars with cadence, and a library of bios for different contexts.
+description: Use when the user knows what they want to do but not how to be known for it, such as finding a niche, positioning, thought leadership, rebranding, or making bios consistent across channels. Uses the Why You, Why Them, and Why Now framework to produce a positioning statement, an audience and channel map, content pillars with cadence, and a bio library.
 tags: brand, positioning, thought-leadership, voice, niche, audience, content, bio, online-presence, fractional, ned
 ---
 
@@ -37,7 +37,7 @@ Strategic positioning for your online presence, built around three questions: Wh
 - **dyslexia_friendly: true**: use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: audience and channel map."). Refer to saved files by description, not filename. Repeat key details (sector, target role, audience) and do not assume the user remembers from earlier messages.
 - **colour_blind: true**: never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim), ask once: "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim), ask once: "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -178,11 +178,7 @@ Persona guides supplement the standard references, they do not replace them. Loa
 
 ### Template Usage
 
-When a capability specifies a template, you MUST:
-
-1. Load the template first using `@` symbol
-2. Follow the template structure exactly
-3. Preserve template footers
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 
@@ -197,4 +193,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Personal Brand Helper v1.11.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Personal Brand Helper | Career Helper Plugin | Prosper AI Consulting, UK*

@@ -1,6 +1,6 @@
 {
   "name": "career-helper",
-  "version": "1.16.0",
+  "version": "1.17.0",
   "description": "End-to-end career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Now includes a market map of organisations like your employer with dated signals, decision makers, and a weekly what-changed update (market mapper), live role discovery with batch ranking (job scout), an evidenced skills inventory with gap analysis and learning plans (skills radar), an interactive kanban board view of the application tracker, verified CV PDF production, cover letters and supporting statements, reference and referee prep, and Claude Cowork scheduled routines with a one-command weekly update (career routines), alongside personal brand building (Why You, Why Them, Why Now positioning, audience and channel map, content pillars, bio library) and non-linear career exploration: entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling",
   "owner": {
     "name": "Prosper AI Consulting"

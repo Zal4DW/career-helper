@@ -1,6 +1,6 @@
 ---
 name: social-media-review
-description: This skill should be used when the user asks to "review my social media", "check my socials", "how do I look on social media", "clean up my online presence", "is my Instagram/Twitter/Facebook okay for employers", or "social media audit". Provides a lightweight, approachable social media review through the eyes of a recruiter or employer. Especially useful for graduates, early career, and anyone re-entering the job market.
+description: Use when the user wants a quick, informal check of how their personal social media looks to a recruiter, and what to clean up or lock down. Lighter than employer-footprint and especially useful for graduates, early-career users, and people re-entering the job market.
 tags: social-media, audit, review, instagram, twitter, facebook, tiktok, graduate, online-presence, recruiter
 ---
 
@@ -32,10 +32,10 @@ A quick, friendly check of your social media through a recruiter's eyes. Find ou
 
 **At skill start**, check for `career-helper-preferences.md` in the current working directory using the Glob tool. If found, read the YAML frontmatter and apply:
 
-- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors — use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: privacy cleanup."). Refer to saved files by description, not filename. Repeat key details (platform names, usernames) — do not assume the user remembers from earlier messages.
+- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: privacy cleanup."). Refer to saved files by description, not filename. Repeat key details (platform names, usernames); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once — "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -43,7 +43,7 @@ These rules apply to **all communication with the user** and to the **formatting
 
 ## How It Works
 
-Unlike the full `/employer-footprint` analysis (which runs 8 parallel research agents, maps company culture, and produces a scored dashboard), this skill is **lighter, faster, and more conversational**. Think of it as a quick health check rather than a full medical.
+Unlike the full `/employer-footprint` analysis (which runs parallel research agents, maps company culture, and produces a scored dashboard), this skill is **lighter, faster, and more conversational**. Think of it as a quick health check rather than a full medical.
 
 **Best for:**
 - Graduates and early career professionals cleaning up before their first job search
@@ -234,7 +234,7 @@ For graduates and early career users, include:
 - **Proportionate** - Don't catastrophise minor issues
 
 ### Tone of Voice
-- Address the user as "you", not by name: "Your LinkedIn looks strong" not "Bethan's LinkedIn looks strong" — default to second person for warmth and engagement; occasional name use is fine for emphasis
+- Address the user as "you", not by name: "Your LinkedIn looks strong" not "Bethan's LinkedIn looks strong"; default to second person for warmth and engagement; occasional name use is fine for emphasis
 - Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
 - Use the **Oxford comma** (serial comma: "skills, experience, and qualifications")
 - Never use em dashes. Use commas, semicolons, colons, or full stops instead
@@ -272,4 +272,4 @@ After cleaning up your social media:
 
 ---
 
-*Social Media Review v1.0.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Social Media Review | Career Helper Plugin | Prosper AI Consulting, UK*

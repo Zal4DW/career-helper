@@ -1,6 +1,6 @@
 ---
 name: getting-started
-description: This skill should be used when the user asks "how do I get started", "how do I use career-helper", "how do I get the best results", "what should I prepare", "what order should I use the skills", "tips for using career-helper", "show me how this plugin works", "give me the guide", "getting the best guide", or "can I get a guide to share". Provides a comprehensive guide covering preparation checklists, recommended workflows, skill-by-skill tips, power-user strategies, and a downloadable getting the best guide for maximising career-helper output quality.
+description: Use when the user is new to Career Helper or wants to get more out of it, such as how to start, what to prepare, which order to use the skills in, tips for better results, or a shareable guide to the plugin.
 tags: getting-started, guide, help, how-to, tips, workflow, best-practices, onboarding
 ---
 
@@ -42,10 +42,10 @@ Get the most out of Career Helper. Whether you are a graduate writing your first
 
 **At skill start**, check for `career-helper-preferences.md` in the current working directory using the Glob tool. If found, read the YAML frontmatter and apply:
 
-- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors — use plain replacements. Explicit signposting at every transition. Refer to saved files by description, not filename.
+- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition. Refer to saved files by description, not filename.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once — "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -218,7 +218,7 @@ Job searching is emotionally challenging at every level. Never minimise this. A 
 - **Inclusive** - Examples and language that work for all career levels, not just senior professionals
 
 ### Tone of Voice
-- Address the user as "you", not by name: "You might want to start with..." not "Bethan might want to start with..." — default to second person for warmth and engagement; occasional name use is fine for emphasis
+- Address the user as "you", not by name: "You might want to start with..." not "Bethan might want to start with..."; default to second person for warmth and engagement; occasional name use is fine for emphasis
 - Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
 - Use the **Oxford comma** (serial comma: "skills, experience, and qualifications")
 - Never use em dashes. Use commas, semicolons, colons, or full stops instead
@@ -243,4 +243,4 @@ Or run **/career-helper:quick-start** if you want guided routing.
 
 ---
 
-*Getting Started Guide v1.14.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Getting Started Guide | Career Helper Plugin | Prosper AI Consulting, UK*

@@ -1,6 +1,6 @@
 ---
 name: skills-radar
-description: This skill should be used when the user asks "what skills do I actually have", "what am I missing for this role", "do a skills gap analysis", "what should I learn next", "build me a learning plan", "find skills I've forgotten to list", "audit my skills", or "why do I keep getting rejected for lacking X". Builds an evidenced skills inventory (including mining the user's own public work such as GitHub, portfolios, and publications, with their consent), compares it against a target role, and produces a prioritised gap analysis with a realistic learning plan.
+description: Use when the user wants an honest picture of their skills against a target role, such as a skills inventory, a gap analysis, finding skills missing from their CV, understanding repeated "lacks X" rejections, or a learning plan. Mines their public work (with consent) for evidence and separates real skill gaps from evidence gaps.
 tags: skills, gap-analysis, upskilling, learning, inventory, competencies, development, enrichment
 ---
 
@@ -34,7 +34,7 @@ Know what you can evidence, see what a target role demands, and close the gap de
 - **dyslexia_friendly: true**: Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: gap analysis."). Refer to saved files by description, not filename. Repeat key details (skill names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true**: Never use colour alone to convey meaning. Gap priorities are text labels (Critical, Important, Nice to have), never colour codes.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -127,10 +127,7 @@ Turns the top gaps (three at most) into a plan:
 
 ### Template Usage
 
-When a capability specifies a template, you MUST:
-1. Load the template first using the @ symbol
-2. Follow the template structure exactly
-3. Preserve template footers
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 
@@ -144,4 +141,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Skills Radar v1.0.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Skills Radar | Career Helper Plugin | Prosper AI Consulting, UK*

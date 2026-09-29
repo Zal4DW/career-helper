@@ -1,6 +1,6 @@
 ---
 name: career-routines
-description: This skill should be used when the user asks to "schedule my job search", "set up a weekly routine", "automate my job search", "run this every Monday", "put the weekly update on a schedule", "what routines do I have", "why did my scheduled task not run", or "keep my tracker and market map updated automatically". Sets up, tailors, and reviews Claude Cowork scheduled tasks that run the Career Helper maintenance pass (tracker standup, follow-ups, market map update, learnings check) and narrower routines, with honest guidance on when a task runs in the cloud and when it needs your computer, plus an appendix for people running Career Helper outside Cowork.
+description: Use when the user wants parts of their job search to run on a schedule, or asks about routines they already have, such as putting the weekly update on a Cowork schedule, setting up narrower recurring tasks, or working out why a scheduled task did not run. Explains when a task runs in the cloud and when it needs their computer.
 tags: routines, schedule, scheduled-tasks, cowork, automation, weekly, recurring, cron
 ---
 
@@ -36,7 +36,7 @@ Put the recurring parts of your job search on a schedule, so the tracker, follow
 - **dyslexia_friendly: true**: Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 3. Next: choosing the cadence."). Refer to saved files by description, not filename. Repeat key details (routine names, days, times); do not assume the user remembers from earlier messages.
 - **colour_blind: true**: Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -158,10 +158,7 @@ Routines are plumbing, and plumbing should be boring:
 
 ### Template Usage
 
-When a capability specifies a template, you MUST:
-1. Load the template first using the @ symbol
-2. Follow the template structure exactly
-3. Preserve template footers
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 
@@ -174,4 +171,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Career Routines v1.0.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Career Routines | Career Helper Plugin | Prosper AI Consulting, UK*

@@ -1,6 +1,6 @@
 ---
 name: market-mapper
-description: This skill should be used when the user asks to "map the market", "which companies like mine are hiring", "who is growing in my area", "keep an ear to the ground", "find companies similar to my employer", "who should I be watching", "set up a weekly market watch", "what has changed since last week", or "who are the decision makers at these companies". Builds an evidenced map of ten to fifteen organisations similar to the user's current or recent employer, with dated growth, hiring, and investment signals, named decision makers where public sources confirm them, and a suggested angle for a discreet approach. A watchlist and weekly update capability reports only what has changed since the last run, so a passive jobseeker can stay informed without searching from scratch.
+description: Use when the user, often employed and discreet, wants to watch the market rather than apply now, such as mapping organisations similar to their employer, spotting who is hiring or growing, identifying decision makers, or getting a weekly update on what has changed. Builds an evidenced map of ten to fifteen organisations with dated signals and discreet approach angles.
 tags: market, companies, watchlist, decision-makers, hiring-signals, growth, passive, discreet, monitoring, weekly
 ---
 
@@ -37,7 +37,7 @@ Spot the organisations worth watching before they advertise, know who runs them,
 - **dyslexia_friendly: true**: Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: decision makers."). Refer to saved files by description, not filename. Repeat key details (organisation names, dates, people); do not assume the user remembers from earlier messages.
 - **colour_blind: true**: Never use colour alone to convey meaning. Watch priorities are text labels (Act now, Warm, Watch, Quiet), never colour codes.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -163,6 +163,10 @@ Market Mapper is an intelligence tool, so it must be calm and literal about what
 - **Dated window**: the signal window and the last-checked date appear on every map and every update
 - **Actionable**: every organisation carries a watch priority and a suggested angle, or an honest reason it has neither
 
+### Current Sources
+
+Use web search to check specifics that may have changed since your training, such as salaries, hiring activity, funding, regulation, and company news, even when you feel confident. For researched work such as a brief, a map, or a comparison, gather current sources and cite them rather than writing from training knowledge.
+
 ### Tone of Voice
 
 - Address the user as "you": "Your strongest signals this week are..." not "The user's strongest signals are..."
@@ -172,10 +176,7 @@ Market Mapper is an intelligence tool, so it must be calm and literal about what
 
 ### Template Usage
 
-When a capability specifies a template, you MUST:
-1. Load the template first using the @ symbol
-2. Follow the template structure exactly
-3. Preserve template footers
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 
@@ -189,4 +190,4 @@ When a capability specifies a template, you MUST:
 
 ---
 
-*Market Mapper v1.0.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Market Mapper | Career Helper Plugin | Prosper AI Consulting, UK*

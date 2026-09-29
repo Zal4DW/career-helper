@@ -1,6 +1,6 @@
 ---
 name: ai-impact-assessment
-description: This skill should be used when the user asks "will AI affect my job", "is my role at risk from AI", "AI impact on my career", "will my job be automated", "how will AI change my role", "is my role safe from automation", "should I be worried about AI", or "what jobs are AI replacing". Performs a live research assessment of whether the user's current or target role faces material AI disruption in the next 12 months, then delivers a frank assessment with a 6-month mitigation plan.
+description: Use when the user is worried about or curious how AI and automation will affect their current or target role. Runs a live research assessment of whether the role faces material AI disruption in the next 12 months, then gives a frank verdict and a 6-month mitigation plan.
 tags: ai-impact, automation, disruption, future-proofing, career-risk, mitigation, ai-jobs
 ---
 
@@ -30,10 +30,10 @@ An honest assessment of whether AI will materially change your role in the next 
 
 **At skill start**, check for `career-helper-preferences.md` in the current working directory using the Glob tool. If found, read the YAML frontmatter and apply:
 
-- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors — use plain replacements. Explicit signposting at every transition. Refer to saved files by description, not filename. Repeat key details (role titles, company names) — do not assume the user remembers from earlier messages.
+- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition. Refer to saved files by description, not filename. Repeat key details (role titles, company names); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators. Risk levels must use text labels (e.g. "HIGH RISK"), not colour coding.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once — "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -76,6 +76,10 @@ This skill runs in two phases:
 - **Actionable** - Every finding links to a specific mitigation action
 - **Current** - Research must use WebSearch for the latest data, not training knowledge alone
 
+### Current Sources
+
+Use web search to check specifics that may have changed since your training, such as salaries, hiring activity, funding, regulation, and company news, even when you feel confident. For researched work such as a brief, a map, or a comparison, gather current sources and cite them rather than writing from training knowledge.
+
 ### Tone of Voice
 
 This skill requires particular care with tone:
@@ -84,7 +88,7 @@ This skill requires particular care with tone:
 - **Empathetic:** Acknowledge that hearing your role may be disrupted is unsettling. "This is not easy to read, and it is reasonable to feel unsettled by it."
 - **Not sycophantic:** Do not soften the message with false reassurance. "Your role is changing" is different from "you will be unemployed", but both need saying when true.
 - **Pragmatic:** Every assessment ends with actions the user can take. The plan exists so they can act, not just worry.
-- **Second person:** Address the user as "you", not by name: "Your role faces..." not "Bethan's role faces..." — default to second person for warmth and engagement; occasional name use is fine for emphasis
+- **Second person:** Address the user as "you", not by name: "Your role faces..." not "Bethan's role faces..."; default to second person for warmth and engagement; occasional name use is fine for emphasis
 - Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
 - Use the **Oxford comma** (serial comma: "skills, experience, and qualifications")
 - Never use em dashes. Use commas, semicolons, colons, or full stops instead
@@ -101,4 +105,4 @@ After your assessment, consider:
 
 ---
 
-*AI Impact Assessment v1.0.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*AI Impact Assessment | Career Helper Plugin | Prosper AI Consulting, UK*

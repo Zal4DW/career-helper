@@ -1,6 +1,6 @@
 ---
 name: linkedin-coach
-description: This skill should be used when the user asks to "review my LinkedIn profile", "optimise my LinkedIn", "write a LinkedIn headline", "build a content strategy", "review my LinkedIn post", or "create a video introduction". Covers full profile audits, headline crafting, content strategy coaching, post review, and video introduction scripts across five modes.
+description: Use when the user wants help with LinkedIn specifically, such as a profile audit, headline, content strategy, reviewing a post, or a video introduction script. For deciding what they want to be known for before the LinkedIn work, use personal-brand first.
 tags: linkedin, profile, content, headline, video, social, career
 ---
 
@@ -34,10 +34,10 @@ Comprehensive LinkedIn optimisation across five modes. Choose the one that fits 
 
 **At skill start**, check for `career-helper-preferences.md` in the current working directory using the Glob tool. If found, read the YAML frontmatter and apply:
 
-- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors — use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: content strategy."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates) — do not assume the user remembers from earlier messages.
+- **dyslexia_friendly: true** → Use short sentences. Number all lists and options (never unnumbered). One decision per message. No idioms or metaphors; use plain replacements. Explicit signposting at every transition ("Step 2 of 4. Next: content strategy."). Refer to saved files by description, not filename. Repeat key details (company names, role titles, dates); do not assume the user remembers from earlier messages.
 - **colour_blind: true** → Never use colour alone to convey meaning. Use labels, text, or icons for all status indicators.
 
-If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once — "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format documented in the Tim skill before continuing. If the user declines or says no, proceed without creating the file.
+If **no preferences file exists** and this skill was invoked directly (not dispatched by Tim): ask once, "Do you have any accessibility preferences I should know about? For example, if you're dyslexic I can adjust how I format things." If yes, save to `career-helper-preferences.md` using the format in @../tim/references/tim-preferences-format.md before continuing. If the user declines or says no, proceed without creating the file.
 
 These rules apply to **all communication with the user** and to the **formatting of output documents**.
 
@@ -152,17 +152,14 @@ These references supplement (not replace) the standard capability references. Lo
 - **Actionable steps** - Concrete next actions, not vague advice
 
 ### Tone of Voice
-- Address the user as "you", not by name: "Your headline could be stronger" not "Bethan's headline could be stronger" — default to second person for warmth and engagement; occasional name use is fine for emphasis
+- Address the user as "you", not by name: "Your headline could be stronger" not "Bethan's headline could be stronger"; default to second person for warmth and engagement; occasional name use is fine for emphasis
 - Avoid hyperbole and cinema poster phrasing (not "game-changing", "revolutionary", or "supercharge your career")
 - Use the **Oxford comma** (serial comma: "skills, experience, and qualifications")
 - Never use em dashes. Use commas, semicolons, colons, or full stops instead
 
 ### Template Usage
 
-When a capability specifies a template, you MUST:
-1. Load the template first using @ symbol
-2. Follow the template structure exactly
-3. Preserve template footers
+When a capability names a template, load it with the @ reference before writing, and follow its structure and footer. Users and other skills rely on the same headings appearing in the same places.
 
 ---
 
@@ -175,4 +172,4 @@ After optimising your LinkedIn, you might want:
 
 ---
 
-*LinkedIn Coach v1.3.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*LinkedIn Coach | Career Helper Plugin | Prosper AI Consulting, UK*
