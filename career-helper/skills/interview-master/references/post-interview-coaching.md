@@ -541,4 +541,4 @@ Before considering debrief complete:
 
 ---
 
-*Output:* `{role-slug}-post-interview-debrief.md` using `templates/post-interview-debrief-template.md` structure
+*Output:* `{role-slug}-post-interview-debrief.md` using `references/post-interview-debrief-template.md` structure

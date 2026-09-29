@@ -393,7 +393,7 @@ For each offer, ask yourself:
 
 **Always output as:** `offer-evaluation.md`
 
-Load template: @`templates/offer-evaluation-template.md`
+Load template: @`references/offer-evaluation-template.md`
 
 ---
 
@@ -401,8 +401,8 @@ Load template: @`templates/offer-evaluation-template.md`
 
 After evaluation:
 
-1. "Ready to negotiate? I can help with specific strategies" → @`supporting-prompts/salary-negotiation.md`
-2. "Need more information on a company?" → @`supporting-prompts/company-research.md`
+1. "Ready to negotiate? I can help with specific strategies" → @`references/salary-negotiation.md`
+2. "Need more information on a company?" → @`../application-optimiser/references/company-research.md`
 3. "Want to discuss the decision further?" → Continue conversation
 4. "Ready to accept/decline?" → Provide templates
 

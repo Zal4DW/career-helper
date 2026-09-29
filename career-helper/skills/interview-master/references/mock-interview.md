@@ -341,7 +341,7 @@ After mock interview:
 
 1. "Want to practice that question again with the feedback in mind?"
 2. "Shall we do another round focusing on {weak area}?"
-3. "Ready to update your interview prep document with these insights?" → @`supporting-prompts/interview-prep.md`
+3. "Ready to update your interview prep document with these insights?" → @`references/interview-prep.md`
 4. "Want to work on your STAR stories?" → Revisit interview prep
 
 ---

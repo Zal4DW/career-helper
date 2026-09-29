@@ -509,9 +509,9 @@ during product launches.
 - "What does a typical week look like outside of crunch periods?"
 
 **Sources Consulted:**
-1. [TechCrunch](url) - Accessed {Date}
-2. [Glassdoor](url) - Accessed {Date}
-3. [Company careers page](url) - Accessed {Date}
+1. [TechCrunch]({{SOURCE_URL}}) - Accessed {{DATE}}
+2. [Glassdoor]({{SOURCE_URL}}) - Accessed {{DATE}}
+3. [Company careers page]({{SOURCE_URL}}) - Accessed {{DATE}}
 ```
 
 ---

@@ -891,4 +891,4 @@ Adapt based on:
 
 ---
 
-*Output:* `three-month-plan.md` using `templates/three-month-plan-template.md` structure
+*Output:* `three-month-plan.md` using `references/three-month-plan-template.md` structure
