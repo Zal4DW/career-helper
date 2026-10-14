@@ -130,7 +130,7 @@ Help the user gather the right materials before they start using career-helper s
 - Organisations you already have in mind, and any you want excluded (group companies, non-compete, bad history)
 - A sense of size band: a 50-person scale-up and a FTSE 250 hire very differently
 - Your `three-month-plan.md` or `skills-inventory.md` if they exist; the direction may already be defined there
-- Ten minutes to run LinkedIn people searches yourself and paste back the results, if you want LinkedIn coverage of decision makers
+- The Claude for Chrome extension if you want LinkedIn coverage of decision makers
 
 **Why it matters:** the map is only as good as its seed. A wrong definition of "similar" produces a confidently wrong list, and the weekly update will keep watching the wrong organisations.
 

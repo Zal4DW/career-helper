@@ -26,7 +26,7 @@ Run parallel WebSearch and WebFetch calls across different source types. Each ty
 | Source type | Examples | Reliability notes |
 |:------------|:---------|:------------------|
 | General boards | Indeed, Reed, Totaljobs, CV-Library | Often block fetches; search-engine results may be stale |
-| Professional networks | LinkedIn Jobs | Mostly behind login; ask the user to search and paste postings in |
+| Professional networks | LinkedIn Jobs | Mostly behind login; prefer Claude in Chrome here |
 | Curated aggregators | Otta / Welcome to the Jungle, Escape the City, workinstartups | Better for tech and startup roles; smaller coverage |
 | Sector boards | CharityJob, jobs.ac.uk, Civil Service Jobs, TechJobs | Usually unauthenticated and current; strong for sector targets |
 | Executive and interim | Nurole, exec search firm listings | NED and senior roles; some behind registration |
@@ -44,13 +44,13 @@ Cover at least three source types per run. Note which sources were unreachable; 
 
 ---
 
-## Step 3: Ask the User to Paste In Logged-In Results
+## Step 3: Offer Claude in Chrome for Logged-In Boards
 
-Career Helper does not sign in to job boards or use the user's logged-in browser session. When LinkedIn or Indeed coverage matters, or a board blocks fetches, offer once:
+When LinkedIn or Indeed coverage matters, or a board blocks fetches, offer once:
 
-"The strongest listings are often behind logins that I cannot reach from here. If you run a search on LinkedIn or Indeed yourself and paste the postings in (the full text, or the link plus the text), I will add them to this run and rank them with everything else. Would you like to do that, or shall I continue with the sources I can reach?"
+"The strongest listings are often behind logins that I cannot reach from here. If you install the Claude for Chrome extension, I can search LinkedIn or Indeed in your own browser, logged in as you, and read the full postings. Would you like to do that, or shall I continue with the sources I can reach?"
 
-For each pasted posting, capture role title, organisation, location, salary if stated, closing date, and the requirements list. Mark any field the paste does not show as `[NOT STATED]`.
+If the user takes the browser route, drive their browser to run the saved searches, open each promising posting, and capture role title, organisation, location, salary if stated, closing date, and the requirements list. Capture text immediately; do not rely on the URL staying live.
 
 If the user declines, continue without it and reflect the narrower coverage honestly in the output.
 
@@ -72,7 +72,7 @@ End every discovery run with a short coverage statement before handing over to r
 - Which source types were searched, and which were unreachable or blocked.
 - How fresh the results are likely to be.
 - What the run cannot claim: "This is what was reachable today, not the whole market."
-- The standing mitigations: saved alerts on two or three boards, direct careers page checks for target companies, and pasting in postings from logged-in boards.
+- The standing mitigations: saved alerts on two or three boards, direct careers page checks for target companies, and Claude in Chrome for logged-in boards.
 
 A short, honest coverage statement protects the user from the worst failure mode of automated search: quietly mistaking partial results for the market.
 
@@ -83,4 +83,4 @@ A short, honest coverage statement protects the user from the worst failure mode
 - Do not fabricate or embellish listings. If a search result shows only a title and company, record only that and mark the rest `[NOT STATED]` until the posting is fetched.
 - Do not present aggregator summaries as the posting text; fetch the original where reachable.
 - Do not keep searching past useful volume. Ten well-verified roles beat forty unverified links; stop when the shortlist has enough credible candidates to rank.
-- Do not scrape aggressively. If a site blocks access, respect it, note it, and offer the paste-in route or move to another source; do not attempt to circumvent blocks.
+- Do not scrape aggressively. If a site blocks access, respect it, note it, and move to the browser-extension route or another source; do not attempt to circumvent blocks.

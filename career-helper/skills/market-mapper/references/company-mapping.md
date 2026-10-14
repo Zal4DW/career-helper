@@ -104,7 +104,7 @@ Rules:
 - **Check recency.** A leadership page can be stale; cross-check against Companies House or a dated press mention where the person matters.
 - **Note the appointment date** where known; a director appointed six weeks ago is a change signal in their own right.
 
-Career Helper does not sign in to LinkedIn or use the user's logged-in browser session. If LinkedIn coverage matters, offer once per session: "LinkedIn people search sits behind a login I cannot reach from here. If you run the searches I have listed yourself and paste back what you find, I will add any confirmed names to the map. Would you like that, or shall I continue with the sources I can reach?" Treat a pasted result as user-supplied evidence and record it as such. If declined, reflect the narrower coverage in the coverage statement.
+Offer the Claude for Chrome extension once per session if LinkedIn coverage matters: "LinkedIn people search sits behind a login I cannot reach from here. If you have the Claude for Chrome extension, I can look up these organisations in your own browser and read the public profiles. Would you like that, or shall I continue with the sources I can reach?" If declined, reflect the narrower coverage in the coverage statement.
 
 ---
 
@@ -143,7 +143,7 @@ Every map ends with a short coverage statement before the next actions:
 - Which routes and sources were searched, and which were unreachable or behind logins
 - The signal window and the date of the run
 - What the map cannot claim: "This is what public sources showed in the window, not a full picture of any organisation's plans."
-- The standing mitigations: LinkedIn searches the user runs and pastes back, the weekly update to catch what this run missed, and the user's own network as a source the map cannot see
+- The standing mitigations: the Claude for Chrome extension for LinkedIn, the weekly update to catch what this run missed, and the user's own network as a source the map cannot see
 
 ---
 
@@ -169,4 +169,4 @@ With `colour_blind: true` nothing changes: priorities are text labels already.
 - Do not infer decline from silence. A quiet careers page is not a hiring freeze.
 - Do not suggest outreach that would expose an employed user. When in doubt, the angle is "follow and read".
 - Do not keep the user's employer name anywhere except the map header, and tell the user that is where it is.
-- Do not scrape aggressively or attempt to work around a login or a block. Note the gap, offer the paste-back route, and move on.
+- Do not scrape aggressively or attempt to work around a login or a block. Note the gap, offer the browser extension, and move on.

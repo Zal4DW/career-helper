@@ -336,7 +336,7 @@ Personal Brand E → Social Media Review (if cleanup is needed) or Employer Foot
 ### Common Mistakes
 
 - **Treating a scout run as market coverage.** Automated search sees only what is reachable today. Set saved alerts on two or three boards as the backbone; use scout runs to widen coverage and to triage.
-- **Skipping the paste-in offer.** LinkedIn and Indeed hold many of the best listings behind logins that Career Helper does not use. Run those searches yourself and paste the postings in; without them, expect those boards to be underrepresented.
+- **Skipping the Claude in Chrome offer.** LinkedIn and Indeed hold many of the best listings behind logins. The browser extension lets the search run in your own logged-in browser; without it, expect those boards to be underrepresented.
 - **Applying down the whole shortlist.** The tiers exist to protect your energy. Apply first means this week; Park means not now. A padded application count is not a strategy.
 
 ### Iteration Strategy
@@ -399,7 +399,7 @@ AI-specific gaps → /career-transitions (AI Readiness Assessment)
 ### Common Mistakes
 
 - **Treating a signal as a vacancy.** A funding round means money, not a role for you. Read the signal for what it supports.
-- **Expecting LinkedIn coverage without your own searches.** LinkedIn people search sits behind a login that Career Helper does not use. Public leadership pages, Companies House, and press coverage confirm most decision makers; LinkedIn searches you run and paste back close the rest.
+- **Expecting LinkedIn coverage without the browser extension.** LinkedIn people search sits behind a login. Public leadership pages, Companies House, and press coverage confirm most decision makers; the Claude for Chrome extension closes the rest.
 - **Acting on every Act now in the same week.** An employed user engaging with five competitors in one week is noticeable. Pick one.
 - **Letting the map go stale.** A map with no update for a month is a list of old news. Run the weekly update, or schedule it in Claude Cowork.
 

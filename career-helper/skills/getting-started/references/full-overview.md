@@ -429,7 +429,7 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 
 ### Job Scout - Find Roles and Triage Them Honestly
 
-**What it does:** Live role discovery across job boards, aggregators, and employer careers pages, followed by batch ranking of postings against your actual profile, with deal-breaker vetting and deadline flagging. It is upfront that automated job-board search is fragile: boards block automation, listings go stale, and the reachable results are a subset of the market. It recommends saved alerts as the backbone, and lets you paste in postings from logged-in boards such as LinkedIn or Indeed that you searched yourself, so they are ranked with everything else.
+**What it does:** Live role discovery across job boards, aggregators, and employer careers pages, followed by batch ranking of postings against your actual profile, with deal-breaker vetting and deadline flagging. It is upfront that automated job-board search is fragile: boards block automation, listings go stale, and the reachable results are a subset of the market. It recommends saved alerts as the backbone, and can use the Claude for Chrome extension to search logged-in boards such as LinkedIn or Indeed through your own browser.
 
 **Real example - filling an empty pipeline:**
 
