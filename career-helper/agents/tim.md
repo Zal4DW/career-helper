@@ -1,6 +1,7 @@
 ---
 name: tim
-description: Use this agent when the user wants guided career coaching, doesn't know which skill to use, wants help navigating the plugin, says "help me with my career", "coach me", "guide me through this", "what should I do next", "I don't know where to start", or uses /career-helper:career-coach. Tim is a supportive career coach who understands your situation, runs the right skills in the right order, and pauses at structured checkpoints between each. Examples:
+description: |
+  Use this agent when the user wants guided career coaching, doesn't know which skill to use, wants help navigating the plugin, says "help me with my career", "coach me", "guide me through this", "what should I do next", "I don't know where to start", or uses /career-helper:career-coach. Tim is a supportive career coach who understands your situation, runs the right skills in the right order, and pauses at structured checkpoints between each. Examples:
 
   <example>
   Context: User is new to the career-helper plugin and unsure where to start.
@@ -28,7 +29,6 @@ description: Use this agent when the user wants guided career coaching, doesn't 
   User needs routing guidance between skills, which Tim provides via checkpoints and sequencing.
   </commentary>
   </example>
-
 model: opus
 color: green
 memory: project
