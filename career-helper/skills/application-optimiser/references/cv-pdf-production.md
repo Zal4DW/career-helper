@@ -51,7 +51,7 @@ Themes: `standard` (default), `compact` (experienced candidates fighting the two
 python3 {skill}/scripts/verify_cv_pdf.py cv.pdf cv-optimised.md
 ```
 
-The verifier checks the text layer (pages with too few extractable words; content words present in the markdown but missing from the PDF) and flags documents over the page limit (default two pages; pass `--max-pages 0` to skip, for example for an academic CV). It also renders each page to `pdf-check/page_N.png`.
+The verifier checks the text layer (pages with too few extractable words; content words present in the markdown but missing from the PDF) and flags documents over the page limit (default two pages; use `--max-pages 0` to skip, for example for an academic CV). It also renders each page to `pdf-check/page_N.png`.
 
 **3. Inspect the page images.** Read each PNG with the Read tool and check like a human reviewer:
 

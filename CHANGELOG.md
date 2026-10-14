@@ -10,6 +10,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ### Fixed
 - **Tim agent frontmatter.** The multi-line `description` in `agents/tim.md` was not valid YAML, so the agent loaded with only its filename and every other field (model, colour, memory, description) was dropped. It is now a `description: |` block.
+- **Plugin review false positive on credentials.** The review read "pass `--max-pages 0`" in the CV PDF guide as the `pass` password manager, and the heading-stripping regex in `verify_cv_pdf.py` as a command built at run time. The guide now says "use", and the script strips heading markers with a plain string helper. Behaviour is unchanged.
 
 ### Added
 - **Plugin icon.** A 1024 px square glassmorphic PNG at `career-helper/.claude-plugin/icon.png` for the plugin listing: a CV with a coach's speech bubble and check mark. Generated with PAI Image (Google Nano Banana, carries a SynthID watermark).
