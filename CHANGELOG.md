@@ -11,6 +11,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 ### Fixed
 - **Tim agent frontmatter.** The multi-line `description` in `agents/tim.md` was not valid YAML, so the agent loaded with only its filename and every other field (model, colour, memory, description) was dropped. It is now a `description: |` block.
 
+### Changed
+- **No use of your logged-in browser session.** Job Scout and Market Mapper no longer offer to drive the Claude for Chrome extension in your logged-in browser to search LinkedIn or Indeed as you. Instead, you run those searches yourself and paste the postings or names in, and they are ranked or mapped with everything else. Career Helper now never uses an account credential or signed-in session. Getting Started, Tim's routing guide, and the README are updated to match.
+
 ### Added
 - **Plugin icon.** A 1024 px square glassmorphic PNG at `career-helper/.claude-plugin/icon.png` for the plugin listing: a CV with a coach's speech bubble and check mark. Generated with PAI Image (Google Nano Banana, carries a SynthID watermark).
 

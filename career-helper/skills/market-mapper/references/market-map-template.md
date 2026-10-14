@@ -86,7 +86,7 @@ Or: No public signals found in the window (searched {{routes}} on {{YYYY-MM-DD}}
 - **Unreachable or behind login:** {{LinkedIn people search; any boards or sites that blocked access}}
 - **Run date and window:** {{YYYY-MM-DD}}, last {{N}} months
 - **What this map cannot claim:** this is what public sources showed in the window, not a full picture of any organisation's plans. Quiet does not mean stagnant.
-- **Mitigations:** the weekly update catches what this run missed; the Claude for Chrome extension extends LinkedIn coverage; your own network sees what public sources cannot.
+- **Mitigations:** the weekly update catches what this run missed; LinkedIn searches you run yourself and paste back extend coverage; your own network sees what public sources cannot.
 
 ---
 

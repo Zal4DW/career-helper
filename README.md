@@ -135,7 +135,7 @@ Or just describe what you need:
 
   ![The kanban board view: six stage columns from Researching to Closed, one card per application with its next action, an OVERDUE text tag on a slipped date, keyboard-operable move buttons, and toolbar buttons to copy or download the tracker markdown](docs/images/kanban-board-view.png)
   *The board view of the application tracker, shown with placeholder data. Generated to `applications/board.html`; your tracker file stays the source of truth.*
-- **Job scouting** live role discovery and five-dimension batch ranking, honest about the limits of automated job-board search (and able to use the Claude for Chrome extension for logged-in boards)
+- **Job scouting** live role discovery and five-dimension batch ranking, honest about the limits of automated job-board search (you can paste in postings from logged-in boards such as LinkedIn or Indeed that you searched yourself)
 - **Skills radar** an evidenced skills inventory that separates real skill gaps from evidence gaps, with learning plans built around your actual weekly hours
 - **Market mapper** a map of organisations like your employer with dated signals and named decision makers, built for the employed and discreet, with a weekly update that reports only what changed and a watchlist board (four priority columns, same mechanics as the application board)
 - **Verified CV PDFs** a generate-verify loop that renders an ATS-safe PDF, checks the text layer parses, and inspects the layout page by page

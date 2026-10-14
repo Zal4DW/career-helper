@@ -50,7 +50,7 @@ Before the first discovery run in any session, set expectations plainly. Automat
 
 Say so in one or two sentences, then offer the mitigations:
 
-1. **Claude in Chrome.** If the user has the Claude for Chrome browser extension, Claude can operate their own logged-in browser: searching LinkedIn or Indeed as them, reading full postings, and collecting results far more reliably than web search. Suggest it once per session when a board blocks access or when the user wants LinkedIn or Indeed coverage. Do not require it.
+1. **Your own logged-in search, pasted in.** Career Helper never signs in to a job board or uses the user's logged-in browser session. When LinkedIn or Indeed coverage matters, suggest once per session that the user runs the search themselves and pastes the postings (or their links and text) into the conversation; they are then triaged and ranked alongside everything else.
 2. **Saved alerts as the backbone.** Recommend the user sets saved searches and email alerts on two or three boards; treat scout runs as a supplement that widens coverage, not the primary channel.
 3. **Direct careers pages.** Employer careers pages are usually unauthenticated and current; prefer them for target companies.
 
@@ -68,7 +68,7 @@ Never present a discovery run as complete market coverage, and always state wher
 Structured, multi-source discovery:
 - Deal-breakers and constraints captured first, so bad matches are filtered before they waste attention
 - Parallel WebSearch and WebFetch across job boards, aggregators, and employer careers pages
-- Claude in Chrome offered for logged-in boards where available
+- Logged-in boards covered by the user pasting in postings they found themselves
 - Deduplication across sources; the same role often appears on three boards
 - Staleness checks: posting date, application deadline, and whether the role still resolves
 - Every result carries its source URL and the date seen
