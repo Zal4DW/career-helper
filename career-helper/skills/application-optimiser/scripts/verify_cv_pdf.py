@@ -55,6 +55,18 @@ def extract_text_per_page(pdf_path: Path):
     return [(page.extract_text() or "") for page in reader.pages]
 
 
+def _drop_heading_marker(line: str) -> str:
+    """Remove a leading markdown heading marker (up to three spaces of
+    indent, one to six hashes, then whitespace) from a single line."""
+    body = line.lstrip(" \t")
+    if len(line) - len(body) > 3:
+        return line
+    hashes = len(body) - len(body.lstrip("#"))
+    if 1 <= hashes <= 6 and body[hashes:hashes + 1].isspace():
+        return " " + body[hashes + 1:]
+    return line
+
+
 def strip_markdown(text: str) -> str:
     """Reduce markdown to roughly the text a reader (or ATS parser) sees.
 
@@ -63,7 +75,7 @@ def strip_markdown(text: str) -> str:
     """
     text = re.sub(r"```.*?```", " ", text, flags=re.S)
     text = re.sub(r"\]\([^)]*\)", "] ", text)
-    text = re.sub(r"^\s{0,3}#{1,6}\s", " ", text, flags=re.M)
+    text = "\n".join(_drop_heading_marker(line) for line in text.split("\n"))
     return text.replace("`", " ").replace("*", " ").replace("_", " ")
 
 

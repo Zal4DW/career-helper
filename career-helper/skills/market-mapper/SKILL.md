@@ -60,7 +60,7 @@ Set expectations plainly before the first run:
 
 - **Signals are only as good as public sources.** Funding announcements, contract awards, Companies House filings, press releases, and careers pages are reachable. Internal plans are not. A quiet company is not necessarily a stagnant one; say "no public signals found in the window" rather than inferring decline.
 - **Decision makers are named only when a public source confirms them.** Leadership pages, Companies House officer records, press releases, conference listings, and public LinkedIn profiles count. Guessing a name, inventing a title, or fabricating a LinkedIn URL is never acceptable; use `[NOT FOUND]` and give the user the search to run themselves.
-- **LinkedIn sits behind a login.** Public profile pages are sometimes reachable, but people search and company insights are not. Offer the Claude for Chrome extension once per session for LinkedIn coverage in the user's own browser; do not attempt to circumvent access limits.
+- **LinkedIn sits behind a login.** Public profile pages are sometimes reachable, but people search and company insights are not. Offer a signed-in browser once per session for LinkedIn coverage: Cowork's built-in browser signed in to LinkedIn, or the Claude in Chrome extension in the user's own Chrome; do not attempt to circumvent access limits.
 - **Recency has a window.** Default to signals from the last three months. State the window on every map and every update, and date every signal.
 
 **Load:** @references/company-mapping.md for the full method and the signal taxonomy.

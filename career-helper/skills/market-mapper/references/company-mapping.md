@@ -104,7 +104,7 @@ Rules:
 - **Check recency.** A leadership page can be stale; cross-check against Companies House or a dated press mention where the person matters.
 - **Note the appointment date** where known; a director appointed six weeks ago is a change signal in their own right.
 
-Offer the Claude for Chrome extension once per session if LinkedIn coverage matters: "LinkedIn people search sits behind a login I cannot reach from here. If you have the Claude for Chrome extension, I can look up these organisations in your own browser and read the public profiles. Would you like that, or shall I continue with the sources I can reach?" If declined, reflect the narrower coverage in the coverage statement.
+Offer a signed-in browser once per session if LinkedIn coverage matters: "LinkedIn people search sits behind a login I cannot reach from here. If you use Claude Cowork, its built-in browser can do this once you are signed in to LinkedIn there (you can import the login from your usual browser in Cowork's browser settings); or, if you have the Claude in Chrome extension, I can use your own Chrome. Either way I can look up these organisations and read the public profiles. Would you like that, or shall I continue with the sources I can reach?" If declined, reflect the narrower coverage in the coverage statement.
 
 ---
 
@@ -143,7 +143,7 @@ Every map ends with a short coverage statement before the next actions:
 - Which routes and sources were searched, and which were unreachable or behind logins
 - The signal window and the date of the run
 - What the map cannot claim: "This is what public sources showed in the window, not a full picture of any organisation's plans."
-- The standing mitigations: the Claude for Chrome extension for LinkedIn, the weekly update to catch what this run missed, and the user's own network as a source the map cannot see
+- The standing mitigations: a signed-in browser (Cowork's built-in browser or Claude in Chrome) for LinkedIn, the weekly update to catch what this run missed, and the user's own network as a source the map cannot see
 
 ---
 
@@ -169,4 +169,4 @@ With `colour_blind: true` nothing changes: priorities are text labels already.
 - Do not infer decline from silence. A quiet careers page is not a hiring freeze.
 - Do not suggest outreach that would expose an employed user. When in doubt, the angle is "follow and read".
 - Do not keep the user's employer name anywhere except the map header, and tell the user that is where it is.
-- Do not scrape aggressively or attempt to work around a login or a block. Note the gap, offer the browser extension, and move on.
+- Do not scrape aggressively or attempt to work around a login or a block. Note the gap, offer the signed-in browser, and move on.

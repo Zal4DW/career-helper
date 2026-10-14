@@ -50,7 +50,7 @@ Before the first discovery run in any session, set expectations plainly. Automat
 
 Say so in one or two sentences, then offer the mitigations:
 
-1. **Claude in Chrome.** If the user has the Claude for Chrome browser extension, Claude can operate their own logged-in browser: searching LinkedIn or Indeed as them, reading full postings, and collecting results far more reliably than web search. Suggest it once per session when a board blocks access or when the user wants LinkedIn or Indeed coverage. Do not require it.
+1. **A signed-in browser.** If the user is in Claude Cowork, its built-in browser can be signed in to LinkedIn or Indeed (the site's login can be imported from their usual browser); if they have the Claude in Chrome extension, Claude can use their own Chrome, where they are already signed in. Either way Claude can search LinkedIn or Indeed as them, reading full postings, and collecting results far more reliably than web search. Suggest it once per session when a board blocks access or when the user wants LinkedIn or Indeed coverage. Do not require it.
 2. **Saved alerts as the backbone.** Recommend the user sets saved searches and email alerts on two or three boards; treat scout runs as a supplement that widens coverage, not the primary channel.
 3. **Direct careers pages.** Employer careers pages are usually unauthenticated and current; prefer them for target companies.
 
@@ -68,7 +68,7 @@ Never present a discovery run as complete market coverage, and always state wher
 Structured, multi-source discovery:
 - Deal-breakers and constraints captured first, so bad matches are filtered before they waste attention
 - Parallel WebSearch and WebFetch across job boards, aggregators, and employer careers pages
-- Claude in Chrome offered for logged-in boards where available
+- A signed-in browser (Cowork's built-in browser or Claude in Chrome) offered for logged-in boards where available
 - Deduplication across sources; the same role often appears on three boards
 - Staleness checks: posting date, application deadline, and whether the role still resolves
 - Every result carries its source URL and the date seen
