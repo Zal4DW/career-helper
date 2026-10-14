@@ -336,7 +336,7 @@ Personal Brand E → Social Media Review (if cleanup is needed) or Employer Foot
 ### Common Mistakes
 
 - **Treating a scout run as market coverage.** Automated search sees only what is reachable today. Set saved alerts on two or three boards as the backbone; use scout runs to widen coverage and to triage.
-- **Skipping the Claude in Chrome offer.** LinkedIn and Indeed hold many of the best listings behind logins. The browser extension lets the search run in your own logged-in browser; without it, expect those boards to be underrepresented.
+- **Skipping the signed-in browser offer.** LinkedIn and Indeed hold many of the best listings behind logins. Cowork's built-in browser (once signed in to those sites) or the Claude in Chrome extension lets the search run as you; without it, expect those boards to be underrepresented.
 - **Applying down the whole shortlist.** The tiers exist to protect your energy. Apply first means this week; Park means not now. A padded application count is not a strategy.
 
 ### Iteration Strategy
@@ -399,7 +399,7 @@ AI-specific gaps → /career-transitions (AI Readiness Assessment)
 ### Common Mistakes
 
 - **Treating a signal as a vacancy.** A funding round means money, not a role for you. Read the signal for what it supports.
-- **Expecting LinkedIn coverage without the browser extension.** LinkedIn people search sits behind a login. Public leadership pages, Companies House, and press coverage confirm most decision makers; the Claude for Chrome extension closes the rest.
+- **Expecting LinkedIn coverage without a signed-in browser.** LinkedIn people search sits behind a login. Public leadership pages, Companies House, and press coverage confirm most decision makers; Cowork's built-in browser signed in to LinkedIn, or the Claude in Chrome extension, closes the rest.
 - **Acting on every Act now in the same week.** An employed user engaging with five competitors in one week is noticeable. Pick one.
 - **Letting the map go stale.** A map with no update for a month is a list of old news. Run the weekly update, or schedule it in Claude Cowork.
 
