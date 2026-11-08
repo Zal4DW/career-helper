@@ -1,7 +1,6 @@
 ---
 name: linkedin-coach
 description: Use when the user wants help with LinkedIn specifically, such as a profile audit, headline, content strategy, reviewing a post, or a video introduction script. For deciding what they want to be known for before the LinkedIn work, use personal-brand first.
-tags: linkedin, profile, content, headline, video, social, career
 ---
 
 # LinkedIn Coach

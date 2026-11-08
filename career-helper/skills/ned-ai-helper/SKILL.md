@@ -1,7 +1,6 @@
 ---
 name: ned-ai-helper
 description: Use when a Non-Executive Director, governor, or trustee needs board-level help with AI, such as evaluating an AI proposal, challenging executive AI strategy, designing governance structures, assessing AI risk, building board AI literacy, or preparing slides to brief the board. Produces board-ready papers (as Claude Docs) and briefing decks in the "Pragmatic Operator" tone.
-tags: ned, board, governance, ai-governance, non-executive-director, trustee, governor, risk
 ---
 
 ## Accessibility

@@ -1,7 +1,6 @@
 ---
 name: social-media-review
 description: Use when the user wants a quick, informal check of how their personal social media looks to a recruiter, and what to clean up or lock down. Lighter than employer-footprint and especially useful for graduates, early-career users, and people re-entering the job market.
-tags: social-media, audit, review, instagram, twitter, facebook, tiktok, graduate, online-presence, recruiter
 ---
 
 # Social Media Review

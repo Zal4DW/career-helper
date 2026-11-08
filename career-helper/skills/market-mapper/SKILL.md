@@ -1,7 +1,6 @@
 ---
 name: market-mapper
 description: Use when the user, often employed and discreet, wants to watch the market rather than apply now, such as mapping organisations similar to their employer, spotting who is hiring or growing, identifying decision makers, or getting a weekly update on what has changed. Builds an evidenced map of ten to fifteen organisations with dated signals and discreet approach angles.
-tags: market, companies, watchlist, decision-makers, hiring-signals, growth, passive, discreet, monitoring, weekly
 ---
 
 # Market Mapper
@@ -130,7 +129,7 @@ Do not add organisations to the application board unless the user has chosen the
 
 **What you need:** Nothing; the board is created with the map (Capability 1)
 **Load:** @references/market-map-board.md, and `/career-outputs` for publishing
-**Page:** @references/market-map-board-template.html
+**Page:** @references/market-map-board-template.md
 
 The interactive market map, kept in your Claude account and built on the same mechanism as the application board in `/career-navigator`:
 - One card per organisation in four priority columns (Act now, Warm, Watch, Quiet), each column carrying its one-line meaning

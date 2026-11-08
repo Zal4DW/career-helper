@@ -1,3 +1,10 @@
+# Ikigai Map Page Template
+
+This file holds the HTML page for the artifact titled `Career Helper Ikigai`. The page is kept inside Markdown so the plugin ships only text files.
+
+**How to use it:** copy everything between the `~~~~html` and `~~~~` fence lines, exactly as written, into a file named `ikigai-map-template.html` in your working folder, and publish that file. Do not include the fence lines. Do not edit the page; the board's content lives in its database, as @references/tim-ikigai-visual.md describes.
+
+~~~~html
 <title>Career Helper Ikigai</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <!--
@@ -328,3 +335,4 @@
   });
 })();
 </script>
+~~~~

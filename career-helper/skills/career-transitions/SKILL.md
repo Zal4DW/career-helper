@@ -1,7 +1,6 @@
 ---
 name: career-transitions
 description: Use when the user is considering a structural change to how they work rather than their next similar job, such as fractional or portfolio careers, starting a business or startup, moving into the public or charity sector, other non-linear paths, or assessing and evidencing their AI readiness. Includes regional tax and legal guidance for fractional work and upskilling roadmaps.
-tags: portfolio, fractional, career-change, ai-readiness, transition, executive, entrepreneurship, startup, founder, business, public-sector, charity, non-profit, non-linear, intrapreneurship, career-pivot
 ---
 
 # Career Transitions

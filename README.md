@@ -75,7 +75,7 @@ Or just describe what you need. Example prompts:
 | **AI Impact Assessment** | Researches whether AI will materially disrupt your role in the next 12 months, with a 6-month mitigation plan | `/ai-impact-assessment` |
 | **NED AI Helper** | AI governance for Non-Executive Directors, Board Governors, and Charity Trustees. Challenge frameworks, risk assessment, governance structures, regulatory guidance, board papers as Claude Docs, and board briefing slides | `/ned-ai-helper` |
 | **Personal Brand** | Why You, Why Them, Why Now positioning; audience and channel map; content pillars; bio library across LinkedIn, X, speaker bio, podcast bio, About page, and board bio. Persona guides for NEDs, fractional, and career returners | `/personal-brand` |
-| **Career Coach (Tim)** | Guided career coaching, understands your situation, reads emotional signals, runs the right skills in the right order, checks in after difficult work, with accessibility support and persistent agent memory | `/career-helper:career-coach` |
+| **Career Coach (Tim)** | Guided career coaching, understands your situation, reads emotional signals, runs the right skills in the right order, checks in after difficult work, with accessibility support | `/career-helper:career-coach` |
 
 ## Commands
 
@@ -140,7 +140,7 @@ Or just describe what you need. Example prompts:
 - **Template-driven** consistent, professional outputs
 - **Digital footprint audit** credit-report style employer impression report and dashboard
 - **Non-linear career exploration** entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling with honest pros/cons and decision frameworks
-- **Guided coaching** Tim orchestrates skills based on your situation with structured checkpoints and persistent agent memory that improves routing over time
+- **Guided coaching** Tim orchestrates skills based on your situation with structured checkpoints
 - **Accessibility across all skills** dyslexia-friendly enhanced mode with signposting, numbered options, and plain language; colour-blind safe output with text labels instead of colour coding. Preferences stored in `career-helper-preferences.md` and respected by every skill, command, and Tim
 
 ---
@@ -211,7 +211,7 @@ What the plugin runs, fetches, and stores:
 - **Artifacts, Claude Docs, and slide decks** in your Claude account, published only when a skill offers one and you agree. They are private to you unless you share them. The boards keep their data in the artifact's own database, which only you (and anyone you share with) can see.
 - **Web research** through Claude's own search and fetch tools, for public information such as company news, job listings, and regulation.
 - **A signed-in browser** (Cowork's built-in browser or Claude in Chrome), only when you ask it to search a site you are signed in to, such as LinkedIn.
-- **Two Python packages**, `markdown` and `weasyprint`, installed in your Cowork environment when you ask for a verified CV PDF; the scripts are in `skills/application-optimiser/scripts/`.
+- **Python packages** (`markdown`, `weasyprint`, and `pypdf`, plus `pdf2image` and Poppler for page images), installed in your Cowork environment when you ask for a verified CV PDF; the scripts are kept as text in `skills/application-optimiser/references/cv-pdf-scripts.md` and written to a `.career-helper-tools/` folder in the application folder when needed.
 
 The plugin has no hooks, no MCP servers, and no executables, and sends nothing to any service of its own.
 

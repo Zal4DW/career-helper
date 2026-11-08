@@ -1,7 +1,6 @@
 ---
 name: personal-brand
 description: Use when the user knows what they want to do but not how to be known for it, such as finding a niche, positioning, thought leadership, rebranding, or making bios consistent across channels. Uses the Why You, Why Them, and Why Now framework to produce a positioning statement, an audience and channel map, content pillars with cadence, and a bio library.
-tags: brand, positioning, thought-leadership, voice, niche, audience, content, bio, online-presence, fractional, ned
 ---
 
 # Personal Brand Helper

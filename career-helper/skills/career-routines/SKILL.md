@@ -1,7 +1,6 @@
 ---
 name: career-routines
 description: Use when the user wants parts of their job search to run on a schedule, or asks about routines they already have, such as putting the weekly update on a Cowork schedule, setting up narrower recurring tasks, or working out why a scheduled task did not run. Explains when a task runs in the cloud and when it needs their computer.
-tags: routines, schedule, scheduled-tasks, cowork, automation, weekly, recurring
 ---
 
 # Career Routines

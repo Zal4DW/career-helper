@@ -67,7 +67,8 @@ If you are unsure where something belongs, open an issue and ask.
 
 ### Skill Content Conventions
 
-- Every skill's `SKILL.md` starts with YAML frontmatter: `name`, `description`, `tags`.
+- Every `SKILL.md` starts with YAML frontmatter holding only `name` and `description`, each as plain text. Commands use only `description` and `argument-hint`; agents use only `name`, `description`, and `model`. The plugin directory refuses any other frontmatter key from unverified organisations, so do not add `tags`, `color`, `memory`, or similar.
+- The plugin folder holds only Markdown, text, JSON, and YAML files, plus PNG, JPEG, GIF, WebP, or ICO images. No scripts, HTML, or package manager configuration, and no file starting with `#!`. A page or script a skill needs is kept in a fenced code block inside a Markdown reference, and the skill writes it out when needed.
 - Each skill should have an Accessibility section that checks for `career-helper-preferences.md`.
 - Each skill should have a Tone of Voice subsection within Output Standards.
 - Skills that produce user-facing documents must respect the **no em dashes, no emojis, Oxford comma** rules in their output as well as in their prompts.

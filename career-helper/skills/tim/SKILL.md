@@ -1,7 +1,6 @@
 ---
 name: tim
 description: Use when the user wants guided career coaching, does not know which skill to use, or wants help deciding what to do next. Launches Tim, the Career Helper coach, who learns the user's situation, runs the right skills in the right order, and checks in between each.
-tags: coach, guide, orchestrator, career, help, navigate, accessibility, dyslexia
 ---
 
 # Tim: Your Career Coach

@@ -1,7 +1,6 @@
 ---
 name: interview-master
 description: Use when the user is preparing for, practising, or recovering from interviews, including mock interviews, what interviewers look for, post-interview or post-rejection coaching, references, building slides for an interview presentation, and concerns about ageism or being called overqualified. Covers STAR frameworks, UK age-discrimination law, practical strategies, and emotional resilience.
-tags: interview, preparation, mock, practice, rejection, coaching, star, ageism, age-discrimination, overqualified
 ---
 
 # Interview Master

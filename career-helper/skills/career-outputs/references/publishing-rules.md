@@ -12,9 +12,9 @@ Each output has one fixed title. The title is how you find the output again when
 
 | Output | Title | Kind | Capabilities to declare |
 |:-------|:------|:-----|:------------------------|
-| Application board | `Career Helper Applications` | Page from `kanban-board-template.html` | `{"db": {}, "user": {}}` |
-| Market map | `Career Helper Market Map` | Page from `market-map-board-template.html` | `{"db": {"rules": [{"path": "private", "read": "owner", "write": "owner"}]}, "user": {}}` |
-| Ikigai map | `Career Helper Ikigai` | Page from `ikigai-map-template.html` | `{"db": {}, "user": {}}` |
+| Application board | `Career Helper Applications` | Page in `kanban-board-template.md` | `{"db": {}, "user": {}}` |
+| Market map | `Career Helper Market Map` | Page in `market-map-board-template.md` | `{"db": {"rules": [{"path": "private", "read": "owner", "write": "owner"}]}, "user": {}}` |
+| Ikigai map | `Career Helper Ikigai` | Page in `ikigai-map-template.md` | `{"db": {}, "user": {}}` |
 | Progress dashboard | `Career Helper Progress` | Dashboard artifact type | From the type |
 | Footprint dashboard | `Career Helper Footprint` | Dashboard artifact type | From the type |
 
@@ -35,10 +35,12 @@ The page files carry their own `<title>`, which matches the table. Use a one-sen
 
 ## Page Versions
 
-Each page file states its version in its opening comment (for example, "Page version 2.0.0"). The register records the version each published page is on.
+Each page is kept as HTML inside a Markdown reference (`kanban-board-template.md`, `market-map-board-template.md`, and `ikigai-map-template.md`). Before every publish, new or refresh, extract the HTML between the `~~~~html` and `~~~~` fence lines into a `.html` file with the same base name, and publish that `.html` file. Never publish the Markdown file itself; it would not render as an interactive page.
 
-- **New page:** publish the file unchanged, with the capabilities in the table above.
-- **Older page:** when the plugin's page version is newer than the register's, republish the new file to the same link, unchanged, with the same capabilities. Tell the user in one line that the page was updated and their data is unaffected.
+Each page states its version in its opening comment (for example, "Page version 2.0.0"). The register records the version each published page is on.
+
+- **New page:** publish the extracted HTML file unchanged, with the capabilities in the table above.
+- **Older page:** when the plugin's page version is newer than the register's, republish the newly extracted HTML file to the same link, unchanged, with the same capabilities. Tell the user in one line that the page was updated and their data is unaffected.
 - **Same version:** do not republish. Write data only.
 
 Never edit a page file to put user data in it. The pages hold no user data; everything lives in the database.

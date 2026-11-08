@@ -7,3 +7,8 @@ Thumbs.db
 desktop.ini
 __MACOSX/
 dist/
+
+# Local environment files
+.env
+.env.local
+.env.*.local

@@ -1,7 +1,6 @@
 ---
 name: career-navigator
 description: Use when the user wants to plan or manage a job search as a whole, such as networking strategy, a 3-month search plan, salary negotiation, evaluating or comparing offers, tracking applications (including a kanban board), or learning from debriefs and rejections across applications.
-tags: networking, salary, negotiation, offers, planning, job-search, strategy
 ---
 
 # Career Navigator
@@ -208,7 +207,7 @@ Turn each outcome into a short, structured note, then periodically synthesise th
 
 **What you need:** Nothing; the board is created with the tracker (Capability 5)
 **Load:** @references/kanban-board.md, and `/career-outputs` for publishing
-**Page:** @references/kanban-board-template.html
+**Page:** @references/kanban-board-template.md
 
 The interactive application board, kept in your Claude account:
 - One card per application in six stage columns (Researching, Applying, Applied, Interviewing, Offer, Closed)

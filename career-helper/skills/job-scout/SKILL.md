@@ -1,7 +1,6 @@
 ---
 name: job-scout
 description: Use when the user wants to find live job openings or triage postings they already have, such as searching boards and careers pages, ranking a batch of adverts against their profile, or building a shortlist for the tracker. Gives honest caveats about what automated search can and cannot see.
-tags: jobs, search, discovery, job-boards, ranking, shortlist, triage, openings, vacancies
 ---
 
 # Job Scout

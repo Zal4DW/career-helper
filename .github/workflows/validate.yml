@@ -22,7 +22,7 @@ jobs:
         run: python3 scripts/check_house_style.py
 
       - name: Compile Python scripts
-        run: python3 -m py_compile career-helper/skills/application-optimiser/scripts/*.py scripts/*.py
+        run: python3 -m py_compile scripts/*.py
 
       - uses: actions/setup-node@v4
         with:

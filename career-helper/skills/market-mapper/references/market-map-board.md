@@ -2,7 +2,7 @@
 
 **Purpose:** Keep the market map as one interactive board that the user and Claude both keep current. Every organisation is a card in one of four priority columns (Act now, Warm, Watch, Quiet). The user can raise or lower priorities with a reason, edit the overview, angle, and their own notes, and see each organisation's dated signals and decision makers; Claude researches, adds signals, and reads the user's changes back in any later session, including a scheduled weekly update.
 
-**Applies to:** The artifact titled `Career Helper Market Map`, published from `@references/market-map-board-template.html`. Its database is the record of the map. When the session has a workspace folder, a read-only snapshot is kept at `market-map.md` in the shape of `@references/market-map-template.md`.
+**Applies to:** The artifact titled `Career Helper Market Map`, published from the page in `@references/market-map-board-template.md`. Its database is the record of the map. When the session has a workspace folder, a read-only snapshot is kept at `market-map.md` in the shape of `@references/market-map-template.md`.
 
 ---
 
@@ -59,8 +59,8 @@ Declare these capabilities when publishing:
 Follow `/career-outputs` Capability 1:
 
 1. **Look it up** in `career-helper-artefacts.md`, then by the title `Career Helper Market Map`.
-2. **New board:** publish `market-map-board-template.html` unchanged with the capabilities above, then write `map/meta`, `private/seed`, and one document per organisation in one batch. Read the `organisations` collection back once and confirm the count.
-3. **Existing board on an older page version:** republish the new page file to the same link. The data is kept.
+2. **New board:** extract the HTML from `market-map-board-template.md` into `market-map-board-template.html` and publish that file unchanged with the capabilities above, then write `map/meta`, `private/seed`, and one document per organisation in one batch. Read the `organisations` collection back once and confirm the count.
+3. **Existing board on an older page version:** extract the page again and republish the `.html` file to the same link. The data is kept.
 4. **Moving from an older map:** if `market-map.md` exists from an earlier version of Career Helper (no snapshot line at the top), it is the user's own record: read it and write it into the board, then turn the file into a snapshot.
 5. **Record** the link and page version in the register, and refresh the `market-map.md` snapshot.
 

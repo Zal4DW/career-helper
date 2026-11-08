@@ -1,3 +1,10 @@
+# Application Board Page Template
+
+This file holds the HTML page for the artifact titled `Career Helper Applications`. The page is kept inside Markdown so the plugin ships only text files.
+
+**How to use it:** copy everything between the `~~~~html` and `~~~~` fence lines, exactly as written, into a file named `kanban-board-template.html` in your working folder, and publish that file. Do not include the fence lines. Do not edit the page; the board's content lives in its database, as @references/kanban-board.md describes.
+
+~~~~html
 <title>Career Helper Applications</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <!--
@@ -510,3 +517,4 @@
   });
 })();
 </script>
+~~~~

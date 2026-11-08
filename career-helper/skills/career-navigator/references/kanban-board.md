@@ -2,7 +2,7 @@
 
 **Purpose:** Give the user an interactive view of their whole application pipeline that they and Claude keep up to date together. Every application is a card in one of six stage columns (Researching, Applying, Applied, Interviewing, Offer, Closed); the user can drag cards between stages, edit next actions, and add or remove applications, and Claude reads those changes back in any later session.
 
-**Applies to:** The artifact titled `Career Helper Applications`, published from `@references/kanban-board-template.html`. Its database is the application record described in `@references/application-tracker.md`.
+**Applies to:** The artifact titled `Career Helper Applications`, published from the page in `@references/kanban-board-template.md`. Its database is the application record described in `@references/application-tracker.md`.
 
 ---
 
@@ -31,8 +31,8 @@ Suggested wording the first time: "Your applications are on a board in your Clau
 Follow `/career-outputs` Capability 1:
 
 1. **Look it up** in `career-helper-artefacts.md`, then by the title `Career Helper Applications`.
-2. **New board:** publish `kanban-board-template.html` unchanged, with capabilities `{"db": {}, "user": {}}`, then write the cards and the `board/meta` document (fields in `application-tracker.md`) in one batch. Read the collection back once and confirm the count.
-3. **Existing board on an older page version:** republish the new page file to the same link. The cards are kept.
+2. **New board:** extract the HTML from `kanban-board-template.md` into `kanban-board-template.html` and publish that file unchanged, with capabilities `{"db": {}, "user": {}}`, then write the cards and the `board/meta` document (fields in `application-tracker.md`) in one batch. Read the collection back once and confirm the count.
+3. **Existing board on an older page version:** extract the page again and republish the `.html` file to the same link. The cards are kept.
 4. **Record** the link and page version in the register.
 
 The page holds no user data, so there is nothing to fill in or escape in the file. It renders every value as plain text.

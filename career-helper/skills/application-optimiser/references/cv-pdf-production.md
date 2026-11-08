@@ -2,7 +2,7 @@
 
 **Purpose:** Turn a finished markdown CV or cover letter into a submission-ready PDF, then prove it survived the journey: the layout renders cleanly and the text layer parses the way an applicant tracking system will actually read it. A CV that looks right but parses wrong fails silently; this pipeline exists to catch that before an employer does.
 
-**Scripts:** `scripts/generate_cv_pdf.py` and `scripts/verify_cv_pdf.py` (relative to this skill's folder)
+**Scripts:** `generate_cv_pdf.py` and `verify_cv_pdf.py`, held in @references/cv-pdf-scripts.md. Before step 1, write both into a `.career-helper-tools/` folder inside the application folder (the folder that holds `cv-optimised.md`), as that file describes, so the commands below find them.
 
 ---
 
@@ -35,12 +35,12 @@ If the user wants a visually designed CV for humans (portfolio roles, design rol
 
 Dependencies (one-time, not part of the plugin runtime): `pip install markdown weasyprint pypdf pdf2image`, plus the poppler system package for page images (`apt-get install poppler-utils` or `brew install poppler`).
 
-Run from the application folder so outputs land beside the CV.
+Run from the application folder, where the CV and `.career-helper-tools/` both sit, so outputs land beside the CV.
 
 **1. Generate.**
 
 ```bash
-python3 {skill}/scripts/generate_cv_pdf.py cv-optimised.md cv.pdf --theme standard
+python3 .career-helper-tools/generate_cv_pdf.py cv-optimised.md cv.pdf --theme standard
 ```
 
 Themes: `standard` (default), `compact` (experienced candidates fighting the two-page limit), `relaxed` (larger print; suits cover letters). The script warns if unfilled `{{PLACEHOLDER}}` markers remain; never generate a submission PDF from a template with placeholders.
@@ -48,7 +48,7 @@ Themes: `standard` (default), `compact` (experienced candidates fighting the two
 **2. Verify.**
 
 ```bash
-python3 {skill}/scripts/verify_cv_pdf.py cv.pdf cv-optimised.md
+python3 .career-helper-tools/verify_cv_pdf.py cv.pdf cv-optimised.md
 ```
 
 The verifier checks the text layer (pages with too few extractable words; content words present in the markdown but missing from the PDF) and flags documents over the page limit (default two pages; use `--max-pages 0` to skip, for example for an academic CV). It also renders each page to `pdf-check/page_N.png`.
@@ -71,7 +71,7 @@ The verifier checks the text layer (pages with too few extractable words; conten
 **WeasyPrint unavailable and cannot be installed:** generate styled HTML instead and have the user print it to PDF from their browser (A4, default margins off, headers and footers disabled):
 
 ```bash
-python3 {skill}/scripts/generate_cv_pdf.py cv-optimised.md cv.html --html-only
+python3 .career-helper-tools/generate_cv_pdf.py cv-optimised.md cv.html --html-only
 ```
 
 Then run the verifier on whatever PDF the browser produced; the checks still apply.
