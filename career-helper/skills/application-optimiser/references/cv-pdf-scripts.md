@@ -2,7 +2,7 @@
 
 This file holds the two Python scripts that `cv-pdf-production.md` uses: `generate_cv_pdf.py` renders a markdown CV or cover letter to an ATS-safe PDF, and `verify_cv_pdf.py` checks the PDF before it is shared. They are kept inside Markdown so the plugin ships only text files.
 
-**How to use them:** when a verified PDF is needed, copy each script below, exactly as written and without the fence lines, into a file with the name given in its heading, in a `.career-helper-tools/` folder inside your working folder. Then run them as `cv-pdf-production.md` describes. They need Python 3 and the `markdown` and `weasyprint` packages. Write them fresh each session rather than editing them.
+**How to use them:** when a verified PDF is needed, copy each script below, exactly as written and without the fence lines, into a file with the name given in its heading, in a `.career-helper-tools/` folder inside the application folder that holds `cv-optimised.md`. Then run them as `cv-pdf-production.md` describes. They need Python 3 and the `markdown` and `weasyprint` packages. Write them fresh each session rather than editing them.
 
 ## generate_cv_pdf.py
 

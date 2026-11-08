@@ -37,6 +37,10 @@ PACKAGE_CONFIG_NAMES = {
     "yarn.lock", ".yarnrc", ".yarnrc.yml", ".npmrc", "bunfig.toml", "bun.lock", "bun.lockb",
     "uv.toml", "pyproject.toml", "requirements.txt", "pip.conf", "Pipfile", "Pipfile.lock", "poetry.lock",
 }
+PACKAGE_CONFIG_PATTERN = re.compile(
+    r"^(requirements|constraints)[\w.-]*\.(txt|in)$|^\.?(npmrc|yarnrc|pnpmfile)|^(package|pnpm-workspace|pnpm-lock)\b",
+    re.IGNORECASE,
+)
 ALLOWED_KEYS = {
     "skill": {"name", "description"},
     "command": {"description", "argument-hint"},
@@ -98,7 +102,7 @@ def check_plugin_files(problems: list[str]) -> None:
         if path.name in JUNK_NAMES:
             problems.append(f"{rel}: OS junk file")
             continue
-        if path.name in PACKAGE_CONFIG_NAMES:
+        if path.name in PACKAGE_CONFIG_NAMES or PACKAGE_CONFIG_PATTERN.match(path.name):
             problems.append(f"{rel}: package manager configuration file")
             continue
         suffix = path.suffix.lower()

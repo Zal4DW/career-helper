@@ -59,8 +59,8 @@ Declare these capabilities when publishing:
 Follow `/career-outputs` Capability 1:
 
 1. **Look it up** in `career-helper-artefacts.md`, then by the title `Career Helper Market Map`.
-2. **New board:** publish the page in `market-map-board-template.md` unchanged with the capabilities above, then write `map/meta`, `private/seed`, and one document per organisation in one batch. Read the `organisations` collection back once and confirm the count.
-3. **Existing board on an older page version:** republish the new page file to the same link. The data is kept.
+2. **New board:** extract the HTML from `market-map-board-template.md` into `market-map-board-template.html` and publish that file unchanged with the capabilities above, then write `map/meta`, `private/seed`, and one document per organisation in one batch. Read the `organisations` collection back once and confirm the count.
+3. **Existing board on an older page version:** extract the page again and republish the `.html` file to the same link. The data is kept.
 4. **Moving from an older map:** if `market-map.md` exists from an earlier version of Career Helper (no snapshot line at the top), it is the user's own record: read it and write it into the board, then turn the file into a snapshot.
 5. **Record** the link and page version in the register, and refresh the `market-map.md` snapshot.
 

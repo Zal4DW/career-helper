@@ -2,7 +2,7 @@
 
 **Purpose:** Turn a finished markdown CV or cover letter into a submission-ready PDF, then prove it survived the journey: the layout renders cleanly and the text layer parses the way an applicant tracking system will actually read it. A CV that looks right but parses wrong fails silently; this pipeline exists to catch that before an employer does.
 
-**Scripts:** `generate_cv_pdf.py` and `verify_cv_pdf.py`, held in @references/cv-pdf-scripts.md. Before step 1, write both into `.career-helper-tools/` in the working folder as that file describes.
+**Scripts:** `generate_cv_pdf.py` and `verify_cv_pdf.py`, held in @references/cv-pdf-scripts.md. Before step 1, write both into a `.career-helper-tools/` folder inside the application folder (the folder that holds `cv-optimised.md`), as that file describes, so the commands below find them.
 
 ---
 
@@ -35,7 +35,7 @@ If the user wants a visually designed CV for humans (portfolio roles, design rol
 
 Dependencies (one-time, not part of the plugin runtime): `pip install markdown weasyprint pypdf pdf2image`, plus the poppler system package for page images (`apt-get install poppler-utils` or `brew install poppler`).
 
-Run from the application folder so outputs land beside the CV.
+Run from the application folder, where the CV and `.career-helper-tools/` both sit, so outputs land beside the CV.
 
 **1. Generate.**
 
