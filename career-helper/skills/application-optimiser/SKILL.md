@@ -1,7 +1,6 @@
 ---
 name: application-optimiser
 description: Use when the user is applying for a specific role and wants help with the application itself, such as tailoring or fixing a CV for ATS, researching the company and role, planning the application, writing a cover letter or supporting statement, or producing an upload-ready CV PDF. Delivers verified outputs with layout and ATS text-layer checks.
-tags: cv, ats, resume, company, research, application, strategy
 ---
 
 # Application Optimiser
@@ -126,7 +125,7 @@ Drafts a cover letter, competency-based supporting statement, or short applicati
 
 **What you need:** A finished `cv-optimised.md` (or cover letter) with no unfilled placeholders
 **Load:** @references/cv-pdf-production.md
-**Scripts:** `scripts/generate_cv_pdf.py` and `scripts/verify_cv_pdf.py`
+**Scripts:** `generate_cv_pdf.py` and `verify_cv_pdf.py`, held in @references/cv-pdf-scripts.md
 
 A generate-verify loop, never generate-and-hope:
 - Renders the markdown to a deliberately plain, single-column, ATS-safe PDF (three themes: standard, compact, relaxed)

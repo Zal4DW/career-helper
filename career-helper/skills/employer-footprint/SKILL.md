@@ -1,7 +1,6 @@
 ---
 name: employer-footprint
 description: Use when the user wants a full, scored audit of what an employer would find about them online, matched to a specific target company or role. Runs parallel research across social media, public content, and search presence, then produces a credit-report style dashboard of positive and negative signals with recommendations. For a quick, informal social media check, use social-media-review instead.
-tags: footprint, digital, social-media, audit, employer, impression, online-presence, reputation
 ---
 
 # Employer Footprint Analysis

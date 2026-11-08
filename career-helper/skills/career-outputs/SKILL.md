@@ -1,7 +1,6 @@
 ---
 name: career-outputs
 description: Use when another Career Helper skill hands over an output to show as an interactive page, dashboard, Claude Doc, or slide deck, or when the user asks to open, find, refresh, or share one of those, such as "show my application board", "open my market map", "where is my ikigai map", or "turn my interview pack into a doc". Publishes the boards, the ikigai map, the progress and footprint dashboards, Docs, and Slides the same way every time, and keeps a register of their links.
-tags: artifacts, dashboards, docs, slides, boards, publishing, outputs, cowork
 ---
 
 # Career Outputs
@@ -65,9 +64,9 @@ Career Helper runs in Claude Cowork, which can publish artifacts: private pages 
 
 **What you need:** The owning skill's data, already gathered and checked
 **Load:** @references/publishing-rules.md, then the owning skill's board reference for its data fields:
-- Application board: @../career-navigator/references/kanban-board.md and the page @../career-navigator/references/kanban-board-template.html
-- Market map: @../market-mapper/references/market-map-board.md and the page @../market-mapper/references/market-map-board-template.html
-- Ikigai map: @../tim/references/tim-ikigai-visual.md and the page @../tim/references/ikigai-map-template.html
+- Application board: @../career-navigator/references/kanban-board.md and the page @../career-navigator/references/kanban-board-template.md
+- Market map: @../market-mapper/references/market-map-board.md and the page @../market-mapper/references/market-map-board-template.md
+- Ikigai map: @../tim/references/tim-ikigai-visual.md and the page @../tim/references/ikigai-map-template.md
 
 1. **Look it up first.** Check the register, then your artifact list for the fixed title. If the page exists, you are refreshing it; never publish a second copy.
 2. **Publish the page file unchanged** when it is new, or when its page version is older than the one in the plugin. The page files hold no user data, so there is nothing to fill in or escape.

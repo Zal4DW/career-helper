@@ -1,7 +1,6 @@
 ---
 name: getting-started
 description: Use when the user is new to Career Helper or wants to get more out of it, such as how to start, what to prepare, which order to use the skills in, tips for better results, or a shareable guide to the plugin.
-tags: getting-started, guide, help, how-to, tips, workflow, best-practices, onboarding
 ---
 
 # Getting Started Guide

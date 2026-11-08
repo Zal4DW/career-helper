@@ -6,6 +6,18 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ---
 
+## [2.0.1] - 2026-11-08
+
+### Fixed
+- **Plugin directory file types.** The directory accepts only Markdown, text, JSON, YAML, and images from unverified organisations, so version 2.0.0 was refused. The three board pages (`kanban-board-template`, `market-map-board-template`, and `ikigai-map-template`) are now Markdown references that hold the unchanged HTML in a fenced block, and the CV PDF scripts (`generate_cv_pdf.py` and `verify_cv_pdf.py`) now live, unchanged apart from the `#!` line, in `application-optimiser/references/cv-pdf-scripts.md`. The skills write the page or script out to the working folder when they need it. Page versions are unchanged, so existing boards do not need republishing.
+- **Plugin directory frontmatter.** `tags` is removed from every skill, and `color` and `memory` from the Tim agent, because the directory refuses frontmatter keys outside its allowed list. Tim's Agent Memory section goes with the `memory` key; Tim still keeps your progress in `career-helper-preferences.md` when you agree to it.
+
+### Changed
+- `scripts/check_house_style.py` now enforces the directory's rules: allowed file types only in the plugin folder, no `#!` files, no package manager configuration, UTF-8 with no NUL bytes, and only the accepted frontmatter keys (`name` and `description` for skills; `description` and `argument-hint` for commands; `name`, `description`, and `model` for agents). CI no longer compiles the removed plugin scripts.
+- `CLAUDE.md` and `CONTRIBUTING.md` record the same rules.
+
+---
+
 ## [2.0.0] - 2026-11-08
 
 ### Changed (breaking)

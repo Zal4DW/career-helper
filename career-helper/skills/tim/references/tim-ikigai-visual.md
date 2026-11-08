@@ -45,7 +45,7 @@ Synthesising overlaps from the user's own answers is allowed; this is interpreta
 The map is an interactive page in the user's Claude account, published through `/career-outputs` (Capability 1). The page holds no user data; the answers live in one database document, so the user can edit any region on the page and Claude reads it back later.
 
 1. **Look it up** in `career-helper-artefacts.md`, then by the title `Career Helper Ikigai`. Refresh the existing map rather than publishing a second one.
-2. **New map:** publish @references/ikigai-map-template.html unchanged, with capabilities `{"db": {}, "user": {}}`.
+2. **New map:** publish the page in @references/ikigai-map-template.md unchanged, with capabilities `{"db": {}, "user": {}}`.
 3. **Write the answers** to the document `ikigai/map` with these fields, each in the user's own words (or an empty string when genuinely unknown): `owner`, `date` (`YYYY-MM-DD`), `love`, `goodAt`, `needs`, `paid`, `passion`, `mission`, `profession`, `vocation`, `ikigai`, plus `updated` and `updatedBy: "claude"`.
 4. **Check once:** read the document back.
 5. **Tell the user** the map is in their Claude account, that any region can be edited there, and that an empty region is theirs to fill in.

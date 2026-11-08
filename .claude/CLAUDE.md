@@ -33,7 +33,8 @@ This file gives Claude (and any other AI assistant working in this repo) the hou
 
 ## Skill Conventions
 
-- Every `SKILL.md` starts with YAML frontmatter: `name`, `description`, `tags`.
+- Every `SKILL.md` starts with YAML frontmatter holding only `name` and `description`, each as plain text. Commands use only `description` and `argument-hint`; agents use only `name`, `description`, and `model`. The plugin directory refuses any other frontmatter key from unverified organisations, so do not add `tags`, `color`, `memory`, or similar.
+- The plugin folder holds only Markdown, text, JSON, and YAML files, plus PNG, JPEG, GIF, WebP, or ICO images. No scripts, HTML, or package manager configuration, and no file starting with `#!`. A page or script a skill needs is kept in a fenced code block inside a Markdown reference, and the skill writes it out when needed.
 - Each skill should have an Accessibility section that checks for `career-helper-preferences.md`.
 - Each skill should have a Tone of Voice subsection within Output Standards.
 - Skills must respect the no-em-dash, no-emoji, Oxford comma rules in both their prompts and their output.

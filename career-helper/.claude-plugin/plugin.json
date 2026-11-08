@@ -1,7 +1,7 @@
 {
   "name": "career-helper",
   "displayName": "Career Helper",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors, built for Claude Cowork. Seventeen skills, including Tim (a guided career coach), CV and cover letter work with verified ATS-safe PDFs, interview preparation and presentation slides, reference prep, job scouting, a skills gap radar, salary negotiation and offer evaluation, personal brand, career transitions, digital footprint review, and board-level AI oversight. Your applications and market map live on interactive boards that you and Claude both keep current, with an ikigai map, progress and footprint dashboards, Claude Docs, slide decks, and Cowork scheduled routines with a one-command weekly update.",
   "author": {
     "name": "Prosper AI Consulting",

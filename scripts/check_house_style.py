@@ -9,8 +9,12 @@ Checks:
 1. No em dashes or en dashes in any text file.
 2. No emoji or emoji-style markers (ticks, crosses, warning signs, checkboxes).
 3. plugin.json and marketplace.json parse, and their versions match.
-4. The plugin folder holds no binary files other than images, and no OS junk files.
-5. Every SKILL.md, command, and agent starts with YAML front matter that has a description.
+4. The plugin folder holds only the file types the plugin directory accepts from
+   unverified organisations (Markdown, text, JSON, YAML, and PNG, JPEG, GIF, WebP, or
+   ICO images), no file starting with #!, no package manager configuration, no OS junk
+   files, and only UTF-8 text with no NUL bytes.
+5. Every SKILL.md, command, and agent starts with YAML front matter that has a description
+   and uses only the keys the plugin directory accepts.
 
 Exits non-zero and lists every problem found.
 """
@@ -26,6 +30,18 @@ PLUGIN = ROOT / "career-helper"
 
 TEXT_SUFFIXES = {".md", ".html", ".json", ".py", ".yml", ".yaml", ".txt"}
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}
+PLUGIN_TEXT_SUFFIXES = {".md", ".txt", ".json", ".yml", ".yaml"}
+PLUGIN_IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".ico"}
+PACKAGE_CONFIG_NAMES = {
+    "package.json", "package-lock.json", "npm-shrinkwrap.json", "pnpm-workspace.yaml", "pnpm-lock.yaml",
+    "yarn.lock", ".yarnrc", ".yarnrc.yml", ".npmrc", "bunfig.toml", "bun.lock", "bun.lockb",
+    "uv.toml", "pyproject.toml", "requirements.txt", "pip.conf", "Pipfile", "Pipfile.lock", "poetry.lock",
+}
+ALLOWED_KEYS = {
+    "skill": {"name", "description"},
+    "command": {"description", "argument-hint"},
+    "agent": {"name", "description", "model"},
+}
 JUNK_NAMES = {".DS_Store", "Thumbs.db", "desktop.ini"}
 SKIP_DIRS = {".git", "node_modules", "__pycache__"}
 
@@ -76,16 +92,30 @@ def check_manifests(problems: list[str]) -> None:
 
 
 def check_plugin_files(problems: list[str]) -> None:
-    """Flag OS junk files and any non-image binary inside the plugin folder."""
+    """Flag any file in the plugin folder that the plugin directory would refuse."""
     for path in iter_files(PLUGIN):
         rel = path.relative_to(ROOT)
         if path.name in JUNK_NAMES:
             problems.append(f"{rel}: OS junk file")
             continue
-        suffix = path.suffix.lower()
-        if suffix in TEXT_SUFFIXES or suffix in IMAGE_SUFFIXES:
+        if path.name in PACKAGE_CONFIG_NAMES:
+            problems.append(f"{rel}: package manager configuration file")
             continue
-        problems.append(f"{rel}: non-image binary or unexpected file type in the plugin folder")
+        suffix = path.suffix.lower()
+        if suffix in PLUGIN_IMAGE_SUFFIXES:
+            continue
+        if suffix not in PLUGIN_TEXT_SUFFIXES:
+            problems.append(f"{rel}: file type not accepted by the plugin directory (Markdown, text, JSON, YAML, or image only)")
+            continue
+        data = path.read_bytes()
+        if data.startswith(b"#!"):
+            problems.append(f"{rel}: starts with #!")
+        if b"\x00" in data:
+            problems.append(f"{rel}: contains NUL bytes")
+        try:
+            data.decode("utf-8")
+        except UnicodeDecodeError:
+            problems.append(f"{rel}: not valid UTF-8")
 
 
 FRONT_MATTER = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
@@ -93,8 +123,12 @@ FRONT_MATTER = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 
 def check_front_matter(problems: list[str]) -> None:
     """Check skills, commands, and agents start with front matter that has a description."""
-    targets = list(PLUGIN.glob("skills/*/SKILL.md")) + list(PLUGIN.glob("commands/*.md")) + list(PLUGIN.glob("agents/*.md"))
-    for path in sorted(targets):
+    targets = (
+        [(p, "skill") for p in PLUGIN.glob("skills/*/SKILL.md")]
+        + [(p, "command") for p in PLUGIN.glob("commands/*.md")]
+        + [(p, "agent") for p in PLUGIN.glob("agents/*.md")]
+    )
+    for path, kind in sorted(targets):
         rel = path.relative_to(ROOT)
         match = FRONT_MATTER.match(path.read_text(encoding="utf-8"))
         if not match:
@@ -102,10 +136,11 @@ def check_front_matter(problems: list[str]) -> None:
             continue
         if not re.search(r"^description:[ \t]*\S", match.group(1), re.MULTILINE):
             problems.append(f"{rel}: front matter has no description")
-        if path.name == "SKILL.md":
-            for key in ("name", "tags"):
-                if not re.search(rf"^{key}:[ \t]*\S", match.group(1), re.MULTILINE):
-                    problems.append(f"{rel}: front matter has no {key}")
+        if kind == "skill" and not re.search(r"^name:[ \t]*\S", match.group(1), re.MULTILINE):
+            problems.append(f"{rel}: front matter has no name")
+        for key in re.findall(r"^([A-Za-z0-9_-]+):", match.group(1), re.MULTILINE):
+            if key not in ALLOWED_KEYS[kind]:
+                problems.append(f"{rel}: front matter key '{key}' is not accepted by the plugin directory")
 
 
 def main() -> int:

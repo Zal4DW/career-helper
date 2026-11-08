@@ -1,7 +1,6 @@
 ---
 name: skills-radar
 description: Use when the user wants an honest picture of their skills against a target role, such as a skills inventory, a gap analysis, finding skills missing from their CV, understanding repeated "lacks X" rejections, or a learning plan. Mines their public work (with consent) for evidence and separates real skill gaps from evidence gaps.
-tags: skills, gap-analysis, upskilling, learning, inventory, competencies, development, enrichment
 ---
 
 # Skills Radar

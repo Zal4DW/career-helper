@@ -12,9 +12,9 @@ Each output has one fixed title. The title is how you find the output again when
 
 | Output | Title | Kind | Capabilities to declare |
 |:-------|:------|:-----|:------------------------|
-| Application board | `Career Helper Applications` | Page from `kanban-board-template.html` | `{"db": {}, "user": {}}` |
-| Market map | `Career Helper Market Map` | Page from `market-map-board-template.html` | `{"db": {"rules": [{"path": "private", "read": "owner", "write": "owner"}]}, "user": {}}` |
-| Ikigai map | `Career Helper Ikigai` | Page from `ikigai-map-template.html` | `{"db": {}, "user": {}}` |
+| Application board | `Career Helper Applications` | Page in `kanban-board-template.md` | `{"db": {}, "user": {}}` |
+| Market map | `Career Helper Market Map` | Page in `market-map-board-template.md` | `{"db": {"rules": [{"path": "private", "read": "owner", "write": "owner"}]}, "user": {}}` |
+| Ikigai map | `Career Helper Ikigai` | Page in `ikigai-map-template.md` | `{"db": {}, "user": {}}` |
 | Progress dashboard | `Career Helper Progress` | Dashboard artifact type | From the type |
 | Footprint dashboard | `Career Helper Footprint` | Dashboard artifact type | From the type |
 

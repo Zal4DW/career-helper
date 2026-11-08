@@ -1,7 +1,6 @@
 ---
 name: ai-impact-assessment
 description: Use when the user is worried about or curious how AI and automation will affect their current or target role. Runs a live research assessment of whether the role faces material AI disruption in the next 12 months, then gives a frank verdict and a 6-month mitigation plan.
-tags: ai-impact, automation, disruption, future-proofing, career-risk, mitigation, ai-jobs
 ---
 
 # AI Impact Assessment
