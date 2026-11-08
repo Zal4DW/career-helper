@@ -48,7 +48,7 @@ When the user reports a rejection:
 2. Separate what was actually said from the user's honest assessment of the likely real reason. Keep the two apart in the note.
 3. Cross-reference the job description if the application folder has it, to identify any genuine gap the CV undersold.
 4. Save to `applications/learnings/rejections/{org-slug}-{role-slug}.md`.
-5. Move the role to the Closed section of `applications/tracker.md` (see the Application Tracker capability); do not delete it.
+5. Move the role's card to Closed on the application board, with outcome Rejected (see the Application Tracker capability); do not delete it.
 
 ## Running a Win Log
 

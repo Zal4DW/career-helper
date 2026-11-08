@@ -8,7 +8,7 @@ This file recognises community contributions that have shaped the plugin. Contri
 
 ## Plugin Maintainer
 
-**Paul Bratcher** ([@Zal4DW](https://github.com/Zal4DW)) — Prosper AI Consulting, UK
+**Paul Bratcher** ([@Zal4DW](https://github.com/Zal4DW)): Prosper AI Consulting, UK
 Plugin design, skill architecture, and ongoing maintenance.
 
 ---
@@ -17,7 +17,7 @@ Plugin design, skill architecture, and ongoing maintenance.
 
 ### @sal-avelar-01
 
-- **Contribution:** PR #29 — Job-search learnings loop (interview debriefs, rejection analyses, win logs, and synthesised patterns)
+- **Contribution:** PR #29: Job-search learnings loop (interview debriefs, rejection analyses, win logs, and synthesised patterns)
 - **Date:** June 2026
 - **What was adapted:** The structure of the learnings loop (per-event debrief, rejection, and win notes feeding a single synthesised patterns file) was adapted into `career-navigator` as a new capability, with templates rebuilt to the house style (UK English, "CV" rather than "resume", `{{PLACEHOLDER}}` syntax, no em dashes, template footers) and wired into `/career-helper:status`. The submitted master CV and the parallel `job-search/` directory were not adopted: personal data does not belong in the repo, and reusable value lives inside the plugin architecture.
 - **Released in:** v1.14.0
@@ -28,7 +28,7 @@ Thank you for the learnings-loop idea. Treating each rejection and win as struct
 
 ### @enigmaicon-eng
 
-- **Contribution:** PR #22 — Career coaching instructions and CV content verification framework
+- **Contribution:** PR #22: Career coaching instructions and CV content verification framework
 - **Date:** March 2026
 - **What was adapted:** The verified-content-only guardrails, trigger-phrase STOP list, decision tree for source verification, and the 9-step job-analysis flow were extracted from this contribution and integrated into `application-optimiser` (new `verified-content-guardrails.md` and `master-facts-template.md` references, refactored `ATS-Helper.md` execution plan). The coaching-voice guidance (direct market feedback, flight-risk check, overthinking-versus-applying heuristic) was integrated into `career-navigator`. Tim gained master-facts awareness for dispatching CV work.
 - **Released in:** v1.10.0
@@ -41,7 +41,7 @@ Thank you for raising the bar on content verification discipline. The hallucinat
 
 See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for how to propose changes, what belongs in the repo, and the house style.
 
-Every contribution — ideas, pull requests, bug reports, documentation fixes — is welcome, and every contributor will be credited here.
+Every contribution (ideas, pull requests, bug reports, documentation fixes) is welcome, and every contributor will be credited here.
 
 ---
 

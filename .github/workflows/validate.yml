@@ -1,0 +1,38 @@
+name: Validate plugin
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: House-style and listing checks
+        run: python3 scripts/check_house_style.py
+
+      - name: Compile Python scripts
+        run: python3 -m py_compile career-helper/skills/application-optimiser/scripts/*.py scripts/*.py
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Claude Code CLI (pinned)
+        run: npm install -g @anthropic-ai/claude-code@2.1.319
+
+      - name: Validate plugin manifest (strict)
+        run: claude plugin validate ./career-helper --strict
+
+      - name: Validate marketplace manifest
+        run: claude plugin validate .

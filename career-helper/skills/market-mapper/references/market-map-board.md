@@ -1,85 +1,105 @@
-# Market Map Board View
+# Market Map Board
 
-**Purpose:** Give the user an interactive, visual view of the watchlist when a markdown table stops being enough. The board renders every organisation on the map as a card in one of four priority columns (Act now, Warm, Watch, Quiet) and lets the user drag cards between priorities, edit the summary fields, and export the result back as the map's Watchlist section. It is the same mechanism as the application kanban board in `/career-navigator`, applied to the market map.
+**Purpose:** Keep the market map as one interactive board that the user and Claude both keep current. Every organisation is a card in one of four priority columns (Act now, Warm, Watch, Quiet). The user can raise or lower priorities with a reason, edit the overview, angle, and their own notes, and see each organisation's dated signals and decision makers; Claude researches, adds signals, and reads the user's changes back in any later session, including a scheduled weekly update.
 
-**Applies to:** The board artefact at `market-map-board.html`, generated from `market-map.md` using `@references/market-map-board-template.html`.
+**Applies to:** The artifact titled `Career Helper Market Map`, published from `@references/market-map-board-template.html`. Its database is the record of the map. When the session has a workspace folder, a read-only snapshot is kept at `market-map.md` in the shape of `@references/market-map-template.md`.
 
 ---
 
 ## Principles
 
-1. **The map file remains the source of truth.** The board is a view, not a second database. `market-map.md` holds the signals, sources, and decision-maker detail; the board shows the watchlist summary. The Watchlist is the section the board exports, and the sync steps below also carry priority changes and organisation additions or removals into the affected detail sections, so the map never disagrees with itself.
-2. **Never invent a signal or a person.** The board is populated only from rows that exist in the map. Unknown fields stay blank; the edit dialog says so.
-3. **One board, regenerated.** There is only ever one `market-map-board.html`. Overwrite it after each weekly update; do not accumulate dated copies. (Dated update files live in `market-watch/`; the board is not one of them.)
-4. **Offline and private.** The template is fully self-contained: no external scripts, fonts, or network calls. Board edits persist in the browser's local storage only, on the user's machine. The seed employer name appears only in the map header, never on the board.
+1. **The board is the record.** Organisations, signals, decision makers, priorities, and themes all live in its database. `market-map.md` is a snapshot.
+2. **Never invent a signal or a person.** Signals and decision makers are written only by Claude, each with a dated public source. The page shows them but does not let anyone type new ones, so every entry keeps its source.
+3. **The seed employer stays private.** It is stored in an owner-only part of the database (`private/seed`) that the page never reads, so it never appears on the board, whoever the board is shared with.
+4. **One board.** Find it through the register or its fixed title before doing anything (see `@../career-outputs/references/publishing-rules.md`).
 
 ---
 
-## When to Offer the Board
+## Data
 
-Offer the board (do not push it) when:
+Declare these capabilities when publishing:
 
-- The map has eight or more organisations, or the user is running weekly updates and wants to see movement at a glance.
-- The user asks to "see my watchlist as a board", "show me the market map visually", or similar.
-- The user already uses the application board and asks whether the map can work the same way.
+```json
+{"db": {"rules": [{"path": "private", "read": "owner", "write": "owner"}]}, "user": {}}
+```
 
-Suggested wording: "Would you like your watchlist as a board? Organisations sit in four priority columns, you can drag them between priorities as your own judgement changes, and export the result back into your map."
+### `organisations/{id}`: one document per organisation
 
-If the map has fewer than five organisations, do not offer the board proactively; the watchlist table is enough. A direct request is always honoured, whatever the map's size.
+| Field | Meaning | Written by |
+|:------|:--------|:-----------|
+| `organisation` | Name | Claude or board |
+| `overview` | One line: what they do, size band, location | Claude or board |
+| `priority` | Act now, Warm, Watch, or Quiet | Claude or board |
+| `priorityReason` | One line; the evidence (Claude) or the user's judgement (board) | Claude or board |
+| `priorityBy` | `claude` when evidence set it, `board` when the user did | Claude or board |
+| `priorityChanged` | `YYYY-MM-DD` of the last priority change | Claude or board |
+| `signalGroup`, `latestSignal`, `signalDate` | The latest signal in the window: group (Hiring, Growth, Investment, Change), one line of fact, date | Claude |
+| `decisionMaker` | One-line summary: name, title (source), or `[NOT FOUND]` | Claude |
+| `angle` | One-line suggested action tied to a signal, respecting the posture | Claude or board |
+| `notes` | The user's own notes | Board (Claude only when asked) |
+| `lastChecked` | `YYYY-MM-DD`, or empty for a card the user added | Claude |
+| `website`, `careersPage`, `linkedinPage` | `https://` URLs, or empty | Claude |
+| `sizeBand`, `whyOnMap` | From the map's organisation detail | Claude |
+| `signals` | List of `{date, group, signal, source, seen}`, every entry in the window | Claude |
+| `decisionMakers` | List of `{name, title, source, linkedin, appointed}`; `[NOT FOUND]` entries carry the search to run in `title` | Claude |
+| `updated`, `updatedBy` | Stamped on every write | Both |
+
+### `map/meta`
+
+`owner`, `posture` (Employed and discreet, or Openly searching), `direction`, `signalWindow`, `firstBuilt`, `lastChecked`, `themes` (a list of three to five one-line observations), and `coverage` (the coverage statement).
+
+### `private/seed`
+
+`seedOrganisation` and `seedProfile` (the seed profile table as fields). Owner-only; never shown on the page.
 
 ---
 
-## Generating the Board
+## Publishing and Refreshing the Page
 
-1. **Read the map.** Load `market-map.md`. If none exists, build one first (Capability 1); the board has nothing to show without it.
-2. **Load the template.** Read `@references/market-map-board-template.html`.
-3. **Populate the data block.** Replace the JSON inside `<script id="board-data" type="application/json">`:
-   - `owner`: the user's name from the map header, or `[UNKNOWN]`.
-   - `posture`: the posture from the map header (Employed and discreet, or Openly searching).
-   - `generated`: today's date, `YYYY-MM-DD`.
-   - `cards`: one object per watchlist row, mapping `organisation`, `overview`, `priority`, `signalGroup` (Hiring, Growth, Investment, or Change; empty string when there is no signal), `latestSignal` (the signal text and source, without the group or the date), `signalDate`, `decisionMaker`, `angle`, and `lastChecked` (empty string when the map shows `[UNKNOWN]`; the weekly update then checks the whole signal window for that organisation).
-   - Use empty strings for unknown fields, never invented values. Remove the placeholder example card.
-   - Escape every literal `<` inside JSON string values as `\u003c` (JSON.parse restores the character). Map content includes fetched web text; an unescaped closing script tag would otherwise terminate the data block and break, or worse script-inject, the page.
-4. **Do not edit the HTML text.** The header paragraph is rendered from the JSON `owner`, `posture`, and `generated` values with `textContent`, so there are no placeholders outside the data block and nothing user-supplied is ever inserted as markup. (Browser state is keyed to a fingerprint of the data block, so a regenerated board loads fresh; if the previous board had edits that were never exported, the new board shows a recovery button that copies them as watchlist markdown, and keeps offering it across reloads until a copy succeeds.)
-5. **Write the file** to `market-map-board.html` in the workspace root and tell the user to open it in their browser.
+Follow `/career-outputs` Capability 1:
 
-Regenerate the board at the end of every weekly update so it matches the map.
+1. **Look it up** in `career-helper-artefacts.md`, then by the title `Career Helper Market Map`.
+2. **New board:** publish `market-map-board-template.html` unchanged with the capabilities above, then write `map/meta`, `private/seed`, and one document per organisation in one batch. Read the `organisations` collection back once and confirm the count.
+3. **Existing board on an older page version:** republish the new page file to the same link. The data is kept.
+4. **Moving from an older map:** if `market-map.md` exists from an earlier version of Career Helper (no snapshot line at the top), it is the user's own record: read it and write it into the board, then turn the file into a snapshot.
+5. **Record** the link and page version in the register, and refresh the `market-map.md` snapshot.
+
+Offer to open the board when the map is built, and whenever the user asks to "see my watchlist", "show me the market map", or similar.
 
 ---
 
-## Syncing Changes Back
+## Syncing the User's Changes
 
-The board has two export buttons: "Copy watchlist markdown" and "Download watchlist.md". Both produce the Watchlist section in the exact `market-map.md` format, ordered by priority and renumbered.
+There is no export step. At the start of any task that uses the map (including the weekly update):
 
-When the user pastes exported markdown or mentions they have made board changes:
-
-1. **Diff before overwriting.** Compare the export against the current Watchlist section. Summarise what changed ("Two organisations raised to Act now; one removed; one added as Watch") and confirm before writing.
-2. **Replace the Watchlist section** of `market-map.md`, then update the Priority line in the detail section of every organisation whose priority changed, so the map never carries two different priorities for one organisation. The board carries no reason for a priority change, so do not invent one: this sync happens in conversation, so ask the user once for the reason behind each changed priority and record it marked as their judgement; if they give none, record "Changed on the board on {{date}}; reason not given" and leave the old evidence-based reason out. Themes, coverage, and next actions are untouched. For an organisation the user added on the board, create a minimal detail section with `[NOT FOUND]` fields and offer to research it at the next update; for one the user removed, remove its detail section too.
-3. **Priority changes made by hand are the user's judgement.** Record them, but at the next weekly update say plainly where the evidence disagrees ("You raised Acme to Act now; no hiring signal has appeared since") rather than silently overriding either side.
-4. **Regenerate the board** so the file data matches (otherwise "Reset to file data" would restore stale data).
-
-When the board is regenerated unattended (the weekly update does this), any edits made on the previous board and never exported are not lost: the new board detects them and offers a "Copy unexported changes from the previous board" button. Say in the update report that the board was regenerated, so the user knows to look for that button if they had been editing.
-
-If the user edited both the map file and the board since the last sync, treat the map file as authoritative, list the conflicts, and ask the user to resolve them. Never silently discard either side.
+1. Read `map/meta` and the `organisations` collection.
+2. Pick out documents with `updatedBy: "board"` changed since the register's "Last read" date.
+3. **Priority changes made on the board are the user's judgement.** Keep them, with the reason they gave (`priorityReason`). If they gave none, ask once in conversation; in an unattended run, record "Changed on the board on {{date}}; reason not given" and do not invent one. At the next update, say plainly where the evidence disagrees ("You raised Example Org to Act now; no hiring signal has appeared since") rather than silently overriding either side.
+4. **Organisations the user added** have an empty `lastChecked`: research them at the next update, filling the detail fields and signals.
+5. **Organisations the user removed** are gone from the board; remove them from the snapshot too, and do not re-suggest them for at least one update.
+6. Refresh the snapshot and update "Last read".
 
 ---
 
 ## Accessibility
 
-The template is built to be usable without a mouse and without colour vision, and generated boards must keep it that way:
+The page is built to be usable without a mouse and without colour vision; keep it that way:
 
-- Every priority is a text label on the column, with a one-line meaning under it, and in each card's accessible name; colour is decoration, never the only signal.
-- Cards are keyboard operable: focus a card, use the left and right arrow keys or the labelled Raise and Lower buttons to move it, and Enter to edit.
+- Every priority is a text label on the column, with its one-line meaning under it, and in each card's accessible name.
+- Cards are keyboard operable: focus a card, use the left and right arrow keys or the labelled Raise and Lower buttons to move it, and Enter to open it.
 - Moves and saves are announced through a live region for screen readers.
-- An organisation not checked for more than fourteen days shows a text `STALE` tag, not just a colour change.
-- The board respects the user's light or dark system preference.
+- An organisation not checked for more than fourteen days shows a text `STALE` tag.
+- The page follows the user's light or dark theme and works at phone width.
 
-If `career-helper-preferences.md` sets `dyslexia_friendly: true`, keep the overview and angle fields short when populating the board, and explain the export flow in numbered steps. If `colour_blind: true`, the template already conveys nothing by colour alone; no changes are needed.
+If `career-helper-preferences.md` sets `dyslexia_friendly: true`, keep the overview and angle fields short when writing them. If `colour_blind: true`, no changes are needed.
 
 ---
 
 ## What the Board Is Not
 
-- It is not the evidence. Signal sources, dates, and decision-maker confirmations live in the map's detail sections; the board shows one line each.
-- It is not a live sync: the HTML file cannot write to disk, which is why the export step exists. Make sure the user understands this the first time you generate a board.
+- It is not a place to type evidence. Signals and decision makers come from Claude's dated research; ask Claude to add or correct them.
 - It is not a place for outreach drafts. Angles are one line; anything longer belongs in `/career-navigator` networking intelligence.
+
+---
+
+*Market Map Board v2.0 | Career Helper Plugin | Prosper AI Consulting, UK*

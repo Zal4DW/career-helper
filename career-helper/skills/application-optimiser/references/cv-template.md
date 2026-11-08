@@ -92,9 +92,9 @@
 
 | Keyword | Location in CV | Status |
 |---------|---------------|--------|
-| {keyword 1} | Skills, Experience (Company X) | ✓ Covered |
-| {keyword 2} | Profile, Experience (Company Y) | ✓ Covered |
-| {keyword 3} | [GAP] | ⚠ Missing - Recommend: {suggestion} |
+| {keyword 1} | Skills, Experience (Company X) | Covered |
+| {keyword 2} | Profile, Experience (Company Y) | Covered |
+| {keyword 3} | [GAP] | MISSING. Recommend: {suggestion} |
 
 **Coverage Rate:** {X}% ({Y} of {Z} keywords present)
 

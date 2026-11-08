@@ -97,7 +97,7 @@ Turns the top gaps (three at most) into a plan:
 - Realistic timescales against the user's stated weekly hours; an overloaded plan is a plan that fails
 - Checkpoints that connect back to the job search: when a gap closes, update the CV via `/application-optimiser` and re-rank the shortlist via `/job-scout`
 
-**Output:** `learning-plan.md`
+**Output:** `learning-plan.md`, offered as a Claude Doc (`Learning Plan`) through `/career-outputs`
 
 ---
 

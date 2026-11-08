@@ -1,7 +1,10 @@
 # Market Map
 
+*Snapshot of your market map board on {{YYYY-MM-DD}}. The board is the record: change it there, or ask Claude. Edits made to this file are not read back.*
+
 **Owner:** {{NAME}}
-**Seed organisation:** {{CURRENT_OR_RECENT_EMPLOYER}} (recorded here only; not stored elsewhere)
+**Board:** Career Helper Market Map ({{LINK}})
+**Seed organisation:** {{CURRENT_OR_RECENT_EMPLOYER, included only when the posture is Openly searching and you asked for it; otherwise "Kept privately on the board"}}
 **Posture:** {{Employed and discreet / Openly searching}}
 **Direction:** {{FUNCTION_AND_LEVEL}}, {{GEOGRAPHY}}
 **Signal window:** last {{N}} months

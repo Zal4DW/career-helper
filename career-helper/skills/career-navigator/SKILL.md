@@ -18,7 +18,7 @@ Plan your search, build your network, and navigate offers.
 | 4 | Offer Evaluation | Comparing multiple offers or evaluating a single one |
 | 5 | Application Tracker | Keeping every live application and its next action in one place |
 | 6 | Application Learnings Loop | Capturing interviews, rejections, and wins, then synthesising the patterns |
-| 7 | Kanban Board View | Seeing and updating the whole pipeline visually when several applications are in flight |
+| 7 | Kanban Board View | Seeing, moving, and editing your applications on the interactive board, or sharing it |
 
 ## Quick Start
 
@@ -119,7 +119,7 @@ Comprehensive activity planning:
 
 **Approach:** Collaborative, human-in-the-loop planning. Professional but warm tone. Acknowledges emotional reality of job searching.
 
-**Output:** `three-month-plan.md`
+**Output:** `three-month-plan.md`, offered as a Claude Doc (`Three-Month Career Plan`) through `/career-outputs`
 
 ---
 
@@ -144,7 +144,7 @@ Region-aware negotiation coaching:
 - EU: Mandatory benefits, works councils, 13th month salary
 - APAC: Variable bonus structures, housing allowances
 
-**Output:** `applications/{role-slug}/negotiation-strategy.md`
+**Output:** `applications/{role-slug}/negotiation-strategy.md`, offered as a Claude Doc through `/career-outputs`
 
 ---
 
@@ -163,7 +163,7 @@ Comprehensive offer analysis:
 - Intuition check and regret minimisation framework
 - Scenario planning (best/likely/worst cases)
 
-**Output:** `offer-evaluation.md`
+**Output:** `offer-evaluation.md`, offered as a Claude Doc through `/career-outputs`
 
 ---
 
@@ -171,17 +171,18 @@ Comprehensive offer analysis:
 
 **What you need:** Nothing to start; existing application folders if any
 **Load:** @references/application-tracker.md
-**Template:** @references/application-tracker-template.md
+**Template:** @references/application-tracker-template.md (workspace snapshot)
 
-A single, plain-text board of every live application, owned by the user and stored locally:
-- Builds from a scan of existing `applications/*/` folders, then confirms each stage with you
+One record of every live application, kept on your application board in your Claude account:
+- Builds from a scan of existing `applications/*/` folders (or an older `applications/tracker.md`), then confirms each stage with you
 - Tracks role, organisation, stage, next action, and next date per application
 - Uses fixed text-label stages (Researching through to Closed), never colour coding
 - Records only what you confirm or what existing files show, never inventing status
+- Reads back changes you made on the board before updating anything
 - Surfaces one honest observation when the data warrants it (stalled pipeline, overdue actions, thin volume)
-- Read by `/career-helper:status` as the spine of your progress summary
+- Read by `/career-helper:status` and `/career-helper:weekly-update` as the spine of your progress summary
 
-**Output:** `applications/tracker.md`
+**Output:** The application board's database (`Career Helper Applications`), plus a read-only snapshot at `applications/tracker.md` when you have a workspace folder
 
 ---
 
@@ -205,25 +206,24 @@ Turn each outcome into a short, structured note, then periodically synthesise th
 
 ## 7. Kanban Board View
 
-**What you need:** An existing `applications/tracker.md` (build one first via the Application Tracker if not)
-**Load:** @references/kanban-board.md
-**Template:** @references/kanban-board-template.html
+**What you need:** Nothing; the board is created with the tracker (Capability 5)
+**Load:** @references/kanban-board.md, and `/career-outputs` for publishing
+**Page:** @references/kanban-board-template.html
 
-An interactive, self-contained HTML board generated from the tracker:
+The interactive application board, kept in your Claude account:
 - One card per application in six stage columns (Researching, Applying, Applied, Interviewing, Offer, Closed)
 - Drag and drop between stages, with keyboard-operable move buttons and an edit dialog
 - Text-label stages and an `OVERDUE` text tag; colour is never the only signal
-- No external assets or network calls; board edits persist in the browser only
-- Export buttons produce tracker markdown so changes flow back into `applications/tracker.md`
-- The tracker file remains the source of truth; the board is a regenerable view
+- Your changes are saved straight away and Claude reads them back next time; no export step
+- Private to you unless you share it from the artifact's share menu
 
-**Output:** `applications/board.html`
+**Output:** The `Career Helper Applications` artifact, recorded in `career-helper-artefacts.md`
 
 ---
 
 ## Application Folder
 
-Role-specific outputs (networking intelligence, negotiation strategy) are saved in `applications/{role-slug}/`. Cross-application outputs (three-month-plan, offer-evaluation, tracker) are saved at the `applications/` level or workspace root. When running a role-specific capability, check if the application folder exists first using Glob. If it doesn't, create it when saving the first output.
+Role-specific outputs (networking intelligence, negotiation strategy) are saved in `applications/{role-slug}/`. Cross-application outputs (three-month-plan, offer-evaluation, the tracker snapshot) are saved at the `applications/` level or workspace root; the three-month plan and offer evaluation can also be kept as Claude Docs (see `/career-outputs`). When running a role-specific capability, check if the application folder exists first using Glob. If it doesn't, create it when saving the first output.
 
 ---
 
@@ -287,6 +287,7 @@ When a capability names a template, load it with the @ reference before writing,
 - **/interview-master** - Prepare for interviews
 - **/career-transitions** - Explore portfolio/fractional career paths
 - **/market-mapper** - Map the organisations like your employer that are growing or hiring; an Act now organisation there seeds networking intelligence here
+- **/career-outputs** - Publishes the application board and keeps plans and evaluations as Claude Docs
 
 ---
 

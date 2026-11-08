@@ -83,6 +83,7 @@ NLP and recruitment AI specialist approach:
 **Output:**
 - `applications/{role-slug}/cv-optimised.md`
 - `applications/{role-slug}/linkedin-updates.md` (LinkedIn sync recommendations)
+- Optionally, a Claude Doc (`CV Draft: {{ROLE}} at {{ORGANISATION}}`) for drafting and discussion; the file you submit still comes from the markdown through CV PDF Production (Capability 5), because applicant tracking systems need a plain, verified file
 
 ---
 

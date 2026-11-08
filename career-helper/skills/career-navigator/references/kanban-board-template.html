@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Application Board</title>
+<title>Career Helper Applications</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<!--
+  Career Helper application board. Page version 2.0.0.
+  Publish this file unchanged as an artifact with capabilities {db: {}, user: {}}.
+  It holds no user data: every application lives in the artifact database.
+    cards/{id}     one document per application (fields in references/kanban-board.md)
+    board/meta     {owner, created}
+  Claude seeds and reads the database with the artifact data tools; the page
+  reads it live and writes the user's moves and edits back. User text is only
+  ever rendered with textContent.
+-->
 <style>
+  /* Layout: six stage columns that scroll sideways inside their own track; one column per row on a phone. */
   :root {
     --bg: #f4f6f9;
     --surface: #ffffff;
@@ -12,104 +19,77 @@
     --ink-soft: #5a616b;
     --line: #d9dee6;
     --accent: #1a4d8f;
+    --accent-ink: #ffffff;
     --accent-soft: #e8eef7;
     --warn-ink: #7a4a00;
     --warn-bg: #fff3df;
     --focus: #b25000;
-    font-size: 16px;
+    --font-body: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #16191d;
-      --surface: #21252b;
-      --ink: #e6e9ed;
-      --ink-soft: #a7aeb8;
-      --line: #3a4048;
-      --accent: #7aa7dd;
-      --accent-soft: #263243;
-      --warn-ink: #ffd9a0;
-      --warn-bg: #453416;
-      --focus: #ffb066;
+    :root:not([data-theme="light"]) {
+      --bg: #16191d; --surface: #21252b; --ink: #e6e9ed; --ink-soft: #a7aeb8; --line: #3a4048;
+      --accent: #7aa7dd; --accent-ink: #16191d; --accent-soft: #263243;
+      --warn-ink: #ffd9a0; --warn-bg: #453416; --focus: #ffb066;
+      color-scheme: dark;
     }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16191d; --surface: #21252b; --ink: #e6e9ed; --ink-soft: #a7aeb8; --line: #3a4048;
+    --accent: #7aa7dd; --accent-ink: #16191d; --accent-soft: #263243;
+    --warn-ink: #ffd9a0; --warn-bg: #453416; --focus: #ffb066;
+    color-scheme: dark;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+    font-family: var(--font-body);
+    font-size: 16px;
     background: var(--bg);
     color: var(--ink);
     line-height: 1.45;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 18px 26px;
   }
-  header {
-    padding: 18px 22px 10px 22px;
-  }
-  header h1 { margin: 0 0 2px 0; font-size: 1.35rem; }
+  header h1 { margin: 0 0 2px 0; font-size: 1.35rem; text-wrap: balance; }
   header p { margin: 0; color: var(--ink-soft); font-size: 0.9rem; }
-  .toolbar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 10px 22px 14px 22px;
-    align-items: center;
-  }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 8px; padding-block: 12px; align-items: center; }
   button {
-    font: inherit;
-    font-size: 0.85rem;
-    padding: 7px 14px;
-    border-radius: 6px;
-    border: 1px solid var(--line);
-    background: var(--surface);
-    color: var(--ink);
-    cursor: pointer;
+    font: inherit; font-size: 0.85rem; padding: 7px 14px; border-radius: 6px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer;
   }
-  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-  @media (prefers-color-scheme: dark) {
-    button.primary { color: #16191d; }
-  }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  button:disabled { opacity: 0.55; cursor: not-allowed; }
   button:focus-visible, [tabindex]:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible {
-    outline: 3px solid var(--focus);
-    outline-offset: 2px;
+    outline: 3px solid var(--focus); outline-offset: 2px;
   }
-  .status-msg {
-    font-size: 0.85rem;
-    color: var(--ink-soft);
-    min-height: 1.2em;
-    padding: 0 22px 6px 22px;
+  .notice {
+    font-size: 0.9rem; color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+    border-radius: 8px; padding: 10px 12px; margin: 0 0 12px 0; max-width: 65ch;
   }
+  .status-msg { font-size: 0.85rem; color: var(--ink-soft); min-height: 1.2em; margin: 0 0 8px 0; }
+  .board-wrap { overflow-x: auto; }
   .board {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(230px, 1fr);
-    gap: 12px;
-    padding: 0 22px 26px 22px;
-    overflow-x: auto;
-    align-items: start;
+    display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr);
+    gap: 12px; align-items: start; padding-bottom: 6px;
+  }
+  @media (max-width: 520px) {
+    .board { grid-auto-flow: row; grid-auto-columns: auto; }
   }
   .column {
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 10px;
-    min-height: 140px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    padding: 10px; min-height: 140px; min-width: 0;
   }
   .column h2 {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin: 2px 4px 10px 4px;
-    display: flex;
-    justify-content: space-between;
-    color: var(--ink-soft);
+    font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; margin: 2px 4px 10px 4px;
+    display: flex; justify-content: space-between; color: var(--ink-soft);
   }
   .column.drag-over { border-color: var(--accent); background: var(--accent-soft); }
   .cards { display: flex; flex-direction: column; gap: 8px; min-height: 40px; }
   .card {
-    border: 1px solid var(--line);
-    border-left: 4px solid var(--accent);
-    border-radius: 8px;
-    background: var(--bg);
-    padding: 10px 10px 8px 10px;
-    cursor: grab;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--bg);
+    padding: 10px 10px 8px 10px; cursor: grab; overflow-wrap: anywhere;
   }
   .card:active { cursor: grabbing; }
   .card .role { font-weight: 700; font-size: 0.95rem; margin: 0; }
@@ -117,80 +97,46 @@
   .card .meta { font-size: 0.8rem; margin: 2px 0; }
   .card .meta strong { font-weight: 600; }
   .card .overdue {
-    display: inline-block;
-    background: var(--warn-bg);
-    color: var(--warn-ink);
-    border-radius: 4px;
-    padding: 0 6px;
-    font-weight: 700;
-    font-size: 0.75rem;
-    margin-left: 6px;
+    display: inline-block; background: var(--warn-bg); color: var(--warn-ink); border-radius: 4px;
+    padding: 0 6px; font-weight: 700; font-size: 0.75rem; margin-left: 6px;
   }
-  .card .controls {
-    display: flex;
-    gap: 6px;
-    margin-top: 8px;
-    flex-wrap: wrap;
-  }
-  .card .controls button {
-    font-size: 0.75rem;
-    padding: 3px 9px;
-  }
+  .card .controls { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+  .card .controls button { font-size: 0.75rem; padding: 3px 9px; }
   dialog {
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: var(--surface);
-    color: var(--ink);
-    max-width: 430px;
-    width: 92vw;
-    padding: 18px;
+    border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink);
+    max-width: 430px; width: 92vw; padding: 18px;
   }
-  dialog::backdrop { background: rgba(0,0,0,0.45); }
+  dialog::backdrop { background: rgba(0, 0, 0, 0.45); }
   dialog h3 { margin: 0 0 12px 0; font-size: 1.05rem; }
   dialog label { display: block; font-size: 0.82rem; font-weight: 600; margin: 10px 0 3px 0; }
   dialog input, dialog select, dialog textarea {
-    font: inherit;
-    font-size: 0.88rem;
-    width: 100%;
-    padding: 7px 9px;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    background: var(--bg);
-    color: var(--ink);
+    font: inherit; font-size: 0.88rem; width: 100%; padding: 7px 9px; border: 1px solid var(--line);
+    border-radius: 6px; background: var(--bg); color: var(--ink);
   }
   dialog textarea { resize: vertical; min-height: 56px; }
-  dialog .row { display: flex; gap: 10px; justify-content: flex-end; margin-top: 16px; }
+  dialog .row { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; margin-top: 16px; }
   .hint { font-size: 0.78rem; color: var(--ink-soft); margin-top: 4px; }
-  .visually-hidden {
-    position: absolute;
-    width: 1px; height: 1px;
-    margin: -1px; padding: 0;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-    border: 0;
-  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
-</head>
-<body>
+
 <header>
-  <h1>Application Board</h1>
-  <p>Owner: {{NAME}}. Generated from applications/tracker.md on {{DATE}}. The tracker file remains the source of truth: export your changes back when you finish.</p>
+  <h1>Applications</h1>
+  <p id="board-meta">Your application pipeline, kept in Claude.</p>
 </header>
 
 <div class="toolbar">
-  <button class="primary" id="copy-md">Copy tracker markdown</button>
-  <button id="download-md">Download tracker.md</button>
-  <button id="add-card">Add application</button>
-  <button id="reset-data">Reset to file data</button>
+  <button class="primary" id="add-card" type="button">Add application</button>
 </div>
+<p class="notice" id="notice">Loading your applications. Each application appears as a card in its stage: Researching, Applying, Applied, Interviewing, Offer, or Closed.</p>
 <p class="status-msg" id="status-msg" role="status" aria-live="polite"></p>
 
-<main class="board" id="board" aria-label="Application kanban board"></main>
+<div class="board-wrap">
+  <main class="board" id="board" aria-label="Application board"></main>
+</div>
 
 <dialog id="edit-dialog">
   <h3 id="edit-title">Edit application</h3>
-  <form method="dialog" id="edit-form">
+  <form id="edit-form">
     <label for="f-role">Role</label>
     <input id="f-role" required>
     <label for="f-org">Organisation</label>
@@ -205,152 +151,158 @@
     <textarea id="f-notes"></textarea>
     <div id="closed-fields" hidden>
       <label for="f-outcome">Outcome</label>
-      <select id="f-outcome">
-        <option>Accepted</option>
-        <option>Rejected</option>
-        <option>Withdrawn</option>
-        <option>No response</option>
-      </select>
+      <select id="f-outcome"></select>
       <label for="f-closed-date">Date closed</label>
       <input id="f-closed-date" type="date">
       <label for="f-learned">What you learned</label>
       <input id="f-learned">
     </div>
+    <p class="hint">Keep notes short. Salary figures and personal reflections belong in your negotiation and learnings documents.</p>
     <div class="row">
       <button type="button" id="delete-card">Remove</button>
       <button type="button" id="cancel-edit">Cancel</button>
-      <button class="primary" id="save-edit" value="save">Save</button>
+      <button class="primary" type="submit" id="save-edit">Save</button>
     </div>
   </form>
 </dialog>
-
-<script id="board-data" type="application/json">
-{
-  "owner": "{{NAME}}",
-  "generated": "{{DATE}}",
-  "cards": [
-    {
-      "role": "{{ROLE_TITLE}}",
-      "organisation": "{{ORGANISATION}}",
-      "stage": "{{Researching|Applying|Applied|Interviewing|Offer|Closed}}",
-      "nextAction": "{{NEXT_ACTION}}",
-      "nextDate": "{{YYYY-MM-DD or empty string}}",
-      "notes": "{{NOTES}}",
-      "outcome": "",
-      "dateClosed": "",
-      "learned": ""
-    }
-  ]
-}
-</script>
 
 <script>
 (function () {
   'use strict';
 
   var STAGES = ['Researching', 'Applying', 'Applied', 'Interviewing', 'Offer', 'Closed'];
+  var OUTCOMES = ['Accepted', 'Rejected', 'Withdrawn', 'No response'];
+  var FIELDS = ['role', 'organisation', 'stage', 'nextAction', 'nextDate', 'notes', 'outcome', 'dateClosed', 'learned'];
 
-  var rawData = document.getElementById('board-data').textContent;
-  var fileData = JSON.parse(rawData);
-  // Key browser state to a fingerprint of the embedded data, so a
-  // regenerated board never loads stale state saved against old data.
-  var fingerprint = 0;
-  for (var fi = 0; fi < rawData.length; fi++) {
-    fingerprint = ((fingerprint << 5) - fingerprint + rawData.charCodeAt(fi)) | 0;
-  }
-  var STORAGE_KEY = 'career-helper-board:' + fingerprint;
-  var state = load();
+  var cards = [];
+  var db = null;
+  var canWrite = true;
+  var confirmed = false;
+  var queues = {};
 
-  function load() {
-    try {
-      var raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) { return JSON.parse(raw); }
-    } catch (e) { /* localStorage unavailable: fall back to file data */ }
-    return normalise(fileData);
-  }
-  function normalise(data) {
-    // Clone each card so board edits never mutate the fileData snapshot
-    // that "Reset to file data" restores.
-    var cards = (data.cards || []).filter(function (c) {
-      return c.role && c.role.indexOf('{{') === -1;
-    }).map(function (c) {
-      var copy = {};
-      for (var k in c) {
-        if (Object.prototype.hasOwnProperty.call(c, k)) { copy[k] = c[k]; }
-      }
-      return copy;
-    });
-    cards.forEach(function (c, i) { c.id = 'card-' + i; });
-    return { owner: data.owner, generated: data.generated, cards: cards, nextId: cards.length };
-  }
-  function save() {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) { /* ignore */ }
-  }
+  var boardEl = document.getElementById('board');
+  var noticeEl = document.getElementById('notice');
+  var statusEl = document.getElementById('status-msg');
+  var metaEl = document.getElementById('board-meta');
+  var addBtn = document.getElementById('add-card');
 
-  var board = document.getElementById('board');
-  var statusMsg = document.getElementById('status-msg');
-  function announce(text) { statusMsg.textContent = text; }
+  function announce(text) { statusEl.textContent = text; }
+  function notice(text) { noticeEl.textContent = text; noticeEl.hidden = !text; }
 
+  function localDate() {
+    var d = new Date();
+    var m = String(d.getMonth() + 1);
+    var day = String(d.getDate());
+    return d.getFullYear() + '-' + (m.length < 2 ? '0' + m : m) + '-' + (day.length < 2 ? '0' + day : day);
+  }
   function isOverdue(card) {
-    if (!card.nextDate || card.stage === 'Closed') { return false; }
-    var d = new Date(card.nextDate + 'T23:59:59');
-    return !isNaN(d) && d < new Date();
+    return Boolean(card.nextDate) && card.stage !== 'Closed' && card.nextDate < localDate();
+  }
+  function slug(text) {
+    return String(text).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 80) || 'application';
+  }
+  function newId(role, org) {
+    var base = slug(org + '-' + role);
+    var id = base;
+    var n = 2;
+    while (cards.some(function (c) { return c.id === id; })) { id = base + '-' + n; n += 1; }
+    return id;
+  }
+  function findCard(id) {
+    for (var i = 0; i < cards.length; i++) { if (cards[i].id === id) { return cards[i]; } }
+    return null;
+  }
+
+  // One write at a time per document; retry once on a transient error.
+  function wait(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+  function attempt(fn) {
+    return fn().catch(function (e) {
+      if (e && e.code === 'unavailable') { return wait(400 + Math.random() * 800).then(fn); }
+      throw e;
+    });
+  }
+  function write(id, fn) {
+    var p = (queues[id] || Promise.resolve()).then(function () { return attempt(fn); });
+    queues[id] = p.catch(function () { /* keep the queue moving */ });
+    return p.catch(writeFailed);
+  }
+  function writeFailed(e) {
+    var code = e && e.code;
+    if (code === 'invalid_argument') {
+      setReadOnly();
+      announce('This board is read-only for you, so that change was not saved.');
+    } else if (code === 'quota_exceeded') {
+      announce('The board is full. Remove closed applications you no longer need, then try again.');
+    } else {
+      announce('That change was not saved. Check your connection and try again.');
+    }
+    throw e;
+  }
+  function stamp(body) {
+    body.updated = new Date().toISOString();
+    body.updatedBy = 'board';
+    return body;
+  }
+
+  function setReadOnly() {
+    canWrite = false;
+    addBtn.disabled = true;
+    render();
   }
 
   function render() {
-    board.innerHTML = '';
+    boardEl.textContent = '';
     STAGES.forEach(function (stage) {
       var col = document.createElement('section');
       col.className = 'column';
-      col.dataset.stage = stage;
-      var cards = state.cards.filter(function (c) { return c.stage === stage; });
+      col.setAttribute('aria-label', stage);
+      var inStage = cards.filter(function (c) { return c.stage === stage; });
       var h = document.createElement('h2');
       h.textContent = stage;
       var count = document.createElement('span');
-      count.textContent = String(cards.length);
-      count.setAttribute('aria-label', cards.length + ' applications');
+      count.textContent = String(inStage.length);
+      count.setAttribute('aria-label', inStage.length + ' applications');
       h.appendChild(count);
       col.appendChild(h);
       var list = document.createElement('div');
       list.className = 'cards';
-      cards.forEach(function (card) { list.appendChild(renderCard(card)); });
+      inStage.forEach(function (card) { list.appendChild(renderCard(card)); });
       col.appendChild(list);
-      col.addEventListener('dragover', function (e) { e.preventDefault(); col.classList.add('drag-over'); });
-      col.addEventListener('dragleave', function () { col.classList.remove('drag-over'); });
-      col.addEventListener('drop', function (e) {
-        e.preventDefault();
-        col.classList.remove('drag-over');
-        moveCard(e.dataTransfer.getData('text/plain'), stage);
-      });
-      board.appendChild(col);
+      if (canWrite) {
+        col.addEventListener('dragover', function (e) { e.preventDefault(); col.classList.add('drag-over'); });
+        col.addEventListener('dragleave', function () { col.classList.remove('drag-over'); });
+        col.addEventListener('drop', function (e) {
+          e.preventDefault();
+          col.classList.remove('drag-over');
+          moveCard(e.dataTransfer.getData('text/plain'), stage);
+        });
+      }
+      boardEl.appendChild(col);
     });
-    save();
   }
 
   function renderCard(card) {
     var el = document.createElement('article');
     el.className = 'card';
-    el.draggable = true;
+    el.draggable = canWrite;
     el.tabIndex = 0;
-    el.dataset.id = card.id;
-    el.setAttribute('aria-label', card.role + ' at ' + card.organisation + ', stage ' + card.stage);
+    el.setAttribute('aria-label', (card.role || 'Role') + ' at ' + (card.organisation || 'organisation') + ', stage ' + card.stage + (isOverdue(card) ? ', next action overdue' : ''));
 
     var role = document.createElement('p');
     role.className = 'role';
-    role.textContent = card.role;
+    role.textContent = card.role || '';
     el.appendChild(role);
-
     var org = document.createElement('p');
     org.className = 'org';
-    org.textContent = card.organisation;
+    org.textContent = card.organisation || '';
     el.appendChild(org);
 
     if (card.stage === 'Closed') {
       if (card.outcome) { el.appendChild(meta('Outcome', card.outcome)); }
       if (card.learned) { el.appendChild(meta('Learned', card.learned)); }
     } else {
-      if (card.nextAction) {
-        var m = meta('Next', card.nextAction + (card.nextDate ? ' (' + card.nextDate + ')' : ''));
+      if (card.nextAction || card.nextDate) {
+        var m = meta('Next', (card.nextAction || 'Action not set') + (card.nextDate ? ' (' + card.nextDate + ')' : ''));
         if (isOverdue(card)) {
           var tag = document.createElement('span');
           tag.className = 'overdue';
@@ -362,26 +314,27 @@
       if (card.notes) { el.appendChild(meta('Notes', card.notes)); }
     }
 
-    var controls = document.createElement('div');
-    controls.className = 'controls';
     var idx = STAGES.indexOf(card.stage);
-    if (idx > 0) { controls.appendChild(moveButton(card, STAGES[idx - 1], 'Back')); }
-    if (idx < STAGES.length - 1) { controls.appendChild(moveButton(card, STAGES[idx + 1], 'Advance')); }
-    var edit = document.createElement('button');
-    edit.textContent = 'Edit';
-    edit.addEventListener('click', function () { openEditor(card.id); });
-    controls.appendChild(edit);
-    el.appendChild(controls);
+    if (canWrite) {
+      var controls = document.createElement('div');
+      controls.className = 'controls';
+      if (idx > 0) { controls.appendChild(moveButton(card, STAGES[idx - 1], 'Back')); }
+      if (idx < STAGES.length - 1) { controls.appendChild(moveButton(card, STAGES[idx + 1], 'Advance')); }
+      var edit = document.createElement('button');
+      edit.type = 'button';
+      edit.textContent = 'Edit';
+      edit.addEventListener('click', function () { openEditor(card.id); });
+      controls.appendChild(edit);
+      el.appendChild(controls);
 
-    el.addEventListener('dragstart', function (e) { e.dataTransfer.setData('text/plain', card.id); });
-    el.addEventListener('keydown', function (e) {
-      // Only act on keys pressed on the card itself; Enter on a child
-      // button already triggers that button and must not double-fire.
-      if (e.target !== el) { return; }
-      if (e.key === 'Enter') { openEditor(card.id); }
-      if (e.key === 'ArrowRight' && idx < STAGES.length - 1) { moveCard(card.id, STAGES[idx + 1]); }
-      if (e.key === 'ArrowLeft' && idx > 0) { moveCard(card.id, STAGES[idx - 1]); }
-    });
+      el.addEventListener('dragstart', function (e) { e.dataTransfer.setData('text/plain', card.id); });
+      el.addEventListener('keydown', function (e) {
+        if (e.target !== el) { return; }
+        if (e.key === 'Enter') { openEditor(card.id); }
+        if (e.key === 'ArrowRight' && idx < STAGES.length - 1) { moveCard(card.id, STAGES[idx + 1]); }
+        if (e.key === 'ArrowLeft' && idx > 0) { moveCard(card.id, STAGES[idx - 1]); }
+      });
+    }
     return el;
   }
   function meta(label, value) {
@@ -395,206 +348,158 @@
   }
   function moveButton(card, target, verb) {
     var b = document.createElement('button');
+    b.type = 'button';
     b.textContent = verb + ': ' + target;
     b.addEventListener('click', function () { moveCard(card.id, target); });
     return b;
   }
 
   function moveCard(id, stage) {
-    var card = state.cards.find(function (c) { return c.id === id; });
-    if (!card || card.stage === stage) { return; }
-    card.stage = stage;
-    announce(card.role + ' at ' + card.organisation + ' moved to ' + stage + '.');
-    render();
-    if (stage === 'Closed' && !card.outcome) { openEditor(id); }
+    var card = findCard(id);
+    if (!card || card.stage === stage || !db || !canWrite) { return; }
+    var label = card.role + ' at ' + card.organisation;
+    write(id, function () { return db.doc('cards/' + id).update(stamp({ stage: stage })); })
+      .then(function () {
+        announce(label + ' moved to ' + stage + '.');
+        if (stage === 'Closed' && !card.outcome) { openEditor(id, 'Closed'); }
+      }, function () {});
   }
 
   // Editor
   var dialog = document.getElementById('edit-dialog');
+  var form = document.getElementById('edit-form');
   var stageSelect = document.getElementById('f-stage');
-  STAGES.forEach(function (s) {
-    var o = document.createElement('option');
-    o.textContent = s;
-    stageSelect.appendChild(o);
-  });
+  var outcomeSelect = document.getElementById('f-outcome');
+  var deleteBtn = document.getElementById('delete-card');
+  STAGES.forEach(function (s) { var o = document.createElement('option'); o.textContent = s; stageSelect.appendChild(o); });
+  OUTCOMES.forEach(function (s) { var o = document.createElement('option'); o.textContent = s; outcomeSelect.appendChild(o); });
   var editingId = null;
 
-  function openEditor(id) {
-    var card = state.cards.find(function (c) { return c.id === id; });
-    if (!card) { return; }
-    editingId = id;
-    document.getElementById('edit-title').textContent = 'Edit: ' + card.role;
-    document.getElementById('f-role').value = card.role;
-    document.getElementById('f-org').value = card.organisation;
-    stageSelect.value = card.stage;
-    document.getElementById('f-action').value = card.nextAction || '';
-    document.getElementById('f-date').value = card.nextDate || '';
-    document.getElementById('f-notes').value = card.notes || '';
-    document.getElementById('f-outcome').value = card.outcome || 'Rejected';
-    document.getElementById('f-closed-date').value = card.dateClosed || '';
-    document.getElementById('f-learned').value = card.learned || '';
+  function field(id) { return document.getElementById(id); }
+  function resetDelete() { confirmed = false; deleteBtn.textContent = 'Remove'; }
+
+  function openEditor(id, forceStage) {
+    var card = id ? findCard(id) : null;
+    if (id && !card) { return; }
+    editingId = id || null;
+    var c = card || { role: '', organisation: '', stage: 'Researching' };
+    field('edit-title').textContent = card ? 'Edit: ' + c.role : 'Add application';
+    field('f-role').value = c.role || '';
+    field('f-org').value = c.organisation || '';
+    stageSelect.value = forceStage || c.stage || 'Researching';
+    field('f-action').value = c.nextAction || '';
+    field('f-date').value = c.nextDate || '';
+    field('f-notes').value = c.notes || '';
+    outcomeSelect.value = c.outcome || 'Rejected';
+    field('f-closed-date').value = c.dateClosed || (stageSelect.value === 'Closed' ? localDate() : '');
+    field('f-learned').value = c.learned || '';
+    deleteBtn.hidden = !card;
+    resetDelete();
     toggleClosedFields();
     dialog.showModal();
   }
-  function toggleClosedFields() {
-    document.getElementById('closed-fields').hidden = stageSelect.value !== 'Closed';
-  }
+  function toggleClosedFields() { field('closed-fields').hidden = stageSelect.value !== 'Closed'; }
   stageSelect.addEventListener('change', toggleClosedFields);
 
-  // Saving goes through the form's submit event so that pressing Enter in
-  // a field and clicking Save behave identically, and so the browser's
-  // required-field validation runs before anything is persisted.
-  document.getElementById('edit-form').addEventListener('submit', function (e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var card = state.cards.find(function (c) { return c.id === editingId; });
-    if (!card) { dialog.close(); return; }
-    var role = document.getElementById('f-role').value.trim();
-    var org = document.getElementById('f-org').value.trim();
+    if (!db || !canWrite) { dialog.close(); return; }
+    var role = field('f-role').value.trim();
+    var org = field('f-org').value.trim();
     if (!role || !org) { return; }
-    card.role = role;
-    card.organisation = org;
-    card.stage = stageSelect.value;
-    card.nextAction = document.getElementById('f-action').value.trim();
-    card.nextDate = document.getElementById('f-date').value;
-    card.notes = document.getElementById('f-notes').value.trim();
-    card.outcome = document.getElementById('f-outcome').value;
-    card.dateClosed = document.getElementById('f-closed-date').value;
-    card.learned = document.getElementById('f-learned').value.trim();
-    delete card.draft;
-    dialog.close();
-    announce('Saved changes to ' + card.role + '.');
-    render();
-  });
-  document.getElementById('cancel-edit').addEventListener('click', function () { dialog.close(); });
-  document.getElementById('delete-card').addEventListener('click', function () {
-    state.cards = state.cards.filter(function (c) { return c.id !== editingId; });
-    dialog.close();
-    announce('Application removed from the board.');
-    render();
-  });
-  // A new card is a draft until first saved; closing the dialog any other
-  // way (Cancel, Escape) discards it rather than exporting a placeholder.
-  dialog.addEventListener('close', function () {
-    var card = state.cards.find(function (c) { return c.id === editingId; });
-    if (card && card.draft) {
-      state.cards = state.cards.filter(function (c) { return c.id !== editingId; });
-      announce('New application discarded.');
-      render();
-    }
-    editingId = null;
-  });
-
-  document.getElementById('add-card').addEventListener('click', function () {
-    var card = {
-      id: 'card-new-' + (state.nextId++),
-      role: 'New role',
-      organisation: 'Organisation',
-      stage: 'Researching',
-      nextAction: '',
-      nextDate: '',
-      notes: '',
-      outcome: '',
-      dateClosed: '',
-      learned: '',
-      draft: true
+    var closed = stageSelect.value === 'Closed';
+    var body = {
+      role: role,
+      organisation: org,
+      stage: stageSelect.value,
+      nextAction: field('f-action').value.trim(),
+      nextDate: field('f-date').value,
+      notes: field('f-notes').value.trim(),
+      outcome: closed ? outcomeSelect.value : '',
+      dateClosed: closed ? field('f-closed-date').value : '',
+      learned: closed ? field('f-learned').value.trim() : ''
     };
-    state.cards.push(card);
-    render();
-    openEditor(card.id);
-  });
-
-  document.getElementById('reset-data').addEventListener('click', function () {
-    if (confirm('Discard board changes and reload the data generated from tracker.md?')) {
-      state = normalise(fileData);
-      announce('Board reset to the data generated from tracker.md.');
-      render();
-    }
-  });
-
-  // Markdown export in the exact applications/tracker.md format.
-  function pad(v) { return v || '[UNKNOWN]'; }
-  function cell(v) {
-    // Escape pipes and flatten newlines so values survive a markdown
-    // table without being silently altered beyond whitespace.
-    return String(v == null ? '' : v)
-      .replace(/\r?\n+/g, '; ')
-      .replace(/\|/g, '\\|')
-      .trim();
-  }
-  function localDate() {
-    var d = new Date();
-    var m = String(d.getMonth() + 1);
-    var day = String(d.getDate());
-    return d.getFullYear() + '-' + (m.length < 2 ? '0' + m : m) + '-' + (day.length < 2 ? '0' + day : day);
-  }
-  function toMarkdown() {
-    var today = localDate();
-    var active = state.cards.filter(function (c) { return c.stage !== 'Closed'; });
-    var closed = state.cards.filter(function (c) { return c.stage === 'Closed'; });
-    var overdue = active.filter(isOverdue).map(function (c) {
-      return c.role + ' at ' + c.organisation + ' (' + c.nextDate + ')';
-    });
-    var lines = [];
-    lines.push('# Application Tracker', '');
-    lines.push('**Owner:** ' + (state.owner || '[UNKNOWN]'));
-    lines.push('**Last updated:** ' + today, '');
-    lines.push('A single view of every live application. Stages: Researching, Applying, Applied, Interviewing, Offer, Closed. Update the next action and date whenever something moves.', '');
-    lines.push('---', '', '## Active Applications', '');
-    lines.push('| Role | Organisation | Stage | Next action | Next date | Notes |');
-    lines.push('|:-----|:-------------|:------|:------------|:----------|:------|');
-    active.forEach(function (c) {
-      lines.push('| ' + [cell(c.role), cell(c.organisation), cell(c.stage), cell(pad(c.nextAction)), cell(pad(c.nextDate)), cell(c.notes)].join(' | ') + ' |');
-    });
-    lines.push('', '---', '', '## Closed', '');
-    lines.push('| Role | Organisation | Outcome | Date closed | What you learned |');
-    lines.push('|:-----|:-------------|:--------|:------------|:-----------------|');
-    closed.forEach(function (c) {
-      lines.push('| ' + [cell(c.role), cell(c.organisation), cell(pad(c.outcome)), cell(pad(c.dateClosed)), cell(c.learned)].join(' | ') + ' |');
-    });
-    lines.push('', '---', '', '## At a Glance', '');
-    lines.push('- **Active applications:** ' + active.length);
-    lines.push('- **Awaiting response:** ' + active.filter(function (c) { return c.stage === 'Applied'; }).length);
-    lines.push('- **Interviews booked:** ' + active.filter(function (c) { return c.stage === 'Interviewing'; }).length);
-    lines.push('- **Offers in hand:** ' + active.filter(function (c) { return c.stage === 'Offer'; }).length);
-    lines.push('- **Overdue actions:** ' + (overdue.length ? overdue.join('; ') : 'None'));
-    lines.push('', '---', '');
-    lines.push('*Generated using Career Helper. Found this helpful? Share your success story or suggest improvements at https://github.com/Zal4DW/career-helper*');
-    return lines.join('\n') + '\n';
-  }
-
-  document.getElementById('copy-md').addEventListener('click', function () {
-    var md = toMarkdown();
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(md).then(function () {
-        announce('Tracker markdown copied. Paste it into applications/tracker.md, or paste it to Claude and ask it to update your tracker.');
-      }, function () { fallbackCopy(md); });
+    var id = editingId;
+    dialog.close();
+    if (id) {
+      write(id, function () { return db.doc('cards/' + id).update(stamp(body)); })
+        .then(function () { announce('Saved changes to ' + role + '.'); }, function () {});
     } else {
-      fallbackCopy(md);
+      var created = newId(role, org);
+      body.created = localDate();
+      write(created, function () { return db.doc('cards/' + created).set(stamp(body)); })
+        .then(function () { announce('Added ' + role + ' at ' + org + '.'); }, function () {});
     }
   });
-  function fallbackCopy(md) {
-    var ta = document.createElement('textarea');
-    ta.value = md;
-    document.body.appendChild(ta);
-    ta.select();
-    try { document.execCommand('copy'); announce('Tracker markdown copied.'); }
-    catch (e) { announce('Copy failed. Use Download tracker.md instead.'); }
-    document.body.removeChild(ta);
-  }
-  document.getElementById('download-md').addEventListener('click', function () {
-    var blob = new Blob([toMarkdown()], { type: 'text/markdown' });
-    var a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = 'tracker.md';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(a.href);
-    announce('tracker.md downloaded. Replace applications/tracker.md with it, or ask Claude to merge it.');
+  field('cancel-edit').addEventListener('click', function () { dialog.close(); });
+  deleteBtn.addEventListener('click', function () {
+    if (!editingId || !db || !canWrite) { return; }
+    if (!confirmed) { confirmed = true; deleteBtn.textContent = 'Confirm remove'; return; }
+    var id = editingId;
+    var card = findCard(id);
+    dialog.close();
+    write(id, function () { return db.doc('cards/' + id).delete(); })
+      .then(function () { announce((card ? card.role : 'Application') + ' removed from the board.'); }, function () {});
   });
+  dialog.addEventListener('close', function () { editingId = null; resetDelete(); });
+  addBtn.addEventListener('click', function () { if (db && canWrite) { openEditor(null); } });
+
+  function renderMeta(data) {
+    var owner = data && data.owner ? String(data.owner) : '';
+    metaEl.textContent = owner ? 'Owner: ' + owner + '. Changes you make here are saved straight away, and Claude reads them next time you ask.' : 'Changes you make here are saved straight away, and Claude reads them next time you ask.';
+  }
+
+  function updateNotice() {
+    if (cards.length === 0) {
+      notice('No applications yet. Ask Claude to add your applications to this board, or use Add application.');
+    } else {
+      notice('');
+    }
+  }
 
   render();
+
+  if (!window.claude || typeof window.claude.use !== 'function') {
+    addBtn.disabled = true;
+    notice('This board keeps your applications in Claude. Open it in Claude to see and change them.');
+    return;
+  }
+
+  Promise.all([window.claude.use('db'), window.claude.use('user')]).then(function (found) {
+    db = found[0];
+    var user = found[1];
+    if (!db) {
+      addBtn.disabled = true;
+      notice('This board keeps your applications in Claude. Open it in Claude, signed in, to see and change them.');
+      return;
+    }
+    if (user) {
+      user.can('data.write').then(function (ok) { if (ok === false) { setReadOnly(); } }, function () {});
+    }
+    var fresh = false;
+    var timer = setTimeout(function () {
+      if (!fresh) {
+        notice(cards.length ? 'The board may be out of date: your latest changes cannot be reached yet.' : 'Your applications cannot be reached yet. The board fills in when the connection returns.');
+      }
+    }, 10000);
+    db.collection('cards').onSnapshot(function (snap) {
+      cards = snap.docs.map(function (d) {
+        var data = d.data() || {};
+        var c = { id: d.id };
+        FIELDS.forEach(function (f) { c[f] = typeof data[f] === 'string' ? data[f] : ''; });
+        if (STAGES.indexOf(c.stage) === -1) { c.stage = 'Researching'; }
+        return c;
+      });
+      if (!snap.metadata.fromCache) { fresh = true; clearTimeout(timer); }
+      render();
+      if (fresh || cards.length) { updateNotice(); }
+    }, function () {
+      clearTimeout(timer);
+      notice('The board could not load your applications. Close it and open it again from Claude.');
+    });
+    db.doc('board/meta').onSnapshot(function (snap) {
+      renderMeta(snap.exists ? snap.data() : null);
+    }, function () {});
+  });
 })();
 </script>
-</body>
-</html>

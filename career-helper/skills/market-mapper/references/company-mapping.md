@@ -28,7 +28,7 @@ Record the posture in the map header. It changes every angle downstream.
 | Ownership and stage | PLC, private equity backed, founder led, public sector, charity | Signals how they hire and how fast they change |
 | Function and level the user wants | e.g. "head of operations, or a step up to director" | Drives which hiring signals count |
 
-Read `three-month-plan.md`, `skills-inventory.md`, and `applications/tracker.md` first if they exist; the direction and level may already be defined. Apply the user's exclusions: their own employer and its group companies always; anywhere covered by a non-compete or restrictive covenant; anywhere the user has said no to.
+Read `three-month-plan.md`, `skills-inventory.md`, and the application board (or its snapshot, `applications/tracker.md`) first if they exist; the direction and level may already be defined. Apply the user's exclusions: their own employer and its group companies always; anywhere covered by a non-compete or restrictive covenant; anywhere the user has said no to.
 
 Play the seed back in five or six lines and get a yes before searching.
 
@@ -168,5 +168,5 @@ With `colour_blind: true` nothing changes: priorities are text labels already.
 - Do not present sector commentary as a company signal. If nothing was found for an organisation, say so.
 - Do not infer decline from silence. A quiet careers page is not a hiring freeze.
 - Do not suggest outreach that would expose an employed user. When in doubt, the angle is "follow and read".
-- Do not keep the user's employer name anywhere except the map header, and tell the user that is where it is.
+- Do not keep the user's employer name anywhere except the owner-only seed record on the market map board (and the snapshot header when the user is openly searching), and tell the user that is where it is.
 - Do not scrape aggressively or attempt to work around a login or a block. Note the gap, offer the signed-in browser, and move on.

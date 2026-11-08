@@ -27,7 +27,7 @@ Follow these 3 steps:
 
 ### STEP 1 = Research:
 
-- Research and list their top 5-10 pain points, common questions, and desires. Use publicly available conversations, posts, and general industry knowledge—the most up-to-date trends possible.
+- Research and list their top 5-10 pain points, common questions, and desires. Use publicly available conversations, posts, and general industry knowledge; the most up-to-date trends possible.
 
 ----
 

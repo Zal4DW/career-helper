@@ -38,7 +38,7 @@ Generate → Evaluate → If NEEDS_IMPROVEMENT → Refine → Re-evaluate
 | Check | Pass | Fail |
 |-------|------|------|
 | **UK Spelling** | organisation, colour, behaviour, optimise, analyse, centre | organisation, color, behavior, optimize, analyze, center |
-| **Em Dashes** | None present | — used anywhere |
+| **Em Dashes** | None present | Any em dash (U+2014) or en dash (U+2013) used anywhere |
 | **Override** | US role explicitly requires US English | Default should be UK |
 
 **Common UK vs US Spelling:**
@@ -268,9 +268,9 @@ When presenting validated content:
 ---
 
 **Quality Assurance:**
-- ✅ [Key validation point 1]
-- ✅ [Key validation point 2]
-- ✅ Citations verified (if applicable)
+- PASS: [Key validation point 1]
+- PASS: [Key validation point 2]
+- PASS: Citations verified (if applicable)
 
 *This content has been validated against Career Helper quality standards.*
 ```
@@ -374,10 +374,10 @@ Output: <citation_evaluation>PASS|NEEDS_IMPROVEMENT|FAIL</citation_evaluation>
 **Refined:** Added missing keywords, quantified remaining bullets...
 
 **CV Evaluation:** PASS
-- Keyword coverage: 78% ✓
-- All bullets have metrics ✓
-- ATS-safe formatting ✓
-- Role alignment ✓
+- Keyword coverage: 78%: PASS
+- All bullets have metrics: PASS
+- ATS-safe formatting: PASS
+- Role alignment: PASS
 
 ### Final Output to User
 
@@ -388,10 +388,10 @@ Output: <citation_evaluation>PASS|NEEDS_IMPROVEMENT|FAIL</citation_evaluation>
 ---
 
 **Quality Assurance:**
-- ✅ 78% keyword coverage from job description
-- ✅ All achievements quantified with metrics
-- ✅ ATS-safe formatting verified
-- ✅ Summary aligned to Data Scientist role
+- PASS: 78% keyword coverage from job description
+- PASS: All achievements quantified with metrics
+- PASS: ATS-safe formatting verified
+- PASS: Summary aligned to Data Scientist role
 
 *Validated against Career Helper ATS optimization standards.*
 

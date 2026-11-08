@@ -16,7 +16,7 @@ Help board members exercise effective AI governance oversight without requiring 
 
 ---
 
-## Ten Capabilities
+## Eleven Capabilities
 
 ### 1. Strategic Challenge Framework
 Generate targeted questions to challenge AI proposals at board level.
@@ -87,6 +87,13 @@ Cut through vendor and consultant AI noise.
 **Use when:** Evaluating sales pitches, challenging executive enthusiasm, reality-checking claims
 
 **Produces:** Sceptical responses to common claims, realistic capability benchmarks, "AI slop" awareness
+
+### 11. Board AI Briefing (Slides)
+Turn a paper into a short deck to present.
+
+**Use when:** Briefing the board or a committee on a proposal, the risk position, governance options, or readiness
+
+**Produces:** A slide deck in your Claude account, one point per slide, sources in the speaker notes, and the decisions the board is asked to take
 
 ---
 

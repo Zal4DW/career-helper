@@ -1,6 +1,6 @@
 # Market Watch Update: {{YYYY-MM-DD}}
 
-**Map:** market-map.md ({{N}} organisations)
+**Map:** Career Helper Market Map ({{N}} organisations)
 **Period covered:** {{YYYY-MM-DD}} to {{YYYY-MM-DD}}
 **Posture:** {{Employed and discreet / Openly searching}}
 

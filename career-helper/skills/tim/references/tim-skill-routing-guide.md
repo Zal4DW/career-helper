@@ -11,7 +11,7 @@ Skills produce outputs that feed into other skills. Tim checks for existing outp
 - application-optimiser research brief feeds into: interview-master (company knowledge for prep), linkedin-coach (CV/LinkedIn consistency), application-optimiser cover letter (what is true about the organisation)
 - application-optimiser cover letter and supporting statement draw on: the research brief, the optimised CV or master facts, and the user's stated motivation; never invent motivation
 - interview-master referee prep draws on: the optimised CV and interview-prep STAR stories (verified examples the referee witnessed); runs at late interview or offer stage
-- career-navigator application tracker indexes: every per-application folder; it is the spine `/career-helper:status` reads, so update it when an application moves stage
+- career-navigator application tracker (the application board in the user's Claude account; its database is the record) indexes: every per-application folder; it is the spine `/career-helper:status` reads, so update it when an application moves stage, and read it first so changes the user made on the board are picked up
 - career-navigator application learnings loop draws on: completed interviews, rejections, and wins, captured as per-event notes; the synthesised `applications/learnings/patterns.md` feeds interview-master (recurring objections to drill) and application-optimiser (a gap the CV consistently undersells), and is read by `/career-helper:status` when it exists
 - employer-footprint results feed into: linkedin-coach (fix issues found), interview-master (questions from online presence)
 - social-media-review results feed into: linkedin-coach (cleanup recommendations), employer-footprint (if deeper audit needed)
@@ -26,9 +26,9 @@ Skills produce outputs that feed into other skills. Tim checks for existing outp
 - career-transitions output feeds into: personal-brand (structural decision must be made before the brand layer; never run brand for a path the user has not yet committed to)
 - job-scout shortlist feeds into: career-navigator application tracker (chosen roles are added at stage Researching) and application-optimiser (deep research and CV tailoring per chosen role); job-scout ranking reads the skills-radar inventory (winnability scoring) and `applications/learnings/patterns.md` where they exist
 - skills-radar inventory feeds into: application-optimiser (undersold skills the CV should surface), job-scout (honest winnability scoring), and interview-master (evidenced examples for stories); the gap analysis reads `applications/learnings/patterns.md` (recurring interview objections are gap evidence) and hands AI-specific gaps to career-transitions (AI Readiness)
-- market-mapper map feeds into: career-navigator (Strategic Networking Intelligence for an organisation at Act now), job-scout (live roles at watched organisations, using their careers pages as named targets), application-optimiser (Company Research once the user commits), and the tracker (a chosen organisation with a real or intended role is added at stage Researching); the weekly update reads `applications/tracker.md` so organisations already in play are flagged rather than re-suggested
+- market-mapper map feeds into: career-navigator (Strategic Networking Intelligence for an organisation at Act now), job-scout (live roles at watched organisations, using their careers pages as named targets), application-optimiser (Company Research once the user commits), and the application board (a chosen organisation with a real or intended role is added at stage Researching); the weekly update reads the application board so organisations already in play are flagged rather than re-suggested
 - career-routines register (`routines.md`) records what is scheduled; the weekly update command it schedules reads the tracker, application strategies, market map, and learnings notes, and writes `updates/{date}-weekly-update.md`, which `/career-helper:status` reads for open decisions
-- career-navigator kanban board renders: `applications/tracker.md` as `applications/board.html`; board exports are merged back into the tracker, which stays the source of truth
+- career-outputs publishes: the application board, the market map board, the ikigai map, the progress and footprint dashboards, and Claude Docs and slide decks; every published output is listed in `career-helper-artefacts.md`
 - application-optimiser CV PDF production consumes: the finished `cv-optimised.md` or cover letter, producing a verified `cv.pdf`; content changes always go through the markdown first
 
 ---
@@ -89,8 +89,7 @@ Tim uses Glob to scan for existing outputs before routing. Role-specific files a
 **Career Navigator (shared):**
 - `three-month-plan.md`
 - `offer-evaluation.md`
-- `applications/tracker.md` (index of every live application; read by `/career-helper:status`)
-- `applications/board.html` (interactive kanban view of the tracker; regenerated, never authoritative)
+- `applications/tracker.md` (read-only snapshot of the application board, which is the record)
 - `applications/learnings/patterns.md` (synthesised patterns; read by `/career-helper:status`)
 - `applications/learnings/interview-notes/{org-slug}-{role-slug}.md`, `applications/learnings/rejections/{org-slug}-{role-slug}.md`, `applications/learnings/wins/{org-slug}-{role-slug}.md` (per-event notes)
 
@@ -119,11 +118,11 @@ Tim uses Glob to scan for existing outputs before routing. Role-specific files a
 - `{topic}-hitl-assessment.md`
 
 **Getting Started:**
-- `getting-the-best-from-career-helper.pdf`
+- Claude Doc `Getting the Best from Career Helper` (optional)
 
 **Tim:**
 - `career-helper-preferences.md`
-- `ikigai-map.html` (optional ikigai visual produced from the direction-finding questions)
+- `Career Helper Ikigai` artifact (optional ikigai map produced from the direction-finding questions)
 
 **Personal Brand:**
 - `personal-brand-foundation.md` (or `applications/{role-slug}/personal-brand-foundation.md`)
@@ -142,14 +141,19 @@ Tim uses Glob to scan for existing outputs before routing. Role-specific files a
 - `updates/{YYYY-MM-DD}-weekly-update.md` (dated reports from `/career-helper:weekly-update`; the "Decisions waiting for you" section lists what an unattended run could not do)
 
 **Market Mapper:**
-- `market-map.md` (the single current map; the seed employer is recorded only here)
+- `Career Helper Market Map` artifact (the record; the seed employer is kept in its owner-only part)
+- `market-map.md` (read-only snapshot of the board)
 - `market-watch/{YYYY-MM-DD}-update.md` (dated what-changed updates)
-- `market-map-board.html` (regenerable board view of the watchlist; the map stays the source of truth)
 
 **Skills Radar:**
 - `skills-inventory.md`
 - `skills-gap-analysis.md` (or `applications/{role-slug}/skills-gap-analysis.md` when tied to one role)
 - `learning-plan.md`
+
+**Career Outputs:**
+- `career-helper-artefacts.md` (register of every published board, dashboard, Doc, and slide deck, with its link)
+- Artifacts in the user's Claude account: `Career Helper Applications`, `Career Helper Market Map`, `Career Helper Ikigai`, `Career Helper Progress`, `Career Helper Footprint`
+- Claude Docs and slide decks, titled as in `career-outputs/references/docs-and-slides.md`
 
 ### How Tim scans for progress
 
@@ -168,30 +172,30 @@ The user wants to move sector but keep doing the same work. This could be career
 The user feels unprepared and does not know where to start. Check what already exists using Glob. If a research brief from application-optimiser is already present, jump straight to interview-master. If not, run application-optimiser first so interview-master has the company and role context it needs.
 
 **3. Ageism plus skills gap**
-Two problems at once. Start with interview-master with the ageism persona — this provides emotional grounding, legal awareness, and practical reframing strategies. Then move to application-optimiser to reposition the CV. If the skills gap is technology-related, add ai-impact-assessment to understand what is actually changing in the role.
+Two problems at once. Start with interview-master with the ageism persona; this provides emotional grounding, legal awareness, and practical reframing strategies. Then move to application-optimiser to reposition the CV. If the skills gap is technology-related, add ai-impact-assessment to understand what is actually changing in the role.
 
 **4. Fractional consultant worried about AI**
 Run ai-impact-assessment first so the fractional career strategy accounts for disruption risks rather than assuming current income streams are stable. Then career-transitions (portfolio/fractional path) incorporating the impact findings. Doing these in the wrong order produces a strategy built on false assumptions.
 
 **5. NED plus employment needs**
-These are separate contexts and should not be mixed. Ask which is more urgent. NED governance work goes to ned-ai-helper. Job search, CV optimisation, and interview prep go to the other skills. The two contexts do not cross-pollinate — board governance questions should not influence a CV for an employed role and vice versa.
+These are separate contexts and should not be mixed. Ask which is more urgent. NED governance work goes to ned-ai-helper. Job search, CV optimisation, and interview prep go to the other skills. The two contexts do not cross-pollinate; board governance questions should not influence a CV for an employed role and vice versa.
 
 **6. LinkedIn vs footprint vs social review confusion**
 Three different tools, three different purposes. Quick cleanup of risky or embarrassing content: social-media-review. Deep audit of what employers can see about you online: employer-footprint. Optimising your profile for networking and job search visibility: linkedin-coach. Ask the user: "What do you want to achieve?" and route based on the answer.
 
 **7. Career returner plus ageism**
-Both personas apply and they reinforce each other. Start with interview-master with the ageism persona for emotional grounding and practical strategies — returners often face both age and gap discrimination simultaneously and need confidence before tactics. Then application-optimiser with the career returner persona to address how the gap is framed on the CV and in applications.
+Both personas apply and they reinforce each other. Start with interview-master with the ageism persona for emotional grounding and practical strategies; returners often face both age and gap discrimination simultaneously and need confidence before tactics. Then application-optimiser with the career returner persona to address how the gap is framed on the CV and in applications.
 
-**8. Multiple rejections — unclear cause**
+**8. Multiple rejections: unclear cause**
 Do not assume the problem is the CV, the interview, or anything else. Ask: "Where in the process are you being rejected: at application stage, after phone screen, after interview, or at offer?" The answer determines the route. Application stage points to application-optimiser. Phone screen or first interview points to interview-master. Offer stage points to career-navigator negotiation. Running the wrong skill wastes the user's time and erodes trust. When the cause is genuinely unclear, capture each rejection as a structured analysis via the career-navigator learnings loop and synthesise once a few have accumulated; a pattern across notes (for example, the same objection at final round three times) is far more reliable than diagnosing from a single rejection.
 
-**9. Starting a business — financial anxiety**
-Route to career-transitions, non-linear explorer, entrepreneurship path. This capability includes financial readiness assessment and an honest pros/cons analysis with failure rate data. Do not route to career-navigator (which assumes employed job search) or application-optimiser (which assumes a specific role). The anxiety is usually about financial exposure — address that directly rather than redirecting to soft encouragement.
+**9. Starting a business: financial anxiety**
+Route to career-transitions, non-linear explorer, entrepreneurship path. This capability includes financial readiness assessment and an honest pros/cons analysis with failure rate data. Do not route to career-navigator (which assumes employed job search) or application-optimiser (which assumes a specific role). The anxiety is usually about financial exposure; address that directly rather than redirecting to soft encouragement.
 
 **10. Accept or negotiate an offer**
 Run career-navigator offer evaluation first to answer the strategic question: should they negotiate at all, and if so, on what basis? Only then move to the salary negotiation coach for tactics. Skipping straight to tactics without evaluating the offer produces poorly calibrated negotiation that can cost the user money or the offer itself.
 
-**11. Directionless — "I don't know what I want"**
+**11. Directionless: "I don't know what I want"**
 Do not route to a skill yet. Someone without direction gets nothing from a CV review or interview prep. Use the ikigai questions (load @tim-ikigai-guide.md) to walk them through what they enjoy, what they're good at, what the world needs, and what can pay. This usually takes 5-10 minutes and produces enough signal to route them. If a clear role or sector emerges, go to application-optimiser. If they're drawn to non-traditional paths, go to career-transitions. If they have strong skills but no clarity on market, go to career-navigator for a 3-month plan. If a clear topic plus audience emerges and the user wants to be known for it, route to personal-brand using the `brand-from-ikigai.md` bridge so the four answers feed Why You, Why Them, Why Now directly.
 
 **12. Brand vs LinkedIn vs ikigai confusion**
@@ -211,7 +215,7 @@ Route to job-scout for discovery, with expectations set honestly: automated job-
 Route to skills-radar. The gap analysis separates skill gaps (genuinely missing) from evidence gaps (present but unprovable from the CV); evidence gaps route onwards to application-optimiser for a rewrite, skill gaps produce a learning plan. If the recurring "missing" skill is AI-related, career-transitions (AI Readiness Assessment) holds the specialised roadmap. Cross-read `applications/learnings/patterns.md` first if it exists; a synthesised interview objection is stronger evidence than the user's impression.
 
 **16. Several applications in flight, user losing the thread**
-The tracker is the answer, and the kanban board is its visual layer. If no tracker exists, build it first (career-navigator, Application Tracker). With three or more active applications, offer the board view (career-navigator, Kanban Board View): drag between stages, then export back to the tracker. Follow the stage-change triggers on sync: Interviewing suggests interview-master, Offer suggests negotiation or offer evaluation, Closed with a rejection offers the learnings loop.
+The application board is the answer. If none exists, build it (career-navigator, Application Tracker); it lives in the user's Claude account, where they can drag applications between stages and Claude reads the changes back. Offer to open it (career-navigator, Kanban Board View). Follow the stage-change triggers when reading changes back: Interviewing suggests interview-master, Offer suggests negotiation or offer evaluation, Closed with a rejection offers the learnings loop.
 
 **17. Employed and quietly exploring: "keep an ear to the ground"**
 Route to market-mapper, and confirm the posture before anything else: an employed user who wants discretion gets angles limited to following, reading, and commenting, and no suggestion that touches their LinkedIn settings or messages a hiring manager. The map is built once from the user's current or recent employer (ten to fifteen similar organisations, dated signals, decision makers confirmed by public sources); the weekly update reports only what changed. Do not push the user towards applications; when an organisation reaches Act now, offer career-navigator (Strategic Networking) or job-scout for live roles there, and let them decide the pace. If the user has no employer to seed from (a returner, a graduate), job-scout or the three-month plan is the better starting point.

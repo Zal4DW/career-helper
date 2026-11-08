@@ -6,6 +6,33 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ---
 
+## [2.0.0] - 2026-11-08
+
+### Changed (breaking)
+- **The application board is now the application record.** The board is an interactive artifact in your Claude account (`Career Helper Applications`) whose own database holds every application. You move and edit cards there and Claude reads your changes back in any later session, including scheduled runs; there is no export step. `applications/tracker.md` becomes a read-only snapshot. An existing `tracker.md` from an earlier version is imported the first time the board is built.
+- **The market map is now a board record too.** Organisations, dated signals, decision makers, priorities, and themes live in the `Career Helper Market Map` artifact's database. You can reprioritise with a reason, and every signal and decision maker keeps its source. The seed employer is held in an owner-only part of the database that the page never shows. `market-map.md` becomes a read-only snapshot.
+- **Cowork only.** Command-line, cron, Claude Code Desktop, and cloud Routine instructions are removed from Career Routines, the weekly update, the getting-started guides, and the README.
+
+### Added
+- **Career Outputs skill** (`/career-outputs`): one owner for publishing boards, the ikigai map, dashboards, Claude Docs, and slide decks, with fixed titles, privacy rules (private by default, never shared on your behalf), page versioning, a register of links (`career-helper-artefacts.md`), and workspace snapshots.
+- **Ikigai map as an editable artifact** (`Career Helper Ikigai`), replacing the static `ikigai-map.html`.
+- **Dashboards**: a progress dashboard refreshed by `/career-helper:status` and the weekly update, and an employer footprint dashboard. Every number shows its source.
+- **Claude Docs** offered for interview packs, debriefs, referee briefings, NED board papers, plans, offer evaluations, brand work, learning plans, transition plans, AI impact assessments, and the getting-the-best guide.
+- **Slides**: an Interview Presentation capability in Interview Master, and a Board AI Briefing capability in NED AI Helper.
+- **Directory listing fields** in `plugin.json`: display name, icon, licence, homepage, repository, documentation, support, and privacy policy links.
+- **Privacy statement** (`PRIVACY.md`), and README sections for data handling, example prompts, and troubleshooting.
+- **"Not advice" lines** on salary negotiation, offer evaluation, and the NED fiduciary-duty and regulatory references.
+- **CI**: `scripts/check_house_style.py` (dashes, emoji, manifests, binaries, front matter) and `claude plugin validate --strict` on every pull request.
+
+### Removed
+- The bundled `getting-the-best-guide.pdf` and its build script (the guide is offered as a Claude Doc instead), and a committed `__pycache__` file. Non-image binaries are held by the directory review.
+- Board export buttons and browser-only storage from the board pages.
+
+### Fixed
+- Every em dash, en dash, and emoji-style marker across the repository, per the house style.
+- Hyperbole in two persona prompts ("world-class").
+- The plugin icon is resized to 512 px.
+
 ## [1.17.1] - 2026-10-14
 
 ### Fixed
@@ -268,23 +295,23 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 ## [1.9.0] - 2026-03-21
 
 ### Added
-- **Wellbeing and emotional awareness in Tim's coaching** — Tim now reads emotional signals during intake, acknowledges difficulty before routing to skills, and checks in after emotionally demanding work
+- **Wellbeing and emotional awareness in Tim's coaching**: Tim now reads emotional signals during intake, acknowledges difficulty before routing to skills, and checks in after emotionally demanding work
   - Intake Q2 branches based on emotional context: forced change gets "how are you feeling?", steady situations get "what would help most?"
   - Wellbeing Notes in preferences file carry emotional context across sessions
   - CHECK-IN line in checkpoints after skills that touch rejection, ageism, redundancy, or difficult feelings
   - Pace line in Progress Tracker after emotionally demanding sessions
   - Skill dispatch now passes emotional context to sub-agents so they can calibrate tone
-- **Agent memory for Tim** (`memory: project`) — Tim now builds persistent coaching knowledge across sessions
+- **Agent memory for Tim** (`memory: project`); Tim now builds persistent coaching knowledge across sessions
   - Stores routing patterns, skill sequencing insights, and coaching approaches that work
   - Separate from user data (which stays in preferences file)
-- **Interview Master: peer development questions** — explicit "How have you helped your colleagues improve?" question type with STAR guidance focused on the other person's outcome
-- **Interview Master: company selection criteria** — "What matters most when choosing your next company?" with values-alignment answer framework
+- **Interview Master: peer development questions**: explicit "How have you helped your colleagues improve?" question type with STAR guidance focused on the other person's outcome
+- **Interview Master: company selection criteria**: "What matters most when choosing your next company?" with values-alignment answer framework
 - **Wellbeing-aware checkpoint template** (Variation D) with CHECK-IN rules and concrete example
 
 ### Changed
-- **Accessibility: traffic-light terminology replaced** — all references to "traffic-light indicators" changed to "text-label ratings (GREEN/AMBER/RED)" across employer-footprint SKILL.md, dashboard template, digital-footprint-audit, deep-research-reflection, and getting-the-best guide
-- Dashboard template score key now includes accessibility note: "Ratings always use text labels alongside scores — never colour alone"
-- Tim's "What Tim never does" lists deduplicated — Persona section covers voice/tone, Wellbeing section covers coaching boundaries, with cross-reference
+- **Accessibility: traffic-light terminology replaced**: all references to "traffic-light indicators" changed to "text-label ratings (GREEN/AMBER/RED)" across employer-footprint SKILL.md, dashboard template, digital-footprint-audit, deep-research-reflection, and getting-the-best guide
+- Dashboard template score key now includes accessibility note: "Ratings always use text labels alongside scores; never colour alone"
+- Tim's "What Tim never does" lists deduplicated; Persona section covers voice/tone, Wellbeing section covers coaching boundaries, with cross-reference
 - Sequencing Logic updated to require emotional acknowledgment before routing
 - Returning user instructions broken into readable sub-bullets
 - Mock interview hiring manager typical questions expanded with peer development and company selection criteria
@@ -295,7 +322,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 ## [1.8.3] - 2026-03-17
 
 ### Added
-- **Accessibility support across all skills and commands** — previously only Tim checked for accessibility preferences; now every skill and command does
+- **Accessibility support across all skills and commands**: previously only Tim checked for accessibility preferences; now every skill and command does
   - All 10 non-Tim skills check for `career-helper-preferences.md` at skill start and apply dyslexia-friendly and colour-blind safe formatting
   - Skills invoked directly (not via Tim) ask once about accessibility preferences if no preferences file exists, then save for future sessions
   - `/career-helper:quick-start` includes accessibility as part of its intake questions
@@ -311,16 +338,16 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 ## [1.8.0] - 2026-03-16
 
 ### Added
-- **Tim — Career Coach** (`/career-helper:career-coach`) - Guided career coaching that orchestrates skills for you
-  - Semi-autonomous skill orchestration — Tim understands your situation and runs the right skills in the right order
+- **Tim: Career Coach** (`/career-helper:career-coach`) - Guided career coaching that orchestrates skills for you
+  - Semi-autonomous skill orchestration: Tim understands your situation and runs the right skills in the right order
   - Structured checkpoints between skills using labelled DONE/SAVED/FLAG/NEXT format
-  - Non-deterministic sequencing — adapts based on your goals, urgency, flags, and emotional signals
+  - Non-deterministic sequencing: adapts based on your goals, urgency, flags, and emotional signals
   - Session persistence via `career-helper-preferences.md` with consent-gated storage
   - Accessibility support: dyslexia-friendly enhanced mode (signposting, numbered options, confirmation checks, no idioms, one decision per message)
-  - Colour-blind safe communication — all status conveyed through labels and words, never colour alone
+  - Colour-blind safe communication: all status conveyed through labels and words, never colour alone
   - Returning user detection with privacy-safe identity confirmation before displaying personal data
   - Error handling for skill failures with clear reporting and user choice
-  - Supportive coach persona — warm, encouraging, direct, never sycophantic
+  - Supportive coach persona: warm, encouraging, direct, never sycophantic
 - New command: `/career-helper:career-coach` to launch Tim
 - New skill: `tim` with 3 reference files (routing guide, dyslexia guide, checkpoint templates)
 
@@ -398,10 +425,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Version
 
 ### Added
 - **Ageism in employment support** for Interview Master skill (post-interview coaching & all capabilities)
-  - New reference: `ageism-in-employment.md` — comprehensive UK law (Equality Act 2010), Employment Tribunal process, burden of proof, time limits, compensation, whistleblowing routes, EHRC role, recent case law (2024-2025), and honest assessment of practical reality vs. letter of the law
-  - New reference: `age-discrimination-strategies.md` — practical CV strategies to reduce age bias, interview tactics for "overqualified" concerns, digital presence optimisation, skills to update (with free/affordable UK training resources), age-friendly employers and job boards, networking strategies for older workers
-  - New reference: `emotional-support-resilience.md` — psychological impact of age-related rejection, long-service identity crisis (20-30 years at one company), NHS and charity support services with helpline numbers, cognitive reframing techniques (3 C's Framework), daily routine templates, confidence rebuilding, crisis contacts, and when to seek professional help
-- New ageism persona in Interview Master — triggered when user mentions age discrimination, being "too old", "overqualified" as age proxy, long-service redundancy, or age-related rejection patterns. Loads all three ageism references alongside standard capability references
+  - New reference: `ageism-in-employment.md`: comprehensive UK law (Equality Act 2010), Employment Tribunal process, burden of proof, time limits, compensation, whistleblowing routes, EHRC role, recent case law (2024-2025), and honest assessment of practical reality vs. letter of the law
+  - New reference: `age-discrimination-strategies.md`: practical CV strategies to reduce age bias, interview tactics for "overqualified" concerns, digital presence optimisation, skills to update (with free/affordable UK training resources), age-friendly employers and job boards, networking strategies for older workers
+  - New reference: `emotional-support-resilience.md`: psychological impact of age-related rejection, long-service identity crisis (20-30 years at one company), NHS and charity support services with helpline numbers, cognitive reframing techniques (3 C's Framework), daily routine templates, confidence rebuilding, crisis contacts, and when to seek professional help
+- New ageism persona in Interview Master; triggered when user mentions age discrimination, being "too old", "overqualified" as age proxy, long-service redundancy, or age-related rejection patterns. Loads all three ageism references alongside standard capability references
 - Ageism routing in help command (5 new routing entries)
 - Ageism routing in quick-start command (new situation option + follow-up question + 3 routing entries)
 - Quick start examples for ageism in Interview Master skill

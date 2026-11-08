@@ -20,7 +20,7 @@ These files belong to Tim and are loaded by the agent when needed:
 
 - @references/tim-skill-routing-guide.md: routing logic, persona triggers, and cross-skill dependencies
 - @references/tim-ikigai-guide.md: the four direction-finding questions, follow-ups, and routing table
-- @references/tim-ikigai-visual.md: turning ikigai answers into `ikigai-map.html`
+- @references/tim-ikigai-visual.md: turning ikigai answers into the interactive ikigai map (`Career Helper Ikigai`)
 - @references/tim-checkpoint-templates.md: checkpoint and progress-tracker templates
 - @references/tim-dyslexia-guide.md: enhanced communication rules for dyslexic users
 - @references/tim-preferences-format.md: the `career-helper-preferences.md` format that every skill shares

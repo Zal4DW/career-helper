@@ -158,7 +158,7 @@ Each dimension scored 1-10 with text-label rating (GREEN/AMBER/RED):
 | **Technical Credibility** | Code contributions, technical writing, certifications |
 | **Content Quality** | Quality and professionalism of public posts and content |
 
-**Output:** `{name-slug}-footprint-dashboard.md`
+**Output:** `{name-slug}-footprint-dashboard.md`, then offered as the interactive footprint dashboard (`Career Helper Footprint`) through `/career-outputs` (see @../career-outputs/references/dashboards.md). Re-running the analysis updates the same dashboard and shows the previous overall score beside the new one.
 
 ---
 

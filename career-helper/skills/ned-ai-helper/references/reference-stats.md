@@ -163,16 +163,16 @@ Source: Wharton SSRN 2024
 ## Key Insights for NEDs
 
 > "The single biggest reason enterprise AI fails is that companies still treat it as a tool instead of a general-purpose technology."
-> — McKinsey AI-First Playbook 2025
+> Source: McKinsey AI-First Playbook 2025
 
 > "Nobody needs trillion-parameter, generic models. They need efficient, cost-effective AI tailored for use cases that matter."
-> — Ana Paula Assis, IBM
+> Source: Ana Paula Assis, IBM
 
 > "Companies starting later are realising they now won't catch those who started earlier."
-> — Paul Bratcher, NED Briefing 2024
+> Source: Paul Bratcher, NED Briefing 2024
 
 > "Permission to prompt: Workers need explicit permission and clear policies. Many felt using AI was 'cheating' without institutional endorsement."
-> — Google/Public First AI Works 2025
+> Source: Google/Public First AI Works 2025
 
 ---
 
@@ -266,7 +266,7 @@ Source: [WEF Future of Jobs 2025](https://www.weforum.org/stories/2025/01/future
 ### Microsoft's Vision for AI-Era Organisations
 
 > "The future belongs to Frontier Firms - human-led, agent-operated organisations that buy intelligence like electricity, help their employees put it to work to generate value, and compound it like interest."
-> — Kathleen Hogan, EVP Chief Strategy and Transformation Officer, Microsoft
+> Source: Kathleen Hogan, EVP Chief Strategy and Transformation Officer, Microsoft
 
 ### Five Capabilities of Frontier Firms
 
@@ -283,10 +283,10 @@ Source: Microsoft "Becoming a Frontier Firm" 2024
 ### Critical Transformation Insight
 
 > "Redesigning with AI doesn't begin with technology. It begins with understanding how people actually work. You can't transform what you can't see."
-> — Katy George, CVP Workforce Transformation, Microsoft
+> Source: Katy George, CVP Workforce Transformation, Microsoft
 
 > "This is not an IT transformation or a product launch - it's a business transformation. Business leaders must be clear about what objectives really matter."
-> — Microsoft Frontier Firm Guide
+> Source: Microsoft Frontier Firm Guide
 
 ---
 

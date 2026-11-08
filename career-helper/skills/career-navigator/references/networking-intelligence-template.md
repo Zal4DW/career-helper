@@ -30,11 +30,11 @@
 
 | Name | Title | Connection Angle | Connect By | Status | Notes |
 |------|-------|-----------------|------------|--------|-------|
-| {Name 1} | {Job Title} | {Why connecting} | {Date} | ☐ Not started | {Key point} |
-| {Name 2} | {Job Title} | {Why connecting} | {Date} | ☐ Not started | {Key point} |
-| {Name 3} | {Job Title} | {Why connecting} | {Date} | ☐ Not started | {Key point} |
+| {Name 1} | {Job Title} | {Why connecting} | {Date} | Not started | {Key point} |
+| {Name 2} | {Job Title} | {Why connecting} | {Date} | Not started | {Key point} |
+| {Name 3} | {Job Title} | {Why connecting} | {Date} | Not started | {Key point} |
 
-**Status Options:** ☐ Not started → ⏳ Message sent → ✓ Connected → 💬 Conversing
+**Status options:** Not started, Message sent, Connected, Conversing
 
 ---
 
@@ -42,9 +42,9 @@
 
 | Name | Title | Connection Angle | Connect By | Status | Notes |
 |------|-------|-----------------|------------|--------|-------|
-| {Name 4} | {Job Title} | {Why connecting} | {Date} | ☐ Not started | {Key point} |
-| {Name 5} | {Job Title} | {Why connecting} | {Date} | ☐ Not started | {Key point} |
-| {Name 6} | {Job Title} | {Why connecting} | {Date} | ☐ Not started | {Key point} |
+| {Name 4} | {Job Title} | {Why connecting} | {Date} | Not started | {Key point} |
+| {Name 5} | {Job Title} | {Why connecting} | {Date} | Not started | {Key point} |
+| {Name 6} | {Job Title} | {Why connecting} | {Date} | Not started | {Key point} |
 
 ---
 
@@ -52,8 +52,8 @@
 
 | Name | Title | Connection Angle | Connect By | Status | Notes |
 |------|-------|-----------------|------------|--------|-------|
-| {Name 7} | {Job Title} | {Why connecting} | {Date} | ☐ Not started | {Key point} |
-| {Name 8} | {Job Title} | {Why connecting} | {Date} | ☐ Not started | {Key point} |
+| {Name 7} | {Job Title} | {Why connecting} | {Date} | Not started | {Key point} |
+| {Name 8} | {Job Title} | {Why connecting} | {Date} | Not started | {Key point} |
 
 ---
 
@@ -63,9 +63,9 @@ Track engagement with target people's content **before** connecting.
 
 | Name | Post 1 Commented | Post 2 Commented | Post 3 Engaged | Ready to Connect |
 |------|------------------|------------------|----------------|------------------|
-| {Name 1} | ☐ | ☐ | ☐ | ☐ |
-| {Name 2} | ☐ | ☐ | ☐ | ☐ |
-| {Name 3} | ☐ | ☐ | ☐ | ☐ |
+| {Name 1} | [ ] | [ ] | [ ] | [ ] |
+| {Name 2} | [ ] | [ ] | [ ] | [ ] |
+| {Name 3} | [ ] | [ ] | [ ] | [ ] |
 
 **Goal:** 2-3 meaningful engagements before connection request
 
@@ -77,29 +77,29 @@ Track engagement with target people's content **before** connecting.
 
 | Day | Activity | Target People | Time | Completed |
 |-----|----------|---------------|------|-----------|
-| Mon | Find recent posts, leave thoughtful comments | {Name 1}, {Name 2} | 20 min | ☐ |
-| Tue | Engage with company content, share with insights | Company page | 15 min | ☐ |
-| Wed | Connect with alumni and mutual connections | {Name 3}, {Name 4} | 15 min | ☐ |
-| Thu | Connect with Tier 1 priorities | {Name 1}, {Name 2} | 30 min | ☐ |
-| Fri | Follow up on acceptances, continue engagement | All | 20 min | ☐ |
+| Mon | Find recent posts, leave thoughtful comments | {Name 1}, {Name 2} | 20 min | [ ] |
+| Tue | Engage with company content, share with insights | Company page | 15 min | [ ] |
+| Wed | Connect with alumni and mutual connections | {Name 3}, {Name 4} | 15 min | [ ] |
+| Thu | Connect with Tier 1 priorities | {Name 1}, {Name 2} | 30 min | [ ] |
+| Fri | Follow up on acceptances, continue engagement | All | 20 min | [ ] |
 
 ### Week 2: Application Week
 
 | Day | Activity | Target People | Time | Completed |
 |-----|----------|---------------|------|-----------|
-| Mon | Submit application | - | 30 min | ☐ |
-| Tue | Connect with recruiters/Tier 2 | {Name 5}, {Name 6} | 20 min | ☐ |
-| Wed | Engage with connected profiles' content | Tier 1 | 15 min | ☐ |
-| Thu | Connect with remaining Tier 2 | {Name 7} | 15 min | ☐ |
-| Fri | Review responses, adjust strategy | All | 15 min | ☐ |
+| Mon | Submit application | - | 30 min | [ ] |
+| Tue | Connect with recruiters/Tier 2 | {Name 5}, {Name 6} | 20 min | [ ] |
+| Wed | Engage with connected profiles' content | Tier 1 | 15 min | [ ] |
+| Thu | Connect with remaining Tier 2 | {Name 7} | 15 min | [ ] |
+| Fri | Review responses, adjust strategy | All | 15 min | [ ] |
 
 ### Week 3+: Post-Application Nurture
 
 | Day | Activity | Target People | Time | Completed |
 |-----|----------|---------------|------|-----------|
-| Mon | Connect with Tier 3 | {Name 8}, {Name 9} | 20 min | ☐ |
-| Wed | Meaningful engagement with connections | All connected | 20 min | ☐ |
-| Fri | Status check, follow-ups if needed | Tier 1 | 15 min | ☐ |
+| Mon | Connect with Tier 3 | {Name 8}, {Name 9} | 20 min | [ ] |
+| Wed | Meaningful engagement with connections | All connected | 20 min | [ ] |
+| Fri | Status check, follow-ups if needed | Tier 1 | 15 min | [ ] |
 
 ---
 
@@ -179,9 +179,9 @@ Best,
 
 | Your Connection | Their Title | Knows Target Person | Target's Title | Relationship | Intro Status |
 |----------------|-------------|---------------------|----------------|--------------|--------------|
-| {Name A} | {Title} | {Target Name 1} | {Title} | Former colleagues | ☐ Not requested |
-| {Name B} | {Title} | {Target Name 2} | {Title} | Same university | ☐ Not requested |
-| {Name C} | {Title} | {Target Name 3} | {Title} | Industry peers | ☐ Not requested |
+| {Name A} | {Title} | {Target Name 1} | {Title} | Former colleagues | Not requested |
+| {Name B} | {Title} | {Target Name 2} | {Title} | Same university | Not requested |
+| {Name C} | {Title} | {Target Name 3} | {Title} | Industry peers | Not requested |
 
 **Introduction Request Template:**
 ```
@@ -209,9 +209,9 @@ People at {Company} who share your background:
 
 | Name | Title | Shared Background | Joined | LinkedIn | Connect By | Status |
 |------|-------|------------------|--------|----------|------------|--------|
-| {Name} | {Title} | Both worked at {Company X} | {When} | {URL} | {Date} | ☐ |
-| {Name} | {Title} | {University} alumni | {When} | {URL} | {Date} | ☐ |
-| {Name} | {Title} | Both worked in {sector} | {When} | {URL} | {Date} | ☐ |
+| {Name} | {Title} | Both worked at {Company X} | {When} | {URL} | {Date} | [ ] |
+| {Name} | {Title} | {University} alumni | {When} | {URL} | {Date} | [ ] |
+| {Name} | {Title} | Both worked in {sector} | {When} | {URL} | {Date} | [ ] |
 
 **Alumni Connection Template:**
 ```
@@ -240,13 +240,13 @@ Best,
 
 | Name | Title | Focus Area | Recent Activity | Connect By | Status |
 |------|-------|-----------|----------------|------------|--------|
-| {Name 1} | {Recruiter Title} | {e.g., Tech/AI roles} | {Posted about X} | {Date} | ☐ |
-| {Name 2} | {Recruiter Title} | {e.g., C-suite} | {Hiring for Y} | {Date} | ☐ |
+| {Name 1} | {Recruiter Title} | {e.g., Tech/AI roles} | {Posted about X} | {Date} | [ ] |
+| {Name 2} | {Recruiter Title} | {e.g., C-suite} | {Hiring for Y} | {Date} | [ ] |
 
 **Recruiter Connection Timing:**
-- ☐ Before application (if they posted the role publicly)
-- ☐ 2-3 days after application (give them time to see your CV)
-- ☐ After initial screening (if you advance)
+- [ ] Before application (if they posted the role publicly)
+- [ ] 2-3 days after application (give them time to see your CV)
+- [ ] After initial screening (if you advance)
 
 **What to Say vs. Not Say:**
 
@@ -299,9 +299,9 @@ Track progression with each connection:
 
 | Name | Connected | 1st Exchange | 2nd Exchange | Valuable Intel | Potential Referral | Notes |
 |------|-----------|-------------|--------------|----------------|-------------------|-------|
-| {Name 1} | {Date} | ☐ | ☐ | ☐ | ☐ | {Notes} |
-| {Name 2} | {Date} | ☐ | ☐ | ☐ | ☐ | {Notes} |
-| {Name 3} | {Date} | ☐ | ☐ | ☐ | ☐ | {Notes} |
+| {Name 1} | {Date} | [ ] | [ ] | [ ] | [ ] | {Notes} |
+| {Name 2} | {Date} | [ ] | [ ] | [ ] | [ ] | {Notes} |
+| {Name 3} | {Date} | [ ] | [ ] | [ ] | [ ] | {Notes} |
 
 **Goal Progress:**
 - 60-80% connection acceptance rate (Tier 1)
@@ -313,7 +313,7 @@ Track progression with each connection:
 
 ## Messaging Do's and Don'ts Reference
 
-### ✅ DO:
+### DO:
 
 - [ ] Reference specific recent work/posts of theirs
 - [ ] Show genuine interest in company/mission
@@ -324,7 +324,7 @@ Track progression with each connection:
 - [ ] Make it easy to respond
 - [ ] Space connections 1-2 days apart
 
-### ❌ DON'T:
+### DON'T:
 
 - [ ] Use generic "I'd like to add you"
 - [ ] Immediately ask for job/referral

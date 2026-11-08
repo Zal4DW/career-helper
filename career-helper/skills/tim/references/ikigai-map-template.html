@@ -1,194 +1,328 @@
-<!DOCTYPE html>
+<title>Career Helper Ikigai</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <!--
-  Ikigai Map template for Career Helper.
-  The skill replaces every {{PLACEHOLDER}} with the user's own words, then saves
-  the result as ikigai-map.html. HTML-escape every value first (at minimum the
-  characters & < > " '), so user text cannot break the markup or inject script.
-  The text-equivalent table is the single source of content; the diagram reads
-  from it, so you only fill each value once. Self-contained: no external assets.
-  Accessibility: colour-blind-safe palette, every region labelled in text, full
-  text table below, hover AND keyboard focus both reveal detail. Do not remove.
+  Career Helper ikigai map. Page version 2.0.0.
+  Publish this file unchanged as an artifact with capabilities {db: {}, user: {}}.
+  It holds no user data: the map lives in one database document.
+    ikigai/map   {owner, date, love, goodAt, needs, paid, passion, mission, profession, vocation, ikigai}
+  Claude writes the user's own words there after publishing; the user can edit
+  any region on the page and Claude reads it back. Text is rendered with
+  textContent only. Accessibility: colour-blind-safe palette (Okabe-Ito),
+  every region labelled in text, a full text table, and keyboard access to
+  every region. Do not remove any of these.
 -->
-<html lang="en-GB">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ikigai Map for {{NAME}}</title>
 <style>
+  /* Layout: diagram beside a detail panel, the full text table below; stacked on a phone. */
   :root {
-    --love: #0072B2;        /* Okabe-Ito blue */
-    --goodat: #E69F00;      /* orange */
-    --needs: #009E73;       /* bluish green */
-    --paid: #D55E00;        /* vermillion */
+    --bg: #f7f8fa;
+    --surface: #ffffff;
     --ink: #25282d;
-    --muted: #5a616b;
+    --ink-soft: #5a616b;
     --line: #d7dce3;
+    --accent: #1a4d8f;
+    --accent-ink: #ffffff;
+    --head: #eef2f7;
+    --focus: #b25000;
+    --love: #0072B2;
+    --goodat: #E69F00;
+    --needs: #009E73;
+    --paid: #D55E00;
+    --circle-opacity: 0.38;
+    --font-body: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16191d; --surface: #21252b; --ink: #e6e9ed; --ink-soft: #a7aeb8; --line: #3a4048;
+      --accent: #7aa7dd; --accent-ink: #16191d; --head: #2a3038; --focus: #ffb066;
+      --love: #56B4E9; --goodat: #E69F00; --needs: #009E73; --paid: #D55E00; --circle-opacity: 0.45;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16191d; --surface: #21252b; --ink: #e6e9ed; --ink-soft: #a7aeb8; --line: #3a4048;
+    --accent: #7aa7dd; --accent-ink: #16191d; --head: #2a3038; --focus: #ffb066;
+    --love: #56B4E9; --goodat: #E69F00; --needs: #009E73; --paid: #D55E00; --circle-opacity: 0.45;
+    color-scheme: dark;
   }
   * { box-sizing: border-box; }
   body {
-    font-family: 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
-    color: var(--ink);
-    margin: 0;
-    padding: 24px;
-    line-height: 1.5;
-    background: #fafbfc;
+    margin: 0; font-family: var(--font-body); font-size: 16px; color: var(--ink); background: var(--bg); line-height: 1.5;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 20px 28px;
   }
-  header { max-width: 920px; margin: 0 auto 8px; }
-  h1 { color: #1a4d8f; font-size: 22pt; margin: 0 0 4px; }
-  .sub { color: var(--muted); margin: 0 0 4px; }
-  main { max-width: 920px; margin: 0 auto; }
-  .layout { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; }
-  .diagram { flex: 1 1 460px; min-width: 320px; }
-  .panel {
-    flex: 1 1 300px; min-width: 260px;
-    border: 1px solid var(--line); border-radius: 8px;
-    padding: 14px 16px; background: #fff;
-  }
-  .panel h2 { font-size: 13pt; color: #1a4d8f; margin: 0 0 6px; }
-  #panel-title { font-weight: 700; }
-  #panel-text { margin: 6px 0 0; }
-  svg { width: 100%; height: auto; display: block; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  h1 { color: var(--accent); font-size: 1.6rem; margin: 0 0 4px; text-wrap: balance; }
+  .sub { color: var(--ink-soft); margin: 0 0 4px; font-size: 0.92rem; max-width: 65ch; }
+  .notice { font-size: 0.9rem; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; margin: 12px 0; max-width: 65ch; }
+  .status-msg { font-size: 0.85rem; color: var(--ink-soft); min-height: 1.2em; margin: 4px 0; }
+  .layout { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; margin-top: 8px; }
+  .diagram { flex: 1 1 420px; min-width: 0; }
+  .panel { flex: 1 1 280px; min-width: 0; border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; background: var(--surface); }
+  .panel h2 { font-size: 1rem; color: var(--accent); margin: 0 0 6px; }
+  #panel-title { font-weight: 700; margin: 0; }
+  #panel-text { margin: 6px 0 10px; overflow-wrap: anywhere; }
+  svg { width: 100%; max-width: 100%; height: auto; display: block; }
+  svg circle.ring { fill-opacity: var(--circle-opacity); }
   .region { cursor: pointer; outline: none; }
-  .region:focus-visible .hit { stroke: #1a4d8f; stroke-width: 3px; }
+  .region .hit { fill: transparent; stroke: transparent; }
+  .region:focus-visible .hit { stroke: var(--focus); stroke-width: 3px; }
   .region:hover .label, .region:focus-visible .label { font-weight: 700; }
   .label { font-size: 13px; fill: var(--ink); pointer-events: none; }
-  .label.small { font-size: 11px; fill: var(--muted); }
-  .centre-label { font-size: 15px; font-weight: 700; fill: #1a4d8f; }
-  table { border-collapse: collapse; width: 100%; margin: 22px 0 0; font-size: 10.5pt; }
-  caption { text-align: left; font-weight: 700; color: #1a4d8f; padding: 0 0 6px; }
-  th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; }
-  th { background: #eef2f7; width: 30%; }
-  .note { color: var(--muted); font-size: 9.5pt; margin-top: 14px; }
-  @media print { body { background: #fff; } .panel { break-inside: avoid; } }
+  .label.small { font-size: 11px; }
+  .centre-label { font-size: 15px; font-weight: 700; fill: var(--ink); }
+  button { font: inherit; font-size: 0.85rem; padding: 7px 14px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  button:disabled { opacity: 0.55; cursor: not-allowed; }
+  button:focus-visible, textarea:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+  .table-wrap { overflow-x: auto; margin-top: 22px; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.92rem; }
+  caption { text-align: left; font-weight: 700; color: var(--accent); padding: 0 0 6px; }
+  th, td { border: 1px solid var(--line); padding: 7px 10px; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+  th { background: var(--head); width: 30%; }
+  td.empty { color: var(--ink-soft); font-style: italic; }
+  .note { color: var(--ink-soft); font-size: 0.85rem; margin-top: 14px; max-width: 65ch; }
+  dialog { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); max-width: 460px; width: 92vw; padding: 18px; }
+  dialog::backdrop { background: rgba(0, 0, 0, 0.45); }
+  dialog h3 { margin: 0 0 10px; font-size: 1.05rem; }
+  dialog label { display: block; font-size: 0.82rem; font-weight: 600; margin: 6px 0 3px; }
+  dialog textarea { font: inherit; font-size: 0.9rem; width: 100%; min-height: 110px; padding: 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); resize: vertical; }
+  dialog .row { display: flex; gap: 10px; justify-content: flex-end; margin-top: 14px; }
 </style>
-</head>
-<body>
-<header>
-  <h1>Ikigai Map</h1>
-  <p class="sub">{{NAME}} &middot; {{DATE}}</p>
-  <p class="sub">Hover or tab through each region to see what you wrote. The full text is in the table below the diagram.</p>
-</header>
 
-<main>
-<div class="layout">
-  <div class="diagram">
-    <svg viewBox="0 0 600 560" role="img" aria-label="Ikigai diagram with four overlapping areas: what you love, what you are good at, what the world needs, and what you can be paid for.">
-      <!-- four overlapping circles; multiply blend keeps overlaps legible -->
-      <g style="mix-blend-mode:multiply">
-        <circle cx="300" cy="190" r="175" fill="var(--love)"   fill-opacity="0.40"/>
-        <circle cx="410" cy="300" r="175" fill="var(--goodat)" fill-opacity="0.40"/>
-        <circle cx="300" cy="410" r="175" fill="var(--paid)"   fill-opacity="0.40"/>
-        <circle cx="190" cy="300" r="175" fill="var(--needs)"  fill-opacity="0.40"/>
-      </g>
+<div class="wrap">
+  <header>
+    <h1>Ikigai Map</h1>
+    <p class="sub" id="owner-line">Your four answers and where they overlap.</p>
+    <p class="sub">Select a region in the diagram, or use the table below. Choose Edit to change what it says; Claude reads your changes next time.</p>
+  </header>
+  <p class="notice" id="notice">Loading your ikigai map.</p>
+  <p class="status-msg" id="status-msg" role="status" aria-live="polite"></p>
 
-      <!-- base regions -->
-      <g class="region" tabindex="0" role="button" data-target="t-love" aria-label="What you love">
-        <circle class="hit" cx="300" cy="120" r="34" fill="transparent"/>
-        <text class="label" x="300" y="108" text-anchor="middle">What you</text>
-        <text class="label" x="300" y="126" text-anchor="middle" style="font-weight:700">LOVE</text>
-      </g>
-      <g class="region" tabindex="0" role="button" data-target="t-goodat" aria-label="What you are good at">
-        <circle class="hit" cx="500" cy="300" r="34" fill="transparent"/>
-        <text class="label" x="500" y="288" text-anchor="middle">What you are</text>
-        <text class="label" x="500" y="306" text-anchor="middle" style="font-weight:700">GOOD AT</text>
-      </g>
-      <g class="region" tabindex="0" role="button" data-target="t-paid" aria-label="What you can be paid for">
-        <text class="label" x="300" y="476" text-anchor="middle">What you can be</text>
-        <text class="label" x="300" y="494" text-anchor="middle" style="font-weight:700">PAID FOR</text>
-        <circle class="hit" cx="300" cy="486" r="34" fill="transparent"/>
-      </g>
-      <g class="region" tabindex="0" role="button" data-target="t-needs" aria-label="What the world needs">
-        <circle class="hit" cx="100" cy="300" r="34" fill="transparent"/>
-        <text class="label" x="100" y="288" text-anchor="middle">What the</text>
-        <text class="label" x="100" y="306" text-anchor="middle" style="font-weight:700">WORLD NEEDS</text>
-      </g>
+  <div class="layout">
+    <div class="diagram">
+      <svg viewBox="0 0 600 560" role="img" aria-label="Ikigai diagram with four overlapping areas: what you love, what you are good at, what the world needs, and what you can be paid for.">
+        <circle class="ring" cx="300" cy="190" r="175" fill="var(--love)"></circle>
+        <circle class="ring" cx="410" cy="300" r="175" fill="var(--goodat)"></circle>
+        <circle class="ring" cx="300" cy="410" r="175" fill="var(--paid)"></circle>
+        <circle class="ring" cx="190" cy="300" r="175" fill="var(--needs)"></circle>
 
-      <!-- overlap regions -->
-      <g class="region" tabindex="0" role="button" data-target="t-passion" aria-label="Passion: where love and good at overlap">
-        <circle class="hit" cx="385" cy="220" r="26" fill="transparent"/>
-        <text class="label small" x="385" y="224" text-anchor="middle">PASSION</text>
-      </g>
-      <g class="region" tabindex="0" role="button" data-target="t-profession" aria-label="Profession: where good at and paid overlap">
-        <circle class="hit" cx="385" cy="380" r="26" fill="transparent"/>
-        <text class="label small" x="385" y="384" text-anchor="middle">PROFESSION</text>
-      </g>
-      <g class="region" tabindex="0" role="button" data-target="t-vocation" aria-label="Vocation: where world needs and paid overlap">
-        <circle class="hit" cx="215" cy="380" r="26" fill="transparent"/>
-        <text class="label small" x="215" y="384" text-anchor="middle">VOCATION</text>
-      </g>
-      <g class="region" tabindex="0" role="button" data-target="t-mission" aria-label="Mission: where world needs and love overlap">
-        <circle class="hit" cx="215" cy="220" r="26" fill="transparent"/>
-        <text class="label small" x="215" y="224" text-anchor="middle">MISSION</text>
-      </g>
+        <g class="region" tabindex="0" role="button" data-key="love" aria-label="What you love">
+          <circle class="hit" cx="300" cy="120" r="34"></circle>
+          <text class="label" x="300" y="108" text-anchor="middle">What you</text>
+          <text class="label" x="300" y="126" text-anchor="middle" font-weight="700">LOVE</text>
+        </g>
+        <g class="region" tabindex="0" role="button" data-key="goodAt" aria-label="What you are good at">
+          <circle class="hit" cx="500" cy="300" r="34"></circle>
+          <text class="label" x="500" y="288" text-anchor="middle">What you are</text>
+          <text class="label" x="500" y="306" text-anchor="middle" font-weight="700">GOOD AT</text>
+        </g>
+        <g class="region" tabindex="0" role="button" data-key="paid" aria-label="What you can be paid for">
+          <circle class="hit" cx="300" cy="486" r="34"></circle>
+          <text class="label" x="300" y="476" text-anchor="middle">What you can be</text>
+          <text class="label" x="300" y="494" text-anchor="middle" font-weight="700">PAID FOR</text>
+        </g>
+        <g class="region" tabindex="0" role="button" data-key="needs" aria-label="What the world needs">
+          <circle class="hit" cx="100" cy="300" r="34"></circle>
+          <text class="label" x="100" y="288" text-anchor="middle">What the</text>
+          <text class="label" x="100" y="306" text-anchor="middle" font-weight="700">WORLD NEEDS</text>
+        </g>
+        <g class="region" tabindex="0" role="button" data-key="passion" aria-label="Passion: where love and good at overlap">
+          <circle class="hit" cx="385" cy="220" r="26"></circle>
+          <text class="label small" x="385" y="224" text-anchor="middle">PASSION</text>
+        </g>
+        <g class="region" tabindex="0" role="button" data-key="profession" aria-label="Profession: where good at and paid overlap">
+          <circle class="hit" cx="385" cy="380" r="26"></circle>
+          <text class="label small" x="385" y="384" text-anchor="middle">PROFESSION</text>
+        </g>
+        <g class="region" tabindex="0" role="button" data-key="vocation" aria-label="Vocation: where world needs and paid overlap">
+          <circle class="hit" cx="215" cy="380" r="26"></circle>
+          <text class="label small" x="215" y="384" text-anchor="middle">VOCATION</text>
+        </g>
+        <g class="region" tabindex="0" role="button" data-key="mission" aria-label="Mission: where world needs and love overlap">
+          <circle class="hit" cx="215" cy="220" r="26"></circle>
+          <text class="label small" x="215" y="224" text-anchor="middle">MISSION</text>
+        </g>
+        <g class="region" tabindex="0" role="button" data-key="ikigai" aria-label="Ikigai: where all four overlap">
+          <circle class="hit" cx="300" cy="300" r="40"></circle>
+          <text class="centre-label" x="300" y="304" text-anchor="middle">IKIGAI</text>
+        </g>
+      </svg>
+    </div>
 
-      <!-- centre -->
-      <g class="region" tabindex="0" role="button" data-target="t-ikigai" aria-label="Ikigai: where all four overlap">
-        <circle class="hit" cx="300" cy="300" r="40" fill="transparent"/>
-        <text class="centre-label" x="300" y="304" text-anchor="middle">IKIGAI</text>
-      </g>
-    </svg>
+    <aside class="panel" aria-live="polite">
+      <h2>Detail</h2>
+      <p id="panel-title">Pick a region</p>
+      <p id="panel-text">Select a circle, an overlap, or the centre to see what you wrote there.</p>
+      <button type="button" id="panel-edit" hidden>Edit</button>
+    </aside>
   </div>
 
-  <aside class="panel" aria-live="polite">
-    <h2>Detail</h2>
-    <p id="panel-title">Pick a region</p>
-    <p id="panel-text">Hover over or tab to a circle, an overlap, or the centre to see what you wrote there.</p>
-  </aside>
+  <div class="table-wrap">
+    <table>
+      <caption>Your ikigai in full (text equivalent)</caption>
+      <tbody id="table-body"></tbody>
+    </table>
+  </div>
+
+  <p class="note">This diagram is labelled in text and does not rely on colour. Every region is listed in the table, so the page works fully without seeing the diagram. An empty region is yours to fill in; an honest gap at the centre is useful information.</p>
 </div>
 
-<!-- Every {{PLACEHOLDER}} below must be HTML-escaped at generation (& < > " ') -->
-<table>
-  <caption>Your ikigai in full (text equivalent)</caption>
-  <tbody>
-    <tr><th>What you love</th><td id="t-love">{{LOVE}}</td></tr>
-    <tr><th>What you are good at</th><td id="t-goodat">{{GOOD_AT}}</td></tr>
-    <tr><th>What the world needs</th><td id="t-needs">{{WORLD_NEEDS}}</td></tr>
-    <tr><th>What you can be paid for</th><td id="t-paid">{{PAID_FOR}}</td></tr>
-    <tr><th>Passion (love + good at)</th><td id="t-passion">{{PASSION}}</td></tr>
-    <tr><th>Mission (love + world needs)</th><td id="t-mission">{{MISSION}}</td></tr>
-    <tr><th>Profession (good at + paid)</th><td id="t-profession">{{PROFESSION}}</td></tr>
-    <tr><th>Vocation (world needs + paid)</th><td id="t-vocation">{{VOCATION}}</td></tr>
-    <tr><th>Ikigai (all four)</th><td id="t-ikigai">{{IKIGAI}}</td></tr>
-  </tbody>
-</table>
-
-<p class="note">This diagram is labelled in text and does not rely on colour to convey meaning. Every region's content is listed in the table above, so the page is fully usable without seeing the diagram. Generated with Career Helper by Prosper AI Consulting.</p>
-</main>
+<dialog id="edit-dialog">
+  <h3 id="edit-title">Edit</h3>
+  <form id="edit-form">
+    <label for="f-text" id="f-label">Your words</label>
+    <textarea id="f-text"></textarea>
+    <div class="row">
+      <button type="button" id="cancel-edit">Cancel</button>
+      <button class="primary" type="submit" id="save-edit">Save</button>
+    </div>
+  </form>
+</dialog>
 
 <script>
-  (function () {
-    var titles = {
-      't-love': 'What you love',
-      't-goodat': 'What you are good at',
-      't-needs': 'What the world needs',
-      't-paid': 'What you can be paid for',
-      't-passion': 'Passion (love + good at)',
-      't-mission': 'Mission (love + world needs)',
-      't-profession': 'Profession (good at + paid)',
-      't-vocation': 'Vocation (world needs + paid)',
-      't-ikigai': 'Ikigai (all four overlap)'
-    };
-    var pt = document.getElementById('panel-title');
-    var px = document.getElementById('panel-text');
-    function show(id) {
-      var cell = document.getElementById(id);
-      if (!cell) return;
-      pt.textContent = titles[id] || '';
-      px.textContent = cell.textContent.trim() || 'Not filled in yet. This space is yours to complete.';
+(function () {
+  'use strict';
+
+  var REGIONS = [
+    ['love', 'What you love'],
+    ['goodAt', 'What you are good at'],
+    ['needs', 'What the world needs'],
+    ['paid', 'What you can be paid for'],
+    ['passion', 'Passion (love and good at)'],
+    ['mission', 'Mission (love and world needs)'],
+    ['profession', 'Profession (good at and paid)'],
+    ['vocation', 'Vocation (world needs and paid)'],
+    ['ikigai', 'Ikigai (all four overlap)']
+  ];
+  var TITLES = {};
+  REGIONS.forEach(function (r) { TITLES[r[0]] = r[1]; });
+  var EMPTY = 'Not filled in yet. This space is yours to complete.';
+
+  var map = {};
+  var db = null;
+  var canWrite = false;
+  var current = null;
+  var queue = Promise.resolve();
+
+  var noticeEl = document.getElementById('notice');
+  var statusEl = document.getElementById('status-msg');
+  var panelTitle = document.getElementById('panel-title');
+  var panelText = document.getElementById('panel-text');
+  var panelEdit = document.getElementById('panel-edit');
+  var tableBody = document.getElementById('table-body');
+
+  function notice(text) { noticeEl.textContent = text; noticeEl.hidden = !text; }
+  function announce(text) { statusEl.textContent = text; }
+  function value(key) { return typeof map[key] === 'string' ? map[key].trim() : ''; }
+
+  function renderTable() {
+    tableBody.textContent = '';
+    REGIONS.forEach(function (r) {
+      var tr = document.createElement('tr');
+      var th = document.createElement('th');
+      th.scope = 'row';
+      th.textContent = r[1];
+      var td = document.createElement('td');
+      var v = value(r[0]);
+      td.textContent = v || EMPTY;
+      if (!v) { td.className = 'empty'; }
+      if (canWrite) {
+        td.appendChild(document.createTextNode(' '));
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.textContent = 'Edit';
+        b.setAttribute('aria-label', 'Edit ' + r[1]);
+        b.addEventListener('click', function () { openEditor(r[0]); });
+        td.appendChild(b);
+      }
+      tr.appendChild(th);
+      tr.appendChild(td);
+      tableBody.appendChild(tr);
+    });
+    var owner = value('owner');
+    var date = value('date');
+    document.getElementById('owner-line').textContent = owner ? owner + (date ? ', ' + date : '') : 'Your four answers and where they overlap.';
+    if (current) { show(current); }
+  }
+
+  function show(key) {
+    current = key;
+    panelTitle.textContent = TITLES[key] || '';
+    panelText.textContent = value(key) || EMPTY;
+    panelEdit.hidden = !canWrite;
+  }
+  panelEdit.addEventListener('click', function () { if (current) { openEditor(current); } });
+
+  var regions = document.querySelectorAll('.region');
+  Array.prototype.forEach.call(regions, function (el) {
+    var key = el.getAttribute('data-key');
+    el.addEventListener('mouseenter', function () { show(key); });
+    el.addEventListener('focus', function () { show(key); });
+    el.addEventListener('click', function () { show(key); });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(key); }
+    });
+  });
+
+  var dialog = document.getElementById('edit-dialog');
+  var editing = null;
+  function openEditor(key) {
+    if (!canWrite) { return; }
+    editing = key;
+    document.getElementById('edit-title').textContent = TITLES[key];
+    document.getElementById('f-text').value = value(key);
+    dialog.showModal();
+  }
+  document.getElementById('cancel-edit').addEventListener('click', function () { dialog.close(); });
+  document.getElementById('edit-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var key = editing;
+    var text = document.getElementById('f-text').value.trim();
+    dialog.close();
+    if (!db || !key) { return; }
+    var body = { updated: new Date().toISOString(), updatedBy: 'board' };
+    body[key] = text;
+    queue = queue.then(function () {
+      return db.doc('ikigai/map').update(body).catch(function (err) {
+        if (err && err.code === 'unavailable') { return new Promise(function (r) { setTimeout(r, 800); }).then(function () { return db.doc('ikigai/map').update(body); }); }
+        throw err;
+      });
+    }).then(function () { announce('Saved ' + TITLES[key] + '.'); }, function (err) {
+      if (err && err.code === 'invalid_argument') { canWrite = false; renderTable(); announce('This map is read-only for you, so that change was not saved.'); }
+      else { announce('That change was not saved. Check your connection and try again.'); }
+    });
+  });
+  dialog.addEventListener('close', function () { editing = null; });
+
+  renderTable();
+
+  if (!window.claude || typeof window.claude.use !== 'function') {
+    notice('This map keeps your answers in Claude. Open it in Claude to see and change them.');
+    return;
+  }
+  Promise.all([window.claude.use('db'), window.claude.use('user')]).then(function (found) {
+    db = found[0];
+    var user = found[1];
+    if (!db) {
+      notice('This map keeps your answers in Claude. Open it in Claude, signed in, to see and change them.');
+      return;
     }
-    var regions = document.querySelectorAll('.region');
-    for (var i = 0; i < regions.length; i++) {
-      (function (r) {
-        var id = r.getAttribute('data-target');
-        r.addEventListener('mouseenter', function () { show(id); });
-        r.addEventListener('focus', function () { show(id); });
-        r.addEventListener('click', function () { show(id); });
-        r.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(id); }
-        });
-      })(regions[i]);
-    }
-  })();
+    var fresh = false;
+    var timer = setTimeout(function () { if (!fresh) { notice('Your ikigai map cannot be reached yet. It fills in when the connection returns.'); } }, 10000);
+    db.doc('ikigai/map').onSnapshot(function (snap) {
+      map = snap.exists ? (snap.data() || {}) : {};
+      canWrite = snap.exists;
+      if (!snap.metadata.fromCache) { fresh = true; clearTimeout(timer); }
+      if (user) {
+        user.can('data.write').then(function (ok) { if (ok === false && canWrite) { canWrite = false; renderTable(); } }, function () {});
+      }
+      renderTable();
+      if (fresh) { notice(snap.exists ? '' : 'Nothing here yet. Ask Tim to work through the four ikigai questions with you, and your answers will appear here.'); }
+    }, function () {
+      clearTimeout(timer);
+      notice('The map could not load. Close it and open it again from Claude.');
+    });
+  });
+})();
 </script>
-</body>
-</html>

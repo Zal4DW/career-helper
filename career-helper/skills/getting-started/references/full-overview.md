@@ -164,7 +164,7 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 
 ### Career Navigator - Planning, Networking, and Offers
 
-**What it does:** Strategic networking intelligence, 3-month job search plans, salary negotiation coaching, offer evaluation, an application tracker that keeps every live application and its next action in one place (with an optional interactive kanban board view you can drag applications around and export back to the tracker), and an application learnings loop that turns each interview, rejection, and win into a structured note and synthesises them into a single patterns file.
+**What it does:** Strategic networking intelligence, 3-month job search plans, salary negotiation coaching, offer evaluation, an application tracker that keeps every live application and its next action on one interactive board in your Claude account (drag applications between stages; Claude reads your changes back), and an application learnings loop that turns each interview, rejection, and win into a structured note and synthesises them into a single patterns file.
 
 **Real example - planning a job search:**
 
@@ -526,18 +526,18 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 > 3. Reports new signals, priority changes, and decision-maker moves; offers (but does not apply) removals of quiet organisations and additions of new ones
 > 4. Suggests three actions for the week, each tied to a signal, and updates the map in place
 >
-> **You get:** `market-watch/2026-09-14-update.md` and a current `market-map.md`. In Claude Cowork this runs on a schedule (routine 6 in the scheduled routines).
+> **You get:** `market-watch/2026-09-14-update.md` and an up-to-date market map board. In Claude Cowork this runs on a schedule (routine 6 in the scheduled routines).
 
 **Real example - the board view:**
 
 > **You say:** "Show me my watchlist as a board."
 >
 > **What happens:**
-> 1. Generates `market-map-board.html` from the map: one card per organisation in four priority columns (Act now, Warm, Watch, Quiet), with the latest signal, decision maker, angle, and last-checked date
-> 2. You drag organisations between priorities or use the keyboard; anything not checked in a fortnight carries a text `STALE` tag
-> 3. Export copies the Watchlist section as markdown so your changes flow back into the map, which stays the source of truth
+> 1. Opens your market map board: one card per organisation in four priority columns (Act now, Warm, Watch, Quiet), with the latest signal, decision maker, angle, and last-checked date; each card opens to show its dated signals and sources
+> 2. You drag organisations between priorities or use the keyboard, and add your reason; anything not checked in a fortnight carries a text `STALE` tag
+> 3. Your changes are saved straight away, and the next update reads them and says where the evidence disagrees
 >
-> **You get:** A board that works exactly like the application board in `/career-navigator`, offline and private
+> **You get:** A board that works exactly like the application board in `/career-navigator`, private to you in your Claude account
 
 **When to use it:**
 - You are employed and want to know who is growing without announcing a search
@@ -550,14 +550,14 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 
 ### Career Routines - Keep It Moving on a Schedule
 
-**What it does:** Sets up Claude Cowork scheduled tasks that run the Career Helper maintenance pass without you. The first routine for almost everyone is the one-command weekly update (`/career-helper:weekly-update`): tracker standup, follow-ups due, market map update with the board refreshed, a learnings check, and a dated report with a "Decisions waiting for you" section for anything an unattended run could not decide. The skill tailors the prompt, walks you through `/schedule`, records what you set up in `routines.md`, reviews what has and has not run, and troubleshoots. It is plain about where a task runs: in the cloud when it needs no folder on your computer, on your machine (which must be awake) when it is given your local workspace folder.
+**What it does:** Sets up Claude Cowork scheduled tasks that run the Career Helper maintenance pass without you. The first routine for almost everyone is the one-command weekly update (`/career-helper:weekly-update`): application board standup, follow-ups due, market map update, a learnings check, the progress dashboard refreshed, and a dated report with a "Decisions waiting for you" section for anything an unattended run could not decide. The skill tailors the prompt, walks you through `/schedule`, records what you set up in `routines.md`, reviews what has and has not run, and troubleshoots. It is plain about where a task runs: in the cloud when it needs no folder on your computer (your boards are still reachable there), on your machine (which must be awake) when it is given your local workspace folder.
 
 **Real example - the first routine:**
 
 > **You say:** "Set up a weekly routine that keeps my job search moving."
 >
 > **What happens:**
-> 1. Checks which files exist (tracker, market map, learnings) so the routine has something to read
+> 1. Checks what exists (application board, market map, learnings) so the routine has something to read
 > 2. Recommends the weekly update and asks one question: run it on your machine with your folder, or in the cloud
 > 3. Gives you the exact `/schedule` steps and the prompt to paste, and suggests running it once by hand to approve anything it needs
 > 4. Records the routine in `routines.md` so `/career-helper:status` can see it
@@ -576,10 +576,9 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 > **You get:** A routine that runs, and an updated register
 
 **When to use it:**
-- You want the tracker, follow-ups, and market map to update themselves each week
+- You want the application board, follow-ups, and market map to update themselves each week
 - You are employed and want the market map watched without sitting down to do it
 - A routine has gone quiet and you want to know why
-- You run Career Helper outside Cowork and need the cron or Claude Code Desktop equivalent
 
 ---
 
@@ -594,15 +593,15 @@ In addition to skills, career-helper has four commands:
 | `/career-helper:help` | Shows all skills and routes you to the right one | You know you need help but are not sure which skill |
 | `/career-helper:quick-start` | Asks guided questions to find your starting point | You are brand new and want to be guided |
 | `/career-helper:status` | Shows all outputs you have generated and suggests next steps | You have used skills before and want to see progress |
-| `/career-helper:weekly-update` | Runs the tracker standup, follow-ups due, market map update, and learnings check in one unattended pass and saves a dated report | Every Monday by hand, or on a schedule |
+| `/career-helper:weekly-update` | Runs the application board standup, follow-ups due, market map update, learnings check, and progress dashboard refresh in one unattended pass and saves a dated report | Every Monday by hand, or on a schedule |
 
 ## Automating Your Search
 
-The simplest way to keep the search moving between sessions is to put `/career-helper:weekly-update` on a weekly Cowork schedule. It runs the tracker standup, the follow-up check, the market map update, and a learnings check in one unattended pass, saves a dated report to `updates/`, and lists anything it could not decide for you. Run `/career-routines` to set it up: it explains when a Cowork task runs in the cloud and when it needs your computer awake, tailors the prompt, records the routine, and offers narrower prompts (Monday standup, market monitor, posting reminder, follow-up check, pre-interview nudge, market map update) if you want one at a different cadence. It also covers Claude Code Desktop, cron, and cloud Routines for people outside Cowork.
+The simplest way to keep the search moving between sessions is to put `/career-helper:weekly-update` on a weekly Cowork schedule. It runs the application board standup, the follow-up check, the market map update, a learnings check, and the progress dashboard refresh in one unattended pass, saves a dated report to `updates/`, and lists anything it could not decide for you. Run `/career-routines` to set it up: it explains when a Cowork task runs in the cloud and when it needs your computer awake, tailors the prompt, records the routine, and offers narrower prompts (Monday standup, market monitor, posting reminder, follow-up check, pre-interview nudge, market map update) if you want one at a different cadence.
 
 ## Getting the Best Guide
 
-There is also a comprehensive "Getting the Best from Career Helper" guide available. It covers installation, folder setup, and walks through three common scenarios: graduates starting out, experienced professionals between roles, and employed professionals wanting better positioning. Ask for the guide using `/getting-started` and selecting "Getting the best guide", or just say "give me the getting the best guide". A PDF version is available to save and share.
+There is also a comprehensive "Getting the Best from Career Helper" guide available. It covers installation, folder setup, and walks through three common scenarios: graduates starting out, experienced professionals between roles, and employed professionals wanting better positioning. Ask for the guide using `/getting-started` and selecting "Getting the best guide", or just say "give me the getting the best guide". It can be saved as a Claude Doc to keep, print, or export to PDF or Word.
 
 ## Workspace Tip
 

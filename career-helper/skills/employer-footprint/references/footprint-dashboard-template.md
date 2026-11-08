@@ -45,11 +45,11 @@
 ```
 
 **Score Key:**
-- **GREEN (7-10): Strong** — positive signal, competitive advantage
-- **AMBER (4-6): Adequate** — improvement opportunities exist
-- **RED (1-3): Concern** — significant gap, action recommended
+- **GREEN (7-10): Strong**: positive signal, competitive advantage
+- **AMBER (4-6): Adequate**: improvement opportunities exist
+- **RED (1-3): Concern**: significant gap, action recommended
 
-*Ratings always use text labels (GREEN/AMBER/RED) alongside scores — never colour alone.*
+*Ratings always use text labels (GREEN/AMBER/RED) alongside scores; never colour alone.*
 
 ---
 

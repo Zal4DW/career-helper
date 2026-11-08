@@ -280,12 +280,12 @@ Step 1: /market-mapper (Market Map)
             ↓
 Step 2: /market-mapper (Watchlist and Weekly Update), on a Cowork schedule via /career-routines or run manually
         Input: the existing map
-        Output: market-watch/{date}-update.md, updated market-map.md
+        Output: market-watch/{date}-update.md, updated market map board
         Why: only what changed is reported, so the weekly read stays short
             ↓
 Step 3 (optional): /market-mapper (Watchlist Board View)
-        Output: market-map-board.html
-        Why optional: useful once the map passes eight organisations
+        Output: the market map board, opened to change priorities
+        Why optional: the board exists from step 1; open it when you want to reprioritise
             ↓
 Step 4 (when an organisation reaches Act now): /career-navigator (Strategic Networking Intelligence)
         Input: the organisation, its decision makers and signals from the map

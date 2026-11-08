@@ -78,6 +78,8 @@ Then run the verifier on whatever PDF the browser produced; the checks still app
 
 **Claude environments with native document rendering** (for example Claude Cowork) can produce a PDF directly from the markdown. That is acceptable for a quick draft, but the verification step is not optional either way: whatever produced the PDF, run `verify_cv_pdf.py` on the result before it is submitted. The value of this pipeline is the verified loop, not the particular renderer.
 
+**A CV drafted in a Claude Doc** follows the same rule. A PDF exported from the Doc must pass `verify_cv_pdf.py` against the markdown before it is submitted; a Word export should be checked by extracting its text and comparing it with the markdown. When in doubt, copy the final wording back into `cv-optimised.md` and run the normal generate-verify loop.
+
 **pdf2image or poppler missing:** the verifier skips the visual render and says so. The text-layer check still runs. Find another way to eyeball the pages (open the PDF, or Read it directly) before the file goes anywhere.
 
 ---

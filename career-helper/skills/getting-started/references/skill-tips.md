@@ -162,8 +162,8 @@ Company Research → Interview Preparation → Mock Interview
 
 ### Application Tracker
 
-- **Let it build from your folders.** If you already have application folders, the tracker scans them and infers each stage, then asks you to confirm. You do not start from a blank table.
-- **Keep one tracker.** It lives at `applications/tracker.md`. Update the stage and next action whenever something moves; `/career-helper:status` reads it as the spine of your progress view.
+- **Let it build from your folders.** If you already have application folders, the tracker scans them and infers each stage, then asks you to confirm. You do not start from a blank board.
+- **Keep one board.** It lives in your Claude account as `Career Helper Applications`, with a read-only snapshot at `applications/tracker.md`. Move cards on the board or tell Claude whenever something moves; `/career-helper:status` reads it as the spine of your progress view.
 - **Use it to spot stalls.** If several roles sit at "researching" with none submitted, the tracker will say so. That honesty is the point; a tidy list with no next actions is not a tracker.
 
 ### Application Learnings Loop
@@ -349,7 +349,7 @@ Personal Brand E → Social Media Review (if cleanup is needed) or Employer Foot
 
 ```text
 Job Scout discovery → Job Scout ranking → applications/shortlist.md
-Chosen roles → applications/tracker.md (stage Researching) → /application-optimiser (research and CV tailoring)
+Chosen roles → application board (stage Researching) → /application-optimiser (research and CV tailoring)
 Skills Radar inventory → Job Scout winnability scoring
 Learnings loop patterns → Job Scout ranking (recurring objections lower winnability honestly)
 ```
@@ -408,16 +408,16 @@ AI-specific gaps → /career-transitions (AI Readiness Assessment)
 - Accept or decline the offered removals and additions at each update; the map only changes when you say so.
 - When an organisation turns to Act now, move it into `/career-navigator` (Strategic Networking) or `/job-scout` rather than acting from the map alone.
 - Rebuild the seed profile if your direction changes; a map built for one function does not transfer to another.
-- Use the board view once the map passes eight organisations; drag priorities as your judgement changes, but expect the next update to say where the evidence disagrees.
+- Use the board to change priorities as your judgement changes, and give your reason; expect the next update to say where the evidence disagrees.
 
 ### What Feeds Into What
 
 ```text
-Market Mapper map → market-map.md → weekly update → market-watch/{date}-update.md
-market-map.md → board view → market-map-board.html → export → Watchlist section of market-map.md
+Market Mapper map → market map board (snapshot: market-map.md) → weekly update → market-watch/{date}-update.md
+Your priority changes on the board → read back by the next update
 Act now organisations → /career-navigator (networking intelligence) or /job-scout (live roles there)
-Chosen organisation with a role → applications/tracker.md (stage Researching) → /application-optimiser
-applications/tracker.md → Market Mapper update (organisations already in play are flagged, not re-suggested)
+Chosen organisation with a role → application board (stage Researching) → /application-optimiser
+Application board → Market Mapper update (organisations already in play are flagged, not re-suggested)
 ```
 
 ---
@@ -426,8 +426,8 @@ applications/tracker.md → Market Mapper update (organisations already in play 
 
 ### Input Quality
 
-- **Have the inputs before the routine.** A weekly update with no tracker and no market map reports "not found" every Monday. Build one of them first.
-- **Say where you want it to run.** With your local workspace folder, a Cowork task runs on your machine and needs it awake; without a local folder it runs in the cloud, but each run is a new session with no memory of last week's files. For routines that build on the tracker or map, Desktop with the folder is the reliable choice.
+- **Have the inputs before the routine.** A weekly update with no application board and no market map reports "not found" every Monday. Build one of them first.
+- **Say where you want it to run.** With your local workspace folder, a Cowork task runs on your machine and needs it awake; without a local folder it runs in the cloud, where it still reaches your boards (they live in your Claude account) but not last week's files. For the fullest run, give it your folder.
 - **Run it once by hand.** Approve anything it asks for on that first run, so scheduled runs never stall on a permission.
 
 ### Common Mistakes
@@ -446,7 +446,7 @@ applications/tracker.md → Market Mapper update (organisations already in play 
 
 ```text
 /career-routines → Cowork /schedule → /career-helper:weekly-update → updates/{date}-weekly-update.md
-Weekly update → tracker At a Glance refresh, market-map.md and market-map-board.html refresh, market-watch/{date}-update.md
+Weekly update → application board read, market map board update, snapshots and progress dashboard refreshed, market-watch/{date}-update.md
 updates/ "Decisions waiting for you" → /career-helper:status → you
 routines.md → /career-helper:status (stale routine check)
 ```

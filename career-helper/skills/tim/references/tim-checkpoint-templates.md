@@ -7,13 +7,13 @@ This reference is loaded by the Tim career coach skill to ensure consistent chec
 ## 1. Standard Checkpoint Template
 
 ```text
-DONE: [what was completed — one line]
-SAVED: [filename(s) — or "your [description] (in your career-helper folder)" for dyslexia mode]
+DONE: [what was completed: one line]
+SAVED: [filename(s): or "your [description] (in your career-helper folder)" for dyslexia mode]
 FLAG: [only include this line if there's something genuinely worth pausing for]
 NEXT: [what Tim recommends next and a one-line reason why]
 ```
 
-Followed by one clear question or 2–3 numbered options.
+Followed by one clear question or 2 to 3 numbered options.
 
 ---
 
@@ -29,12 +29,12 @@ YOUR JOURNEY
 ```
 
 Rules:
-- Only show skills relevant to this user — not all 10
+- Only show skills relevant to this user; not all 10
 - Word-based status: done, now, upcoming, skipped
 - Never use colour to convey status
-- This is a living plan — it updates when Tim re-routes
+- This is a living plan: it updates when Tim re-routes
 - One line per step, no descriptions
-- After emotionally demanding sessions, add a pace line: "We're going at your pace — no rush on the next step." Omit when the user is moving confidently
+- After emotionally demanding sessions, add a pace line: "We're going at your pace; no rush on the next step." Omit when the user is moving confidently
 
 ---
 
@@ -45,7 +45,7 @@ WELCOME BACK
 - Last session: [date and what was done]
 - Files on record: [summary of existing outputs]
 - Not yet done: [remaining relevant steps]
-PICK UP WHERE WE LEFT OFF — or tell me what's changed
+PICK UP WHERE WE LEFT OFF, or tell me what's changed
 ```
 
 Rules:
@@ -62,7 +62,7 @@ Rules:
 ```text
 DONE: Company research for Greenfield & Co
 SAVED: applications/marketing-manager-greenfield/research-brief.md
-NEXT: CV optimisation — I'll tailor your CV using the research findings
+NEXT: CV optimisation: I'll tailor your CV using the research findings
 
 Ready to move on?
 ```
@@ -73,7 +73,7 @@ Ready to move on?
 DONE: Company research for Greenfield & Co
 SAVED: applications/marketing-manager-greenfield/research-brief.md
 FLAG: Glassdoor reviews mention high turnover in your target team
-NEXT: CV optimisation — I'll tailor your CV using the research findings
+NEXT: CV optimisation: I'll tailor your CV using the research findings
 
 Ready to move on, or do you want to talk about the turnover concern first?
 ```
@@ -94,10 +94,10 @@ What would you like to do next?
 ### Variation D: With check-in (after emotionally demanding skill)
 
 ```text
-DONE: Post-rejection coaching — reviewed your last three applications
+DONE: Post-rejection coaching: reviewed your last three applications
 SAVED: applications/marketing-manager-greenfield/rejection-analysis.md
 CHECK-IN: That covered some tough ground. How are you feeling about things?
-NEXT: CV repositioning — the analysis shows positioning is the issue, not your experience
+NEXT: CV repositioning: the analysis shows positioning is the issue, not your experience
 
 Do you want to:
 1. Move on to CV repositioning
@@ -106,8 +106,8 @@ Do you want to:
 
 Rules for CHECK-IN:
 - Only include after skills that touched rejection, ageism, redundancy, or surfaced difficult feelings
-- One human line — not a paragraph, not a platitude
-- Never "Are you okay?" — be specific to what just happened
+- One human line: not a paragraph, not a platitude
+- Never "Are you okay?"; be specific to what just happened
 - Always offer the option to pause when CHECK-IN is present
 
 ### Variation E: Session end
@@ -137,7 +137,7 @@ Step 2 of 5 done.
 
 DONE: CV optimisation for the Marketing Manager role at Greenfield & Co
 SAVED: Your optimised CV (in your Greenfield & Co application folder)
-NEXT: LinkedIn update — I'll sync your LinkedIn profile to match your new CV
+NEXT: LinkedIn update: I'll sync your LinkedIn profile to match your new CV
 
 Do you want to:
 1. Move on to LinkedIn
@@ -148,10 +148,10 @@ Do you want to:
 
 ## 5. Checkpoint Rules
 
-- FLAGS only when genuinely worth pausing for — not for routine observations
+- FLAGS only when genuinely worth pausing for; not for routine observations
 - NEXT always includes a brief reason why
-- Max 2–3 numbered options when presenting choices — never more
-- No paragraphs — bullets and short lines only
+- Max 2 to 3 numbered options when presenting choices; never more
+- No paragraphs: bullets and short lines only
 - Never rely on colour to convey meaning
 - In dyslexia mode: add step counter ("Step 2 of 5 done"), simplify file references, always use numbered options
-- Keep checkpoints concise — they accumulate in context and must survive compaction
+- Keep checkpoints concise: they accumulate in context and must survive compaction

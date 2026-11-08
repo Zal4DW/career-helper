@@ -1,12 +1,12 @@
 ---
 name: career-routines
 description: Use when the user wants parts of their job search to run on a schedule, or asks about routines they already have, such as putting the weekly update on a Cowork schedule, setting up narrower recurring tasks, or working out why a scheduled task did not run. Explains when a task runs in the cloud and when it needs their computer.
-tags: routines, schedule, scheduled-tasks, cowork, automation, weekly, recurring, cron
+tags: routines, schedule, scheduled-tasks, cowork, automation, weekly, recurring
 ---
 
 # Career Routines
 
-Put the recurring parts of your job search on a schedule, so the tracker, follow-ups, and market map keep themselves current between sessions.
+Put the recurring parts of your job search on a schedule, so the application board, follow-ups, and market map keep themselves current between sessions.
 
 ## Capabilities
 
@@ -15,7 +15,6 @@ Put the recurring parts of your job search on a schedule, so the tracker, follow
 | 1 | Set Up a Routine | Creating a Claude Cowork scheduled task, tailored to your workspace and cadence |
 | 2 | Routine Library | Choosing from the ready-made prompts, starting with the one-command weekly update |
 | 3 | Review Your Routines | Seeing what is scheduled, what last ran, and fixing a routine that is not doing its job |
-| 4 | Outside Cowork | Scheduling the same prompts from Claude Code Desktop, the command line, or a cloud Routine |
 
 ## Quick Start
 
@@ -51,9 +50,9 @@ The one thing to understand before scheduling anything is **where the task runs*
 - **In the cloud** when the task does not need a folder on your computer. Your laptop can be closed. It can use connected tools, plugins, skills, web research, and files saved to your Claude account.
 - **On your machine** when the task is given a folder on your computer. Then your computer and Claude Desktop must be available at the scheduled time.
 
-Career Helper works in both Desktop Cowork and cloud Cowork, but they keep data differently, and routines depend on that. Desktop Cowork with a local folder is the most feature-rich option for persistence: every session and every scheduled run sees the same files on disk. Cloud Cowork keeps created files in the conversation's data store, so a long-running piece of work there means staying in the same conversation, and a scheduled run (a new session each time) cannot build on last week's files unless the workspace lives on something every session can reach, such as a connected drive.
+Career Helper keeps the application board, the market map, and the dashboards in the user's Claude account, so every scheduled run can reach them, in the cloud or on the machine. Per-application files, learnings notes, and dated reports live in the workspace folder, which a cloud run (a new session each time) cannot see unless the workspace is on something every session can reach, such as a connected drive.
 
-So the honest default for a routine that reads the tracker or market map is Desktop Cowork with the workspace folder, running on the user's machine at a time it is awake. Say this plainly before setting anything up, and let the user choose.
+So the choice is: on the user's machine with the workspace folder for the fullest run (the computer must be awake), or in the cloud with no folder for a run that updates the boards with the laptop closed but cannot read the per-application files. Say this plainly before setting anything up, and let the user choose.
 
 **Load:** @references/cowork-scheduling.md for the setup steps, the cloud-or-local rules, permissions, and troubleshooting.
 
@@ -67,10 +66,10 @@ So the honest default for a routine that reads the tracker or market map is Desk
 
 Walk the user through one routine at a time:
 
-1. **Check what exists.** Glob the workspace for `applications/tracker.md`, `market-map.md`, `applications/learnings/`, and any content calendar. A routine that reads a file which does not exist reports "not found" every week; suggest building the file first, or pick a routine whose inputs exist.
+1. **Check what exists.** Look for the application board and the market map board (register or fixed titles, see `/career-outputs`), and Glob the workspace for `applications/learnings/` and any content calendar. A routine that reads something which does not exist reports "not found" every week; suggest building it first, or pick a routine whose inputs exist.
 2. **Recommend the routine.** For almost everyone the first routine is the weekly update (`/career-helper:weekly-update`), because it already contains the standup, the follow-up check, and the market map update. Offer the narrower prompts only for a different cadence.
 3. **Tailor the prompt.** Fill the bracketed parts (target role, location, employer where relevant). Keep the "do not invent" and "record decisions, do not ask" lines; they are what keep an unattended run honest.
-4. **Decide where it runs.** Ask whether they want it on their machine (Desktop Cowork, folder chosen, computer must be awake) or in the cloud (no local folder, lid closed, but no memory of last week's files unless the workspace is on a connected drive). State the trade-off in two sentences.
+4. **Decide where it runs.** Ask whether they want it on their machine (folder chosen, computer must be awake, fullest run) or in the cloud (no local folder, lid closed, boards updated but per-application files out of reach unless the workspace is on a connected drive). State the trade-off in two sentences.
 5. **Give the exact steps.** Type `/schedule` in any Cowork task (or open Scheduled in the sidebar), paste the prompt, choose the cadence, choose the folder or leave it for the cloud, and save. Suggest running it once immediately to confirm it works and to approve anything it needs.
 6. **Record it.** Add a row to `routines.md` (create from the template if absent): name, cadence, where it runs, prompt, date set up. `/career-helper:status` reads this file.
 
@@ -99,7 +98,7 @@ Present the library only when asked, or when the weekly update does not fit; do 
 
 ## 3. Review Your Routines
 
-**What you need:** `routines.md`, and `updates/` or `market-watch/` if the routines write there
+**What you need:** `routines.md`, and `updates/` or `market-watch/` if the routines write there, or the boards' last-checked dates
 **Load:** @references/cowork-scheduling.md (Troubleshooting section)
 
 Read `routines.md` and the output folders, then report:
@@ -112,21 +111,6 @@ Read `routines.md` and the output folders, then report:
 Offer the fix for each, and update `routines.md` when something changes. Never guess at what a run did; read its output file or ask the user to open the run in Cowork's Scheduled list.
 
 **Output:** Conversational review, updated `routines.md`
-
----
-
-## 4. Outside Cowork
-
-**What you need:** To know where the user runs Career Helper
-**Load:** @references/cowork-scheduling.md (Outside Cowork section)
-
-Some people run the plugin in Claude Code rather than Cowork. The prompts are identical; only the scheduler changes:
-
-- **Claude Code Desktop local scheduled task:** Routines in the sidebar, New routine, Local; runs on the machine with the folder; needs the app open and the computer awake, with one catch-up run on wake
-- **Command line with cron or launchd:** `claude -p "/career-helper:weekly-update" --permission-mode acceptEdits --permission-prompts none` from the workspace folder; the machine must be awake; no catch-up
-- **Cloud Routine (claude.ai/code/routines):** runs without the machine but only clones a GitHub repository, so it suits a workspace kept in a private repository and nothing else
-
-`/loop` in Claude Code repeats a prompt only while a session is open and is not a scheduler.
 
 ---
 
@@ -153,7 +137,7 @@ Routines are plumbing, and plumbing should be boring:
 
 - Address the user as "you": "Your weekly update runs on..." not "The user's weekly update runs on..."
 - Avoid hyperbole and cinema poster phrasing (not "set it and forget it" or "your job search on autopilot")
-- Use the **Oxford comma** (serial comma: "tracker, follow-ups, and market map")
+- Use the **Oxford comma** (serial comma: "board, follow-ups, and market map")
 - Never use em dashes. Use commas, semicolons, colons, or full stops instead
 
 ### Template Usage
@@ -164,7 +148,8 @@ When a capability names a template, load it with the @ reference before writing,
 
 ## Related Skills
 
-- **/career-navigator**: The application tracker the standup reads
+- **/career-navigator**: The application board the standup reads
+- **/career-outputs**: The boards and the progress dashboard the weekly update refreshes
 - **/market-mapper**: The market map the weekly update refreshes
 - **/linkedin-coach**: The content calendar the posting reminder reads
 - **/getting-started**: Orientation; routes here for anything about scheduling

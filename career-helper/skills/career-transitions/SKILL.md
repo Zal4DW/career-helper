@@ -68,7 +68,7 @@ Comprehensive portfolio career strategy:
 - US: 1099 vs W-2, self-employment tax, LLC vs S-Corp, state variations
 - EU: VAT registration, cross-border invoicing, local regulations
 
-**Output:** `portfolio-career-strategy.md`
+**Output:** `portfolio-career-strategy.md`, offered as a Claude Doc (`Career Transition Plan`) through `/career-outputs`
 
 ---
 
@@ -117,7 +117,7 @@ Comprehensive exploration of non-traditional career alternatives:
 
 **Research-driven:** Uses WebSearch for current data on success rates, salary benchmarks, funding landscapes, and sector-specific insights relevant to the user's situation.
 
-**Output:** `non-linear-career-exploration.md`
+**Output:** `non-linear-career-exploration.md`, offered as a Claude Doc (`Career Transition Plan`) through `/career-outputs`
 
 ---
 

@@ -198,7 +198,7 @@ This pattern reads like American movie poster hyperbole. It implies the reader n
 
 ### No Em Dashes
 
-**Incorrect:** The assessment — which covers seven dimensions — provides clarity.
+**Incorrect:** The assessment, set off with em dashes around "which covers seven dimensions", provides clarity.
 
 **Correct:** The assessment (which covers seven dimensions) provides clarity.
 
@@ -209,8 +209,8 @@ Use hyphens, colons, or sentence breaks instead.
 ### Number Ranges
 
 Use "to" not em dashes:
-- "5 to 10 days" not "5—10 days"
-- "2025 to 2026" not "2025–2026"
+- "5 to 10 days", never a dash between the numbers
+- "2025 to 2026", never a dash between the years
 
 ### Date Format
 

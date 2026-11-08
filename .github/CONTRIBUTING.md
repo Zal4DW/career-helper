@@ -2,7 +2,7 @@
 
 Thank you for considering a contribution. This guide explains what belongs in the repo, how to propose changes, and the house style we use across skills and agents.
 
-Every contribution — pull request, issue, prompt, framework, bug fix — is welcome, and every contributor is credited in [CONTRIBUTORS.md](../CONTRIBUTORS.md).
+Every contribution (pull request, issue, prompt, framework, bug fix) is welcome, and every contributor is credited in [CONTRIBUTORS.md](../CONTRIBUTORS.md).
 
 ---
 
@@ -10,11 +10,11 @@ Every contribution — pull request, issue, prompt, framework, bug fix — is we
 
 Career Helper is a Claude Code plugin. The useful contributions look like:
 
-- **New skills** — a new capability that fits alongside the existing 11 skills (e.g., a new persona, a new ceremony, a new type of research). Propose as an issue first so we can discuss scope.
-- **New references inside existing skills** — most changes belong here. A new prompt, framework, or template that strengthens one of the existing skills (e.g., `verified-content-guardrails.md` inside application-optimiser).
-- **Refinements to existing skills** — clearer prompts, better examples, improved routing logic, tighter coaching tone.
-- **Bug fixes** — if something is broken, please file an issue with reproduction steps.
-- **Documentation improvements** — README, skill docs, examples.
+- **New skills**: a new capability that fits alongside the existing skills (e.g., a new persona, a new ceremony, a new type of research). Propose as an issue first so we can discuss scope.
+- **New references inside existing skills**: most changes belong here. A new prompt, framework, or template that strengthens one of the existing skills (e.g., `verified-content-guardrails.md` inside application-optimiser).
+- **Refinements to existing skills**: clearer prompts, better examples, improved routing logic, tighter coaching tone.
+- **Bug fixes**: if something is broken, please file an issue with reproduction steps.
+- **Documentation improvements**: README, skill docs, examples.
 
 ## What Does NOT Belong in This Repo
 
@@ -33,7 +33,7 @@ If you are unsure where something belongs, open an issue and ask.
 2. **Fork the repository** and create a branch: `feature/short-description` or `fix/short-description`.
 3. **Make your changes** following the house style (below).
 4. **Open a pull request** against `main`. Describe the change, link to the issue, and explain what you tested.
-5. **Respond to review.** We aim to review within a week. The maintainer may suggest refactoring, splitting, or integrating your change into existing files rather than accepting it as a standalone addition — this is normal and not a rejection of the contribution.
+5. **Respond to review.** We aim to review within a week. The maintainer may suggest refactoring, splitting, or integrating your change into existing files rather than accepting it as a standalone addition; this is normal and not a rejection of the contribution.
 6. **Get credited.** Once merged, you'll be added to [CONTRIBUTORS.md](../CONTRIBUTORS.md) with a summary of what you contributed.
 
 **For larger contributions** (new skills, substantial refactors): expect a round or two of review. We care a lot about consistency across the plugin, so we may ask for changes that align your contribution with the rest of the codebase.
@@ -44,12 +44,12 @@ If you are unsure where something belongs, open an issue and ask.
 
 ### Language
 
-- **UK English throughout** — organisation, colour, optimise, analyse, centre, programme. US English is acceptable only when a specific skill explicitly targets a US audience.
-- **Oxford comma** — "skills, experience, and qualifications".
-- **No em dashes** — use commas, semicolons, colons, or full stops instead.
-- **No emojis** — this includes emoji-style markers in skill content (no ✅, ❌, ⚠️). Use plain text labels instead.
-- **No hyperbole** — avoid "game-changing", "revolutionary", "supercharge". Plain, honest language only.
-- **Second person** for coaching and user-facing content — "your CV", not "the user's CV".
+- **UK English throughout**: organisation, colour, optimise, analyse, centre, programme. US English is acceptable only when a specific skill explicitly targets a US audience.
+- **Oxford comma**: "skills, experience, and qualifications".
+- **No em dashes**: use commas, semicolons, colons, or full stops instead.
+- **No emojis**: this includes emoji-style markers in skill content (no ticks, crosses, or warning signs). Use plain text labels instead.
+- **No hyperbole**: avoid "game-changing", "revolutionary", "supercharge". Plain, honest language only.
+- **Second person** for coaching and user-facing content; "your CV", not "the user's CV".
 
 ### Content Integrity
 

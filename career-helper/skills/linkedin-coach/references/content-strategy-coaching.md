@@ -86,10 +86,10 @@ Ask user these discovery questions:
 5. **What myths in your field do you want to debunk?**
 
 Their pillars should be:
-- ✓ Grounded in real experience (not aspirational)
-- ✓ Specific enough to be credible
-- ✓ Broad enough for ongoing content
-- ✓ Aligned with career goals
+- Grounded in real experience (not aspirational)
+- Specific enough to be credible
+- Broad enough for ongoing content
+- Aligned with career goals
 
 ### 2. Design Your Posting Cadence (3x Per Week)
 
@@ -200,13 +200,13 @@ A sequence of 2-5 related posts published over 1-2 weeks, each standing alone bu
 
 **When to use threads:**
 
-✓ **Use threads when:**
+**Use threads when:**
 - Topic requires multiple angles (framework + implementation + case study)
 - Building a narrative (problem → solution → results)
 - Teaching a process with distinct steps
 - Sharing a transformation journey
 
-✗ **Don't use threads when:**
+**Don't use threads when:**
 - One post would suffice
 - You're just padding a thin idea
 - You haven't thought through the full arc
@@ -336,12 +336,12 @@ Add:
 ## Quality Standards
 
 **Every content strategy should have:**
-- ✓ 3-5 content pillars grounded in real expertise
-- ✓ 4-week content calendar with specific topics
-- ✓ Mix of tactical, strategic, and story posts
-- ✓ 20-30 person engagement network with tiers
-- ✓ Guidance on when/how to use thread series
-- ✓ At least one drafted post (to validate voice/approach)
+- 3-5 content pillars grounded in real expertise
+- 4-week content calendar with specific topics
+- Mix of tactical, strategic, and story posts
+- 20-30 person engagement network with tiers
+- Guidance on when/how to use thread series
+- At least one drafted post (to validate voice/approach)
 
 **Never:**
 - Write generic "post this" templates
