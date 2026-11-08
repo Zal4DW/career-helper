@@ -44,9 +44,9 @@ The page holds no user data, so there is nothing to fill in or escape in the fil
 There is no export step. When any task uses the board:
 
 1. Read the `cards` collection.
-2. Pick out cards with `updatedBy: "board"` changed since the register's "Last read" date.
+2. Pick out cards with `updatedBy: "board"` whose `updated` timestamp is later than `lastReadByClaude` in the meta document (see `publishing-rules.md`, Reading Data Back).
 3. Summarise them in a line ("You moved Example Org to Interviewing and set a follow-up for Friday"), confirm anything that looks accidental (a card removed from Interviewing, for example), and trigger follow-ups as `application-tracker.md` describes.
-4. Refresh the `applications/tracker.md` snapshot and update "Last read".
+4. Refresh the `applications/tracker.md` snapshot, and write the current time to `lastReadByClaude` (and the register's "Last read").
 
 If the user has edited the snapshot file by hand, show the differences against the board and offer to apply them. Never silently discard either side.
 

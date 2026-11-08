@@ -8,9 +8,11 @@
 
 ## Pages and Dashboards
 
+*"Last read" mirrors `lastReadByClaude` on each board, as a full timestamp (YYYY-MM-DDTHH:MM:SSZ); the board's own value is the one Claude compares against.*
+
 | Title | Kind | Link | Page version | First published | Last updated | Last read |
 |:------|:-----|:-----|:-------------|:----------------|:-------------|:----------|
-| Career Helper Applications | Application board | {{LINK}} | {{e.g. 2.0.0}} | {{YYYY-MM-DD}} | {{YYYY-MM-DD}} | {{YYYY-MM-DD}} |
+| Career Helper Applications | Application board | {{LINK}} | {{e.g. 2.0.0}} | {{YYYY-MM-DD}} | {{YYYY-MM-DD}} | {{YYYY-MM-DDTHH:MM:SSZ}} |
 | Career Helper Market Map | Market map board | {{LINK}} | {{...}} | {{...}} | {{...}} | {{...}} |
 | Career Helper Ikigai | Ikigai map | {{LINK}} | {{...}} | {{...}} | {{...}} | {{...}} |
 | Career Helper Progress | Dashboard | {{LINK}} | n/a | {{...}} | {{...}} | n/a |

@@ -64,9 +64,9 @@ The data fields for each page are defined by its owning skill (`kanban-board.md`
 At the start of any task that uses a board, read its database before relying on anything in the conversation or the workspace snapshot:
 
 1. List the collection (and the meta document).
-2. Find documents with `updatedBy: "board"` changed since the register's "Last read" date. These are the user's own changes.
+2. Find documents with `updatedBy: "board"` whose `updated` timestamp is later than `lastReadByClaude` in the board's meta document (`board/meta` or `map/meta`). These are the user's own changes. Compare full ISO 8601 timestamps, never dates alone. If `lastReadByClaude` is missing (a board from before this rule, or the first read), treat every `updatedBy: "board"` document as new once, and say so.
 3. Summarise them in one or two lines ("You moved Example Org to Interviewing and set a follow-up for Friday"), then act on them as the owning skill describes (for example, a move to Interviewing suggests interview preparation).
-4. Update "Last read" in the register.
+4. Write the current time (ISO 8601, to the second) to `lastReadByClaude` in the board's meta document, and copy it to "Last read" in the register when there is one. The meta document is the baseline, so it works in sessions with no workspace folder.
 
 The board's database is the record. If the workspace snapshot and the database disagree, the database wins; refresh the snapshot.
 

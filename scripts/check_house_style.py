@@ -35,12 +35,14 @@ EMOJI = re.compile("[" + "".join(f"{chr(a)}-{chr(b)}" for a, b in EMOJI_RANGES) 
 
 
 def iter_files(base: Path):
+    """Yield every file under base, skipping .git, node_modules, and __pycache__."""
     for path in sorted(base.rglob("*")):
         if path.is_file() and not any(part in SKIP_DIRS for part in path.relative_to(ROOT).parts):
             yield path
 
 
 def check_text(problems: list[str]) -> None:
+    """Record any em dash, en dash, or emoji in the repository's text files."""
     for path in iter_files(ROOT):
         if path.suffix.lower() not in TEXT_SUFFIXES:
             continue
@@ -54,6 +56,7 @@ def check_text(problems: list[str]) -> None:
 
 
 def check_manifests(problems: list[str]) -> None:
+    """Check both manifests parse, versions match, and listing fields are present."""
     try:
         plugin = json.loads((PLUGIN / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
         market = json.loads((ROOT / ".claude-plugin" / "marketplace.json").read_text(encoding="utf-8"))
@@ -73,6 +76,7 @@ def check_manifests(problems: list[str]) -> None:
 
 
 def check_plugin_files(problems: list[str]) -> None:
+    """Flag OS junk files and any non-image binary inside the plugin folder."""
     for path in iter_files(PLUGIN):
         rel = path.relative_to(ROOT)
         if path.name in JUNK_NAMES:
@@ -88,6 +92,7 @@ FRONT_MATTER = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 
 
 def check_front_matter(problems: list[str]) -> None:
+    """Check skills, commands, and agents start with front matter that has a description."""
     targets = list(PLUGIN.glob("skills/*/SKILL.md")) + list(PLUGIN.glob("commands/*.md")) + list(PLUGIN.glob("agents/*.md"))
     for path in sorted(targets):
         rel = path.relative_to(ROOT)
@@ -104,6 +109,7 @@ def check_front_matter(problems: list[str]) -> None:
 
 
 def main() -> int:
+    """Run every check, print the result, and return the process exit code."""
     problems: list[str] = []
     check_text(problems)
     check_manifests(problems)

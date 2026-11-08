@@ -46,7 +46,7 @@ Declare these capabilities when publishing:
 
 ### `map/meta`
 
-`owner`, `posture` (Employed and discreet, or Openly searching), `direction`, `signalWindow`, `firstBuilt`, `lastChecked`, `themes` (a list of three to five one-line observations), and `coverage` (the coverage statement).
+`owner`, `posture` (Employed and discreet, or Openly searching), `direction`, `signalWindow`, `firstBuilt`, `lastChecked`, `themes` (a list of three to five one-line observations), `coverage` (the coverage statement), and `lastReadByClaude` (the ISO 8601 time Claude last read the board back).
 
 ### `private/seed`
 
@@ -73,11 +73,11 @@ Offer to open the board when the map is built, and whenever the user asks to "se
 There is no export step. At the start of any task that uses the map (including the weekly update):
 
 1. Read `map/meta` and the `organisations` collection.
-2. Pick out documents with `updatedBy: "board"` changed since the register's "Last read" date.
+2. Pick out documents with `updatedBy: "board"` whose `updated` timestamp is later than `lastReadByClaude` in the meta document (see `publishing-rules.md`, Reading Data Back).
 3. **Priority changes made on the board are the user's judgement.** Keep them, with the reason they gave (`priorityReason`). If they gave none, ask once in conversation; in an unattended run, record "Changed on the board on {{date}}; reason not given" and do not invent one. At the next update, say plainly where the evidence disagrees ("You raised Example Org to Act now; no hiring signal has appeared since") rather than silently overriding either side.
 4. **Organisations the user added** have an empty `lastChecked`: research them at the next update, filling the detail fields and signals.
 5. **Organisations the user removed** are gone from the board; remove them from the snapshot too, and do not re-suggest them for at least one update.
-6. Refresh the snapshot and update "Last read".
+6. Refresh the snapshot, and write the current time to `lastReadByClaude` (and the register's "Last read").
 
 ---
 

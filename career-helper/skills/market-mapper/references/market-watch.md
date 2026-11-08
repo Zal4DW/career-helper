@@ -65,7 +65,7 @@ In dyslexia-friendly mode, number every organisation and every signal, signpost 
 
 If nothing changed, the update is a header, one line saying "No new signals across the {{N}} organisations on the map in the period {{start}} to {{end}}", the coverage line, and the footer. Do not manufacture observations to fill the page.
 
-Save to `market-watch/{{YYYY-MM-DD}}-update.md`, creating the `market-watch/` folder first if it does not exist.
+Save to `market-watch/{{YYYY-MM-DD}}-update.md`, creating the `market-watch/` folder first if it does not exist. Fill in the Coverage line about the board only after Step 5 has written the board, so the report never claims an update that did not happen.
 
 ---
 

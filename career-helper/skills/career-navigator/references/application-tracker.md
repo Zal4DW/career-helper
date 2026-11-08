@@ -35,7 +35,7 @@ One document per application in the `cards` collection, with a stable id built f
 | `created` | `YYYY-MM-DD` the card was added |
 | `updated`, `updatedBy` | Stamped on every write: `claude` or `board` |
 
-The `board/meta` document holds `owner` (the user's name as they gave it, or empty) and `created`.
+The `board/meta` document holds `owner` (the user's name as they gave it, or empty), `created`, and `lastReadByClaude` (the ISO 8601 time Claude last read the board back).
 
 ---
 

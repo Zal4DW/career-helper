@@ -16,7 +16,7 @@ Check for `career-helper-preferences.md` in the current working directory. If fo
 
 Find the application board through `career-helper-artefacts.md`, or by its title `Career Helper Applications` in your artifact list (see `/career-outputs`, Publishing Rules). If it exists, read its `cards` collection and use it as the spine of the status summary: each card holds the application's stage, next action, and next date. Present the pipeline first, then supplement with any output files found in the scan below.
 
-- **Changes made on the board.** Cards with `updatedBy: "board"` changed since the register's "Last read" date are the user's own changes; mention them in a line, refresh the `applications/tracker.md` snapshot, and update "Last read" in `career-helper-artefacts.md`.
+- **Changes made on the board.** Cards with `updatedBy: "board"` whose `updated` time is later than `lastReadByClaude` in `board/meta` are the user's own changes; mention them in a line, refresh the `applications/tracker.md` snapshot, and write the current time to `lastReadByClaude` (and the register's "Last read").
 - **Out of date.** If a card looks behind the files on disk (for example, a folder has an `interview-prep.md` but the card still shows Applied), note the discrepancy and offer to update the board via `/career-navigator` (Application Tracker).
 - **No board, but an old tracker.** If `applications/tracker.md` exists without the snapshot line at the top, it is from an earlier version of Career Helper: offer to move it onto a board via `/career-navigator` (Application Tracker).
 - **No board and no tracker, but application folders.** Offer to build one: "Would you like me to put your applications on a board so you can see every role and its next action in one place?"
@@ -32,7 +32,7 @@ Check `updates/` for the most recent `*-weekly-update.md`. If one exists, whatev
 
 ## Check for a Market Map
 
-Find the market map board through the register or its title `Career Helper Market Map`. If it exists, read `map/meta` and the `organisations` collection. Surface any organisation at priority Act now (one line each, with the signal date) after the application pipeline, and mention priorities the user changed on the board since the last read, then update its "Last read" in `career-helper-artefacts.md`. If the map's last-checked date is more than two weeks old, or `market-watch/` has no update file from the last two weeks, offer to run the weekly update via `/market-mapper`. If only an old `market-map.md` exists (no snapshot line at the top), offer to move it onto a board via `/market-mapper`. Never restate signals as new that the map already carries, and never invent a signal or a person.
+Find the market map board through the register or its title `Career Helper Market Map`. If it exists, read `map/meta` and the `organisations` collection. Surface any organisation at priority Act now (one line each, with the signal date) after the application pipeline, and mention priorities the user changed on the board since the last read, then write the current time to its `lastReadByClaude` (and the register's "Last read"). If the map's last-checked date is more than two weeks old, or `market-watch/` has no update file from the last two weeks, offer to run the weekly update via `/market-mapper`. If only an old `market-map.md` exists (no snapshot line at the top), offer to move it onto a board via `/market-mapper`. Never restate signals as new that the map already carries, and never invent a signal or a person.
 
 ---
 

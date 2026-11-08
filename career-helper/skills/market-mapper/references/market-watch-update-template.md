@@ -66,7 +66,7 @@ Or: None.
 
 - **Checked:** {{careers pages, news, Companies House, contracts, funding sources}}
 - **Unreachable this run:** {{LinkedIn people search; any sites that blocked access; or "None"}}
-- Your market map board has been updated with these changes (and the snapshot refreshed where there is a workspace folder). Offers above are applied only when you confirm them.
+- {{Write one of these, after the board write in Step 5 has finished: "Your market map board has been updated with these changes (and the snapshot refreshed where there is a workspace folder)." or, if the write failed or did not finish: "Your market map board could not be updated in this run; the changes above will be applied next time."}} Offers above are applied only when you confirm them.
 
 ---
 
