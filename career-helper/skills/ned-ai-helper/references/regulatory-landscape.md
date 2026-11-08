@@ -1,6 +1,6 @@
 # AI Regulatory Landscape
 
-**Important:** This reference gives directors, governors, and trustees awareness of their duties in an AI context. It is not legal advice. Take advice from your organisation's company secretary, general counsel, or a qualified solicitor before relying on it for a specific decision.
+**Important:** This reference gives directors, governors, and trustees awareness of the AI regulatory landscape. It is not legal advice. Take advice from your organisation's company secretary, general counsel, or a qualified solicitor before relying on it for a specific decision.
 
 UK and EU regulatory requirements relevant to board AI oversight.
 

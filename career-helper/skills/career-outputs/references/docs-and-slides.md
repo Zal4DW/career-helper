@@ -28,7 +28,8 @@ Always offer the Doc or deck; do not create one the user has not agreed to. If t
 | Three-month plan | `/career-navigator` | `Three-Month Career Plan` |
 | Offer evaluation and negotiation strategy | `/career-navigator` | `Offer Evaluation: {{ORGANISATION}}` and `Negotiation Strategy: {{ORGANISATION}}` |
 | Learning plan | `/skills-radar` | `Learning Plan` |
-| Career transition and portfolio plans | `/career-transitions` | `Career Transition Plan` |
+| Portfolio and fractional career strategy | `/career-transitions` | `Portfolio Career Plan` |
+| Non-linear career exploration | `/career-transitions` | `Non-Linear Career Plan` |
 | AI impact assessment | `/ai-impact-assessment` | `AI Impact Assessment: {{ROLE}}` |
 | Getting the best from Career Helper | `/getting-started` | `Getting the Best from Career Helper` |
 | CV or cover letter draft (optional) | `/application-optimiser` | `CV Draft: {{ROLE}} at {{ORGANISATION}}` |

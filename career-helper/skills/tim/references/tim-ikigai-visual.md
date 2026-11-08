@@ -36,7 +36,7 @@ The classic ikigai model has four overlapping circles and their intersections. P
 | Vocation (world needs + paid) | Your synthesis of where answers 3 and 4 overlap |
 | Ikigai (all four) | The centre, only if a genuine candidate emerged |
 
-Synthesising overlaps from the user's own answers is allowed; this is interpretation, not fabrication. If an overlap or the centre is not clear from what the user said, leave the `{{PLACEHOLDER}}` in place rather than guessing, and tell the user it is theirs to fill in. An honest gap at the centre is useful information; it often points toward career transitions or retraining.
+Synthesising overlaps from the user's own answers is allowed; this is interpretation, not fabrication. If an overlap or the centre is not clear from what the user said, write an empty string rather than guessing, and tell the user it is theirs to fill in. An honest gap at the centre is useful information; it often points toward career transitions or retraining.
 
 ---
 

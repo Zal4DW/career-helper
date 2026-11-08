@@ -53,7 +53,7 @@
 
 | Section | Contents | Source |
 |:--------|:---------|:-------|
-| Overall score | The overall score out of 10 with its text rating (Strong, Adequate, or Concern) and the one-line summary | The written report |
+| Overall score | The overall score out of 10 with its text rating as the report gives it (GREEN: Strong, AMBER: Adequate, or RED: Concern) and the one-line summary | The written report |
 | Dimension scores | All eight dimensions, each with its score, text rating, and one line of evidence | The written report's dimension sections |
 | What employers see first | The first-page search results, each with its impression label (Positive, Neutral, Concerning) | The searches recorded in the report |
 | Top actions | The prioritised recommendations, each with its effort and the dimension it improves | The report's recommendations |

@@ -50,7 +50,7 @@ Or: None.
 
 - **Gone quiet (offered for removal):** {{ORGANISATION}}, no signals across the last two updates. {{Or: None.}}
 - **Suggested additions (offered for adding):** {{ORGANISATION}}, surfaced by {{signal and source}}; fits the seed on {{dimension}}. {{Or: None.}}
-- **Already in your tracker:** {{ORGANISATION}} at stage {{STAGE}}; no angle suggested here. {{Or: None.}}
+- **Already on your application board:** {{ORGANISATION}} at stage {{STAGE}}; no angle suggested here. {{Or: None.}}
 
 ---
 
@@ -66,7 +66,7 @@ Or: None.
 
 - **Checked:** {{careers pages, news, Companies House, contracts, funding sources}}
 - **Unreachable this run:** {{LinkedIn people search; any sites that blocked access; or "None"}}
-- The map file has been updated with these changes. Offers above are applied only when you confirm them.
+- Your market map board has been updated with these changes (and the snapshot refreshed where there is a workspace folder). Offers above are applied only when you confirm them.
 
 ---
 

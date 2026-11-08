@@ -514,7 +514,7 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 > 4. Names decision makers only where a public source confirms them, with the source
 > 5. Suggests one low-key angle per organisation (follow, read, comment on a topic post) and assigns a text-label priority: Act now, Warm, Watch, or Quiet
 >
-> **You get:** `market-map.md`, with a coverage statement saying which sources were reachable
+> **You get:** Your market map board (`Career Helper Market Map`, with a `market-map.md` snapshot in your workspace), with a coverage statement saying which sources were reachable
 
 **Real example - the weekly update:**
 

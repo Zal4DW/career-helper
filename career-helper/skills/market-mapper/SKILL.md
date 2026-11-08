@@ -50,7 +50,7 @@ Most people who want a market map are employed and do not want their employer to
 - **Employed and discreet (default if unsure):** every suggested angle is something a curious, engaged professional would do anyway. Follow rather than connect. Comment on public posts about the topic, not about hiring. Never suggest messages that mention looking for a role, and never suggest changing LinkedIn settings such as "Open to Work" or profile headlines. Remind the user once that their own employer's leadership may see public engagement with a competitor.
 - **Openly searching:** angles can be more direct, and the map feeds straight into `/career-navigator` (Strategic Networking) and `/job-scout` for live roles at watched organisations.
 
-Do not store the user's employer name anywhere except the map file itself, and say so.
+Do not store the user's employer name anywhere except the owner-only seed record on the market map board (`private/seed`), and say so. Include it in the `market-map.md` snapshot only when the posture is "Openly searching" and the user asks for it.
 
 ---
 
