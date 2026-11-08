@@ -44,7 +44,7 @@ Every ranked role carries a next step, whatever its tier: Apply first and Apply 
 
 ## Next Actions
 
-1. {{Confirm which roles to pursue; chosen roles are added to applications/tracker.md at stage Researching.}}
+1. {{Confirm which roles to pursue; chosen roles are added to the application board at stage Researching.}}
 2. {{Deadline-driven ordering if any CLOSING SOON flags exist.}}
 3. {{Refresh cadence: when to run discovery again.}}
 

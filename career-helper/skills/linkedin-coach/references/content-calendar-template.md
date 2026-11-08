@@ -48,14 +48,14 @@ Document your 3-5 content pillars - the specific topics you'll post about:
 
 | Day | Post Topic | Pillar | Type | Thread? | Status | Engagement | Notes |
 |-----|-----------|--------|------|---------|--------|------------|-------|
-| Mon/Tue | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | 1/4 or N | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
-| Wed/Thu | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
-| Fri/Sat | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Mon/Tue | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | 1/4 or N | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Wed/Thu | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Fri/Sat | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
 
 **Engagement this week:**
-- ☐ Engaged with 15+ posts from network
-- ☐ Responded to all comments on my posts
-- ☐ Added 3-5 new connections from relevant engagements
+- [ ] Engaged with 15+ posts from network
+- [ ] Responded to all comments on my posts
+- [ ] Added 3-5 new connections from relevant engagements
 
 ---
 
@@ -65,14 +65,14 @@ Document your 3-5 content pillars - the specific topics you'll post about:
 
 | Day | Post Topic | Pillar | Type | Thread? | Status | Engagement | Notes |
 |-----|-----------|--------|------|---------|--------|------------|-------|
-| Mon/Tue | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
-| Wed/Thu | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | 2/4 | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
-| Fri/Sat | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Mon/Tue | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Wed/Thu | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | 2/4 | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Fri/Sat | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
 
 **Engagement this week:**
-- ☐ Engaged with 15+ posts from network
-- ☐ Responded to all comments on my posts
-- ☐ Added 3-5 new connections from relevant engagements
+- [ ] Engaged with 15+ posts from network
+- [ ] Responded to all comments on my posts
+- [ ] Added 3-5 new connections from relevant engagements
 
 ---
 
@@ -82,14 +82,14 @@ Document your 3-5 content pillars - the specific topics you'll post about:
 
 | Day | Post Topic | Pillar | Type | Thread? | Status | Engagement | Notes |
 |-----|-----------|--------|------|---------|--------|------------|-------|
-| Mon/Tue | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
-| Wed/Thu | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | 3/4 | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
-| Fri/Sat | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Mon/Tue | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Wed/Thu | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | 3/4 | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Fri/Sat | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
 
 **Engagement this week:**
-- ☐ Engaged with 15+ posts from network
-- ☐ Responded to all comments on my posts
-- ☐ Added 3-5 new connections from relevant engagements
+- [ ] Engaged with 15+ posts from network
+- [ ] Responded to all comments on my posts
+- [ ] Added 3-5 new connections from relevant engagements
 
 ---
 
@@ -99,14 +99,14 @@ Document your 3-5 content pillars - the specific topics you'll post about:
 
 | Day | Post Topic | Pillar | Type | Thread? | Status | Engagement | Notes |
 |-----|-----------|--------|------|---------|--------|------------|-------|
-| Mon/Tue | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
-| Wed/Thu | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | 4/4 | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
-| Fri/Sat | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | ☐ Draft<br>☐ Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Mon/Tue | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Wed/Thu | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | 4/4 | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
+| Fri/Sat | {Specific topic} | {Pillar #} | Tactical/Strategic/Story | N | [ ] Draft<br>[ ] Posted | Views: __<br>Comments: __<br>Shares: __ | {What worked/didn't} |
 
 **Engagement this week:**
-- ☐ Engaged with 15+ posts from network
-- ☐ Responded to all comments on my posts
-- ☐ Added 3-5 new connections from relevant engagements
+- [ ] Engaged with 15+ posts from network
+- [ ] Responded to all comments on my posts
+- [ ] Added 3-5 new connections from relevant engagements
 
 ---
 
@@ -121,10 +121,10 @@ If you're planning multi-post thread series, map them out here:
 
 | Post # | Topic | Key Points | Posting Date | Status | Link |
 |--------|-------|-----------|-------------|--------|------|
-| 1/4 | {Hook/Problem} | • {Point 1}<br>• {Point 2}<br>• {Point 3} | {Date} | ☐ | {URL when posted} |
-| 2/4 | {Solution/Framework} | • {Point 1}<br>• {Point 2}<br>• {Point 3} | {Date} | ☐ | {URL when posted} |
-| 3/4 | {Example/Proof} | • {Point 1}<br>• {Point 2}<br>• {Point 3} | {Date} | ☐ | {URL when posted} |
-| 4/4 | {Lessons/Mistakes} | • {Point 1}<br>• {Point 2}<br>• {Point 3} | {Date} | ☐ | {URL when posted} |
+| 1/4 | {Hook/Problem} | • {Point 1}<br>• {Point 2}<br>• {Point 3} | {Date} | [ ] | {URL when posted} |
+| 2/4 | {Solution/Framework} | • {Point 1}<br>• {Point 2}<br>• {Point 3} | {Date} | [ ] | {URL when posted} |
+| 3/4 | {Example/Proof} | • {Point 1}<br>• {Point 2}<br>• {Point 3} | {Date} | [ ] | {URL when posted} |
+| 4/4 | {Lessons/Mistakes} | • {Point 1}<br>• {Point 2}<br>• {Point 3} | {Date} | [ ] | {URL when posted} |
 
 **Cross-reference strategy:**
 - Each post should link back to previous post in series
@@ -183,19 +183,19 @@ Earlier career, building presence, genuine relationship-building.
 ## Daily Engagement Routine (30-40 min/day)
 
 **Morning (20 min before posting):**
-- ☐ Check feed, find 3-5 posts from network
-- ☐ Leave thoughtful comments (2-3 sentences each)
-- ☐ Build visibility before your own post
+- [ ] Check feed, find 3-5 posts from network
+- [ ] Leave thoughtful comments (2-3 sentences each)
+- [ ] Build visibility before your own post
 
 **Post publication (first hour after posting):**
-- ☐ Respond to every comment quickly
-- ☐ Ask follow-up questions to engage commenters
-- ☐ Tag relevant people if appropriate (sparingly)
+- [ ] Respond to every comment quickly
+- [ ] Ask follow-up questions to engage commenters
+- [ ] Tag relevant people if appropriate (sparingly)
 
 **Evening (10 min):**
-- ☐ Check for late comments, respond
-- ☐ Note any patterns in engagement
-- ☐ Update calendar with engagement metrics
+- [ ] Check for late comments, respond
+- [ ] Note any patterns in engagement
+- [ ] Update calendar with engagement metrics
 
 ---
 
@@ -285,28 +285,28 @@ As ideas come up between planned posts, capture them here:
 Before publishing each post, check:
 
 **Structure:**
-- ☐ Hook in first 2 lines (problem/insight/surprise)
-- ☐ Short paragraphs (2-3 lines max)
-- ☐ White space between sections
-- ☐ Specific examples and numbers (not vague)
-- ☐ Clear takeaway or question at end
+- [ ] Hook in first 2 lines (problem/insight/surprise)
+- [ ] Short paragraphs (2-3 lines max)
+- [ ] White space between sections
+- [ ] Specific examples and numbers (not vague)
+- [ ] Clear takeaway or question at end
 
 **Voice:**
-- ☐ Sounds like me talking to a colleague
-- ☐ No buzzwords I don't use in real life
-- ☐ Honest about challenges, not just wins
-- ☐ Professional, not performative
+- [ ] Sounds like me talking to a colleague
+- [ ] No buzzwords I don't use in real life
+- [ ] Honest about challenges, not just wins
+- [ ] Professional, not performative
 
 **Value:**
-- ☐ Helps someone solve a problem I've solved
-- ☐ Shares a framework I actually use
-- ☐ Documents real learning, not theory
-- ☐ Specific enough to be credible
+- [ ] Helps someone solve a problem I've solved
+- [ ] Shares a framework I actually use
+- [ ] Documents real learning, not theory
+- [ ] Specific enough to be credible
 
 **Engagement:**
-- ☐ Invites discussion (but not "thoughts?")
-- ☐ References others if appropriate
-- ☐ Timing: Tuesday-Thursday, 7-9am or 12-2pm
+- [ ] Invites discussion (but not "thoughts?")
+- [ ] References others if appropriate
+- [ ] Timing: Tuesday-Thursday, 7-9am or 12-2pm
 
 ---
 

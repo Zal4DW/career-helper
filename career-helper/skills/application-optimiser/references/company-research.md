@@ -214,10 +214,10 @@ Process results, then launch next wave of parallel searches based on findings.
 ```
 
 **Important WebFetch Limitations:**
-- ✓ **Company websites**: WebFetch works well - use for About, Team, Press, Career pages
-- ✗ **LinkedIn profiles**: Blocked by anti-scraping - use WebSearch to find URLs, user reviews manually
-- ✗ **Glassdoor**: Often blocked - use WebSearch to find review summaries and links
-- ✗ **Paywalled content**: Will hit paywall - provide link for user to access
+- WORKS: **Company websites**: WebFetch works well - use for About, Team, Press, Career pages
+- BLOCKED: **LinkedIn profiles**: Blocked by anti-scraping - use WebSearch to find URLs, user reviews manually
+- BLOCKED: **Glassdoor**: Often blocked - use WebSearch to find review summaries and links
+- BLOCKED: **Paywalled content**: Will hit paywall - provide link for user to access
 
 **Human-in-the-Loop Fallback (When WebFetch Fails):**
 

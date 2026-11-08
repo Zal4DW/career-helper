@@ -1,9 +1,11 @@
 # Application Tracker
 
-**Owner:** {{NAME}}
-**Last updated:** {{DATE}}
+*Snapshot of your application board on {{YYYY-MM-DD}}. The board is the record: change it there, or ask Claude. Edits made to this file are not read back.*
 
-A single view of every live application. Stages: Researching, Applying, Applied, Interviewing, Offer, Closed. Update the next action and date whenever something moves.
+**Owner:** {{NAME}}
+**Board:** Career Helper Applications ({{LINK}})
+
+Stages: Researching, Applying, Applied, Interviewing, Offer, Closed.
 
 ---
 

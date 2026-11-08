@@ -50,7 +50,7 @@ Most people who want a market map are employed and do not want their employer to
 - **Employed and discreet (default if unsure):** every suggested angle is something a curious, engaged professional would do anyway. Follow rather than connect. Comment on public posts about the topic, not about hiring. Never suggest messages that mention looking for a role, and never suggest changing LinkedIn settings such as "Open to Work" or profile headlines. Remind the user once that their own employer's leadership may see public engagement with a competitor.
 - **Openly searching:** angles can be more direct, and the map feeds straight into `/career-navigator` (Strategic Networking) and `/job-scout` for live roles at watched organisations.
 
-Do not store the user's employer name anywhere except the map file itself, and say so.
+Do not store the user's employer name anywhere except the owner-only seed record on the market map board (`private/seed`), and say so. Include it in the `market-map.md` snapshot only when the posture is "Openly searching" and the user asks for it.
 
 ---
 
@@ -82,13 +82,15 @@ Builds the map in four passes:
 
 Each organisation gets a text-label watch priority: Act now, Warm, Watch, or Quiet, with a one-line reason.
 
-**Output:** `market-map.md` at the workspace root, with a coverage statement naming the sources searched and those unreachable
+Once the user has confirmed the map, it is saved to the market map board through `/career-outputs` (see @references/market-map-board.md): the board's database is the record, and the seed organisation is kept in an owner-only part of it that the page never shows.
+
+**Output:** The `Career Helper Market Map` board, with a coverage statement naming the sources searched and those unreachable, plus a read-only snapshot at `market-map.md` when you have a workspace folder
 
 ---
 
 ## 2. Watchlist and Weekly Update
 
-**What you need:** An existing `market-map.md`; nothing else
+**What you need:** An existing market map board; nothing else
 **Load:** @references/market-watch.md
 **Template:** @references/market-watch-update-template.md
 
@@ -101,11 +103,11 @@ Re-runs the signal pass for every organisation on the map, compares against the 
 - Suggested additions surfaced by the week's search (a new entrant, a competitor that just raised money), offered rather than added
 - Three suggested actions for the week, each tied to a signal
 
-Then rolls the changes into `market-map.md` (per-organisation latest signal, last-checked date, watch priority) so the map stays current and the update file stays short, and regenerates `market-map-board.html` if one exists. An update with nothing to report says so in one line; never pad.
+Then rolls the changes into the market map board (per-organisation latest signal, signals list, last-checked date, watch priority) so the map stays current and the update file stays short, and refreshes the `market-map.md` snapshot. An update with nothing to report says so in one line; never pad.
 
 **Scheduling:** `/career-helper:weekly-update` runs this update as one of its steps and is built to go on a Cowork schedule; `/career-routines` sets that up and also holds the standalone market map prompt (routine 6). Run "update my market map" by hand whenever you like; the delta logic is the same.
 
-**Output:** `market-watch/{{YYYY-MM-DD}}-update.md`, plus an updated `market-map.md` (and a regenerated `market-map-board.html` where one exists)
+**Output:** `market-watch/{{YYYY-MM-DD}}-update.md`, plus an updated market map board and snapshot
 
 ---
 
@@ -117,28 +119,28 @@ The map is a decision aid, not a queue. For an organisation the user chooses to 
 
 1. **Want live roles there?** Run `/job-scout` with the organisation's careers page as a named target; scout runs prefer employer pages, which are the most current source.
 2. **Want to build a relationship first?** Run `/career-navigator` (Strategic Networking Intelligence) for that organisation; the map's decision makers and signals seed the research.
-3. **Ready to apply?** Add a row to `applications/tracker.md` at stage Researching (build the tracker first via `/career-navigator` if none exists) and create `applications/{role-slug}/`, then route to `/application-optimiser`.
+3. **Ready to apply?** Add the role to the application board at stage Researching (build the board first via `/career-navigator` if none exists) and create `applications/{role-slug}/`, then route to `/application-optimiser`.
 4. **Want to understand them properly?** `/application-optimiser` (Company Research) produces the full research brief.
 
-Do not add organisations to the tracker unless the user has chosen them and a role, real or intended, exists to track.
+Do not add organisations to the application board unless the user has chosen them and a role, real or intended, exists to track.
 
 ---
 
 ## 4. Watchlist Board View
 
-**What you need:** An existing `market-map.md` (build one first via Capability 1 if not)
-**Load:** @references/market-map-board.md
-**Template:** @references/market-map-board-template.html
+**What you need:** Nothing; the board is created with the map (Capability 1)
+**Load:** @references/market-map-board.md, and `/career-outputs` for publishing
+**Page:** @references/market-map-board-template.html
 
-An interactive, self-contained HTML board generated from the map, built on the same mechanism as the application kanban board in `/career-navigator`:
+The interactive market map, kept in your Claude account and built on the same mechanism as the application board in `/career-navigator`:
 - One card per organisation in four priority columns (Act now, Warm, Watch, Quiet), each column carrying its one-line meaning
-- Drag and drop between priorities, with keyboard-operable Raise and Lower buttons and an edit dialog
+- Raise and lower priorities by dragging or with keyboard-operable buttons, and give your reason; edit the overview, angle, and your own notes
+- Each card opens to show its dated signals and decision makers with their sources; only Claude adds evidence, so every entry keeps a source
 - Text-label priorities and a `STALE` text tag for any organisation not checked in fourteen days; colour is never the only signal
-- No external assets or network calls; board edits persist in the browser only, and the seed employer never appears on the board
-- Export buttons produce the map's Watchlist section as markdown so hand-made priority changes flow back into `market-map.md`
-- The map file remains the source of truth; the board is a regenerable view, refreshed after each weekly update
+- Your changes are saved straight away and read back by Claude, including in the scheduled weekly update; no export step
+- The seed employer is never shown on the board, whoever you share it with
 
-**Output:** `market-map-board.html`
+**Output:** The `Career Helper Market Map` artifact, recorded in `career-helper-artefacts.md`
 
 ---
 

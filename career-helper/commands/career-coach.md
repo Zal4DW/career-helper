@@ -1,5 +1,5 @@
 ---
-description: Start a guided career coaching session with Tim — your personal career coach who guides you through the right skills in the right order
+description: Start a guided career coaching session with Tim, your personal career coach who guides you through the right skills in the right order
 ---
 
 # Career Coach

@@ -470,22 +470,22 @@ For Tier 1 and 2 people, engage with their content first to establish presence:
 ### Messaging Do's and Don'ts
 
 **DO:**
-- ✓ Reference specific recent work/posts of theirs
-- ✓ Show genuine interest in company/team/mission
-- ✓ Mention specific relevant experience concisely
-- ✓ Keep initial message under 100 words
-- ✓ Be professionally authentic, not overly formal
-- ✓ Offer value or insight, not just ask
-- ✓ Make it easy to respond (clear, specific)
+- Reference specific recent work/posts of theirs
+- Show genuine interest in company/team/mission
+- Mention specific relevant experience concisely
+- Keep initial message under 100 words
+- Be professionally authentic, not overly formal
+- Offer value or insight, not just ask
+- Make it easy to respond (clear, specific)
 
 **DON'T:**
-- ✗ Generic "I'd like to add you to my network"
-- ✗ Immediately ask for referral or job help
-- ✗ Send your resume unsolicited
-- ✗ Write long paragraph explaining your entire background
-- ✗ Mention you're applying (initially) unless relevant
-- ✗ Use templates that sound like templates
-- ✗ Connect with everyone at company on same day
+- Generic "I'd like to add you to my network"
+- Immediately ask for referral or job help
+- Send your resume unsolicited
+- Write long paragraph explaining your entire background
+- Mention you're applying (initially) unless relevant
+- Use templates that sound like templates
+- Connect with everyone at company on same day
 
 ---
 
@@ -524,19 +524,19 @@ For Tier 1 and 2 people, engage with their content first to establish presence:
 
 **Situations to Avoid:**
 
-⚠️ **Don't connect if:**
+**WARNING: Don't connect if:**
 - You have nothing genuine in common and connection feels forced
 - Person has "Open to Connect" signals but you're clearly mass-connecting
 - Company has policy against candidate connections (rare but check)
 - You're connecting with too many people at once from same company
 
-⚠️ **Be Cautious About:**
+**WARNING: Be cautious about:**
 - Connecting with hiring manager's manager (can seem presumptuous)
 - Reaching out to CEO/founder unless very senior role or strong connection angle
 - Connecting during active interview process without notifying recruiter (if you have one)
 - Being too aggressive with follow-ups
 
-⚠️ **Watch for Company Signals:**
+**WARNING: Watch for company signals:**
 - Some companies discourage employee-candidate connections
 - Some actively encourage it (good culture signal)
 - Adjust strategy based on response patterns
@@ -977,12 +977,12 @@ When running this networking intelligence:
 ## Quality Standards
 
 Every recommended connection must have:
-- ✓ Real LinkedIn URL (verified via search)
-- ✓ Clear strategic value explanation
-- ✓ Specific connection angle (not generic)
-- ✓ Personalized message template (not generic)
-- ✓ Timing guidance (when to connect)
-- ✓ Expected outcome stated
+- Real LinkedIn URL (verified via search)
+- Clear strategic value explanation
+- Specific connection angle (not generic)
+- Personalized message template (not generic)
+- Timing guidance (when to connect)
+- Expected outcome stated
 
 **Never:**
 - Recommend generic "connect with HR" without specific person

@@ -1,8 +1,17 @@
 {
   "name": "career-helper",
-  "version": "1.17.1",
-  "description": "End-to-end career support with guided coaching for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Sixteen skills including Tim (your personal career coach), getting started guidance, AI impact assessment, employer footprint analysis, social media review, LinkedIn optimisation, ATS CV rewriting, cover letters and supporting statements, verified CV PDF production, interview preparation, reference and referee prep, job search strategy with an application tracker and interactive kanban board view, live role discovery with batch ranking (job scout), an evidenced skills inventory with gap analysis and learning plans (skills radar), a market map of organisations like your employer with dated signals, decision makers, and a weekly what-changed update (market mapper), scheduled Cowork routines with a one-command weekly update (career routines), career transitions (including non-linear career exploration: entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling), board-level AI oversight, and personal brand building (Why You, Why Them, Why Now positioning, audience and channel map, content pillars, bio library). Ready-made Claude Cowork scheduled routines keep the search moving, and Tim can render an optional interactive ikigai map for direction-finding.",
+  "displayName": "Career Helper",
+  "version": "2.0.0",
+  "description": "Career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors, built for Claude Cowork. Seventeen skills, including Tim (a guided career coach), CV and cover letter work with verified ATS-safe PDFs, interview preparation and presentation slides, reference prep, job scouting, a skills gap radar, salary negotiation and offer evaluation, personal brand, career transitions, digital footprint review, and board-level AI oversight. Your applications and market map live on interactive boards that you and Claude both keep current, with an ikigai map, progress and footprint dashboards, Claude Docs, slide decks, and Cowork scheduled routines with a one-command weekly update.",
   "author": {
-    "name": "Prosper AI Consulting"
-  }
+    "name": "Prosper AI Consulting",
+    "url": "https://github.com/Zal4DW/career-helper"
+  },
+  "homepage": "https://github.com/Zal4DW/career-helper",
+  "repository": "https://github.com/Zal4DW/career-helper",
+  "license": "CC-BY-NC-4.0",
+  "icon": "./.claude-plugin/icon.png",
+  "documentationUrl": "https://github.com/Zal4DW/career-helper#readme",
+  "supportUrl": "https://github.com/Zal4DW/career-helper/issues",
+  "privacyPolicyUrl": "https://github.com/Zal4DW/career-helper/blob/main/PRIVACY.md"
 }

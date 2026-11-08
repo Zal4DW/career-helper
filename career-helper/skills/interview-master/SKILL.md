@@ -1,6 +1,6 @@
 ---
 name: interview-master
-description: Use when the user is preparing for, practising, or recovering from interviews, including mock interviews, what interviewers look for, post-interview or post-rejection coaching, references, and concerns about ageism or being called overqualified. Covers STAR frameworks, UK age-discrimination law, practical strategies, and emotional resilience.
+description: Use when the user is preparing for, practising, or recovering from interviews, including mock interviews, what interviewers look for, post-interview or post-rejection coaching, references, building slides for an interview presentation, and concerns about ageism or being called overqualified. Covers STAR frameworks, UK age-discrimination law, practical strategies, and emotional resilience.
 tags: interview, preparation, mock, practice, rejection, coaching, star, ageism, age-discrimination, overqualified
 ---
 
@@ -17,6 +17,7 @@ Complete interview support - before, during practice, and after.
 | 3 | Mock Interview | Practising with realistic simulation |
 | 4 | Post-Interview Coaching | After a rejection or unsuccessful interview |
 | 5 | Reference & Referee Prep | Choosing, asking, and briefing your referees |
+| 6 | Interview Presentation | Building and rehearsing slides for a case study, a first-90-days plan, or a set topic |
 
 ## Quick Start
 
@@ -29,6 +30,7 @@ Complete interview support - before, during practice, and after.
 "I keep getting told I'm overqualified - what can I do?"
 "I was made redundant after 25 years and I'm struggling"
 "They asked for references - who should I use and how do I brief them?"
+"I have to present a 90-day plan at my second interview"
 ```
 
 ---
@@ -69,7 +71,7 @@ Role-specific preparation, built from a competency map outwards:
 
 All answers cite your real experience with evidence. There is no overall readiness score: a single number invites you to optimise the number rather than the gap.
 
-**Output:** `applications/{role-slug}/interview-prep.md`
+**Output:** `applications/{role-slug}/interview-prep.md`, offered as a Claude Doc (`Interview Pack: {{ROLE}} at {{ORGANISATION}}`) through `/career-outputs` so you can annotate and print it
 
 **Suggested next steps:**
 - "Want me to generate an Interviewer's Perspective report?"
@@ -143,7 +145,7 @@ Realistic interview practice:
 - "What's Still True" evidence anchor from CV
 - Pattern tracking across multiple rejections
 
-**Output:** `applications/{role-slug}/post-interview-debrief.md`
+**Output:** `applications/{role-slug}/post-interview-debrief.md`, optionally kept as a Claude Doc
 
 **Suggested next steps:**
 - Skill gap? "Want me to help update your CV to address this?"
@@ -167,11 +169,27 @@ Prepare your references before you are asked, usually at late interview or offer
 
 All referee details come from you; nothing is invented. Briefs match verified shared history, never coaching exaggeration.
 
-**Output:** `applications/{role-slug}/referee-prep.md`
+**Output:** `applications/{role-slug}/referee-prep.md`, optionally kept as a Claude Doc (`Referee Briefing: {{ROLE}}`) you can share with each referee
 
 **Suggested next steps:**
 - "Want me to draft the brief to send each referee?"
 - "Ready for the offer and negotiation stage?" (route to `/career-navigator`)
+
+---
+
+## 6. Interview Presentation
+
+**What you need:** The exact presentation brief, the time allowed, and ideally a research brief and interview prep for the role
+**Load:** @references/interview-presentation.md
+
+Build and rehearse a presentation the panel has asked for:
+- Agrees the slide headlines with you before writing anything
+- Ties each priority slide to a competency from your interview prep
+- Uses only facts you have confirmed about yourself and sourced facts about the organisation, with sources in the speaker notes
+- Sizes the deck to your slot and keeps the detail in the notes
+- Offers a timed rehearsal with likely panel questions
+
+**Output:** A slide deck (`{{TOPIC}}: {{ORGANISATION}} Interview`) in your Claude account, created through `/career-outputs`
 
 ---
 
@@ -245,6 +263,7 @@ When a capability names a template, load it with the @ reference before writing,
 - **/skills-radar** - A Gap rating in the competency map is the same evidence its gap analysis wants; run it when the same Gap recurs across interviews
 - **/linkedin-coach** - Update your LinkedIn after interview learnings
 - **/career-navigator** - Negotiate offers, evaluate multiple options
+- **/career-outputs** - Keeps your interview pack as a Claude Doc and builds presentation slides
 
 ---
 

@@ -159,7 +159,7 @@ You will analyze and provide optimization recommendations for each section.
 
 **Recommended About Structure:**
 
-**Tone Guidance:** Write warm and human, not corporate. The reader should feel like they're meeting a real person, not reading a press release. Make it clear why someone should want to message you. Avoid jargon-heavy sentences and passive voice—be direct, be readable, be you.
+**Tone Guidance:** Write warm and human, not corporate. The reader should feel like they're meeting a real person, not reading a press release. Make it clear why someone should want to message you. Avoid jargon-heavy sentences and passive voice; be direct, be readable, be you.
 
 **Paragraph 1 - The Hook (2-3 sentences):**
 {Opening that immediately positions you and hooks the reader. Should answer: who are you, at what level, and what's your superpower?}
@@ -379,14 +379,14 @@ Technologies/Methods: [Keyword 1], [Keyword 2], [Keyword 3]
 
 **Before & After Examples:**
 
-**❌ WEAK (vague, no outcomes):**
+**WEAK (vague, no outcomes):**
 ```
 Worked on a digital transformation project. Helped the team implement
 new systems and processes. The project was successful and improved
 efficiency across the organisation.
 ```
 
-**✅ STRONG (specific, quantified, keyword-rich):**
+**STRONG (specific, quantified, keyword-rich):**
 ```
 Challenge: Legacy systems were causing 40% of customer service delays,
 with manual processes costing the business £2M annually in inefficiencies.
@@ -756,4 +756,4 @@ Provide recommendations in this order:
 4. Success metrics to track
 
 Use clear headings, bullet points, and specific examples throughout.
-No generic advice—every recommendation must be tailored to the user's specific profile, career level, and goals.
+No generic advice; every recommendation must be tailored to the user's specific profile, career level, and goals.

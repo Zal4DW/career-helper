@@ -1,5 +1,7 @@
 # Offer Evaluation Framework
 
+**Important:** This guidance supports your own negotiation and decision making. It is not financial, tax, or legal advice. For contract terms, pensions, share schemes, or tax, check with a qualified adviser, and for employment rights see ACAS.
+
 UK English required. No marketing fluff. Analytical, thorough, region-aware.
 
 ## Role and Objective

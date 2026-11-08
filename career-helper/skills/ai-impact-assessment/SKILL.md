@@ -63,7 +63,7 @@ This skill runs in two phases:
 
 **Important:** This assessment may be difficult for the user to hear. Be straightforward, empathetic, and pragmatic. Do not sugar-coat, but do not catastrophise. Open with facts, not reassurance. End with agency and a plan.
 
-**Output:** `{role}-ai-impact-assessment.md`
+**Output:** `{role}-ai-impact-assessment.md`, offered as a Claude Doc (`AI Impact Assessment: {{ROLE}}`) through `/career-outputs`
 
 ---
 

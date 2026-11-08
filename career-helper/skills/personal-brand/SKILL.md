@@ -56,7 +56,7 @@ The core capability. Walk through Why You, Why Them, and Why Now in three blocks
 - Three-word brand summary (proof, point of view, audience)
 - The "permission slip" (the experience that earns you the right to speak on this)
 
-**Output:** `personal-brand-foundation.md` (or `applications/{role-slug}/personal-brand-foundation.md` if tied to a specific target role)
+**Output:** `personal-brand-foundation.md` (or `applications/{role-slug}/personal-brand-foundation.md` if tied to a specific target role), offered as a Claude Doc (`Personal Brand`) through `/career-outputs`
 
 ---
 
@@ -111,7 +111,7 @@ Produce a coherent set of bios so every surface tells the same story at the righ
 - Email signature line
 - Board bio (if relevant)
 
-**Output:** `personal-brand-bio-library.md`
+**Output:** `personal-brand-bio-library.md`, offered as a Claude Doc (`Bio Library`) through `/career-outputs` so you can copy each bio from one place
 
 ---
 

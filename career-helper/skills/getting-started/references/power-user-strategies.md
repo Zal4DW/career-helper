@@ -199,15 +199,15 @@ For users returning after a career break who want positioning that frames the ga
 **When to use:** You have generated multiple outputs over time and want to keep them current.
 
 **Approach:**
-- Keep an application tracker (`/career-navigator`, Application Tracker) as the index of everything in flight; `/career-helper:status` reads it first
-- Run `/career-helper:status` periodically to see all generated files and the tracker board together
+- Keep your application board (`/career-navigator`, Application Tracker) as the index of everything in flight; `/career-helper:status` reads it first
+- Run `/career-helper:status` periodically to see all generated files and the board together, and to refresh the progress dashboard
 - When your CV changes, re-run CV optimisation for active applications
 - When goals shift, re-run the 3-month plan
 - Research briefs older than 3 months should be refreshed - company situations change
 
-**File management:** All outputs are markdown files organised in per-application folders. You can:
+**File management:** Working outputs are markdown files organised in per-application folders; documents you will edit, print, or present can also be kept as Claude Docs and slide decks. You can:
 - Open any application folder to see everything for that role in one place
-- Convert files to PDF for submission
+- Produce a verified PDF of your CV with `/application-optimiser`, or export a Claude Doc to PDF or Word
 - Copy sections into application forms
 - Share with mentors or coaches for feedback
 - Use as reference during real interviews
@@ -220,17 +220,17 @@ For users returning after a career break who want positioning that frames the ga
 **When to use:** You want the search to keep moving between sessions rather than only when you sit down to work on it.
 
 **Approach:**
-1. Keep an application tracker (`/career-navigator`) and, if you are watching the market, a market map (`/market-mapper`), so a scheduled run has something to read
-2. Put `/career-helper:weekly-update` on a weekly Cowork `/schedule`. It runs the standup, follow-up check, market map update, and learnings check in one unattended pass and saves a dated report. `/career-routines` tailors it, records it, and covers Claude Code Desktop, cron, and cloud Routines if you are outside Cowork
+1. Keep an application board (`/career-navigator`) and, if you are watching the market, a market map (`/market-mapper`), so a scheduled run has something to read
+2. Put `/career-helper:weekly-update` on a weekly Cowork `/schedule`. It runs the standup, follow-up check, market map update, and learnings check in one unattended pass and saves a dated report. `/career-routines` tailors it and records it
 3. Add narrower routines only if you want one at a different cadence:
-   - **Monday standup** (weekly): reads the tracker, flags overdue actions, names the three things to do this week
+   - **Monday standup** (weekly): reads the application board, flags overdue actions, names the three things to do this week
    - **Market monitor** (weekly): watches for new roles and news in your target area
    - **Follow-up check** (weekdays): catches the follow-ups that slip
    - **Posting reminder** (weekly): keeps your LinkedIn content cadence on track
    - **Market map update** (weekly): re-checks the organisations on your `/market-mapper` map and reports only what changed; the best first routine if you are employed and quietly exploring
 4. Start with the weekly update alone and add others once it is part of your week
 
-**Key insight:** the value compounds with a persistent workspace folder and a current tracker. Each scheduled run reads the same files, so the routines get more useful as your search progresses.
+**Key insight:** the value compounds with a persistent workspace folder and a current application board. Each scheduled run reads the same board and files, so the routines get more useful as your search progresses.
 
 **Honest caveats:** a Cowork task given your local workspace folder runs on your machine, which must be awake at the time; it runs in the cloud only when it needs no folder on your computer. An unattended run cannot answer questions, which is why the weekly update records decisions instead of asking.
 

@@ -55,16 +55,15 @@ These rules apply to **all communication with the user** and to the **formatting
 
 **What you need:** Nothing - works for everyone
 **Load:** @references/getting-the-best-guide.md
-**PDF:** @references/getting-the-best-guide.pdf
 
 A comprehensive guide covering installation, folder setup, and three scenario-based walkthroughs: graduates starting out, experienced professionals between roles, and employed professionals wanting better positioning. Includes skill connection maps, common mistakes to avoid, and practical advice on LinkedIn copy/paste workflows.
 
 **Core approach:**
-- If the user asks for the guide, a downloadable version, or "how to get the best out of career-helper", present the key points from the guide conversationally and offer to save the PDF to their working folder
+- If the user asks for the guide, a downloadable version, or "how to get the best out of career-helper", present the key points from the guide conversationally and offer it as a Claude Doc they can keep, print, or export to PDF or Word
 - Use the guide content to answer specific questions about workflows, skill ordering, or what to prepare
-- The PDF version can be shared with others who want to use career-helper
+- The Claude Doc can be shared with others who want to use career-helper; create it from the guide's markdown following `@../career-outputs/references/docs-and-slides.md`
 
-**Output:** Conversational guidance from the guide content; optionally saves `getting-the-best-from-career-helper.pdf` to the user's working folder
+**Output:** Conversational guidance from the guide content; optionally a Claude Doc titled "Getting the Best from Career Helper"
 
 ---
 
@@ -128,7 +127,7 @@ Create a personalised skill sequence based on the user's specific situation. Not
 Practical guidance for getting the best results from each skill. Not a repeat of help - specific tips on inputs, prompting, and iteration.
 
 **Core approach:**
-- Ask which skill they want tips for (or cover all fifteen)
+- Ask which skill they want tips for (or cover them all)
 - Provide input quality tips (what makes a good CV upload, how to share a LinkedIn profile, what details to include in a job description)
 - Common mistakes and how to avoid them
 - How to iterate and refine outputs
@@ -165,9 +164,9 @@ Advanced techniques for users who have used the basic skills and want more.
 Scheduling has its own skill, `/career-routines`. From here, give the short version and route:
 
 **Core approach:**
-- Lead with the simplest route: `/career-helper:weekly-update` runs the tracker standup, follow-up check, market map update, and learnings check in one unattended pass and saves a dated report; put that one command on a weekly Cowork schedule via `/schedule`
-- Say plainly where a Cowork task runs: in the cloud when it needs no folder on the computer, on the machine (which must be awake) when it is given a local workspace folder, which a Career Helper workspace usually is
-- Route to `/career-routines` for tailoring the prompt, recording it in `routines.md`, reviewing routines, or scheduling outside Cowork
+- Lead with the simplest route: `/career-helper:weekly-update` runs the application board standup, follow-up check, market map update, learnings check, and progress dashboard refresh in one unattended pass and saves a dated report; put that one command on a weekly Cowork schedule via `/schedule`
+- Say plainly where a Cowork task runs: in the cloud when it needs no folder on the computer (boards are still reachable), on the machine (which must be awake) when it is given a local workspace folder
+- Route to `/career-routines` for tailoring the prompt, recording it in `routines.md`, or reviewing routines
 - Keep the "do not invent" and "record decisions, do not ask" instructions in any prompt the user edits
 
 **Output:** Conversational guidance, then a handoff to `/career-routines`

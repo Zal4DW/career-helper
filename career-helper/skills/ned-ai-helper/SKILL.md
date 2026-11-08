@@ -1,6 +1,6 @@
 ---
 name: ned-ai-helper
-description: Use when a Non-Executive Director, governor, or trustee needs board-level help with AI, such as evaluating an AI proposal, challenging executive AI strategy, designing governance structures, assessing AI risk, or building board AI literacy. Produces board-ready materials in the "Pragmatic Operator" tone.
+description: Use when a Non-Executive Director, governor, or trustee needs board-level help with AI, such as evaluating an AI proposal, challenging executive AI strategy, designing governance structures, assessing AI risk, building board AI literacy, or preparing slides to brief the board. Produces board-ready papers (as Claude Docs) and briefing decks in the "Pragmatic Operator" tone.
 tags: ned, board, governance, ai-governance, non-executive-director, trustee, governor, risk
 ---
 
@@ -27,61 +27,20 @@ Board-level AI governance support for Non-Executive Directors, Governors, and Ch
 
 ## Output Format
 
-Generate every document as markdown first, then offer format conversion. Markdown is the editable source that the PDF and DOCX versions are built from.
+Write every document as markdown first: it is the reviewable source. Then offer the right surface through `/career-outputs` (see @../career-outputs/references/docs-and-slides.md):
 
-### Default Output Method
-1. Generate document as **markdown** (primary format)
-2. **After document created**, offer format conversion using the methods below
-
-### PDF Conversion (Board Paper Delivery)
-
-```bash
-pip install markdown weasyprint
-```
-
-```python
-import markdown
-from weasyprint import HTML
-from pathlib import Path
-
-def convert_to_pdf(md_path: str, pdf_path: str) -> None:
-    """Convert markdown to professional PDF."""
-    content = Path(md_path).read_text(encoding='utf-8')
-    html = markdown.markdown(content, extensions=['tables', 'fenced_code'])
-
-    styled_html = f'''<!DOCTYPE html>
-    <html><head><style>
-    body {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: 11pt; line-height: 1.5; max-width: 800px; margin: 0 auto; padding: 40px; }}
-    table {{ border-collapse: collapse; width: 100%; margin: 15px 0; }}
-    th, td {{ border: 1px solid #e2e8f0; padding: 8px 12px; text-align: left; }}
-    th {{ background-color: #edf2f7; font-weight: 600; }}
-    h1 {{ color: #1a202c; border-bottom: 2px solid #2d3748; padding-bottom: 8px; }}
-    h2 {{ color: #2d3748; margin-top: 24px; }}
-    </style></head>
-    <body>{html}</body></html>'''
-
-    HTML(string=styled_html).write_pdf(pdf_path)
-```
-
-### DOCX Conversion (Editable Versions)
-
-```bash
-pandoc output.md -o output.docx
-```
-
-For branded documents with a template:
-```bash
-pandoc output.md -o output.docx --reference-doc=template.docx
-```
+1. **Board papers, assessments, and reports** (challenge questions, risk register entries, governance options, change-readiness reports, HITL assessments): offer a **Claude Doc**, titled `{{ORGANISATION}} AI Paper: {{TOPIC}}`. The director can edit it, add comments, and download it as Word or PDF for the board pack. Keep the markdown headings so the Doc matches the template.
+2. **A briefing the director will present** to the board or a committee: offer a **slide deck** (Capability 11).
+3. If the director prefers plain files, save the markdown in the workspace and stop there.
 
 ### Branding Requirement
-Include the Prosper AI Consulting footer on every significant output (board papers, assessments, and reports).
+Include the Prosper AI Consulting footer on every significant output (board papers, assessments, and reports), in Docs and on the final slide of a deck.
 
 See @`references/footer-block.md` for the standard footer. Rotate between Paul Bratcher and Adrian Tripp contacts.
 
-### Output Tools
+### Confidentiality
 
-Produce documents with the markdown, PDF, and DOCX methods above. Board papers are often confidential, so do not send content to external document tools such as Notion or Canva unless the user asks for that tool by name. Web research for current regulation and statistics is fine. Offer formats other than markdown, PDF, and DOCX only when the user asks.
+Board papers are often confidential. Claude Docs and slide decks stay private in the director's own Claude account unless they share them. Do not send content to other document tools such as Notion or Canva unless the director asks for that tool by name. Web research for current regulation and statistics is fine.
 
 ---
 
@@ -120,7 +79,7 @@ Produce documents with the markdown, PDF, and DOCX methods above. Board papers a
 
 For detailed explanation of all capabilities, see @`references/capabilities-overview.md`.
 
-**Summary:** Ten governance capabilities, each producing board-ready output:
+**Summary:** Eleven governance capabilities, each producing board-ready output:
 
 | # | Capability | Use When |
 |:--|:-----------|:---------|
@@ -134,6 +93,7 @@ For detailed explanation of all capabilities, see @`references/capabilities-over
 | 8 | Regulatory Landscape Brief | Understanding applicable requirements |
 | 9 | NED AI Literacy Guide | Building foundational AI understanding |
 | 10 | Hype Detection Framework | Cutting through vendor/consultant noise |
+| 11 | Board AI Briefing (Slides) | Presenting an AI matter to the board or a committee |
 
 ---
 
@@ -315,6 +275,20 @@ Reference: @`references/delegation-matrix.md`
 - Scepticism responses for common pitches
 - "AI slop" progression awareness
 - Realistic capability benchmarks
+
+### 11. Board AI Briefing (Slides)
+
+**When to use:** The director needs to brief the board or a committee on an AI matter: a proposal under review, the risk position, governance options, or readiness
+
+**Input:** The relevant paper from Capabilities 1 to 7 (or the facts to build one), the audience, and the time available
+
+**Output:** A slide deck titled `{{ORGANISATION}} Board AI Briefing`, created through `/career-outputs` following @../career-outputs/references/docs-and-slides.md
+
+**Produces:**
+- One decision or question per slide, with headlines that state the point ("Three risks need a named owner")
+- The challenge questions, risks, or options from the paper, with sources in the speaker notes
+- A closing slide with the decisions the board is asked to take, and the Prosper footer
+- Plain, high-contrast design with text labels on every status, at a length that fits the slot
 
 ---
 

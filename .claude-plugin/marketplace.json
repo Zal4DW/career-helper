@@ -1,7 +1,7 @@
 {
   "name": "career-helper",
-  "version": "1.17.1",
-  "description": "End-to-end career support for job seekers at all levels, plus AI governance guidance for Non-Executive Directors and Board Governors. Now includes a market map of organisations like your employer with dated signals, decision makers, and a weekly what-changed update (market mapper), live role discovery with batch ranking (job scout), an evidenced skills inventory with gap analysis and learning plans (skills radar), an interactive kanban board view of the application tracker, verified CV PDF production, cover letters and supporting statements, reference and referee prep, and Claude Cowork scheduled routines with a one-command weekly update (career routines), alongside personal brand building (Why You, Why Them, Why Now positioning, audience and channel map, content pillars, bio library) and non-linear career exploration: entrepreneurship, startups, public sector, charity, intrapreneurship, and multi-role skilling",
+  "version": "2.0.0",
+  "description": "Career Helper by Prosper AI Consulting: career support for job seekers at all levels and AI governance guidance for Non-Executive Directors, built for Claude Cowork.",
   "owner": {
     "name": "Prosper AI Consulting"
   },
@@ -9,7 +9,7 @@
     {
       "name": "career-helper",
       "source": "./career-helper",
-      "description": "End-to-end career support for job seekers at all levels. Employer footprint analysis, LinkedIn optimisation, ATS CV rewriting, verified CV PDFs, cover letters, interview preparation, reference prep, company research, salary negotiation, job scouting with batch ranking, a skills gap radar, a market map with weekly updates, an application tracker with kanban board, personal brand building, and more."
+      "description": "Career support for job seekers at all levels, built for Claude Cowork: a guided coach, ATS CV rewriting with verified PDFs, cover letters, interview preparation and presentation slides, reference prep, job scouting, a skills gap radar, salary negotiation, offer evaluation, an interactive application board and market map, progress dashboards, Claude Docs, scheduled weekly updates, personal brand, career transitions, and board-level AI governance."
     }
   ]
 }

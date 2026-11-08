@@ -1,5 +1,7 @@
 # Salary Negotiation Strategy: {Role Title} at {Company Name}
 
+*This strategy supports your own decisions. It is not financial, tax, or legal advice; check contract, pension, and tax questions with a qualified adviser.*
+
 **Generated:** {Date}
 **Target Role:** {Role Title}
 **Company:** {Company Name}

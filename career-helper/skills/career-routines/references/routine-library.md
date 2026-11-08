@@ -1,6 +1,6 @@
 # Routine Library
 
-**Purpose:** Ready-made prompts for Career Helper routines. Each is safe to run unattended: it reads only what exists, records decisions instead of asking, and never invents. Copy one into Cowork's `/schedule` (or another scheduler; see `cowork-scheduling.md`), fill the bracketed parts, and set the cadence shown.
+**Purpose:** Ready-made prompts for Career Helper routines. Each is safe to run unattended: it reads only what exists, records decisions instead of asking, and never invents. Copy one into Cowork's `/schedule` (see `cowork-scheduling.md`), fill the bracketed parts, and set the cadence shown.
 
 Start with routine 0. It already contains routines 1, 4, and 6, so most people never need the others separately.
 
@@ -8,7 +8,7 @@ Start with routine 0. It already contains routines 1, 4, and 6, so most people n
 
 ### 0. Weekly update (weekly, Monday morning; start here)
 
-One command runs the whole maintenance pass and saves a dated report to `updates/`: tracker standup with overdue actions first, follow-ups due, market map update with the board refreshed, a check on whether learnings notes are ready to synthesise, and one suggested next skill. Anything it cannot decide is listed under "Decisions waiting for you".
+One command runs the whole maintenance pass and saves a dated report to `updates/`: application board standup with overdue actions first, follow-ups due, market map update, a check on whether learnings notes are ready to synthesise, the progress dashboard refreshed, and one suggested next skill. Anything it cannot decide is listed under "Decisions waiting for you".
 
 ```text
 /career-helper:weekly-update
@@ -18,14 +18,16 @@ Cadence: Weekly, Monday, at a time your computer is normally awake if the task u
 
 ### 1. Monday job-search standup (weekly, Monday morning)
 
-Reads your tracker and tells you what to do this week.
+Reads your application board and tells you what to do this week.
 
 ```text
-Read applications/tracker.md in my workspace. Give me a short Monday standup:
+Read my Career Helper application board (the artifact titled "Career Helper Applications").
+Give me a short Monday standup:
 1. Every active application and its next action, with anything overdue flagged first.
 2. Any application that has had no movement for over two weeks.
 3. The three most important things for me to do this week, in order.
-Keep it to one screen. Do not invent any application or status that is not in the tracker.
+Keep it to one screen. Do not invent any application or status that is not on the board,
+and do not change the board.
 ```
 
 Cadence: Weekly, Monday.
@@ -62,7 +64,8 @@ Cadence: Weekly.
 Catches the follow-ups that quietly slip.
 
 ```text
-Read applications/tracker.md and any application-strategy.md files in my workspace.
+Read my Career Helper application board (the artifact titled "Career Helper Applications")
+and any application-strategy.md files in my workspace.
 Tell me which applications are due a follow-up today or are overdue, based on their
 next dates. For each, remind me of the follow-up step from the application strategy.
 If nothing is due, say so in one line. Do not invent dates or contacts.
@@ -90,12 +93,14 @@ Cadence: On demand.
 Keeps your ear to the ground on organisations like your employer without searching from scratch. Build the map first with `/market-mapper`; this routine only updates it.
 
 ```text
-Read market-map.md in my workspace and the most recent file in market-watch/ if one
-exists. If there is no market map, say so in one line and stop; do not ask me anything.
+Read my Career Helper market map board (the artifact titled "Career Helper Market Map")
+and the most recent file in market-watch/ if one exists. If there is no market map,
+say so in one line and stop; do not ask me anything.
 Run the market-mapper weekly update: re-check every organisation on the map for
 hiring, growth, investment, and change signals dated after its last-checked date, and
-report only what has changed. Update the map file in place, save the update to
-market-watch/ with today's date, and regenerate market-map-board.html if it exists. Keep the posture recorded in the map (if it says
+report only what has changed. Update the board in place without overriding priorities
+I set on it, save the update to market-watch/ with today's date, and refresh the
+market-map.md snapshot. Keep the posture recorded in the map (if it says
 employed and discreet, suggest only following, reading, or commenting). Offer, but do
 not apply, removals of quiet organisations or additions of new ones. If nothing changed,
 say so in one line. Do not invent a signal, a person, a title, or a URL.
@@ -114,4 +119,4 @@ Cadence: Weekly, Monday, 07:30 or whenever you start your week.
 
 ---
 
-*Routine Library v1.2 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Routine Library v2.0 | Career Helper Plugin | Prosper AI Consulting, UK*

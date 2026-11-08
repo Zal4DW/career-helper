@@ -22,7 +22,7 @@ Find live roles, triage them honestly, and turn the best into applications.
 "Find me product director roles in Manchester or remote"
 "Here are six job adverts. Which should I apply for first?"
 "Scan for charity sector CFO roles and rank them against my CV"
-"Add the top three from my shortlist to my tracker"
+"Add the top three from my shortlist to my application board"
 ```
 
 ---
@@ -102,7 +102,7 @@ Five-dimension scoring against your actual profile, never against an inflated re
 **What you need:** A ranked shortlist and the user's decision on which roles to pursue
 
 For each role the user commits to:
-1. Add a row to `applications/tracker.md` at stage Researching (build the tracker first via `/career-navigator` if none exists).
+1. Add the role to the application board at stage Researching (build the board first via `/career-navigator` if none exists).
 2. Create `applications/{role-slug}/` and save the posting text or URL there; postings disappear, so capture the text early.
 3. Suggest the natural next step: `/application-optimiser` for company research and CV tailoring.
 
@@ -148,7 +148,7 @@ When a capability names a template, load it with the @ reference before writing,
 
 ## Related Skills
 
-- **/career-navigator**: Application tracker, kanban board view, and 3-month search planning
+- **/career-navigator**: Application board (the tracker) and 3-month search planning
 - **/application-optimiser**: Deep company research and CV tailoring for shortlisted roles
 - **/skills-radar**: Gap analysis when postings keep asking for something you lack
 - **/market-mapper**: The organisations worth watching before they advertise; use their careers pages as named targets here

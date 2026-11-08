@@ -8,14 +8,14 @@ This reference provides Career Helper with comprehensive knowledge of age discri
 ## Role and Objective
 
 <Prompt_Persona>
-You are a career adviser with deep knowledge of UK employment discrimination law, specifically age discrimination under the Equality Act 2010. You understand both the letter of the law and the practical reality of what individuals can and cannot achieve when they experience ageism in recruitment. You are honest about the difficulties of proving discrimination at interview stage without being defeatist. You help candidates understand their rights, document what happens to them, and make informed decisions about whether to pursue complaints or focus their energy on finding the right employer. You never minimise the emotional impact of being told — explicitly or implicitly — that you are too old.
+You are a career adviser with deep knowledge of UK employment discrimination law, specifically age discrimination under the Equality Act 2010. You understand both the letter of the law and the practical reality of what individuals can and cannot achieve when they experience ageism in recruitment. You are honest about the difficulties of proving discrimination at interview stage without being defeatist. You help candidates understand their rights, document what happens to them, and make informed decisions about whether to pursue complaints or focus their energy on finding the right employer. You never minimise the emotional impact of being told, explicitly or implicitly,that you are too old.
 </Prompt_Persona>
 
 ---
 
 ## The Emotional Reality
 
-Being told you are too old — whether explicitly or through the coded language of rejection — is one of the most personally devastating experiences in a job search. It strikes at something you cannot change.
+Being told you are too old, whether explicitly or through the coded language of rejection, is one of the most personally devastating experiences in a job search. It strikes at something you cannot change.
 
 Unlike a skills gap you can address or a presentation style you can improve, your age is immutable. When rejection is linked to age, it feels like a verdict on who you are, not what you did.
 
@@ -24,11 +24,11 @@ Unlike a skills gap you can address or a presentation style you can improve, you
 - Your professional identity was built around a role and a company. Both are gone.
 - Re-entering a job market that has changed beyond recognition is disorienting.
 - Interview panels may be significantly younger than you. The power dynamic feels inverted.
-- Your experience — the thing you have most of — is somehow being held against you.
+- Your experience, the thing you have most of, is somehow being held against you.
 
 **This is not weakness. This is a normal human response to a genuinely difficult situation.**
 
-The guidance in this reference is designed to help you understand your rights, take practical action where possible, and — most importantly — not let the prejudice of some employers define your worth.
+The guidance in this reference is designed to help you understand your rights, take practical action where possible, and, most importantly, not let the prejudice of some employers define your worth.
 
 ---
 
@@ -249,8 +249,8 @@ The EHRC has experienced significant budget and workforce cuts since 2010, const
 
 | Case | What Happened | Significance |
 |------|-------------|-------------|
-| **Cubbin v Age UK (2024)** | Age UK — the UK's leading charity for older people — was found to have committed age discrimination against a job applicant. Ordered to pay over GBP 4,000 | Even organisations that champion age equality can be found liable |
-| **FL v R & F Properties (2024)** | Job offer rescinded due to concerns about the candidate's children's ages — intersection of age and sex discrimination | Recruitment decisions based on personal circumstances are discriminatory |
+| **Cubbin v Age UK (2024)** | Age UK, the UK's leading charity for older people, was found to have committed age discrimination against a job applicant. Ordered to pay over GBP 4,000 | Even organisations that champion age equality can be found liable |
+| **FL v R & F Properties (2024)** | Job offer rescinded due to concerns about the candidate's children's ages; intersection of age and sex discrimination | Recruitment decisions based on personal circumstances are discriminatory |
 | **Gillespie v Irwin's Bakery (2024)** | Settled for GBP 75,000 after redundancy alleged to be age-related | Significant settlements are achievable |
 | **Couperthwaite v Hilton Nursing Partners (2024)** | Claim based on alleged "back in your day" comment was dismissed because the comment was not proven | Verbal comments without corroboration are extremely hard to establish |
 | **Academic study (2025)** | Analysis of 3,241 age discrimination tribunal judgments confirmed ageism remains systemic in UK employment | Age discrimination is widespread and evidenced at scale |

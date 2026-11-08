@@ -1,6 +1,6 @@
 # Ikigai Visual Map
 
-An optional, interactive ikigai diagram Tim can offer after the four direction-finding questions (see `tim-ikigai-guide.md`). It turns the user's four answers into the classic four-circle ikigai map they can keep, open in a browser, and revisit.
+An optional, interactive ikigai diagram Tim can offer after the four direction-finding questions (see `tim-ikigai-guide.md`). It turns the user's four answers into the classic four-circle ikigai map, kept in their Claude account, where they can revisit and edit it.
 
 This is offered, never imposed. The plain-text grid in the ikigai guide remains the default; the visual is an extra for people who find a diagram helpful.
 
@@ -10,7 +10,7 @@ This is offered, never imposed. The plain-text grid in the ikigai guide remains 
 
 After you have summarised the four answers and looked for overlaps, offer the visual:
 
-"Would you like me to turn this into the classic ikigai diagram, an interactive page you can keep and come back to?"
+"Would you like me to turn this into the classic ikigai diagram, an interactive page in your Claude account that you can keep, edit, and come back to?"
 
 Offer it only when:
 - The user gave real answers to at least three of the four questions, so there is something to render.
@@ -36,18 +36,23 @@ The classic ikigai model has four overlapping circles and their intersections. P
 | Vocation (world needs + paid) | Your synthesis of where answers 3 and 4 overlap |
 | Ikigai (all four) | The centre, only if a genuine candidate emerged |
 
-Synthesising overlaps from the user's own answers is allowed; this is interpretation, not fabrication. If an overlap or the centre is not clear from what the user said, leave the `{{PLACEHOLDER}}` in place rather than guessing, and tell the user it is theirs to fill in. An honest gap at the centre is useful information; it often points toward career transitions or retraining.
+Synthesising overlaps from the user's own answers is allowed; this is interpretation, not fabrication. If an overlap or the centre is not clear from what the user said, write an empty string rather than guessing, and tell the user it is theirs to fill in. An honest gap at the centre is useful information; it often points toward career transitions or retraining.
 
 ---
 
 ## How to Build It
 
-1. Load the template: @references/ikigai-map-template.html
-2. Replace every `{{PLACEHOLDER}}` with the user's content, HTML-escaped (or leave it if genuinely unknown). Escape at minimum `&`, `<`, `>`, `"`, and `'` so user text cannot break the markup or inject script.
-3. Save the result as `ikigai-map.html` in the workspace root.
-4. Tell the user the file is saved and can be opened in any browser. In Claude Cowork it can be opened directly.
+The map is an interactive page in the user's Claude account, published through `/career-outputs` (Capability 1). The page holds no user data; the answers live in one database document, so the user can edit any region on the page and Claude reads it back later.
 
-The template is a single self-contained HTML file: no external scripts, fonts, or network calls, so it works offline and can be shared as one file.
+1. **Look it up** in `career-helper-artefacts.md`, then by the title `Career Helper Ikigai`. Refresh the existing map rather than publishing a second one.
+2. **New map:** publish @references/ikigai-map-template.html unchanged, with capabilities `{"db": {}, "user": {}}`.
+3. **Write the answers** to the document `ikigai/map` with these fields, each in the user's own words (or an empty string when genuinely unknown): `owner`, `date` (`YYYY-MM-DD`), `love`, `goodAt`, `needs`, `paid`, `passion`, `mission`, `profession`, `vocation`, `ikigai`, plus `updated` and `updatedBy: "claude"`.
+4. **Check once:** read the document back.
+5. **Tell the user** the map is in their Claude account, that any region can be edited there, and that an empty region is theirs to fill in.
+
+**Reading it back.** When the user returns to direction-finding, read `ikigai/map` first. If the document's `updatedBy` is `"board"` and its `updated` time is later than your last read, the user has edited it. The stamp covers the whole document, not single fields, so compare each region with what you last wrote to find which ones they changed, then acknowledge those edits and work from them.
+
+The page renders every value as plain text and needs no escaping.
 
 ---
 
@@ -55,7 +60,7 @@ The template is a single self-contained HTML file: no external scripts, fonts, o
 
 A colour-coded diagram must never depend on colour alone (house style, and the colour-blind preference). The template already does the following; preserve all of it:
 
-- A **colour-blind-safe palette** (Okabe-Ito) for the four circles.
+- A **colour-blind-safe palette** (Okabe-Ito) for the four circles, in light and dark themes.
 - A **text label on every region**, so the meaning is readable without distinguishing colours.
 - Hover and keyboard focus both reveal a region's detail, so it works without a mouse.
 - A **full text-equivalent table** beneath the diagram listing all four answers and the overlaps, so the page is completely usable if the diagram cannot be seen at all.
@@ -71,10 +76,10 @@ If the user has `colour_blind: true`:
 
 ## Output
 
-**File:** `ikigai-map.html` (workspace root)
+**Artifact:** `Career Helper Ikigai`, recorded in `career-helper-artefacts.md`
 
-A markdown alternative: if the user cannot use HTML, offer the text-equivalent table on its own as `ikigai-map.md` instead.
+A markdown alternative: if the user would rather not have a page, offer the text-equivalent table on its own as `ikigai-map.md` instead.
 
 ---
 
-*Ikigai Visual Map v1.0 | Career Helper Plugin | Prosper AI Consulting, UK*
+*Ikigai Visual Map v2.0 | Career Helper Plugin | Prosper AI Consulting, UK*

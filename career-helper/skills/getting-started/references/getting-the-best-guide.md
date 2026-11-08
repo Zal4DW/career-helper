@@ -1,18 +1,18 @@
 # Getting the Best from **Career Helper**
 
-Career Helper is a plugin for [Cowork](https://claude.ai), the desktop companion in the Claude app by Anthropic. It gives you a set of AI-powered career skills covering everything from CV optimisation and company research to interview preparation, LinkedIn coaching, and salary negotiation. It runs locally on your machine, saves files to a folder you choose, and builds on its own outputs across sessions.
+Career Helper is a plugin for [Cowork](https://claude.ai), the desktop companion in the Claude app by Anthropic. It gives you a set of AI-powered career skills covering everything from CV optimisation and company research to interview preparation, LinkedIn coaching, and salary negotiation. It saves files to a folder you choose, keeps your application board, market map, and dashboards in your Claude account, and builds on its own outputs across sessions.
 
 ## First Things First: Getting Career Helper Installed
 
 You need the Claude desktop app with Cowork mode. If you do not have it yet, download it from [claude.ai](https://claude.ai).
 
-Once you are in Cowork, you need to add Career Helper as a personal plugin. It is not in the default "By Anthropic & Partners" tab, so you will not find it by searching there. Here is how:
+If Career Helper is listed in the Claude plugin directory, install it from there. Otherwise, add it from GitHub:
 
-1. Open Cowork and go to **Manage Plugins** (or Settings > Plugins).
-2. Click the **Personal** tab.
-3. Click the **+** button to add a new personal plugin.
-4. Enter `Zal4DW/career-helper` as the source.
-5. That is it. The skills are now available in every Cowork session.
+1. Click the **+** button next to the chat input.
+2. Select **Add plugins...**
+3. In the Browse plugins dialog, open the filter dropdown and choose **Add marketplace from GitHub**.
+4. Enter `Zal4DW/career-helper` and click **Sync**.
+5. Click **Install** on the Career Helper plugin. The skills are now available in every Cowork session.
 
 The source repository is at [github.com/Zal4DW/career-helper](https://github.com/Zal4DW/career-helper) if you want to browse the code, check for updates, or raise an issue.
 
@@ -20,7 +20,7 @@ The source repository is at [github.com/Zal4DW/career-helper](https://github.com
 
 ## What You Get
 
-Career Helper is not a single tool. It is a set of fifteen skills plus a guided coach, each designed for a different part of the career journey. You do not need to use them all, and you do not need to use them in order. Pick the ones that fit your situation, or let Tim (your career coach) figure it out for you. Here is the quick summary; the rest of this guide shows you exactly how to put them together.
+Career Helper is not a single tool. It is a set of sixteen skills plus a guided coach, each designed for a different part of the career journey. You do not need to use them all, and you do not need to use them in order. Pick the ones that fit your situation, or let Tim (your career coach) figure it out for you. Here is the quick summary; the rest of this guide shows you exactly how to put them together.
 
 | Skill | What It Does |
 |:----|:----|
@@ -30,8 +30,8 @@ Career Helper is not a single tool. It is a set of fifteen skills plus a guided 
 | `/application-optimiser` | Company research, ATS CV optimisation, cover letters and supporting statements, application strategy, and verified CV PDF production |
 | `/linkedin-coach` | Profile audit, headline crafting, content strategy, and video intro scripts |
 | `/interview-master` | Interview prep built from a competency map (ratings, top five risks, objection handling, one-page dashboard), mock interviews, post-rejection coaching, reference and referee prep, and ageism support |
-| `/career-navigator` | Networking intelligence, 3-month plans, salary negotiation, offer evaluation, an application tracker with an interactive kanban board view, and a learnings loop that turns interviews, rejections, and wins into synthesised patterns |
-| `/job-scout` | Live role discovery across job boards and careers pages (with honest coverage caveats), batch ranking of postings, and a shortlist that feeds the tracker |
+| `/career-navigator` | Networking intelligence, 3-month plans, salary negotiation, offer evaluation, an application tracker on an interactive board in your Claude account, and a learnings loop that turns interviews, rejections, and wins into synthesised patterns |
+| `/job-scout` | Live role discovery across job boards and careers pages (with honest coverage caveats), batch ranking of postings, and a shortlist that feeds your application board |
 | `/skills-radar` | An evidenced skills inventory (including skills your CV undersells), gap analysis against a target role, and a realistic learning plan |
 | `/market-mapper` | An evidenced map of organisations like your employer with dated hiring, growth, and investment signals, decision makers confirmed by public sources, discreet angles, a weekly what-changed update, and a watchlist board view |
 | `/career-transitions` | Fractional/portfolio careers, AI readiness, and non-linear career exploration (entrepreneurship, startups, public sector, charity, intrapreneurship) |
@@ -39,6 +39,7 @@ Career Helper is not a single tool. It is a set of fifteen skills plus a guided 
 | `/ned-ai-helper` | AI governance for Non-Executive Directors, Governors, and Trustees |
 | `/personal-brand` | Why You, Why Them, Why Now positioning, audience and channel map, content pillars, and a bio library |
 | `/career-routines` | Claude Cowork scheduled tasks for the one-command weekly update and narrower routines, with honest cloud-or-local guidance and a register of what is running |
+| `/career-outputs` | Publishes and finds your application board, market map, ikigai map, dashboards, Claude Docs, and slide decks, and keeps a register of their links |
 | `/getting-started` | Full overview, preparation checklists, workflow planning, and this guide |
 
 **Accessibility:** Career Helper adapts for dyslexia and colour-blindness across every skill. Tim will ask about your preferences at the start, or you can mention them at any point. If you are dyslexic, you will get shorter sentences, numbered options, explicit signposting, and confirmation checks. All scoring and status indicators use text labels, never colour alone.
@@ -71,7 +72,7 @@ Tim saves your preferences (with your permission) so returning sessions pick up 
 
 ## Set Up a Folder (This Really Matters)
 
-Career Helper saves files as it works. Research briefs, optimised CVs, interview prep packs, content calendars, and footprint dashboards all get written to your working folder. If you start a new Cowork session each time without selecting the same folder, those outputs are lost between sessions. Worse, later skills cannot build on what earlier skills produced.
+Career Helper saves files as it works. Research briefs, optimised CVs, interview prep packs, content calendars, and footprint reports all get written to your working folder. (Your application board, market map, and dashboards live in your Claude account, so they are there whichever folder you choose.) If you start a new Cowork session each time without selecting the same folder, those outputs are lost between sessions. Worse, later skills cannot build on what earlier skills produced.
 
 **How to do it:**
 
@@ -285,7 +286,7 @@ Critically, it feeds those learnings back into your CV and interview prep. Each 
 
 - Run `/career-transitions` if you are considering going fractional or portfolio. It covers readiness assessment, rate setting, IR35 considerations, and client acquisition strategy.
 - Use `/career-navigator` to evaluate and negotiate offers. The salary negotiation coach is region-aware (UK, US, EU, APAC) and covers total compensation including pension, equity, notice periods, and garden leave.
-- When you are juggling several applications, run `/career-navigator` and build an application tracker. It is a single plain-text board of every role, its stage, and its next action, stored locally and read by `/career-helper:status`. It is the private alternative to a job-search spreadsheet.
+- When you are juggling several applications, run `/career-navigator` and build an application tracker. It is a single interactive board of every role, its stage, and its next action, private to you in your Claude account and read by `/career-helper:status`. You can drag roles between stages and Claude picks up your changes. It is the private alternative to a job-search spreadsheet.
 - When references are requested, run `/interview-master` for reference and referee prep. It helps you choose credible referees, ask them well, and brief each one on what the role values, with practical options when you cannot use your current employer yet.
 - Your research briefs, CV versions, and interview prep all save to per-application folders. When you are managing five active applications simultaneously, each one has its own folder with everything in one place. That is the difference between preparation and chaos.
 - If you would rather have someone manage the sequencing for you, run `/career-helper:career-coach`. Tim handles the routing and checks in between each skill, useful when you are juggling a lot and do not want to think about what to run next.
@@ -639,9 +640,9 @@ To summarise, here is what you get across the full skill set:
 - **Offer evaluation frameworks** with weighted decision matrices for comparing multiple opportunities
 - **Post-rejection coaching** that diagnoses where things went wrong and feeds improvements back into your materials
 - **Reference and referee prep** to choose, ask, and brief your referees, with UK conventions and regulated-role notes
-- **An application tracker** that keeps every live application, its stage, and its next action in one plain-text board you own
+- **An application tracker** that keeps every live application, its stage, and its next action on one interactive board, private to you
 - **An application learnings loop** that captures each interview, rejection, and win as a structured note and synthesises them into the patterns that are actually shaping your search
-- **A weekly update you can schedule.** `/career-helper:weekly-update` runs the tracker standup, follow-up check, market map update, and learnings check in one unattended pass and saves a dated report. `/career-routines` puts it on a Cowork `/schedule`, explains when a task runs in the cloud and when it needs your computer awake, and keeps a register of what is running, so the search keeps moving between sessions.
+- **A weekly update you can schedule.** `/career-helper:weekly-update` runs the application board standup, follow-up check, market map update, learnings check, and progress dashboard refresh in one unattended pass and saves a dated report. `/career-routines` puts it on a Cowork `/schedule`, explains when a task runs in the cloud and when it needs your computer awake, and keeps a register of what is running, so the search keeps moving between sessions.
 - **AI readiness assessments** with tiered upskilling roadmaps
 - **AI impact assessments** that research whether your role faces material disruption, with 6-month mitigation plans
 - **Fractional and portfolio career planning** including rate setting, IR35 guidance, and client acquisition strategy

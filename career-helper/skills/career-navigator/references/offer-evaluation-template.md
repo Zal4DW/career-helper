@@ -1,5 +1,7 @@
 # Job Offer Evaluation: {User Name}
 
+*This evaluation supports your own decisions. It is not financial, tax, or legal advice; check contract, pension, and tax questions with a qualified adviser.*
+
 **Generated:** {Date}
 **Offers Evaluated:** {Number of offers}
 

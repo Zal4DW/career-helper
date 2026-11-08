@@ -1,79 +1,82 @@
-# Kanban Board View
+# Application Board
 
-**Purpose:** Give the user an interactive, visual view of their application pipeline when a markdown table stops being enough. The board renders every application as a card in one of six stage columns (Researching, Applying, Applied, Interviewing, Offer, Closed) and lets the user drag cards between stages, edit next actions, and export the result back to tracker markdown.
+**Purpose:** Give the user an interactive view of their whole application pipeline that they and Claude keep up to date together. Every application is a card in one of six stage columns (Researching, Applying, Applied, Interviewing, Offer, Closed); the user can drag cards between stages, edit next actions, and add or remove applications, and Claude reads those changes back in any later session.
 
-**Applies to:** The board artefact at `applications/board.html`, generated from `applications/tracker.md` using `@references/kanban-board-template.html`.
+**Applies to:** The artifact titled `Career Helper Applications`, published from `@references/kanban-board-template.html`. Its database is the application record described in `@references/application-tracker.md`.
 
 ---
 
 ## Principles
 
-1. **The tracker file remains the source of truth.** The board is a view, not a second database. `applications/tracker.md` is the record; the board is regenerated from it and changes flow back into it.
-2. **Never invent status.** The board is populated only from rows that exist in the tracker. If a field is unknown, leave it blank or `[UNKNOWN]`; do not guess.
-3. **One board, regenerated.** There is only ever one `applications/board.html`. Overwrite it on each regeneration; do not accumulate dated copies.
-4. **Offline and private.** The template is fully self-contained: no external scripts, fonts, or network calls. Board edits persist in the browser's local storage only, on the user's machine.
+1. **The board is the record.** Its database holds every application. The workspace file `applications/tracker.md` is a read-only snapshot for portability.
+2. **Never invent status.** Cards are written only from what the user has said or what their files confirm. Unknown fields stay empty.
+3. **One board.** Find it through the register or its fixed title before doing anything; never publish a second copy (see `@../career-outputs/references/publishing-rules.md`).
+4. **Private by default.** The board is visible only to the user unless they share it themselves.
 
 ---
 
 ## When to Offer the Board
 
-Offer the board (do not push it) when:
+The board is the tracker, so it is created the first time the user wants to track applications (see `application-tracker.md`). Offer to open it when:
 
-- The user has three or more active applications in the tracker.
 - The user asks to "see my pipeline", "show me a board", "visualise my applications", or similar.
-- A status review (`/career-helper:status`) shows several applications moving at once.
+- A status review shows several applications moving at once.
 
-Suggested wording: "You have several applications in flight. Would you like an interactive board view? You can drag applications between stages and export the changes back to your tracker."
-
-If the user has zero or one active application, the tracker table is enough; do not offer the board.
+Suggested wording the first time: "Your applications are on a board in your Claude account. You can drag them between stages and edit next steps there; I will see your changes next time we talk."
 
 ---
 
-## Generating the Board
+## Publishing and Refreshing the Page
 
-1. **Read the tracker.** Load `applications/tracker.md`. If none exists, build one first (see `@references/application-tracker.md`); the board has nothing to show without it.
-2. **Load the template.** Read `@references/kanban-board-template.html`.
-3. **Populate the data block.** Replace the JSON inside `<script id="board-data" type="application/json">`:
-   - `owner`: the user's name from the tracker header, or `[UNKNOWN]`.
-   - `generated`: today's date, `YYYY-MM-DD`.
-   - `cards`: one object per tracker row. Active rows map `role`, `organisation`, `stage`, `nextAction`, `nextDate`, and `notes`. Closed rows set `stage` to `Closed` and map `outcome`, `dateClosed`, and `learned`.
-   - Use empty strings for unknown fields, never invented values. Remove the placeholder example card.
-   - Escape every literal `<` inside JSON string values as `\u003c` (JSON.parse restores the character). Tracker content is user text; an unescaped closing script tag pasted into a role or note would otherwise terminate the data block and break, or worse script-inject, the page.
-4. **Replace the header placeholders.** `{{NAME}}` and `{{DATE}}` appear in the header paragraph; fill both. (Browser state is keyed to a fingerprint of the data block, so a regenerated board automatically discards state saved against older data.)
-5. **Write the file** to `applications/board.html` and tell the user to open it in their browser.
+Follow `/career-outputs` Capability 1:
+
+1. **Look it up** in `career-helper-artefacts.md`, then by the title `Career Helper Applications`.
+2. **New board:** publish `kanban-board-template.html` unchanged, with capabilities `{"db": {}, "user": {}}`, then write the cards and the `board/meta` document (fields in `application-tracker.md`) in one batch. Read the collection back once and confirm the count.
+3. **Existing board on an older page version:** republish the new page file to the same link. The cards are kept.
+4. **Record** the link and page version in the register.
+
+The page holds no user data, so there is nothing to fill in or escape in the file. It renders every value as plain text.
 
 ---
 
-## Syncing Changes Back
+## Syncing the User's Changes
 
-The board has two export buttons: "Copy tracker markdown" and "Download tracker.md". Both produce a complete tracker file in the exact `applications/tracker.md` format, including the At a Glance counts.
+There is no export step. When any task uses the board:
 
-When the user pastes exported markdown or mentions they have made board changes:
+1. Read the `cards` collection.
+2. Pick out cards with `updatedBy: "board"` whose `updated` timestamp is later than `lastReadByClaude` in the meta document (see `publishing-rules.md`, Reading Data Back).
+3. Summarise them in a line ("You moved Example Org to Interviewing and set a follow-up for Friday"), confirm anything that looks accidental (a card removed from Interviewing, for example), and trigger follow-ups as `application-tracker.md` describes.
+4. Refresh the `applications/tracker.md` snapshot, and write the current time to `lastReadByClaude` (and the register's "Last read").
 
-1. **Diff before overwriting.** Compare the exported markdown against the current `applications/tracker.md`. Summarise what changed ("Acme moved from Applied to Interviewing; next action updated on the TechCorp role") and confirm before writing.
-2. **Update the tracker**, then regenerate the board so the file data matches (otherwise the board's "Reset to file data" button would restore stale data).
-3. **Trigger follow-ups** exactly as the tracker guidance describes: a move to Interviewing suggests `/interview-master`; a move to Offer suggests salary negotiation or offer evaluation; a move to Closed with outcome Rejected offers the learnings loop and a rejection debrief.
-
-If the user edited both the tracker file and the board since the last sync, treat the tracker file as authoritative, list the conflicts, and ask the user to resolve them. Never silently discard either side.
+If the user has edited the snapshot file by hand, show the differences against the board and offer to apply them. Never silently discard either side.
 
 ---
 
 ## Accessibility
 
-The template is built to be usable without a mouse and without colour vision, and generated boards must keep it that way:
+The page is built to be usable without a mouse and without colour vision; keep it that way:
 
-- Every stage is a text label on the column and on each card's accessible name; colour is decoration, never the only signal.
-- Cards are keyboard operable: focus a card, use the left and right arrow keys or the labelled buttons to move it, and Enter to edit.
-- Moves and saves are announced through a live region for screen readers.
-- Overdue actions show a text `OVERDUE` tag, not just a colour change.
-- The board respects the user's light or dark system preference.
+- Every stage is a text label on the column and in each card's accessible name; colour is decoration, never the only signal.
+- Cards are keyboard operable: focus a card, use the left and right arrow keys or the labelled Back and Advance buttons to move it, and Enter to edit.
+- Saves and errors are announced through a live region for screen readers.
+- Overdue actions show a text `OVERDUE` tag.
+- The page follows the user's light or dark theme and works at phone width.
 
-If `career-helper-preferences.md` sets `dyslexia_friendly: true`, keep card notes short when populating the board, and explain the export flow in numbered steps. If `colour_blind: true`, the template already conveys nothing by colour alone; no changes are needed.
+If `career-helper-preferences.md` sets `dyslexia_friendly: true`, keep card notes short when writing cards, and explain the board in numbered steps the first time. If `colour_blind: true`, no changes are needed.
+
+---
+
+## Sharing
+
+If the user wants a mentor, partner, or coach to see the board, explain the options and let them share it from the artifact's share menu: Viewer (read-only, recommended) or Contributor (can move and edit cards). Never share it for them, and remind them that anyone they share with sees every card's notes.
 
 ---
 
 ## What the Board Is Not
 
-- It is not a replacement for the tracker principles: next actions and honest momentum still matter more than a pretty view.
-- It is not a live sync: the HTML file cannot write to disk, which is why the export step exists. Make sure the user understands this the first time you generate a board.
-- It is not a place for sensitive detail. Keep notes to short context; salary figures and personal reflections belong in the negotiation and learnings files.
+- It is not a replacement for the tracker principles: next actions and honest momentum still matter more than a tidy view.
+- It is not a place for sensitive detail. Notes are short context; salary figures and personal reflections belong in the negotiation and learnings documents.
+
+---
+
+*Application Board v2.0 | Career Helper Plugin | Prosper AI Consulting, UK*

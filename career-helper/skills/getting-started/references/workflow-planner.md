@@ -275,17 +275,17 @@ Step 4 (optional): /linkedin-coach (Profile Audit)
 ```text
 Step 1: /market-mapper (Market Map)
         Input: current employer as the seed, region, target function and level, exclusions, discretion posture
-        Output: market-map.md
+        Output: the market map board (Career Helper Market Map), with a market-map.md snapshot when you have a workspace folder
         Why first: it defines what "similar" means and gathers dated signals before any outreach is considered
             ↓
 Step 2: /market-mapper (Watchlist and Weekly Update), on a Cowork schedule via /career-routines or run manually
         Input: the existing map
-        Output: market-watch/{date}-update.md, updated market-map.md
+        Output: market-watch/{date}-update.md, updated market map board
         Why: only what changed is reported, so the weekly read stays short
             ↓
 Step 3 (optional): /market-mapper (Watchlist Board View)
-        Output: market-map-board.html
-        Why optional: useful once the map passes eight organisations
+        Output: the market map board, opened to change priorities
+        Why optional: the board exists from step 1; open it when you want to reprioritise
             ↓
 Step 4 (when an organisation reaches Act now): /career-navigator (Strategic Networking Intelligence)
         Input: the organisation, its decision makers and signals from the map

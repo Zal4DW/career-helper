@@ -1,19 +1,19 @@
-# Career Helper — Project Instructions for Claude Code
+# Career Helper: Project Instructions for Claude Code
 
 This file gives Claude (and any other AI assistant working in this repo) the house style and conventions to follow when editing skills, agents, references, and documentation.
 
-## House Style — Strict
+## House Style (Strict)
 
 ### Punctuation
 
-- **Never use em dashes (`—`).** Use commas, semicolons, colons, parentheses, or full stops instead. This applies to headings, body text, prompts, and any user-facing output the skills produce.
+- **Never use em dashes or en dashes (U+2014, U+2013).** Use commas, semicolons, colons, parentheses, or full stops instead. This applies to headings, body text, prompts, and any user-facing output the skills produce.
 - **Use the Oxford comma** in lists of three or more (e.g., "skills, experience, and qualifications").
 - **Hyphenate compound modifiers** (e.g., "3- to 5-line summary", "high-impact bullet", "ATS-safe formatting").
 
 ### Language
 
 - **UK English throughout.** Organisation, colour, behaviour, optimise, analyse, centre, programme, favour, recognise, realise, prioritise, maximise. US English is acceptable only when a specific skill explicitly targets a US audience.
-- **No emojis or emoji-style markers.** This includes `✅`, `❌`, `⚠️`, `🔧`, `🤖` and similar. Use plain text labels (PASS / FAIL / WARNING) instead.
+- **No emojis or emoji-style markers.** This includes ticks, crosses, warning signs, and similar symbols (for example U+2705, U+274C, U+26A0). Use plain text labels (PASS / FAIL / WARNING) instead.
 - **No hyperbole or marketing fluff.** Avoid "game-changing", "revolutionary", "supercharge", "world-class", "industry-leading", "robust", "comprehensive" unless the source material genuinely warrants them.
 - **Second person** for user-facing coaching content. "Your CV" not "the user's CV".
 
@@ -67,4 +67,4 @@ See `.github/CONTRIBUTING.md` for the full process. Key points:
 
 ## When Editing This File
 
-If you find yourself wanting to add an exception to any of the above rules, that's a signal to stop and check whether the change is really necessary. The point of a strict house style is that future-you (and future contributors) don't have to think about formatting — the rules are the rules. Add new rules here when patterns emerge; do not weaken existing ones casually.
+If you find yourself wanting to add an exception to any of the above rules, that's a signal to stop and check whether the change is really necessary. The point of a strict house style is that future-you (and future contributors) don't have to think about formatting; the rules are the rules. Add new rules here when patterns emerge; do not weaken existing ones casually.

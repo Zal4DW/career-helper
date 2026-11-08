@@ -1,6 +1,6 @@
 # Market Watch Update: {{YYYY-MM-DD}}
 
-**Map:** market-map.md ({{N}} organisations)
+**Map:** Career Helper Market Map ({{N}} organisations)
 **Period covered:** {{YYYY-MM-DD}} to {{YYYY-MM-DD}}
 **Posture:** {{Employed and discreet / Openly searching}}
 
@@ -50,7 +50,7 @@ Or: None.
 
 - **Gone quiet (offered for removal):** {{ORGANISATION}}, no signals across the last two updates. {{Or: None.}}
 - **Suggested additions (offered for adding):** {{ORGANISATION}}, surfaced by {{signal and source}}; fits the seed on {{dimension}}. {{Or: None.}}
-- **Already in your tracker:** {{ORGANISATION}} at stage {{STAGE}}; no angle suggested here. {{Or: None.}}
+- **Already on your application board:** {{ORGANISATION}} at stage {{STAGE}}; no angle suggested here. {{Or: None.}}
 
 ---
 
@@ -66,7 +66,7 @@ Or: None.
 
 - **Checked:** {{careers pages, news, Companies House, contracts, funding sources}}
 - **Unreachable this run:** {{LinkedIn people search; any sites that blocked access; or "None"}}
-- The map file has been updated with these changes. Offers above are applied only when you confirm them.
+- {{Write one of these, after the board write in Step 5 has finished: "Your market map board has been updated with these changes (and the snapshot refreshed where there is a workspace folder)." or, if the write failed or did not finish: "Your market map board could not be updated in this run; the changes above will be applied next time."}} Offers above are applied only when you confirm them.
 
 ---
 

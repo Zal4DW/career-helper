@@ -1,2 +1,9 @@
 .odta-prosperai/
 .prosper-clients/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
+__MACOSX/
+dist/
