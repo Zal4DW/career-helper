@@ -32,7 +32,7 @@
 | Trend | One row per weekly update: date, active, applied, interviewing, offers, closed | The dashboard's own weekly history data |
 | Response rate | Applications that reached Interviewing or beyond, divided by applications that reached Applied or beyond, with both counts shown | Application board database |
 | Market map | Count of organisations by priority (Act now, Warm, Watch, Quiet), and new signals since the last update | Market map database |
-| Learnings | The top recurring patterns, one line each | `applications/learnings/patterns-synthesis.md` if it exists |
+| Learnings | The top recurring patterns, one line each | `applications/learnings/patterns.md` if it exists |
 | Routines | Each routine, its cadence, and the date of its last output | `routines.md` and the output folders |
 
 ### Rules

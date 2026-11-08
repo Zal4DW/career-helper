@@ -202,6 +202,7 @@
   var map = {};
   var db = null;
   var canWrite = false;
+  var readOnly = false;
   var current = null;
   var queue = Promise.resolve();
 
@@ -289,7 +290,7 @@
         throw err;
       });
     }).then(function () { announce('Saved ' + TITLES[key] + '.'); }, function (err) {
-      if (err && err.code === 'invalid_argument') { canWrite = false; renderTable(); announce('This map is read-only for you, so that change was not saved.'); }
+      if (err && err.code === 'invalid_argument') { readOnly = true; canWrite = false; renderTable(); announce('This map is read-only for you, so that change was not saved.'); }
       else { announce('That change was not saved. Check your connection and try again.'); }
     });
   });
@@ -308,15 +309,15 @@
       notice('This map keeps your answers in Claude. Open it in Claude, signed in, to see and change them.');
       return;
     }
+    if (user) {
+      user.can('data.write').then(function (ok) { if (ok === false) { readOnly = true; canWrite = false; renderTable(); } }, function () {});
+    }
     var fresh = false;
     var timer = setTimeout(function () { if (!fresh) { notice('Your ikigai map cannot be reached yet. It fills in when the connection returns.'); } }, 10000);
     db.doc('ikigai/map').onSnapshot(function (snap) {
       map = snap.exists ? (snap.data() || {}) : {};
-      canWrite = snap.exists;
+      canWrite = snap.exists && !readOnly;
       if (!snap.metadata.fromCache) { fresh = true; clearTimeout(timer); }
-      if (user) {
-        user.can('data.write').then(function (ok) { if (ok === false && canWrite) { canWrite = false; renderTable(); } }, function () {});
-      }
       renderTable();
       if (fresh) { notice(snap.exists ? '' : 'Nothing here yet. Ask Tim to work through the four ikigai questions with you, and your answers will appear here.'); }
     }, function () {

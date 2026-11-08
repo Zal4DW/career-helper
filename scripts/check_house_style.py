@@ -95,11 +95,11 @@ def check_front_matter(problems: list[str]) -> None:
         if not match:
             problems.append(f"{rel}: missing YAML front matter")
             continue
-        if not re.search(r"^description:\s*\S", match.group(1), re.MULTILINE):
+        if not re.search(r"^description:[ \t]*\S", match.group(1), re.MULTILINE):
             problems.append(f"{rel}: front matter has no description")
         if path.name == "SKILL.md":
             for key in ("name", "tags"):
-                if not re.search(rf"^{key}:\s*\S", match.group(1), re.MULTILINE):
+                if not re.search(rf"^{key}:[ \t]*\S", match.group(1), re.MULTILINE):
                     problems.append(f"{rel}: front matter has no {key}")
 
 

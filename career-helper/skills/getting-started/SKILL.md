@@ -127,7 +127,7 @@ Create a personalised skill sequence based on the user's specific situation. Not
 Practical guidance for getting the best results from each skill. Not a repeat of help - specific tips on inputs, prompting, and iteration.
 
 **Core approach:**
-- Ask which skill they want tips for (or cover all fifteen)
+- Ask which skill they want tips for (or cover them all)
 - Provide input quality tips (what makes a good CV upload, how to share a LinkedIn profile, what details to include in a job description)
 - Common mistakes and how to avoid them
 - How to iterate and refine outputs

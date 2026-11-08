@@ -1,4 +1,4 @@
-Act as an expert content strategist specializing in LinkedIn. I want you to audit my recent LinkedIn posts.
+Act as an expert content strategist specialising in LinkedIn. I want you to audit my recent LinkedIn posts.
 
 ## How to Provide Your Posts
 
@@ -31,13 +31,13 @@ Follow these 3 steps:
 
 ----
 
-### STEP 2 = Analyze:
+### STEP 2 = Analyse:
 
-- Analyze which of these pain points or desires the content addresses and or misses.
+- Analyse which of these pain points or desires the content addresses and or misses.
 
 - Judge how powerfully the posts deliver value, guidance, or inspiration related to these concerns.
 
-- Summarize overall alignment: Is my content meeting the real needs of my ideal audience? Where are the biggest gaps or mismatches?
+- Summarise overall alignment: Is my content meeting the real needs of my ideal audience? Where are the biggest gaps or mismatches?
 
 - Highlight what types of content/tactics (e.g., story posts, how-tos, questions, case studies) gain the best and worst engagement or response, citing specific examples from my posts.
 
@@ -51,7 +51,7 @@ Give actionable recommendations to:
 
 - Drop or rework less effective content
 
-- Maximize what's working (with concrete next steps)
+- Maximise what's working (with concrete next steps)
 
 Be to the point and straightforward, specific, and use bullet points where possible.
 Output in Markdown for readability.

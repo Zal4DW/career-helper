@@ -168,5 +168,5 @@ With `colour_blind: true` nothing changes: priorities are text labels already.
 - Do not present sector commentary as a company signal. If nothing was found for an organisation, say so.
 - Do not infer decline from silence. A quiet careers page is not a hiring freeze.
 - Do not suggest outreach that would expose an employed user. When in doubt, the angle is "follow and read".
-- Do not keep the user's employer name anywhere except the owner-only seed record on the market map board (and the snapshot header when the user is openly searching), and tell the user that is where it is.
+- Do not keep the user's employer name anywhere except the owner-only seed record on the market map board (and the snapshot header and seed profile when the user is openly searching and asks for them), and tell the user that is where it is.
 - Do not scrape aggressively or attempt to work around a login or a block. Note the gap, offer the signed-in browser, and move on.

@@ -175,6 +175,7 @@
   var canWrite = true;
   var confirmed = false;
   var queues = {};
+  var reserved = {};
 
   var boardEl = document.getElementById('board');
   var noticeEl = document.getElementById('notice');
@@ -203,7 +204,7 @@
     var base = slug(org);
     var id = base;
     var n = 2;
-    while (cards.some(function (c) { return c.id === id; })) { id = base + '-' + n; n += 1; }
+    while (reserved[id] || cards.some(function (c) { return c.id === id; })) { id = base + '-' + n; n += 1; }
     return id;
   }
   function findCard(id) {
@@ -218,16 +219,21 @@
       throw e;
     });
   }
-  function write(id, fn) {
+  // creating: true for a set() that creates a document. Only a rejected create
+  // means this viewer cannot write; update() also rejects invalid_argument when
+  // the document was removed elsewhere (another device, or Claude).
+  function write(id, fn, creating) {
     var p = (queues[id] || Promise.resolve()).then(function () { return attempt(fn); });
     queues[id] = p.catch(function () { /* keep the queue moving */ });
-    return p.catch(writeFailed);
+    return p.catch(function (e) { return writeFailed(e, creating); });
   }
-  function writeFailed(e) {
+  function writeFailed(e, creating) {
     var code = e && e.code;
-    if (code === 'invalid_argument') {
+    if (code === 'invalid_argument' && creating) {
       setReadOnly();
       announce('This map is read-only for you, so that change was not saved.');
+    } else if (code === 'invalid_argument') {
+      announce('That organisation was changed or removed elsewhere, so the change was not saved.');
     } else if (code === 'quota_exceeded') {
       announce('The map is full. Remove Quiet organisations you no longer need, then try again.');
     } else {
@@ -481,7 +487,8 @@
       body.signals = [];
       body.decisionMakers = [];
       body.added = localDate();
-      write(created, function () { return db.doc('organisations/' + created).set(stamp(body)); })
+      reserved[created] = true;
+      write(created, function () { return db.doc('organisations/' + created).set(stamp(body)); }, true)
         .then(function () { announce('Added ' + org + '. Ask Claude to research it at the next update.'); }, function () {});
     }
   });

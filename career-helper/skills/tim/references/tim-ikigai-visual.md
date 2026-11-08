@@ -50,7 +50,7 @@ The map is an interactive page in the user's Claude account, published through `
 4. **Check once:** read the document back.
 5. **Tell the user** the map is in their Claude account, that any region can be edited there, and that an empty region is theirs to fill in.
 
-**Reading it back.** When the user returns to direction-finding, read `ikigai/map` first. Fields with `updatedBy: "board"` changed since you last read it are the user's own edits: acknowledge them and work from them.
+**Reading it back.** When the user returns to direction-finding, read `ikigai/map` first. If the document's `updatedBy` is `"board"` and its `updated` time is later than your last read, the user has edited it. The stamp covers the whole document, not single fields, so compare each region with what you last wrote to find which ones they changed, then acknowledge those edits and work from them.
 
 The page renders every value as plain text and needs no escaping.
 

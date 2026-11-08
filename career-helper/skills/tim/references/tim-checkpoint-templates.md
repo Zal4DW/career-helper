@@ -8,7 +8,7 @@ This reference is loaded by the Tim career coach skill to ensure consistent chec
 
 ```text
 DONE: [what was completed: one line]
-SAVED: [filename(s): or "your [description] (in your career-helper folder)" for dyslexia mode]
+SAVED: [filename(s), or "your [description] (in your career-helper folder)" for dyslexia mode]
 FLAG: [only include this line if there's something genuinely worth pausing for]
 NEXT: [what Tim recommends next and a one-line reason why]
 ```

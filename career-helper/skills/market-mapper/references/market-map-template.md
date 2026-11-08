@@ -15,6 +15,8 @@
 
 ## Seed Profile
 
+*Include this table only when the posture is Openly searching and you asked for the seed organisation to be shown. Otherwise replace it with the line "Kept privately on the board": the profile and its exclusions can identify your employer.*
+
 | Dimension | Value |
 |:----------|:------|
 | Sector and sub-sector | {{SECTOR}} |

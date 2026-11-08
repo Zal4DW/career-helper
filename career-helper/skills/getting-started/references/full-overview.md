@@ -30,7 +30,7 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 
 **Important:** Never minimise the emotional challenge. A graduate terrified of their first interview deserves the same quality of support as a VP negotiating a package. Redundancy at 55 is a different experience from redundancy at 30. Let the user's situation shape how you present the tools.
 
-## The Fifteen Skills - With Examples
+## The Skills - With Examples
 
 ### Application Optimiser - Research, CV, Cover Letters, and Strategy
 
@@ -545,6 +545,28 @@ Career-helper adapts to your stage. When presenting the overview, be aware of th
 - You keep hearing about roles after they were filled
 - You want a weekly picture of your local market that takes five minutes to read
 - You already use the application board and want the same view of who you are watching
+
+---
+
+### Career Outputs - Boards, Dashboards, Docs, and Slides
+
+**What it does:** Publishes and keeps track of everything Career Helper shows you in Claude: your application board and market map (interactive boards whose own database holds the record, so you and Claude both keep them current), the ikigai map, the progress and footprint dashboards, Claude Docs you can annotate, print, and export to Word or PDF, and slide decks. Each output has one fixed title and one link, stays private unless you share it, and is listed in `career-helper-artefacts.md` so you can find it again.
+
+**Real example - finding and sharing your board:**
+
+> **You say:** "Where is my application board? I want my mentor to see it."
+>
+> **What happens:**
+> 1. Finds the board through the register, or by its title `Career Helper Applications`
+> 2. Opens it, and explains what your mentor would see as a Viewer (read-only) or a Contributor (can move cards)
+> 3. Leaves the sharing to you, from the board's share menu
+>
+> **You get:** Your board, and a clear choice about who sees it
+
+**When to use it:**
+- You want to open, refresh, or share a board, dashboard, Doc, or deck
+- You want a plan or pack as a Claude Doc you can print or export
+- Something Career Helper published seems to be missing
 
 ---
 
