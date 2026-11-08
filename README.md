@@ -211,7 +211,7 @@ What the plugin runs, fetches, and stores:
 - **Artifacts, Claude Docs, and slide decks** in your Claude account, published only when a skill offers one and you agree. They are private to you unless you share them. The boards keep their data in the artifact's own database, which only you (and anyone you share with) can see.
 - **Web research** through Claude's own search and fetch tools, for public information such as company news, job listings, and regulation.
 - **A signed-in browser** (Cowork's built-in browser or Claude in Chrome), only when you ask it to search a site you are signed in to, such as LinkedIn.
-- **Two Python packages**, `markdown` and `weasyprint`, installed in your Cowork environment when you ask for a verified CV PDF; the scripts are kept as text in `skills/application-optimiser/references/cv-pdf-scripts.md` and written to a `.career-helper-tools/` folder in the application folder when needed.
+- **Python packages** (`markdown`, `weasyprint`, and `pypdf`, plus `pdf2image` and Poppler for page images), installed in your Cowork environment when you ask for a verified CV PDF; the scripts are kept as text in `skills/application-optimiser/references/cv-pdf-scripts.md` and written to a `.career-helper-tools/` folder in the application folder when needed.
 
 The plugin has no hooks, no MCP servers, and no executables, and sends nothing to any service of its own.
 
